@@ -1,0 +1,63 @@
+/*
+* amytiss.cpu.cl
+*
+*  date    : 28.04.2019
+*  author  : M. Khaled | Hybrid control systems @ Technical University of Munich, Germany
+*  about   : an OpenCL kernel (optimized for CPUs) used to of the tool AMYTISS.
+*            AMYTISS is a tool for an abstractuin based synthesis of stochastic systems.
+* ***********************************************************************
+*  The kernel manager will replace parameters enclosed by "@@" before compiling !
+*/
+
+#define CPU_VERSION
+
+// pfaces-Including a parameters and some funcs
+/* the dynamics post function without any noise : noise is assumed to be additive */
+//void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i);
+void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
+	dx[i] = x[i];
+}
+
+
+// pFaces-Including a KERNEL-Function: initialize
+__kernel void initialize( 
+    __global float* initial_state
+    ) 
+{
+  int i = get_global_id(0);
+  initial_state[i] = 1;
+}
+
+// pFaces-Including a KERNEL-Function: rk4
+#define RK4_NINT 5
+#define RK4_H ((0.100000/RK4_NINT))
+
+__kernel void rk4( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp)
+{
+
+  int i = get_global_id(0);
+  float t = 0.000000;
+  int nsteps = 100;
+  float step_size = 0.100000;
+  
+  final_state[i] = initial_state[i];
+  for (unsigned int k=0; k < 100; k++) {
+
+    for (unsigned int t = 0; t < RK4_NINT; t++) {
+    
+      #define dyn_fn dynamics_element
+      #include "dynamics_body.cl"
+
+    }
+  }
+}
+
+

@@ -1,0 +1,32 @@
+#-----------------------------------------------------------------------
+# Project Data
+#-----------------------------------------------------------------------
+project_name = "minimal_kernel";
+
+method_choice = "1";
+
+initial_time = "0.0";
+final_time = "1.0";
+step_size = "1.0";
+
+states{
+	dim = "0";
+}
+
+inputs{
+	dim = "0";
+}
+
+dynamics_element_code = "dx[i] = x[i];";
+
+initial_state_lb = "";
+
+initial_state_ub = "";
+
+input_lb = "";
+
+input_ub = "";
+
+growth_bound = {
+    growth_bound_matrix_code = "if(i==j) c = 1.0; else c = 0.0;";
+}

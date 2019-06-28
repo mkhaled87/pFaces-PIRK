@@ -1,0 +1,154 @@
+-----------------------------------------------------------------
+Build log started on Wednesday 26/06/2019 15:50:36-866
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+In file included from 1:66:
+../examples/pirk/kernel-pack/dynamics_body.cl:9:38: error: expected expression
+../examples/pirk/kernel-pack/dynamics_body.cl:17:38: error: expected expression
+../examples/pirk/kernel-pack/dynamics_body.cl:25:35: error: expected expression
+../examples/pirk/kernel-pack/dynamics_body.cl:33:12: error: expected expression
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 26/06/2019 15:53:15-140
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <initialize> was successfully vectorized (8)
+Kernel <rk4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Thursday 27/06/2019 10:19:57-434
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <initialize> was successfully vectorized (8)
+Kernel <rk4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Thursday 27/06/2019 10:24:54-006
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <initialize> was successfully vectorized (8)
+Kernel <rk4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Thursday 27/06/2019 11:36:56-824
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <initialize> was successfully vectorized (8)
+Kernel <rk4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Thursday 27/06/2019 13:24:48-639
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <initialize> was successfully vectorized (8)
+Kernel <rk4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
