@@ -1,4 +1,5 @@
 #include <pfaces-sdk.h>
+#include "pirk.h"
 
 namespace pirk{
 
@@ -7,35 +8,64 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
 {
 
   std::string mem_fingerprint_file = spLaunchState->kernelPackPath + std::string("pirk.mem");
-  /* begin code for creating the "initialize" kernel function */
-  pfacesKernelFunction initializeFunction(
-      "initialize",  /* name of the function to add */
-      {"initial_state"}  /* list of the names of its args */
-  );
-  pfacesKernelFunctionArguments args_initialize = pfacesKernelFunctionArguments::loadFromFile(
-      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "initialize",  /* name of the function whose fingerprint from */
-      {"initial_state"}  /* the arguments of the function */
-  );
-  initializeFunction.setArguments(args_initialize);
-  addKernelFunction(initializeFunction);
-  /* end code for creating the "initialize" kernel function */
 
-  /* begin code for creating the "rk4" kernel function */
-  pfacesKernelFunction rk4Function(
-      "rk4",  /* name of the function to add */
+  /* begin code for creating the "initialize_center" kernel function (function 0) */
+  pfacesKernelFunction function_gb_initialize_center(
+      "gb_initialize_center",  /* name of the function to add */
       {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
   );
-  pfacesKernelFunctionArguments args_rk4 = pfacesKernelFunctionArguments::loadFromFile(
+  pfacesKernelFunctionArguments args_gb_initialize_center = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "rk4",  /* name of the function whose fingerprint from */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* the arguments of the function */
+      "gb_initialize_center",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
   );
-  //args_rk4.m_baseTypeSize = {4};
-  rk4Function.setArguments(args_rk4);
-  addKernelFunction(rk4Function);
-  /* end code for creating the "initialize" kernel function */
-}
+  function_gb_initialize_center.setArguments(args_gb_initialize_center);
+  addKernelFunction(function_gb_initialize_center);
+  /* end code for creating the "initialize_center" kernel function */
+
+  /* begin code for creating the "gb_integrate_center" kernel function (function 1) */
+  pfacesKernelFunction function_gb_integrate_center(
+      "gb_integrate_center",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
+  );
+  pfacesKernelFunctionArguments args_gb_integrate_center = pfacesKernelFunctionArguments::loadFromFile(
+      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+      "gb_integrate_center",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
+  );
+  function_gb_integrate_center.setArguments(args_gb_integrate_center);
+  addKernelFunction(function_gb_integrate_center);
+  /* end code for creating the "gb_integrate_center" kernel function */
+
+  /* begin code for creating the "gb_gb_initialize_radius" kernel function (function 2) */
+  pfacesKernelFunction function_gb_initialize_radius(
+      "gb_initialize_radius",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
+  );
+  pfacesKernelFunctionArguments args_gb_initialize_radius = pfacesKernelFunctionArguments::loadFromFile(
+      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+      "gb_initialize_radius",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
+  );
+  function_gb_initialize_radius.setArguments(args_gb_initialize_radius);
+  addKernelFunction(function_gb_initialize_radius);
+  /* end code for creating the "gb_gb_initialize_radius" kernel function */
+
+  /* begin code for creating the "gb_integrate_radius" kernel function (function 3) */
+  pfacesKernelFunction function_gb_integrate_radius(
+      "gb_integrate_radius",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
+  );
+  pfacesKernelFunctionArguments args_gb_integrate_radius = pfacesKernelFunctionArguments::loadFromFile(
+      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+      "gb_integrate_radius",  /* name of the function to add */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp"}  /* list of the names of its args */
+  );
+  function_gb_integrate_radius.setArguments(args_gb_integrate_radius);
+  addKernelFunction(function_gb_integrate_radius);
+  /* end code for creating the "gb_integrate_radius" kernel function */
+
+} /* End of the growth bound constructor */
 
 void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelProgram)
 {
@@ -44,6 +74,7 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   pfacesParallelAdvisor parallelAdvisor(parallelProgram.getMachine(), parallelProgram.getTargetDevicesIndicies());
 
   /* This range specifies how the task is going to be split up. */
+  pfacesTerminal::showInfoMessage(std::to_string(states_dim));
   cl::NDRange ndUniversalRangeStateDim(
       pfacesBigInt::getPrimitiveValue(states_dim),
       pfacesBigInt::getPrimitiveValue(1)  /* dummy value, no need for second dimension */
@@ -57,8 +88,8 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
 
   cl::NDRange ndUniversalOffsetStateDim = cl::NullRange;
 
-  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_initialize;
-  jobsPerDev_initialize = parallelAdvisor.distributeJob(
+  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_initialize_center;
+  jobsPerDev_gb_initialize_center = parallelAdvisor.distributeJob(
 	      *this,
 	      0, /* function index */
 	      ndProcessRangeStateDim, /* process range */
@@ -68,8 +99,8 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
 	      true, false, false  /* some additional flags */
   );
 
-  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_rk4;
-  jobsPerDev_rk4 = parallelAdvisor.distributeJob(
+  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_center;
+  jobsPerDev_gb_integrate_center = parallelAdvisor.distributeJob(
 	      *this,
 	      1, /* function index */
 	      ndProcessRangeStateDim, /* process range */
@@ -79,12 +110,35 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
 	      true, false, false  /* some additional flags */
   );
 
+  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_initialize_radius;
+  jobsPerDev_gb_initialize_radius = parallelAdvisor.distributeJob(
+	      *this,
+	      2, /* function index */
+	      ndProcessRangeStateDim, /* process range */
+	      ndProcessOffsetStateDim,  /* process offset */
+	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
+	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
+	      true, false, false  /* some additional flags */
+  );
+
+  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius;
+  jobsPerDev_gb_integrate_radius = parallelAdvisor.distributeJob(
+	      *this,
+	      3, /* function index */
+	      ndProcessRangeStateDim, /* process range */
+	      ndProcessOffsetStateDim,  /* process offset */
+	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
+	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
+	      true, false, false  /* some additional flags */
+  );
+
+
   // print the task-scheduling report
   //*
   parallelAdvisor.printTaskSchedulingReport(
       parallelProgram.getMachine(),
-      {"initialize", "rk4"},
-      {jobsPerDev_initialize, jobsPerDev_rk4},
+      {"gb_initialize_center", "gb_integrate_center", "gb_initialize_radius", "gb_integrate_radius"},
+      {jobsPerDev_gb_initialize_center, jobsPerDev_gb_integrate_center, jobsPerDev_gb_initialize_radius, jobsPerDev_gb_integrate_radius},
       ndUniversalRangeStateDim[0]
   );
   //*/
@@ -152,24 +206,63 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
       instrList.push_back(instrSyncPoint);
   }
 
-  // INSTRUCTIONS: initializing the initial states
-  for (size_t i = 0; i < jobsPerDev_initialize.size(); i++) {
+  std::shared_ptr<pfacesInstruction> instrMsg0 = std::make_shared<pfacesInstruction>();
+  instrMsg0->setAsMessage("Initializing center integration...");
+  instrList.push_back(instrMsg0);
+
+  // INSTRUCTIONS: initializing for center integration
+  for (size_t i = 0; i < jobsPerDev_gb_initialize_center.size(); i++) {
       std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_initialize[i]);
+      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_initialize_center[i]);
       instrList.push_back(tmpExecuteInstr);
   }
 
+  // INSTRUCTION: a sync point after initialization
+  instrList.push_back(instrSyncPoint);
+
+  std::shared_ptr<pfacesInstruction> instrMsg1 = std::make_shared<pfacesInstruction>();
+  instrMsg1->setAsMessage("Performing center integration...");
+  instrList.push_back(instrMsg1);
+
+  // INSTRUCTIONS: Perform center integration
+  for (size_t i = 0; i < jobsPerDev_gb_integrate_center.size(); i++) {
+      std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center[i]);
+      instrList.push_back(tmpExecuteInstr);
+  }
+
+  // INSTRUCTION: a sync point after center integration
+  instrList.push_back(instrSyncPoint);
+
+  std::shared_ptr<pfacesInstruction> instrMsg2 = std::make_shared<pfacesInstruction>();
+  instrMsg2->setAsMessage("Initializing radius integration...");
+  instrList.push_back(instrMsg2);
+  // INSTRUCTIONS: initializing for radius integration
+  //for (size_t i = 0; i < jobsPerDev_gb_initialize_radius.size(); i++) {
+  //    std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+  //    tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_initialize_radius[i]);
+  //    instrList.push_back(tmpExecuteInstr);
+  //}
 
   // INSTRUCTION: a sync point after initialization
   instrList.push_back(instrSyncPoint);
 
 
-  // INSTRUCTIONS: performing ODE integration using RK4
-  for (size_t i = 0; i < jobsPerDev_rk4.size(); i++) {
-      std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_rk4[i]);
-      instrList.push_back(tmpExecuteInstr);
-  }
+  std::shared_ptr<pfacesInstruction> instrMsg3 = std::make_shared<pfacesInstruction>();
+  instrMsg3->setAsMessage("Performing radius integration...");
+  instrList.push_back(instrMsg3);
+  // INSTRUCTIONS: performing radius integration
+  //for (size_t i = 0; i < jobsPerDev_gb_integrate_radius.size(); i++) {
+  //    std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+  //    tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius[i]);
+  //    instrList.push_back(tmpExecuteInstr);
+  //}
+
+  // INSTRUCTION: a sync point after initialization
+  instrList.push_back(instrSyncPoint);
+
+  // INSTRUCTION: a sync point after initialization
+  instrList.push_back(instrSyncPoint);
 
 
   // INSTRUCTION: read memory bags from devices

@@ -38,6 +38,8 @@ public:
 		      const std::shared_ptr<pfacesConfigurationReader>& spCfg);
   ~pirk() = default;
 
+  void configureParameters(std::vector<std::string> params, std::vector<std::string> paramvals);
+
   void configureParallelProgram(pfacesParallelProgram& parallelProgram);
 
   void configureTuneParallelProgram(pfacesParallelProgram& tuneParallelProgram, size_t targetFunctionIdx);

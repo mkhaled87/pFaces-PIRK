@@ -15,8 +15,9 @@
 @pfaces-include:"pirk_utils.cl"
 
 /* includes for the growth bound method */
-@pfaces-include:"growth_bound/growth_bound_initialize.cl"
-@pfaces-include:"growth_bound/growth_bound_integrate_center.cl"
-@pfaces-include:"growth_bound/growth_bound_integrate_radius.cl"
+@pfaces-include:"growth_bound/gb_initialize_center.cl"
+@pfaces-include:"growth_bound/gb_integrate_center.cl"
+@pfaces-include:"growth_bound/gb_initialize_radius.cl"
+@pfaces-include:"growth_bound/gb_integrate_radius.cl"
 
 

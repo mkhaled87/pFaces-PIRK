@@ -2,7 +2,7 @@
 #define RK4_NINT 5
 #define RK4_H ((@@true_step_size@@/RK4_NINT))
 
-__kernel void rk4( 
+__kernel void gb_integrate_radius( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -21,10 +21,11 @@ __kernel void rk4(
   final_state[i] = initial_state[i];
   for (unsigned int k=0; k < @@nsteps@@; k++) {
 
-    for (unsigned int t = 0; t < RK4_NINT; t++) {
-    
+    for (unsigned int w = 0; w < RK4_NINT; w++) {
+   
+      #undef dyn_fn 
       #define dyn_fn growth_bound_radius_dynamics
-      #include "../dynamics_body.cl"
+      #include "dynamics_body.cl"
 
     }
   }

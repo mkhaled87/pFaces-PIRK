@@ -3,3 +3,6 @@
 .project
 RemoteSystemsTempFiles
 .cproject
+kernel.o
+kernel.so
+driver.so

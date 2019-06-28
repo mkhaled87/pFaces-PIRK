@@ -22,8 +22,11 @@ step_size = float
 
 dynamics_element_code = string
 
-initial_state_lb = string
-initial_state_ub = string
+initial_state_lower_bound_code = string
+initial_state_upper_bound_code = string
 
-input_lb = string
-input_ub = string
+input_lower_bound_code = string
+input_upper_bound_code = string
+
+growth_bound = scope
+growth_bound.growth_bound_matrix_code = string

@@ -1,5 +1,6 @@
 #include "pirk.h"
 #include <math.h>       /* ceil */
+#include "pirk_utils.cpp"
 #include "pirk_growthbound.cpp"
 
 namespace pirk{
@@ -16,7 +17,7 @@ size_t saveData(
 
   pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE");
   pirk* knl = ((pirk*)(&thisKernel));
-  char* pData = thisParallelProgram.m_dataPool[1].first;
+  /* highest index you can use here is 7 */
   float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
   for(int i=0; i<knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
@@ -51,56 +52,7 @@ pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const 
   std::vector<std::string> params;
   std::vector<std::string> paramvals;
 
-  //int method_choice;
-  method_choice = std::stoi(m_spCfg->readConfigValueString("method_choice"));
-  params.push_back("@@method_choice@@");
-  paramvals.push_back(std::to_string(method_choice));
-
-  //float initial_time;
-  float initial_time = std::stof(m_spCfg->readConfigValueString("initial_time"));
-  params.push_back("@@initial_time@@");
-  paramvals.push_back(std::to_string(initial_time));
-
-  //float final_time;
-  float final_time = std::stof(m_spCfg->readConfigValueString("final_time"));
-  params.push_back("@@final_time@@");
-  paramvals.push_back(std::to_string(final_time));
-
-  //float step_size;
-  float step_size = std::stof(m_spCfg->readConfigValueString("step_size"));
-  params.push_back("@@step_size@@");
-  paramvals.push_back(std::to_string(step_size));
-
-  // true step size
-  float integration_time;
-  int nsteps;
-  float true_step_size;
-  integration_time = final_time - initial_time;
-  nsteps = ceil(integration_time / step_size);
-  true_step_size = integration_time / (float)(nsteps);
-
-  params.push_back("@@true_step_size@@");
-  paramvals.push_back(std::to_string(true_step_size));
-
-  params.push_back("@@nsteps@@");
-  paramvals.push_back(std::to_string(nsteps));
-
-  //int states_dim;
-  states_dim = std::stoi(m_spCfg->readConfigValueString("states.dim"));
-  params.push_back("@@states_dim@@");
-  paramvals.push_back(std::to_string(states_dim));
-
-  //int inputs_dim;
-  inputs_dim = std::stoi(m_spCfg->readConfigValueString("inputs.dim"));
-  params.push_back("@@inputs_dim@@");
-  paramvals.push_back(std::to_string(inputs_dim));
-
-  dynamics_element_code = m_spCfg->readConfigValueString("dynamics_element_code");
-  params.push_back("@@dynamics_element_code@@");
-  paramvals.push_back(dynamics_element_code);
-
-  // updating the list of params
-  updatePrameters(params, paramvals);
+  configureParameters(params, paramvals);
 
   // TASK2: Creating the kernel function and load their memory fingerprints
   //------------------------------------------------------------------------

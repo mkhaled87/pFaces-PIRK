@@ -11,28 +11,65 @@
 
 #define CPU_VERSION
 
-// pfaces-Including a parameters and some funcs
+/* common utility file */
 /* the dynamics post function without any noise : noise is assumed to be additive */
 //void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i);
 void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
-	dx[i] = x[i];
+  dx[i] = x[i];
 }
 
-
-// pFaces-Including a KERNEL-Function: initialize
-__kernel void initialize( 
-    __global float* initial_state
-    ) 
+float growth_bound_matrix(int i, int j, __global float* u)
 {
-  int i = get_global_id(0);
-  initial_state[i] = 1;
+  float c;
+  if(i==j) c = 1.0; else c = 0.0;
+  return c;
 }
 
-// pFaces-Including a KERNEL-Function: rk4
+void growth_bound_radius_dynamics(__global float* dr, __global float* r, __global float* u, float t, int i)
+{
+  dr[i] = 0;
+  for (int j=0; j < 10; j++) {
+    //dr[i] += growth_bound_matrix(i,j,u)*r[j];
+    dr[i] += 0.0;
+  }
+  dr[i] += u[i];
+}
+
+
+/* includes for the growth bound method */
+__kernel void gb_initialize_center( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp)
+{
+  float x_low, x_up, u_low, u_up;
+  x_low=0;
+  x_up=1;
+  u_low=0;
+  u_up=1;
+  int i = get_global_id(0);
+  /* for the center dynamics, we want the initial state to be the center of the interval 
+   * (hence the name), that is the mean of the upper and lower bound. */
+  initial_state[i] = 0.5 * (x_low + x_up);
+  final_state[i] = 0;
+  k0[i] = 0;
+  k1[i] = 0;
+  k2[i] = 0;
+  k3[i] = 0;
+  tmp[i] = 0;
+
+}
+
+
 #define RK4_NINT 5
 #define RK4_H ((0.100000/RK4_NINT))
 
-__kernel void rk4( 
+__kernel void gb_integrate_center( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -51,9 +88,68 @@ __kernel void rk4(
   final_state[i] = initial_state[i];
   for (unsigned int k=0; k < 100; k++) {
 
-    for (unsigned int t = 0; t < RK4_NINT; t++) {
+    for (unsigned int w = 0; w < RK4_NINT; w++) {
     
       #define dyn_fn dynamics_element
+      #include "dynamics_body.cl"
+
+    }
+  }
+}
+__kernel void gb_initialize_radius( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp)
+{
+  float x_low, x_up, u_low, u_up;
+  x_low=0;
+  x_up=1;
+  u_low=0;
+  u_up=1;
+  int i = get_global_id(0);
+  /* for the radius dynamics, we want the initial state to be the radius of the interval 
+   * (hence the name), that is one-half the distance between the upper and lower bound. */
+  initial_state[i] = 0.5 * (x_up - x_low);
+  final_state[i] = 0;
+  k0[i] = 0;
+  k1[i] = 0;
+  k2[i] = 0;
+  k3[i] = 0;
+  tmp[i] = 0;
+
+}
+
+#define RK4_NINT 5
+#define RK4_H ((0.100000/RK4_NINT))
+
+__kernel void gb_integrate_radius( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp)
+{
+
+  int i = get_global_id(0);
+  float t = 0.000000;
+  int nsteps = 100;
+  float step_size = 0.100000;
+  
+  final_state[i] = initial_state[i];
+  for (unsigned int k=0; k < 100; k++) {
+
+    for (unsigned int w = 0; w < RK4_NINT; w++) {
+   
+      #undef dyn_fn 
+      #define dyn_fn growth_bound_radius_dynamics
       #include "dynamics_body.cl"
 
     }

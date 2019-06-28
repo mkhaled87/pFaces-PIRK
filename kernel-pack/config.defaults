@@ -10,23 +10,21 @@ final_time = "1.0";
 step_size = "1.0";
 
 states{
-	dim = "0";
+	dim = "3";
 }
 
 inputs{
-	dim = "0";
+	dim = "3";
 }
 
 dynamics_element_code = "dx[i] = x[i];";
 
-initial_state_lb = "";
+initial_state_lower_bound_code = "x_low[i]=0;";
+initial_state_upper_bound_code = "x_up[i]=1;";
 
-initial_state_ub = "";
+input_lower_bound_code = "u_low[i]=0;";
+input_upper_bound_code = "u_up[i]=1;";
 
-input_lb = "";
-
-input_ub = "";
-
-growth_bound = {
+growth_bound{
     growth_bound_matrix_code = "if(i==j) c = 1.0; else c = 0.0;";
 }
