@@ -238,11 +238,11 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   instrMsg2->setAsMessage("Initializing radius integration...");
   instrList.push_back(instrMsg2);
   // INSTRUCTIONS: initializing for radius integration
-  //for (size_t i = 0; i < jobsPerDev_gb_initialize_radius.size(); i++) {
-  //    std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-  //    tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_initialize_radius[i]);
-  //    instrList.push_back(tmpExecuteInstr);
-  //}
+  for (size_t i = 0; i < jobsPerDev_gb_initialize_radius.size(); i++) {
+      std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_initialize_radius[i]);
+      instrList.push_back(tmpExecuteInstr);
+  }
 
   // INSTRUCTION: a sync point after initialization
   instrList.push_back(instrSyncPoint);
@@ -252,11 +252,11 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   instrMsg3->setAsMessage("Performing radius integration...");
   instrList.push_back(instrMsg3);
   // INSTRUCTIONS: performing radius integration
-  //for (size_t i = 0; i < jobsPerDev_gb_integrate_radius.size(); i++) {
-  //    std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-  //    tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius[i]);
-  //    instrList.push_back(tmpExecuteInstr);
-  //}
+  for (size_t i = 0; i < jobsPerDev_gb_integrate_radius.size(); i++) {
+      std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius[i]);
+      instrList.push_back(tmpExecuteInstr);
+  }
 
   // INSTRUCTION: a sync point after initialization
   instrList.push_back(instrSyncPoint);

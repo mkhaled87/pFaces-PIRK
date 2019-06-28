@@ -30,9 +30,9 @@ void growth_bound_radius_dynamics(__global float* dr, __global float* r, __globa
   dr[i] = 0;
   for (int j=0; j < 10; j++) {
     //dr[i] += growth_bound_matrix(i,j,u)*r[j];
-    dr[i] += 0.0;
+    dr[i] += 0.1;
   }
-  dr[i] += u[i];
+  dr[i] += u[i]; //this is causing the bug
 }
 
 
@@ -121,6 +121,8 @@ __kernel void gb_initialize_radius(
   k2[i] = 0;
   k3[i] = 0;
   tmp[i] = 0;
+  /* TODO: implement input*/
+  //input[i]=0;
 
 }
 

@@ -16,7 +16,7 @@ void growth_bound_radius_dynamics(__global float* dr, __global float* r, __globa
   dr[i] = 0;
   for (int j=0; j < @@states_dim@@; j++) {
     //dr[i] += growth_bound_matrix(i,j,u)*r[j];
-    dr[i] += 0.0;
+    dr[i] += 0.1;
   }
-  dr[i] += u[i];
+  dr[i] += u[i]; //this is causing the bug
 }

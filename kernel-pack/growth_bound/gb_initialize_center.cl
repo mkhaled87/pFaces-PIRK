@@ -23,5 +23,7 @@ __kernel void gb_initialize_center(
   k2[i] = 0;
   k3[i] = 0;
   tmp[i] = 0;
+  /* TODO: implement input*/
+  input[i]=0;
 
 }
