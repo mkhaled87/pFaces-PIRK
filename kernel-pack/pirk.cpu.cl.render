@@ -11,7 +11,13 @@
 
 #define CPU_VERSION
 
+/* includes for the growth bound method */
+// /home/hcs/Documents/pFaces/examples/pirk/test_config/hi.cl
+
+
+
 /* common utility file */
+
 /* the dynamics post function without any noise : noise is assumed to be additive */
 //void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i);
 void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
@@ -29,14 +35,15 @@ void growth_bound_radius_dynamics(__global float* dr, __global float* r, __globa
 {
   dr[i] = 0;
   for (int j=0; j < 10; j++) {
-    //dr[i] += growth_bound_matrix(i,j,u)*r[j];
-    dr[i] += 0.1;
+    dr[i] += growth_bound_matrix(i,j,u)*r[j];
   }
   dr[i] += u[i]; //this is causing the bug
 }
 
+/* THIS IS WHERE THE TEST INCLUDE SHOULD BE */
+#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/hi.cl"
+/* IS IT THERE? */
 
-/* includes for the growth bound method */
 __kernel void gb_initialize_center( 
     __global float *initial_state,
     __global float *final_state, 
@@ -49,8 +56,8 @@ __kernel void gb_initialize_center(
 {
   float x_low, x_up, u_low, u_up;
   x_low=0;
-  x_up=1;
-  u_low=0;
+  x_up=0;
+  u_low=-1;
   u_up=1;
   int i = get_global_id(0);
   /* for the center dynamics, we want the initial state to be the center of the interval 
@@ -62,6 +69,7 @@ __kernel void gb_initialize_center(
   k2[i] = 0;
   k3[i] = 0;
   tmp[i] = 0;
+  input[i]=0.5 * (u_up + u_low);
 
 }
 
@@ -108,8 +116,8 @@ __kernel void gb_initialize_radius(
 {
   float x_low, x_up, u_low, u_up;
   x_low=0;
-  x_up=1;
-  u_low=0;
+  x_up=0;
+  u_low=-1;
   u_up=1;
   int i = get_global_id(0);
   /* for the radius dynamics, we want the initial state to be the radius of the interval 
@@ -122,7 +130,7 @@ __kernel void gb_initialize_radius(
   k3[i] = 0;
   tmp[i] = 0;
   /* TODO: implement input*/
-  //input[i]=0;
+  input[i]=0.5 * (u_up - u_low);
 
 }
 

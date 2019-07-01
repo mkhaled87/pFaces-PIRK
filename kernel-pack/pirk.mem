@@ -417,7 +417,7 @@ gb_initialize_radius{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 2.1: final_state (gets attached to 0.1's buffer)
+	# argument 2.1: final_state (gets attached to a new buffer (so that the final radius doesn't get clobbered)
 	# ----------------------------------------------------
 	final_state{
 		directionWriteOrRead	= "false";
@@ -433,9 +433,9 @@ gb_initialize_radius{
 		isConstantMemory		= "false";
 		isLocalMemory			= "false";
 		isRangeScalable			= "true";
-		isNewOrResident			= "false";
-		residentFuncIdx			= "0";
-		residentFuncArgIdx		= "1";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
 		requiresSubBuffering	= "true";
 		equalSubBufferSizes		= "false";
 	}
@@ -607,7 +607,7 @@ gb_integrate_radius{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 3.1: final_state (gets attached to 0.1's buffer)
+	# argument 3.1: final_state (gets attached to 2.1's buffer)
 	# ----------------------------------------------------
 	final_state{
 		directionWriteOrRead	= "false";
@@ -624,7 +624,7 @@ gb_integrate_radius{
 		isLocalMemory			= "false";
 		isRangeScalable			= "true";
 		isNewOrResident			= "false";
-		residentFuncIdx			= "0";
+		residentFuncIdx			= "2";
 		residentFuncArgIdx		= "1";
 		requiresSubBuffering	= "true";
 		equalSubBufferSizes		= "false";

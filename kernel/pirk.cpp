@@ -17,8 +17,13 @@ size_t saveData(
 
   pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE");
   pirk* knl = ((pirk*)(&thisKernel));
-  /* highest index you can use here is 7 */
+  /* index 1 is the final state for the center */
   float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
+  for(int i=0; i<knl->states_dim; i++) {
+      pfacesTerminal::showMessage(std::to_string(A[i]));
+    }
+  /* index 8 is the final state for the radius */
+  A = (float*)(thisParallelProgram.m_dataPool[8].first);
   for(int i=0; i<knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
     }

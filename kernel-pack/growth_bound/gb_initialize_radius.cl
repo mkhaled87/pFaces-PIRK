@@ -24,6 +24,6 @@ __kernel void gb_initialize_radius(
   k3[i] = 0;
   tmp[i] = 0;
   /* TODO: implement input*/
-  //input[i]=0;
+  input[i]=0.5 * (u_up - u_low);
 
 }

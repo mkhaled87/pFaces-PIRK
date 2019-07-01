@@ -27,7 +27,7 @@ all: $(TARGET)
 
 kernel: 
 	$(CC) -c -o kernel.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) $(KERNEL_SRC)
-	$(CC) -shared -o kernel.so -Wl,--whole-archive $(PFACES_SDK_LNK) -Wl,--no-whole-archive kernel.o
+	$(CC) -shared -o kernel.so -Wl,--whole-archive $(PFACES_SDK_LNK) -Wl,--no-whole-archive kernel.o -lstdc++fs
 	cp kernel.so ../kernel-pack/driver.so
 
 clean:
