@@ -1,4 +1,4 @@
-      dyn_fn(k0, final_state, input, t, i);
+      k0[i] = dyn_fn(final_state, input, t, i);
     
       barrier(CLK_GLOBAL_MEM_FENCE);
 
@@ -6,7 +6,7 @@
 	
       barrier(CLK_GLOBAL_MEM_FENCE);
       
-      dyn_fn(k1, tmp, input, t + 0.5*step_size,  i);
+      k1[i] = dyn_fn(tmp, input, t + 0.5*step_size,  i);
 
       barrier(CLK_GLOBAL_MEM_FENCE);
 
@@ -14,7 +14,7 @@
     
       barrier(CLK_GLOBAL_MEM_FENCE);
 
-      dyn_fn(k2, tmp, input, t + 0.5*step_size, i);
+      k2[i] = dyn_fn(tmp, input, t + 0.5*step_size, i);
     
       barrier(CLK_GLOBAL_MEM_FENCE);
 
@@ -22,7 +22,7 @@
     
       barrier(CLK_GLOBAL_MEM_FENCE);
 
-      dyn_fn(k3, tmp, input, t +  step_size, i);
+      k3[i] = dyn_fn(tmp, input, t +  step_size, i);
     
       barrier(CLK_GLOBAL_MEM_FENCE);
 

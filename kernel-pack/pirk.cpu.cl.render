@@ -18,31 +18,35 @@
 
 /* common utility file */
 
+// code to load the dynamics from the config file. TODO: integrate this back in
 /* the dynamics post function without any noise : noise is assumed to be additive */
 //void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i);
-void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
-  dx[i] = x[i];
-}
+//void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
+//  dx[i] = x[i];
+//}
+#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/dynamics.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/bounds.cl"
 
-float growth_bound_matrix(int i, int j, __global float* u)
-{
-  float c;
-  if(i==j) c = 1.0; else c = 0.0;
-  return c;
-}
+//float growth_bound_matrix(int i, int j, __global float* u)
+//{
+//  float c;
+//  if(i==j) c = 1.0; else c = 0.0;
+//  return c;
+//}
+#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/growth_bound_matrix.cl"
 
-void growth_bound_radius_dynamics(__global float* dr, __global float* r, __global float* u, float t, int i)
+
+float growth_bound_radius_dynamics( __global float* r, __global float* u, float t, int i)
 {
-  dr[i] = 0;
+  float dr;
+  dr = 0;
   for (int j=0; j < 10; j++) {
-    dr[i] += growth_bound_matrix(i,j,u)*r[j];
+    dr += growth_bound_matrix(i,j,u)*r[j];
   }
-  dr[i] += u[i]; //this is causing the bug
+  dr += u[i]; //this is causing the bug
+  return dr;
 }
 
-/* THIS IS WHERE THE TEST INCLUDE SHOULD BE */
-#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/hi.cl"
-/* IS IT THERE? */
 
 __kernel void gb_initialize_center( 
     __global float *initial_state,
@@ -55,11 +59,15 @@ __kernel void gb_initialize_center(
     __global float *tmp)
 {
   float x_low, x_up, u_low, u_up;
-  x_low=0;
-  x_up=0;
-  u_low=-1;
-  u_up=1;
   int i = get_global_id(0);
+  //x_low=0;
+  x_low = initial_state_lower_bound(i);
+  //x_up=0;
+  x_up = initial_state_upper_bound(i);
+  //u_low=-1;
+  u_low = input_lower_bound(i);
+  //u_up=1;
+  u_up = input_upper_bound(i);
   /* for the center dynamics, we want the initial state to be the center of the interval 
    * (hence the name), that is the mean of the upper and lower bound. */
   initial_state[i] = 0.5 * (x_low + x_up);
@@ -115,11 +123,11 @@ __kernel void gb_initialize_radius(
     __global float *tmp)
 {
   float x_low, x_up, u_low, u_up;
-  x_low=0;
-  x_up=0;
-  u_low=-1;
-  u_up=1;
   int i = get_global_id(0);
+  x_low = initial_state_lower_bound(i);
+  x_up = initial_state_upper_bound(i);
+  u_low = input_lower_bound(i);
+  u_up = input_upper_bound(i);
   /* for the radius dynamics, we want the initial state to be the radius of the interval 
    * (hence the name), that is one-half the distance between the upper and lower bound. */
   initial_state[i] = 0.5 * (x_up - x_low);

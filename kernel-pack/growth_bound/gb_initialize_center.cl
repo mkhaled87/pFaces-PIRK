@@ -9,11 +9,11 @@ __kernel void gb_initialize_center(
     __global float *tmp)
 {
   float x_low, x_up, u_low, u_up;
-  @@initial_state_lower_bound_code@@
-  @@initial_state_upper_bound_code@@
-  @@input_lower_bound_code@@
-  @@input_upper_bound_code@@
   int i = get_global_id(0);
+  x_low = initial_state_lower_bound(i);
+  x_up = initial_state_upper_bound(i);
+  u_low = input_lower_bound(i);
+  u_up = input_upper_bound(i);
   /* for the center dynamics, we want the initial state to be the center of the interval 
    * (hence the name), that is the mean of the upper and lower bound. */
   initial_state[i] = 0.5 * (x_low + x_up);
