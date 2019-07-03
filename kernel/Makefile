@@ -2,8 +2,8 @@
 # compiler
 #
 CC        		= g++
-#CXXFLAGS 		= -Wall -Wextra -std=c++11 -O3 -DNDEBUG -Wno-ignored-attributes -Wno-deprecated  # no debug
-CXXFLAGS 		= -Wall -g -Wextra -std=c++11 -O0 -Wno-ignored-attributes -Wno-deprecated  # yes debug
+CXXFLAGS 		= -Wall -Wextra -std=c++11 -O3 -DNDEBUG -Wno-ignored-attributes -Wno-deprecated  # no debug
+#CXXFLAGS 		= -Wall -g -Wextra -std=c++11 -O0 -Wno-ignored-attributes -Wno-deprecated  # yes debug
 
 #
 # pfaces-sdk

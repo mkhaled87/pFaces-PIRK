@@ -5,18 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../kernel/pirk.cpp \
-../kernel/pirk_growthbound.cpp 
+../kernel/pirk_growthbound.cpp \
+../kernel/pirk_utils.cpp 
 
 O_SRCS += \
 ../kernel/kernel.o 
 
 OBJS += \
 ./kernel/pirk.o \
-./kernel/pirk_growthbound.o 
+./kernel/pirk_growthbound.o \
+./kernel/pirk_utils.o 
 
 CPP_DEPS += \
 ./kernel/pirk.d \
-./kernel/pirk_growthbound.d 
+./kernel/pirk_growthbound.d \
+./kernel/pirk_utils.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

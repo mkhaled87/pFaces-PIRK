@@ -17,15 +17,22 @@ __kernel void gb_integrate_center(
   float t = @@initial_time@@;
   int nsteps = @@nsteps@@;
   float step_size = @@true_step_size@@;
-  
+  float dif; 
   final_state[i] = initial_state[i];
+  barrier(CLK_GLOBAL_MEM_FENCE);
   for (unsigned int k=0; k < @@nsteps@@; k++) {
-
+      barrier(CLK_GLOBAL_MEM_FENCE);
+      dif = final_state[4];
     for (unsigned int w = 0; w < RK4_NINT; w++) {
+      barrier(CLK_GLOBAL_MEM_FENCE);
     
       #define dyn_fn dynamics_element
       #include "dynamics_body.cl"
+      barrier(CLK_GLOBAL_MEM_FENCE);
 
     }
+    barrier(CLK_GLOBAL_MEM_FENCE);
+    //if (i == 4) printf("%f\n",final_state[4]-dif);
   }
+  barrier(CLK_GLOBAL_MEM_FENCE);
 }

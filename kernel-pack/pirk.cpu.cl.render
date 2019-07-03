@@ -12,7 +12,7 @@
 #define CPU_VERSION
 
 /* includes for the growth bound method */
-// /home/hcs/Documents/pFaces/examples/pirk/test_config/hi.cl
+// /home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/hi.cl
 
 
 
@@ -24,8 +24,8 @@
 //void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
 //  dx[i] = x[i];
 //}
-#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/dynamics.cl"
-#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/bounds.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/dynamics.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/bounds.cl"
 
 //float growth_bound_matrix(int i, int j, __global float* u)
 //{
@@ -33,7 +33,7 @@
 //  if(i==j) c = 1.0; else c = 0.0;
 //  return c;
 //}
-#include "/home/hcs/Documents/pFaces/examples/pirk/test_config/growth_bound_matrix.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/growth_bound_matrix.cl"
 
 
 float growth_bound_radius_dynamics( __global float* r, __global float* u, float t, int i)
@@ -60,13 +60,9 @@ __kernel void gb_initialize_center(
 {
   float x_low, x_up, u_low, u_up;
   int i = get_global_id(0);
-  //x_low=0;
   x_low = initial_state_lower_bound(i);
-  //x_up=0;
   x_up = initial_state_upper_bound(i);
-  //u_low=-1;
   u_low = input_lower_bound(i);
-  //u_up=1;
   u_up = input_upper_bound(i);
   /* for the center dynamics, we want the initial state to be the center of the interval 
    * (hence the name), that is the mean of the upper and lower bound. */
@@ -83,7 +79,7 @@ __kernel void gb_initialize_center(
 
 
 #define RK4_NINT 5
-#define RK4_H ((0.100000/RK4_NINT))
+#define RK4_H ((0.010000/RK4_NINT))
 
 __kernel void gb_integrate_center( 
     __global float *initial_state,
@@ -99,18 +95,25 @@ __kernel void gb_integrate_center(
   int i = get_global_id(0);
   float t = 0.000000;
   int nsteps = 100;
-  float step_size = 0.100000;
-  
+  float step_size = 0.010000;
+  float dif; 
   final_state[i] = initial_state[i];
+  barrier(CLK_GLOBAL_MEM_FENCE);
   for (unsigned int k=0; k < 100; k++) {
-
+      barrier(CLK_GLOBAL_MEM_FENCE);
+      dif = final_state[4];
     for (unsigned int w = 0; w < RK4_NINT; w++) {
+      barrier(CLK_GLOBAL_MEM_FENCE);
     
       #define dyn_fn dynamics_element
       #include "dynamics_body.cl"
+      barrier(CLK_GLOBAL_MEM_FENCE);
 
     }
+    barrier(CLK_GLOBAL_MEM_FENCE);
+    //if (i == 4) printf("%f\n",final_state[4]-dif);
   }
+  barrier(CLK_GLOBAL_MEM_FENCE);
 }
 __kernel void gb_initialize_radius( 
     __global float *initial_state,
@@ -137,13 +140,12 @@ __kernel void gb_initialize_radius(
   k2[i] = 0;
   k3[i] = 0;
   tmp[i] = 0;
-  /* TODO: implement input*/
   input[i]=0.5 * (u_up - u_low);
 
 }
 
 #define RK4_NINT 5
-#define RK4_H ((0.100000/RK4_NINT))
+#define RK4_H ((0.010000/RK4_NINT))
 
 __kernel void gb_integrate_radius( 
     __global float *initial_state,
@@ -159,7 +161,7 @@ __kernel void gb_integrate_radius(
   int i = get_global_id(0);
   float t = 0.000000;
   int nsteps = 100;
-  float step_size = 0.100000;
+  float step_size = 0.010000;
   
   final_state[i] = initial_state[i];
   for (unsigned int k=0; k < 100; k++) {

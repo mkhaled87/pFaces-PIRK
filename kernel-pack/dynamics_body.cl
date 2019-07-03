@@ -1,3 +1,5 @@
+      barrier(CLK_GLOBAL_MEM_FENCE);
+
       k0[i] = dyn_fn(final_state, input, t, i);
     
       barrier(CLK_GLOBAL_MEM_FENCE);
