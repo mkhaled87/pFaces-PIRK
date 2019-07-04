@@ -29,6 +29,8 @@ public:
   int inputs_dim;
   int method_choice;
   float integration_time;
+  int nsteps;
+  float true_step_size;
   string dynamics_element_code;
 
   /* All pFaces kernel classes need to provide the following three methods: */

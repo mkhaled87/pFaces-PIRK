@@ -21,7 +21,7 @@ float dynamics_element(__global float* x, __global float* u, float t, int i) {
     //        but the first (i.e. the real one) to be zero.
 
     // Parameters
-    int nlinks = 9;
+    int nlinks = 1000;
     float v = 0.5;            // free-flow speed, in links/period
     float w = (float)(1./6.);            // congestion-wave speed, in links/period
     float c = 40.;             // capacity (max downstream flow), in vehicles/period
@@ -70,7 +70,6 @@ float dynamics_element(__global float* x, __global float* u, float t, int i) {
                  );
         t2 = fmin(c, v * x[(nlinks-1) - 1]);
         dx = 1/T * (t1 - t2);
-        printf("%f\n",dx);
     }
     
     else if(i == nlinks - 1) {

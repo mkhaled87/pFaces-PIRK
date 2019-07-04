@@ -1,10 +1,9 @@
 /*
-* amytiss.cpu.cl
+* pirk.cpu.cl
 *
-*  date    : 28.04.2019
-*  author  : M. Khaled | Hybrid control systems @ Technical University of Munich, Germany
-*  about   : an OpenCL kernel (optimized for CPUs) used to of the tool AMYTISS.
-*            AMYTISS is a tool for an abstractuin based synthesis of stochastic systems.
+*  date    : 04.07.2019
+*  author  : A. Devonport | Electrical Engineering and Computer Sciences, Univeristy of California, Berkeley
+*  about   : An OpenCL kernel for computing interval overapproximations of reachable sets.
 * ***********************************************************************
 *  The kernel manager will replace parameters enclosed by "@@" before compiling !
 */
@@ -12,35 +11,19 @@
 #define CPU_VERSION
 
 /* includes for the growth bound method */
-// /home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/hi.cl
-
-
+// /home/hcs/Documents/pFaces/examples/pirk/ex_n_link/hi.cl
 
 /* common utility file */
 
-// code to load the dynamics from the config file. TODO: integrate this back in
-/* the dynamics post function without any noise : noise is assumed to be additive */
-//void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i);
-//void dynamics_element(__global float* dx, __global float* x, __global float* u, float t, int i) {
-//  dx[i] = x[i];
-//}
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/dynamics.cl"
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/bounds.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/bounds.cl"
 
-//float growth_bound_matrix(int i, int j, __global float* u)
-//{
-//  float c;
-//  if(i==j) c = 1.0; else c = 0.0;
-//  return c;
-//}
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_tridiag/growth_bound_matrix.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/growth_bound_matrix.cl"
 
-
-float growth_bound_radius_dynamics( __global float* r, __global float* u, float t, int i)
+float growth_bound_radius_dynamics(__global float* r, __global float* u, float t, int i)
 {
-  float dr;
-  dr = 0;
-  for (int j=0; j < 10; j++) {
+  float dr=0;
+  for (int j=0; j < 1000; j++) {
     dr += growth_bound_matrix(i,j,u)*r[j];
   }
   dr += u[i]; //this is causing the bug
@@ -56,7 +39,8 @@ __kernel void gb_initialize_center(
     __global float *k1,
     __global float *k2,
     __global float *k3,
-    __global float *tmp)
+    __global float *tmp,
+    __global float *t)
 {
   float x_low, x_up, u_low, u_up;
   int i = get_global_id(0);
@@ -67,54 +51,35 @@ __kernel void gb_initialize_center(
   /* for the center dynamics, we want the initial state to be the center of the interval 
    * (hence the name), that is the mean of the upper and lower bound. */
   initial_state[i] = 0.5 * (x_low + x_up);
-  final_state[i] = 0;
+  final_state[i] = initial_state[i];
   k0[i] = 0;
   k1[i] = 0;
   k2[i] = 0;
   k3[i] = 0;
   tmp[i] = 0;
   input[i]=0.5 * (u_up + u_low);
+  *t = 0.000000;
 
 }
 
 
+#define step_size 0.100000
 #define RK4_NINT 5
-#define RK4_H ((0.010000/RK4_NINT))
+#define RK4_H ((0.100000/RK4_NINT))
 
-__kernel void gb_integrate_center( 
-    __global float *initial_state,
-    __global float *final_state, 
-    __global float *input,
-    __global float *k0,
-    __global float *k1,
-    __global float *k2,
-    __global float *k3,
-    __global float *tmp)
-{
+#define gb_integrate_dynchoice_1 gb_integrate_center_1
+#define gb_integrate_dynchoice_2 gb_integrate_center_2
+#define gb_integrate_dynchoice_3 gb_integrate_center_3
+#define gb_integrate_dynchoice_4 gb_integrate_center_4
+#define gb_integrate_dynchoice_5 gb_integrate_center_5
+#define gb_integrate_dynchoice_6 gb_integrate_center_6
+#define gb_integrate_dynchoice_7 gb_integrate_center_7
+#define gb_integrate_dynchoice_8 gb_integrate_center_8
 
-  int i = get_global_id(0);
-  float t = 0.000000;
-  int nsteps = 100;
-  float step_size = 0.010000;
-  float dif; 
-  final_state[i] = initial_state[i];
-  barrier(CLK_GLOBAL_MEM_FENCE);
-  for (unsigned int k=0; k < 100; k++) {
-      barrier(CLK_GLOBAL_MEM_FENCE);
-      dif = final_state[4];
-    for (unsigned int w = 0; w < RK4_NINT; w++) {
-      barrier(CLK_GLOBAL_MEM_FENCE);
-    
-      #define dyn_fn dynamics_element
-      #include "dynamics_body.cl"
-      barrier(CLK_GLOBAL_MEM_FENCE);
+#define dynfn dynamics_element
 
-    }
-    barrier(CLK_GLOBAL_MEM_FENCE);
-    //if (i == 4) printf("%f\n",final_state[4]-dif);
-  }
-  barrier(CLK_GLOBAL_MEM_FENCE);
-}
+#include "growth_bound/integrate_kfns.cl"
+
 __kernel void gb_initialize_radius( 
     __global float *initial_state,
     __global float *final_state, 
@@ -123,7 +88,8 @@ __kernel void gb_initialize_radius(
     __global float *k1,
     __global float *k2,
     __global float *k3,
-    __global float *tmp)
+    __global float *tmp,
+    __global float *t)
 {
   float x_low, x_up, u_low, u_up;
   int i = get_global_id(0);
@@ -134,46 +100,37 @@ __kernel void gb_initialize_radius(
   /* for the radius dynamics, we want the initial state to be the radius of the interval 
    * (hence the name), that is one-half the distance between the upper and lower bound. */
   initial_state[i] = 0.5 * (x_up - x_low);
-  final_state[i] = 0;
+  final_state[i] = initial_state[i];
   k0[i] = 0;
   k1[i] = 0;
   k2[i] = 0;
   k3[i] = 0;
   tmp[i] = 0;
   input[i]=0.5 * (u_up - u_low);
+  printf("%f\n",input[i]);
+  *t = 0.000000;
 
 }
 
-#define RK4_NINT 5
-#define RK4_H ((0.010000/RK4_NINT))
+#undef gb_integrate_dynchoice_1
+#undef gb_integrate_dynchoice_2
+#undef gb_integrate_dynchoice_3
+#undef gb_integrate_dynchoice_4
+#undef gb_integrate_dynchoice_5
+#undef gb_integrate_dynchoice_6
+#undef gb_integrate_dynchoice_7
+#undef gb_integrate_dynchoice_8
 
-__kernel void gb_integrate_radius( 
-    __global float *initial_state,
-    __global float *final_state, 
-    __global float *input,
-    __global float *k0,
-    __global float *k1,
-    __global float *k2,
-    __global float *k3,
-    __global float *tmp)
-{
+#undef dynfn
 
-  int i = get_global_id(0);
-  float t = 0.000000;
-  int nsteps = 100;
-  float step_size = 0.010000;
-  
-  final_state[i] = initial_state[i];
-  for (unsigned int k=0; k < 100; k++) {
+#define gb_integrate_dynchoice_1 gb_integrate_radius_1
+#define gb_integrate_dynchoice_2 gb_integrate_radius_2
+#define gb_integrate_dynchoice_3 gb_integrate_radius_3
+#define gb_integrate_dynchoice_4 gb_integrate_radius_4
+#define gb_integrate_dynchoice_5 gb_integrate_radius_5
+#define gb_integrate_dynchoice_6 gb_integrate_radius_6
+#define gb_integrate_dynchoice_7 gb_integrate_radius_7
+#define gb_integrate_dynchoice_8 gb_integrate_radius_8
+#define dynfn growth_bound_radius_dynamics
 
-    for (unsigned int w = 0; w < RK4_NINT; w++) {
-   
-      #undef dyn_fn 
-      #define dyn_fn growth_bound_radius_dynamics
-      #include "dynamics_body.cl"
-
-    }
-  }
-}
-
-
+#include "growth_bound/integrate_kfns.cl"

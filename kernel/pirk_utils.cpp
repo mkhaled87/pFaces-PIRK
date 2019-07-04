@@ -36,7 +36,7 @@ void pirk::configureParameters(std::vector<std::string> params, std::vector<std:
 
   // true step size
   float integration_time;
-  int nsteps;
+  //int nsteps;
   float true_step_size;
   integration_time = final_time - initial_time;
   nsteps = ceil(integration_time / step_size);

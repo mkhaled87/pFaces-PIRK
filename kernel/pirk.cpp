@@ -22,8 +22,9 @@ size_t saveData(
   for(int i=0; i<knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
     }
+    pfacesTerminal::showMessage("-------------------");
   /* index 8 is the final state for the radius */
-  A = (float*)(thisParallelProgram.m_dataPool[8].first);
+  A = (float*)(thisParallelProgram.m_dataPool[9].first);
   for(int i=0; i<knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
     }
