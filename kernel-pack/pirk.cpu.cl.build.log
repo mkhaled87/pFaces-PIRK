@@ -1,18 +1,265 @@
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 15:49:54-436
+Build log started on Monday 08/07/2019 15:41:21-027
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
 Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-1:61:8: error: expected expression
-1:82:10: fatal error: 'integrate_kfns.cl' file not found
+1:138:3: error: unknown type name '__global_float'
+1:155:9: error: use of undeclared identifier 'idx_star'
+1:164:9: error: use of undeclared identifier 'idx_star'
+1:168:14: error: expected expression
+1:170:14: error: expected expression
+1:172:17: error: expected expression
+1:173:16: error: expected expression
+1:177:20: error: implicit declaration of function 'state_jacobian_upper_bound' is invalid in OpenCL
+1:178:20: error: implicit declaration of function 'state_jacobian_lower_bound' is invalid in OpenCL
+1:178:20: note: did you mean 'state_jacobian_upper_bound'?
+1:177:20: note: 'state_jacobian_upper_bound' declared here
+1:178:49: error: use of undeclared identifier 'l'
+1:179:9: error: use of undeclared identifier 'jm'
+1:180:12: error: use of undeclared identifier 'jm'
+1:186:24: error: call to 'max' is ambiguous
+<stdin>:2078:61: note: candidate function
+<stdin>:1641:60: note: candidate function
+<stdin>:1642:61: note: candidate function
+<stdin>:1653:61: note: candidate function
+<stdin>:1654:62: note: candidate function
+<stdin>:1665:59: note: candidate function
+<stdin>:1666:60: note: candidate function
+<stdin>:1677:60: note: candidate function
+<stdin>:1678:61: note: candidate function
+<stdin>:2084:62: note: candidate function
+<stdin>:2085:62: note: candidate function
+<stdin>:2086:62: note: candidate function
+<stdin>:2087:62: note: candidate function
+<stdin>:2088:63: note: candidate function
+<stdin>:1461:68: note: candidate function
+<stdin>:1469:23: note: candidate function
+<stdin>:1470:39: note: candidate function
+<stdin>:1471:53: note: candidate function
+<stdin>:1472:67: note: candidate function
+<stdin>:1474:8: note: candidate function
+<stdin>:1643:61: note: candidate function
+<stdin>:1644:62: note: candidate function
+<stdin>:1645:61: note: candidate function
+<stdin>:1646:62: note: candidate function
+<stdin>:1647:61: note: candidate function
+<stdin>:1648:62: note: candidate function
+<stdin>:1649:61: note: candidate function
+<stdin>:1650:62: note: candidate function
+<stdin>:1651:62: note: candidate function
+<stdin>:1652:63: note: candidate function
+<stdin>:1655:62: note: candidate function
+<stdin>:1656:63: note: candidate function
+<stdin>:1657:62: note: candidate function
+<stdin>:1658:63: note: candidate function
+<stdin>:1659:62: note: candidate function
+<stdin>:1660:63: note: candidate function
+<stdin>:1661:62: note: candidate function
+<stdin>:1662:63: note: candidate function
+<stdin>:1663:63: note: candidate function
+<stdin>:1664:64: note: candidate function
+<stdin>:1667:60: note: candidate function
+<stdin>:1668:61: note: candidate function
+<stdin>:1669:60: note: candidate function
+<stdin>:1670:61: note: candidate function
+<stdin>:1671:60: note: candidate function
+<stdin>:1672:61: note: candidate function
+<stdin>:1673:60: note: candidate function
+<stdin>:1674:61: note: candidate function
+<stdin>:1675:61: note: candidate function
+<stdin>:1676:62: note: candidate function
+<stdin>:1679:61: note: candidate function
+<stdin>:1680:62: note: candidate function
+<stdin>:1681:61: note: candidate function
+<stdin>:1682:62: note: candidate function
+<stdin>:1683:61: note: candidate function
+<stdin>:1684:62: note: candidate function
+<stdin>:1685:61: note: candidate function
+<stdin>:1686:62: note: candidate function
+<stdin>:1687:62: note: candidate function
+<stdin>:1688:63: note: candidate function
+<stdin>:1595:61: note: candidate function
+<stdin>:1596:62: note: candidate function
+<stdin>:1597:61: note: candidate function
+<stdin>:1598:62: note: candidate function
+<stdin>:1599:61: note: candidate function
+<stdin>:1600:62: note: candidate function
+<stdin>:1601:61: note: candidate function
+<stdin>:1602:62: note: candidate function
+<stdin>:1603:62: note: candidate function
+<stdin>:1604:63: note: candidate function
+<stdin>:1607:62: note: candidate function
+<stdin>:1608:63: note: candidate function
+<stdin>:1609:62: note: candidate function
+<stdin>:1610:63: note: candidate function
+<stdin>:1611:62: note: candidate function
+<stdin>:1612:63: note: candidate function
+<stdin>:1613:62: note: candidate function
+<stdin>:1614:63: note: candidate function
+<stdin>:1615:63: note: candidate function
+<stdin>:1616:64: note: candidate function
+<stdin>:1619:60: note: candidate function
+<stdin>:1620:61: note: candidate function
+<stdin>:1621:60: note: candidate function
+<stdin>:1622:61: note: candidate function
+<stdin>:1623:60: note: candidate function
+<stdin>:1624:61: note: candidate function
+<stdin>:1625:60: note: candidate function
+<stdin>:1626:61: note: candidate function
+<stdin>:1627:61: note: candidate function
+<stdin>:1628:62: note: candidate function
+<stdin>:1631:61: note: candidate function
+<stdin>:1632:62: note: candidate function
+<stdin>:1633:61: note: candidate function
+<stdin>:1634:62: note: candidate function
+<stdin>:1635:61: note: candidate function
+<stdin>:1636:62: note: candidate function
+<stdin>:1637:61: note: candidate function
+<stdin>:1638:62: note: candidate function
+<stdin>:1639:62: note: candidate function
+<stdin>:1640:63: note: candidate function
+<stdin>:2079:62: note: candidate function
+<stdin>:2080:62: note: candidate function
+<stdin>:2081:62: note: candidate function
+<stdin>:2082:62: note: candidate function
+<stdin>:2083:63: note: candidate function
+<stdin>:1463:13: note: candidate function
+<stdin>:1464:30: note: candidate function
+<stdin>:1465:45: note: candidate function
+<stdin>:1466:62: note: candidate function
+<stdin>:1468:6: note: candidate function
+1:193:20: error: implicit declaration of function 'input_jacobian_upper_bound' is invalid in OpenCL
+1:193:20: note: did you mean 'state_jacobian_upper_bound'?
+1:177:20: note: 'state_jacobian_upper_bound' declared here
+1:194:20: error: implicit declaration of function 'input_jacobian_lower_bound' is invalid in OpenCL
+1:194:20: note: did you mean 'input_jacobian_upper_bound'?
+1:193:20: note: 'input_jacobian_upper_bound' declared here
+1:194:49: error: use of undeclared identifier 'l'
+1:195:9: error: use of undeclared identifier 'jm'
+1:196:12: error: use of undeclared identifier 'jm'
+1:202:23: error: call to 'max' is ambiguous
+<stdin>:2078:61: note: candidate function
+<stdin>:1641:60: note: candidate function
+<stdin>:1642:61: note: candidate function
+<stdin>:1653:61: note: candidate function
+<stdin>:1654:62: note: candidate function
+<stdin>:1665:59: note: candidate function
+<stdin>:1666:60: note: candidate function
+<stdin>:1677:60: note: candidate function
+<stdin>:1678:61: note: candidate function
+<stdin>:2084:62: note: candidate function
+<stdin>:2085:62: note: candidate function
+<stdin>:2086:62: note: candidate function
+<stdin>:2087:62: note: candidate function
+<stdin>:2088:63: note: candidate function
+<stdin>:1461:68: note: candidate function
+<stdin>:1469:23: note: candidate function
+<stdin>:1470:39: note: candidate function
+<stdin>:1471:53: note: candidate function
+<stdin>:1472:67: note: candidate function
+<stdin>:1474:8: note: candidate function
+<stdin>:1643:61: note: candidate function
+<stdin>:1644:62: note: candidate function
+<stdin>:1645:61: note: candidate function
+<stdin>:1646:62: note: candidate function
+<stdin>:1647:61: note: candidate function
+<stdin>:1648:62: note: candidate function
+<stdin>:1649:61: note: candidate function
+<stdin>:1650:62: note: candidate function
+<stdin>:1651:62: note: candidate function
+<stdin>:1652:63: note: candidate function
+<stdin>:1655:62: note: candidate function
+<stdin>:1656:63: note: candidate function
+<stdin>:1657:62: note: candidate function
+<stdin>:1658:63: note: candidate function
+<stdin>:1659:62: note: candidate function
+<stdin>:1660:63: note: candidate function
+<stdin>:1661:62: note: candidate function
+<stdin>:1662:63: note: candidate function
+<stdin>:1663:63: note: candidate function
+<stdin>:1664:64: note: candidate function
+<stdin>:1667:60: note: candidate function
+<stdin>:1668:61: note: candidate function
+<stdin>:1669:60: note: candidate function
+<stdin>:1670:61: note: candidate function
+<stdin>:1671:60: note: candidate function
+<stdin>:1672:61: note: candidate function
+<stdin>:1673:60: note: candidate function
+<stdin>:1674:61: note: candidate function
+<stdin>:1675:61: note: candidate function
+<stdin>:1676:62: note: candidate function
+<stdin>:1679:61: note: candidate function
+<stdin>:1680:62: note: candidate function
+<stdin>:1681:61: note: candidate function
+<stdin>:1682:62: note: candidate function
+<stdin>:1683:61: note: candidate function
+<stdin>:1684:62: note: candidate function
+<stdin>:1685:61: note: candidate function
+<stdin>:1686:62: note: candidate function
+<stdin>:1687:62: note: candidate function
+<stdin>:1688:63: note: candidate function
+<stdin>:1595:61: note: candidate function
+<stdin>:1596:62: note: candidate function
+<stdin>:1597:61: note: candidate function
+<stdin>:1598:62: note: candidate function
+<stdin>:1599:61: note: candidate function
+<stdin>:1600:62: note: candidate function
+<stdin>:1601:61: note: candidate function
+<stdin>:1602:62: note: candidate function
+<stdin>:1603:62: note: candidate function
+<stdin>:1604:63: note: candidate function
+<stdin>:1607:62: note: candidate function
+<stdin>:1608:63: note: candidate function
+<stdin>:1609:62: note: candidate function
+<stdin>:1610:63: note: candidate function
+<stdin>:1611:62: note: candidate function
+<stdin>:1612:63: note: candidate function
+<stdin>:1613:62: note: candidate function
+<stdin>:1614:63: note: candidate function
+<stdin>:1615:63: note: candidate function
+<stdin>:1616:64: note: candidate function
+<stdin>:1619:60: note: candidate function
+<stdin>:1620:61: note: candidate function
+<stdin>:1621:60: note: candidate function
+<stdin>:1622:61: note: candidate function
+<stdin>:1623:60: note: candidate function
+<stdin>:1624:61: note: candidate function
+<stdin>:1625:60: note: candidate function
+<stdin>:1626:61: note: candidate function
+<stdin>:1627:61: note: candidate function
+<stdin>:1628:62: note: candidate function
+<stdin>:1631:61: note: candidate function
+<stdin>:1632:62: note: candidate function
+<stdin>:1633:61: note: candidate function
+<stdin>:1634:62: note: candidate function
+<stdin>:1635:61: note: candidate function
+<stdin>:1636:62: note: candidate function
+<stdin>:1637:61: note: candidate function
+<stdin>:1638:62: note: candidate function
+<stdin>:1639:62: note: candidate function
+<stdin>:1640:63: note: candidate function
+<stdin>:2079:62: note: candidate function
+<stdin>:2080:62: note: candidate function
+<stdin>:2081:62: note: candidate function
+<stdin>:2082:62: note: candidate function
+<stdin>:2083:63: note: candidate function
+<stdin>:1463:13: note: candidate function
+<stdin>:1464:30: note: candidate function
+<stdin>:1465:45: note: candidate function
+<stdin>:1466:62: note: candidate function
+<stdin>:1468:6: note: candidate function
+1:206:5: error: use of undeclared identifier 'dx'
+1:208:9: error: use of undeclared identifier 'dx'
+1:211:9: error: use of undeclared identifier 'dx'
+1:213:12: error: use of undeclared identifier 'dx'
 Compilation failed
 
 -----------------------------------------------------------------
@@ -20,20 +267,131 @@ Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 15:50:53-903
+Build log started on Monday 08/07/2019 16:01:26-778
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
 Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-1:61:8: error: expected expression
-1:107:10: fatal error: 'integrate_kfns.cl' file not found
+1:138:3: error: unknown type name '__global_float'
+1:155:9: error: use of undeclared identifier 'idx_star'
+1:164:9: error: use of undeclared identifier 'idx_star'
+1:168:14: error: expected expression
+1:170:14: error: expected expression
+1:172:17: error: expected expression
+1:173:16: error: expected expression
+1:177:20: error: implicit declaration of function 'state_jacobian_upper_bound' is invalid in OpenCL
+1:178:20: error: implicit declaration of function 'state_jacobian_lower_bound' is invalid in OpenCL
+1:178:20: note: did you mean 'state_jacobian_upper_bound'?
+1:177:20: note: 'state_jacobian_upper_bound' declared here
+1:182:24: error: call to 'fmax' is ambiguous
+<stdin>:418:61: note: candidate function
+<stdin>:424:62: note: candidate function
+<stdin>:425:62: note: candidate function
+<stdin>:426:62: note: candidate function
+<stdin>:427:62: note: candidate function
+<stdin>:428:63: note: candidate function
+<stdin>:596:11: note: candidate function
+<stdin>:605:63: note: candidate function
+<stdin>:606:67: note: candidate function
+<stdin>:607:71: note: candidate function
+<stdin>:608:75: note: candidate function
+<stdin>:613:22: note: candidate function
+<stdin>:419:62: note: candidate function
+<stdin>:420:62: note: candidate function
+<stdin>:421:62: note: candidate function
+<stdin>:422:62: note: candidate function
+<stdin>:423:63: note: candidate function
+<stdin>:597:13: note: candidate function
+<stdin>:598:17: note: candidate function
+<stdin>:601:13: note: candidate function
+<stdin>:603:47: note: candidate function
+<stdin>:604:56: note: candidate function
+1:186:24: error: call to 'fmax' is ambiguous
+<stdin>:418:61: note: candidate function
+<stdin>:424:62: note: candidate function
+<stdin>:425:62: note: candidate function
+<stdin>:426:62: note: candidate function
+<stdin>:427:62: note: candidate function
+<stdin>:428:63: note: candidate function
+<stdin>:596:11: note: candidate function
+<stdin>:605:63: note: candidate function
+<stdin>:606:67: note: candidate function
+<stdin>:607:71: note: candidate function
+<stdin>:608:75: note: candidate function
+<stdin>:613:22: note: candidate function
+<stdin>:419:62: note: candidate function
+<stdin>:420:62: note: candidate function
+<stdin>:421:62: note: candidate function
+<stdin>:422:62: note: candidate function
+<stdin>:423:63: note: candidate function
+<stdin>:597:13: note: candidate function
+<stdin>:598:17: note: candidate function
+<stdin>:601:13: note: candidate function
+<stdin>:603:47: note: candidate function
+<stdin>:604:56: note: candidate function
+1:193:20: error: implicit declaration of function 'input_jacobian_upper_bound' is invalid in OpenCL
+1:193:20: note: did you mean 'state_jacobian_upper_bound'?
+1:177:20: note: 'state_jacobian_upper_bound' declared here
+1:194:20: error: implicit declaration of function 'input_jacobian_lower_bound' is invalid in OpenCL
+1:194:20: note: did you mean 'input_jacobian_upper_bound'?
+1:193:20: note: 'input_jacobian_upper_bound' declared here
+1:198:23: error: call to 'fmax' is ambiguous
+<stdin>:418:61: note: candidate function
+<stdin>:424:62: note: candidate function
+<stdin>:425:62: note: candidate function
+<stdin>:426:62: note: candidate function
+<stdin>:427:62: note: candidate function
+<stdin>:428:63: note: candidate function
+<stdin>:596:11: note: candidate function
+<stdin>:605:63: note: candidate function
+<stdin>:606:67: note: candidate function
+<stdin>:607:71: note: candidate function
+<stdin>:608:75: note: candidate function
+<stdin>:613:22: note: candidate function
+<stdin>:419:62: note: candidate function
+<stdin>:420:62: note: candidate function
+<stdin>:421:62: note: candidate function
+<stdin>:422:62: note: candidate function
+<stdin>:423:63: note: candidate function
+<stdin>:597:13: note: candidate function
+<stdin>:598:17: note: candidate function
+<stdin>:601:13: note: candidate function
+<stdin>:603:47: note: candidate function
+<stdin>:604:56: note: candidate function
+1:202:23: error: call to 'fmax' is ambiguous
+<stdin>:418:61: note: candidate function
+<stdin>:424:62: note: candidate function
+<stdin>:425:62: note: candidate function
+<stdin>:426:62: note: candidate function
+<stdin>:427:62: note: candidate function
+<stdin>:428:63: note: candidate function
+<stdin>:596:11: note: candidate function
+<stdin>:605:63: note: candidate function
+<stdin>:606:67: note: candidate function
+<stdin>:607:71: note: candidate function
+<stdin>:608:75: note: candidate function
+<stdin>:613:22: note: candidate function
+<stdin>:419:62: note: candidate function
+<stdin>:420:62: note: candidate function
+<stdin>:421:62: note: candidate function
+<stdin>:422:62: note: candidate function
+<stdin>:423:63: note: candidate function
+<stdin>:597:13: note: candidate function
+<stdin>:598:17: note: candidate function
+<stdin>:601:13: note: candidate function
+<stdin>:603:47: note: candidate function
+<stdin>:604:56: note: candidate function
+1:206:5: error: use of undeclared identifier 'dx'
+1:208:9: error: use of undeclared identifier 'dx'
+1:211:9: error: use of undeclared identifier 'dx'
+1:213:12: error: use of undeclared identifier 'dx'
 Compilation failed
 
 -----------------------------------------------------------------
@@ -41,20 +399,39 @@ Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 15:51:49-091
+Build log started on Monday 08/07/2019 16:13:30-366
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
 Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-1:61:8: error: expected expression
-1:111:8: error: expected expression
+1:138:3: error: unknown type name '__global_float'
+1:155:9: error: use of undeclared identifier 'idx_star'
+1:164:9: error: use of undeclared identifier 'idx_star'
+1:168:14: error: expected expression
+1:170:14: error: expected expression
+1:172:17: error: expected expression
+1:173:16: error: expected expression
+1:177:20: error: implicit declaration of function 'state_jacobian_upper_bound' is invalid in OpenCL
+1:178:20: error: implicit declaration of function 'state_jacobian_lower_bound' is invalid in OpenCL
+1:178:20: note: did you mean 'state_jacobian_upper_bound'?
+1:177:20: note: 'state_jacobian_upper_bound' declared here
+1:193:20: error: implicit declaration of function 'input_jacobian_upper_bound' is invalid in OpenCL
+1:193:20: note: did you mean 'state_jacobian_upper_bound'?
+1:177:20: note: 'state_jacobian_upper_bound' declared here
+1:194:20: error: implicit declaration of function 'input_jacobian_lower_bound' is invalid in OpenCL
+1:194:20: note: did you mean 'input_jacobian_upper_bound'?
+1:193:20: note: 'input_jacobian_upper_bound' declared here
+1:206:5: error: use of undeclared identifier 'dx'
+1:208:9: error: use of undeclared identifier 'dx'
+1:211:9: error: use of undeclared identifier 'dx'
+1:213:12: error: use of undeclared identifier 'dx'
 Compilation failed
 
 -----------------------------------------------------------------
@@ -62,22 +439,29 @@ Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 15:53:05-959
+Build log started on Monday 08/07/2019 16:21:34-272
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
 Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-1:61:8: error: use of undeclared identifier 'intial_time'; did you mean 'initial_state'?
-1:35:21: note: 'initial_state' declared here
-1:61:6: error: assigning to '__global float' from incompatible type '__global float *'; dereference with *
-1:111:8: error: expected expression
+1:139:3: error: unknown type name '__global_float'
+1:156:9: error: use of undeclared identifier 'idx_star'
+1:165:9: error: use of undeclared identifier 'idx_star'
+1:169:14: error: expected expression
+1:171:14: error: expected expression
+1:173:17: error: expected expression
+1:174:16: error: expected expression
+1:207:5: error: use of undeclared identifier 'dx'
+1:209:9: error: use of undeclared identifier 'dx'
+1:212:9: error: use of undeclared identifier 'dx'
+1:214:12: error: use of undeclared identifier 'dx'
 Compilation failed
 
 -----------------------------------------------------------------
@@ -85,18 +469,132 @@ Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 15:54:11-791
+Build log started on Monday 08/07/2019 16:23:11-155
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:170:14: error: expected expression
+1:172:14: error: expected expression
+1:174:17: error: expected expression
+1:175:16: error: expected expression
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 08/07/2019 16:23:49-781
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:171:19: error: initializing '__global float *' with an expression of type 'float *' changes address space of pointer
+1:173:19: error: initializing '__global float *' with an expression of type 'float *' changes address space of pointer
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 08/07/2019 16:30:10-460
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:171:21: error: initializing '__global float *' with an expression of type 'float *' changes address space of pointer
+1:173:21: error: initializing '__global float *' with an expression of type 'float *' changes address space of pointer
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 08/07/2019 16:32:09-682
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:206:27: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:1:40: note: passing argument to parameter 'x' here
+1:206:31: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:1:59: note: passing argument to parameter 'u' here
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 08/07/2019 16:33:51-763
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+In file included from 1:18:
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:103:7: error: conflicting types for 'dynamics_element'
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:1:7: note: previous definition is here
+1:206:27: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:1:40: note: passing argument to parameter 'x' here
+1:206:31: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:1:59: note: passing argument to parameter 'u' here
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 08/07/2019 16:35:19-984
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
 Build was succesufull with the following log:
 
 
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
 Compilation done
 Linking started
@@ -121,24 +619,51 @@ Kernel <gb_integrate_radius_5> was successfully vectorized (8)
 Kernel <gb_integrate_radius_6> was successfully vectorized (8)
 Kernel <gb_integrate_radius_7> was successfully vectorized (8)
 Kernel <gb_integrate_radius_8> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
 Done.
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:05:48-215
+Build log started on Monday 08/07/2019 16:36:24-501
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:233:28: error: subscript of pointer to function type 'float (int)'
+1:235:20: error: subscript of pointer to function type 'float (int)'
+1:240:28: error: subscript of pointer to function type 'float (int)'
+1:242:20: error: subscript of pointer to function type 'float (int)'
+Compilation failed
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 08/07/2019 16:38:00-849
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
 Build was succesufull with the following log:
 
 
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
 Compilation done
 Linking started
@@ -163,1289 +688,18 @@ Kernel <gb_integrate_radius_5> was successfully vectorized (8)
 Kernel <gb_integrate_radius_6> was successfully vectorized (8)
 Kernel <gb_integrate_radius_7> was successfully vectorized (8)
 Kernel <gb_integrate_radius_8> was successfully vectorized (8)
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
 Done.
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:08:00-175
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:08:48-998
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:09:40-434
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:09:46-317
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:09:55-003
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:09:59-476
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:10:04-886
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:11:50-410
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:13:44-836
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:15:38-765
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:16:39-456
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:18:19-722
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:23:16-707
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:23:45-218
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:24:33-766
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:26:08-092
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:26:59-574
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:27:33-122
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:28:55-404
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:29:25-230
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:29:39-722
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:31:13-622
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:32:17-567
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:33:08-405
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:33:25-903
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:33:49-009
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:35:49-530
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:36:18-982
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:39:00-294
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:31:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:40:40-665
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-1:30:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:41:50-907
+Build log started on Monday 08/07/2019 17:03:13-488
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1457,13 +711,60 @@ Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-1:30:1: warning: control reaches end of non-void function
-In file included from 1:80:
-../examples/pirk/kernel-pack/integrate_kfns.cl:15:55: error: expected ')'
-../examples/pirk/kernel-pack/integrate_kfns.cl:15:15: note: to match this '('
-In file included from 1:135:
-../examples/pirk/kernel-pack/integrate_kfns.cl:15:55: error: expected ')'
-../examples/pirk/kernel-pack/integrate_kfns.cl:15:15: note: to match this '('
+In file included from 1:82:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:37:9: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:9: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:40:19: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:40:27: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:56:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:57:9: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:9: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:19: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:27: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:76:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:77:9: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:78:9: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:19: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:27: error: use of undeclared identifier 'ulocal'
+In file included from 1:136:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:37:9: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:9: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:40:19: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:40:27: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:56:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:57:9: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:9: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:19: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:27: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:76:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:77:9: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:78:9: error: use of undeclared identifier 'ulocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:19: error: use of undeclared identifier 'xlocal'
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:27: error: use of undeclared identifier 'ulocal'
+1:172:11: error: redefinition of 'xi' with a different type: 'float [10]' vs '__global float *'
+1:141:19: note: previous definition is here
+1:173:11: error: redefinition of 'pi' with a different type: 'float [10]' vs '__global float *'
+1:142:19: note: previous definition is here
+1:208:33: error: passing '__global float *' to parameter of type 'float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:103:37: note: passing argument to parameter 'x' here
+1:208:37: error: passing '__global float *' to parameter of type 'float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:103:47: note: passing argument to parameter 'u' here
+1:266:66: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+1:282:75: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+1:298:74: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+1:314:71: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
 Compilation failed
 
 -----------------------------------------------------------------
@@ -1471,7 +772,7 @@ Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:42:35-462
+Build log started on Monday 08/07/2019 17:04:05-084
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1479,42 +780,60 @@ Purpose: Building context for a run on a single devices.
 OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
-
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-1:30:1: warning: control reaches end of non-void function
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+In file included from 1:82:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:35:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:59:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:81:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:82:20: error: expected expression
+In file included from 1:136:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:35:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:59:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:81:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:82:20: error: expected expression
+1:172:11: error: redefinition of 'xi' with a different type: 'float [10]' vs '__global float *'
+1:141:19: note: previous definition is here
+1:173:11: error: redefinition of 'pi' with a different type: 'float [10]' vs '__global float *'
+1:142:19: note: previous definition is here
+1:208:33: error: passing '__global float *' to parameter of type 'float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:103:37: note: passing argument to parameter 'x' here
+1:208:37: error: passing '__global float *' to parameter of type 'float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl:103:47: note: passing argument to parameter 'u' here
+1:266:66: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+1:282:75: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+1:298:74: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+1:314:71: error: too few arguments to function call, expected 6, have 4
+1:138:1: note: 'ctmm_decomposition_dynamics' declared here
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:43:44-823
+Build log started on Monday 08/07/2019 17:05:19-721
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1522,41 +841,44 @@ Purpose: Building context for a run on a single devices.
 OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
-
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+In file included from 1:82:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:35:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:59:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:81:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:82:20: error: expected expression
+In file included from 1:136:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:35:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:59:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:81:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:82:20: error: expected expression
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:44:26-350
+Build log started on Monday 08/07/2019 17:06:51-684
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1564,41 +886,37 @@ Purpose: Building context for a run on a single devices.
 OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
-
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+1:82:2: error: invalid preprocessing directive
+1:83:21: error: program scope variables are required to be declared in constant address space
+1:83:34: error: expected ';' at end of declaration
+1:84:21: error: program scope variables are required to be declared in constant address space
+1:84:32: error: expected ';' at end of declaration
+1:85:21: error: program scope variables are required to be declared in constant address space
+1:85:26: error: expected ';' at end of declaration
+1:86:21: error: program scope variables are required to be declared in constant address space
+1:86:23: error: expected ';' at end of declaration
+1:87:21: error: program scope variables are required to be declared in constant address space
+1:87:23: error: expected ';' at end of declaration
+1:88:21: error: program scope variables are required to be declared in constant address space
+1:88:23: error: expected ';' at end of declaration
+1:89:21: error: program scope variables are required to be declared in constant address space
+1:89:23: error: expected ';' at end of declaration
+1:90:21: error: program scope variables are required to be declared in constant address space
+1:90:24: error: expected ';' at end of declaration
+1:91:21: error: program scope variables are required to be declared in constant address space
+1:91:22: error: expected ';' after top level declarator
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:46:58-137
+Build log started on Monday 08/07/2019 17:08:14-779
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1606,41 +924,35 @@ Purpose: Building context for a run on a single devices.
 OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
-
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+1:96:20: error: expected expression
+1:119:20: error: expected expression
+1:141:20: error: expected expression
+1:163:20: error: expected expression
+In file included from 1:226:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:35:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:59:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:81:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:82:20: error: expected expression
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:47:47-820
+Build log started on Monday 08/07/2019 17:09:08-551
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1648,41 +960,31 @@ Purpose: Building context for a run on a single devices.
 OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
-
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+In file included from 1:226:
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:13:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:14:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:15:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:35:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:36:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:38:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:58:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:59:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:60:20: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:80:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:81:18: error: expected expression
+../examples/pirk/kernel-pack/growth_bound/integrate_kfns.cl:82:20: error: expected expression
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:48:17-910
+Build log started on Monday 08/07/2019 17:10:00-305
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1690,83 +992,55 @@ Purpose: Building context for a run on a single devices.
 OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
-
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
 Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+1:244:19: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:52: note: passing argument to parameter 'r' here
+1:244:27: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:71: note: passing argument to parameter 'u' here
+1:267:19: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:52: note: passing argument to parameter 'r' here
+1:267:27: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:71: note: passing argument to parameter 'u' here
+1:289:19: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:52: note: passing argument to parameter 'r' here
+1:289:27: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:71: note: passing argument to parameter 'u' here
+1:311:19: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:52: note: passing argument to parameter 'r' here
+1:311:27: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+1:24:71: note: passing argument to parameter 'u' here
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:48:47-922
+Build log started on Monday 08/07/2019 17:11:28-320
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
 Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
 Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
 -----------------------------------------------------------------
-Build was succesufull with the following log:
+Failed to build the kernel(../examples/pirk/kernel-pack//pirk.cpu.cl.render) and the following is the build log: 
 
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=8 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
 Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
+1:28:35: error: passing 'float *' to parameter of type '__global float *' changes address space of pointer
+/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/growth_bound_matrix.cl:1:57: note: passing argument to parameter 'u' here
+Compilation failed
+
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:49:50-479
+Build log started on Monday 08/07/2019 17:12:05-743
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1789,26 +1063,23 @@ Kernel <gb_integrate_center_1> was successfully vectorized (8)
 Kernel <gb_integrate_center_2> was successfully vectorized (8)
 Kernel <gb_integrate_center_3> was successfully vectorized (8)
 Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
 Kernel <gb_initialize_radius> was successfully vectorized (8)
 Kernel <gb_integrate_radius_1> was successfully vectorized (8)
 Kernel <gb_integrate_radius_2> was successfully vectorized (8)
 Kernel <gb_integrate_radius_3> was successfully vectorized (8)
 Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
 Done.
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:50:19-719
+Build log started on Monday 08/07/2019 17:12:23-269
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -1831,530 +1102,23 @@ Kernel <gb_integrate_center_1> was successfully vectorized (8)
 Kernel <gb_integrate_center_2> was successfully vectorized (8)
 Kernel <gb_integrate_center_3> was successfully vectorized (8)
 Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
 Kernel <gb_initialize_radius> was successfully vectorized (8)
 Kernel <gb_integrate_radius_1> was successfully vectorized (8)
 Kernel <gb_integrate_radius_2> was successfully vectorized (8)
 Kernel <gb_integrate_radius_3> was successfully vectorized (8)
 Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
 Done.
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:53:13-171
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 16:53:29-311
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:10:18-051
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:12:50-803
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:13:11-772
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:13:30-449
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:16:43-029
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=9 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=9 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:17:50-223
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:19:24-723
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:19:40-064
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:19:46-808
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:20:08-199
------------------------------------------------------------------
-Number of devices: 1
-Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
-Purpose: Building context for a run on a single devices.
-OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
-Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
------------------------------------------------------------------
-Build was succesufull with the following log:
-
-
-Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
-Compilation started
-Compilation done
-Linking started
-Linking done
-Device build started
-Device build done
-Kernel <gb_initialize_center> was successfully vectorized (8)
-Kernel <gb_integrate_center_1> was successfully vectorized (8)
-Kernel <gb_integrate_center_2> was successfully vectorized (8)
-Kernel <gb_integrate_center_3> was successfully vectorized (8)
-Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
-Kernel <gb_initialize_radius> was successfully vectorized (8)
-Kernel <gb_integrate_radius_1> was successfully vectorized (8)
-Kernel <gb_integrate_radius_2> was successfully vectorized (8)
-Kernel <gb_integrate_radius_3> was successfully vectorized (8)
-Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
-Done.
------------------------------------------------------------------
-Build ended
------------------------------------------------------------------
-
------------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:20:45-771
+Build log started on Monday 08/07/2019 17:13:04-727
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -2377,26 +1141,23 @@ Kernel <gb_integrate_center_1> was successfully vectorized (8)
 Kernel <gb_integrate_center_2> was successfully vectorized (8)
 Kernel <gb_integrate_center_3> was successfully vectorized (8)
 Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
 Kernel <gb_initialize_radius> was successfully vectorized (8)
 Kernel <gb_integrate_radius_1> was successfully vectorized (8)
 Kernel <gb_integrate_radius_2> was successfully vectorized (8)
 Kernel <gb_integrate_radius_3> was successfully vectorized (8)
 Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
 Done.
 -----------------------------------------------------------------
 Build ended
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-Build log started on Thursday 04/07/2019 17:21:11-253
+Build log started on Monday 08/07/2019 17:14:01-901
 -----------------------------------------------------------------
 Number of devices: 1
 Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
@@ -2419,19 +1180,16 @@ Kernel <gb_integrate_center_1> was successfully vectorized (8)
 Kernel <gb_integrate_center_2> was successfully vectorized (8)
 Kernel <gb_integrate_center_3> was successfully vectorized (8)
 Kernel <gb_integrate_center_4> was successfully vectorized (8)
-Kernel <gb_integrate_center_5> was successfully vectorized (8)
-Kernel <gb_integrate_center_6> was successfully vectorized (8)
-Kernel <gb_integrate_center_7> was successfully vectorized (8)
-Kernel <gb_integrate_center_8> was successfully vectorized (8)
 Kernel <gb_initialize_radius> was successfully vectorized (8)
 Kernel <gb_integrate_radius_1> was successfully vectorized (8)
 Kernel <gb_integrate_radius_2> was successfully vectorized (8)
 Kernel <gb_integrate_radius_3> was successfully vectorized (8)
 Kernel <gb_integrate_radius_4> was successfully vectorized (8)
-Kernel <gb_integrate_radius_5> was successfully vectorized (8)
-Kernel <gb_integrate_radius_6> was successfully vectorized (8)
-Kernel <gb_integrate_radius_7> was successfully vectorized (8)
-Kernel <gb_integrate_radius_8> was successfully vectorized (8)
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
 Done.
 -----------------------------------------------------------------
 Build ended

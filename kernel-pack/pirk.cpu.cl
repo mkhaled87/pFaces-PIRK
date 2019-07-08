@@ -33,7 +33,7 @@
 
 #define dynfn dynamics_element
 
-#include "growth_bound/integrate_kfns.cl"
+@pfaces-include:"growth_bound/integrate_kfns.cl"
 
 @pfaces-include:"growth_bound/gb_initialize_radius.cl"
 
@@ -58,4 +58,8 @@
 #define gb_integrate_dynchoice_8 gb_integrate_radius_8
 #define dynfn growth_bound_radius_dynamics
 
-#include "growth_bound/integrate_kfns.cl"
+@pfaces-include:"growth_bound/integrate_kfns.cl"
+
+@pfaces-include:"ctmm/ctmm_decomposition_dynamics.cl"
+@pfaces-include:"ctmm/ctmm_initialize.cl"
+@pfaces-include:"ctmm/ctmm_integrate_kfns.cl"

@@ -25,7 +25,6 @@ __kernel void gb_initialize_radius(
   k3[i] = 0;
   tmp[i] = 0;
   input[i]=0.5 * (u_up - u_low);
-  printf("%f\n",input[i]);
   *t = @@initial_time@@;
 
 }

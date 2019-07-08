@@ -2,6 +2,7 @@
 #include <math.h>       /* ceil */
 #include "pirk_utils.cpp"
 #include "pirk_growthbound.cpp"
+#include "pirk_ctmm.cpp"
 
 namespace pirk{
 
@@ -18,13 +19,14 @@ size_t saveData(
   pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE");
   pirk* knl = ((pirk*)(&thisKernel));
   /* index 1 is the final state for the center */
-  float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
+  // for growth bound, use idx 1
+  float* A = (float*)(thisParallelProgram.m_dataPool[0].first);
   for(int i=0; i<knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
     }
     pfacesTerminal::showMessage("-------------------");
-  /* index 8 is the final state for the radius */
-  A = (float*)(thisParallelProgram.m_dataPool[9].first);
+  //for growth bound, use idx 9
+  A = (float*)(thisParallelProgram.m_dataPool[1].first);
   for(int i=0; i<knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
     }
@@ -44,13 +46,6 @@ pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const 
 /* rest of constructor code begins */
 {
 
-  // TASK0: setting the local vars
-  // -----------------------------
-  /* This is where you'd read from the config file to load in variables, and set any other local variables. */
-  /* for example: */
-  // nRows = std::stoi(m_spCfg->readConfigValueString("matdims.rows"));
-  // nCols = std::stoi(m_spCfg->readConfigValueString("matdims.cols"));
-
   // TASK1: Updating the params
   //---------------------------
   /* Here is where you would take the local variables you made and add them to the parameter list,
@@ -58,13 +53,24 @@ pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const 
   std::vector<std::string> params;
   std::vector<std::string> paramvals;
 
+  method_choice = std::stoi(m_spCfg->readConfigValueString("method_choice"));
+  params.push_back("@@method_choice@@");
+  paramvals.push_back(std::to_string(method_choice));
+
   configureParameters(params, paramvals);
 
   // TASK2: Creating the kernel function and load their memory fingerprints
   //------------------------------------------------------------------------
 
-  /* call the growth bound initialization function. There will be a switch or an if/else here later, once we have other methods  */
-  initializeGrowthBound(spLaunchState, spCfg);
+  /* call the growth bound initialization function. We'll choose which constructor to call based on method_choice.  */
+  method_choice_err = "Invalid method selection! Please set method_choice to 1 (growth bound) or 2 (CTMM).";
+  if(method_choice == 1) {
+      initializeGrowthBound(spLaunchState, spCfg);
+  } else if (method_choice == 2) {
+      initializeCTMM(spLaunchState, spCfg);
+  } else {
+      throw std::runtime_error(method_choice_err);
+  }
 
 }
 /* constructor code ends */
@@ -72,7 +78,13 @@ pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const 
 void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram)
 {
 
-  configureParallelProgramGrowthBound(parallelProgram);
+  if(method_choice == 1) {
+      configureParallelProgramGrowthBound(parallelProgram);
+  } else if (method_choice == 2) {
+      configureParallelProgramCTMM(parallelProgram);
+  } else {
+      throw std::runtime_error(method_choice_err);
+  }
 
   // register a post-execute instruction to save the data
   std::vector<std::shared_ptr<void>> postExecuteParamsList;
