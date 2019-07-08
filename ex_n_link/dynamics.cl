@@ -1,4 +1,4 @@
-float dynamics_element(float* x, float* u, float t, int i) {
+float dynamics_element(__global float* x, __global float* u, float t, int i) {
     // Traffic diverge nx-link (needs n_x >= 5)
         
     // through a three-way intersection, using the cell transmission
@@ -21,7 +21,7 @@ float dynamics_element(float* x, float* u, float t, int i) {
     //        but the first (i.e. the real one) to be zero.
 
     // Parameters
-    int nlinks = 1000;
+    int nlinks = 100;
     float v = 0.5;            // free-flow speed, in links/period
     float w = (float)(1./6.);            // congestion-wave speed, in links/period
     float c = 40.;             // capacity (max downstream flow), in vehicles/period

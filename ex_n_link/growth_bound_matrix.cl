@@ -1,4 +1,4 @@
-float growth_bound_matrix(int i, int j, float* u)
+float growth_bound_matrix(int i, int j, __global float* u)
 {
     // Parameters
     int nlinks = 10;
