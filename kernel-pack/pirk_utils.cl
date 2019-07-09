@@ -20,3 +20,15 @@ float growth_bound_radius_dynamics(__global float* r, __global float* u, float t
   dr += u[i]; //this is causing the bug
   return dr;
 }
+
+
+int krand(int* seed) // 1 <= *seed < m
+{
+    int const a = 16807; //ie 7**5
+    int const m = 2147483647; //ie 2**31-1
+    int tmp = *seed;
+    //*seed = ((long( tmp * a)%m;
+    *seed = tmp * a;
+    *seed = *seed %m;
+    return(*seed);
+}

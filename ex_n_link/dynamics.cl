@@ -43,7 +43,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
 
     else if(i == 1) {
     //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(2) ; w/b*(xbar-x(4))]));
-        t1 = fmin((float) fmin(0.5*c, 0.5*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. Why? */
+        t1 = fmin((float) fmin(0.5*c, 0.5*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. */
                    fmin(w*(xbar-x[1]), w*(xbar-x[2]))
                  );
         t2 = fmin(fmin(c, v*x[1]), 

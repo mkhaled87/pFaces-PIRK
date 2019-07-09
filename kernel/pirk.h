@@ -30,6 +30,7 @@ public:
   int method_choice;
   float integration_time;
   int nsteps;
+  int nsamples;
   float true_step_size;
   string dynamics_element_code;
   std::string method_choice_err;

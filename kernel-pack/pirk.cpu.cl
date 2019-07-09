@@ -52,3 +52,8 @@
 @pfaces-include:"ctmm/ctmm_initialize.cl"
 @pfaces-include:"ctmm/ctmm_integrate_kfns.cl"
 #endif  /* end of CTMM */
+
+#ifdef MC_3  /* start of monte carlo */
+@pfaces-include:"monte_carlo/mc_initialize.cl"
+@pfaces-include:"monte_carlo/mc_integrate_kfns.cl"
+#endif  /* end of monte carlo */

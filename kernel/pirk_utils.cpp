@@ -19,6 +19,10 @@ void pirk::configureParameters(std::vector<std::string> params, std::vector<std:
   params.push_back("@@method_choice@@");
   paramvals.push_back(std::to_string(method_choice));
 
+  nsamples = std::stoi(m_spCfg->readConfigValueString("nsamples"));
+  params.push_back("@@nsamples@@");
+  paramvals.push_back(std::to_string(method_choice));
+
   //float initial_time;
   float initial_time = std::stof(m_spCfg->readConfigValueString("initial_time"));
   params.push_back("@@initial_time@@");

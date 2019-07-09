@@ -3,6 +3,7 @@
 #include "pirk_utils.cpp"
 #include "pirk_growthbound.cpp"
 #include "pirk_ctmm.cpp"
+#include "pirk_montecarlo.cpp"
 
 namespace pirk{
 
@@ -55,6 +56,45 @@ size_t ctmm_saveData(
   return 0;
 }
 
+size_t mc_saveData(
+    const pfaces2DKernel& thisKernel,
+    const pfacesParallelProgram& thisParallelProgram,
+    std::vector<std::shared_ptr<void>>& postExecuteParamsList)
+{
+
+  pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nMC");
+  pirk* knl = ((pirk*)(&thisKernel));
+  float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
+  /* index 1 is the final state for the center */
+  // for growth bound, use idx 1
+  float succ_up[knl->states_dim];
+  float succ_low[knl->states_dim];
+  float cmp;
+  for(int i = 0; i < knl->states_dim; i++) {
+      succ_up[i] = -INFINITY;
+      succ_low[i] = INFINITY;
+      for(int w = 0; w < knl->nsamples; w++) {
+	  cmp = A[w*knl->states_dim + i];
+	  if(cmp > succ_up[i]) {
+	      succ_up[i] = cmp;
+	  }
+	  if(cmp < succ_low[i]) {
+	      succ_low[i] = cmp;
+	  }
+      }
+  }
+  pfacesTerminal::showMessage("Lower sucessor\n-------------------");
+  for(int i=0; i<knl->states_dim; i++) {
+      pfacesTerminal::showMessage(std::to_string(succ_low[i]));
+    }
+  pfacesTerminal::showMessage("Upper sucessor\n-------------------");
+  for(int i=0; i<knl->states_dim; i++) {
+      pfacesTerminal::showMessage(std::to_string(succ_up[i]));
+    }
+
+  return 0;
+}
+
 pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const std::shared_ptr<pfacesConfigurationReader>& spCfg)
   /* member initialization list */
   :   /* First up, we'll initialize the parent class, pfaces2DKernel. */
@@ -84,11 +124,13 @@ pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const 
   //------------------------------------------------------------------------
 
   /* call the growth bound initialization function. We'll choose which constructor to call based on method_choice.  */
-  method_choice_err = "Invalid method selection! Please set method_choice to 1 (growth bound) or 2 (CTMM).";
+  method_choice_err = "Invalid method selection! Please set method_choice to 1 (growth bound), 2 (CTMM), or 3 (Monte Carlo).";
   if(method_choice == 1) {
       initializeGrowthBound(spLaunchState, spCfg);
   } else if (method_choice == 2) {
       initializeCTMM(spLaunchState, spCfg);
+  } else if (method_choice == 3) {
+      initializeMonteCarlo(spLaunchState, spCfg);
   } else {
       throw std::runtime_error(method_choice_err);
   }
@@ -103,6 +145,8 @@ void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram)
       configureParallelProgramGrowthBound(parallelProgram);
   } else if (method_choice == 2) {
       configureParallelProgramCTMM(parallelProgram);
+  } else if (method_choice == 3) {
+      configureParallelProgramMonteCarlo(parallelProgram);
   } else {
       throw std::runtime_error(method_choice_err);
   }
@@ -113,6 +157,8 @@ void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram)
       registerPostExecuteFunction(gb_saveData, "Saving results", postExecuteParamsList);
   } else if (method_choice == 2) {
       registerPostExecuteFunction(ctmm_saveData, "Saving results", postExecuteParamsList);
+  } else if (method_choice == 3) {
+      registerPostExecuteFunction(mc_saveData, "Saving results", postExecuteParamsList);
   } else {
       throw std::runtime_error(method_choice_err);
   }

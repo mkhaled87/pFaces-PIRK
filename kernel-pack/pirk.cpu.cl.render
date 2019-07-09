@@ -9,7 +9,7 @@
 */
 
 #define CPU_VERSION
-#define MC_1
+#define MC_3
 
 /* includes for the growth bound method */
 // /home/hcs/Documents/pFaces/examples/pirk/ex_n_link/hi.cl
@@ -38,6 +38,17 @@ float growth_bound_radius_dynamics(__global float* r, __global float* u, float t
   return dr;
 }
 
+
+int krand(int* seed) // 1 <= *seed < m
+{
+    int const a = 16807; //ie 7**5
+    int const m = 2147483647; //ie 2**31-1
+    int tmp = *seed;
+    //*seed = ((long( tmp * a)%m;
+    *seed = tmp * a;
+    *seed = *seed %m;
+    return(*seed);
+}
 
 #ifdef MC_1 /* start of growth bound */
 __kernel void gb_initialize_center( 
@@ -347,7 +358,6 @@ float ctmm_decomposition_dynamics(
         dh += beta[k] * (u1[k] - u2[k]);
     }
     if(i==0)
-        printf("%d %f\n",i, dh);
     return dh;
     
     
@@ -453,3 +463,128 @@ __kernel void ctmm_integrate_4(
 }
 
 #endif  /* end of CTMM */
+
+#ifdef MC_3  /* start of monte carlo */
+__kernel void mc_initialize( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp,
+    __global float *t,
+    __global float *rands1,
+    __global float *rands2)
+{
+  int sample_idx = get_global_id(0);
+  int state_idx = get_global_id(1);
+  int flat_idx = sample_idx*10 + state_idx;
+  int randseed = flat_idx;
+
+  float x_low, x_up, u_low, u_up;
+  x_low = initial_state_lower_bound(state_idx);
+  x_up = initial_state_upper_bound(state_idx);
+  u_low = input_lower_bound(state_idx);
+  u_up = input_upper_bound(state_idx);
+  
+  initial_state[flat_idx] = x_low + rands1[flat_idx]*(x_up-x_low);
+  final_state[flat_idx] = initial_state[flat_idx];
+  input[flat_idx] = u_low + rands2[flat_idx]*(u_up-u_low);
+  printf("%d, %f\n", state_idx, rands1[flat_idx]);
+
+  k0[flat_idx] = 0;
+  k1[flat_idx] = 0;
+  k2[flat_idx] = 0;
+  k3[flat_idx] = 0;
+  tmp[flat_idx] = 0;
+  *t = 0.000000;
+
+}
+
+__kernel void mc_integrate_1( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp,
+    __global float *t)
+{
+    int sample_idx = get_global_id(0);  
+    int state_idx = get_global_id(1);
+    int flat_idx = sample_idx*10 + state_idx;
+    __global float *current_sample_ptr;
+    current_sample_ptr = final_state + sample_idx*10;
+    //current_sample_ptr = final_state; 
+    k0[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t, state_idx);
+    tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k0[flat_idx];
+}
+
+__kernel void mc_integrate_2( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp,
+    __global float *t)
+{
+    int sample_idx = get_global_id(0);  
+    int state_idx = get_global_id(1);
+    int flat_idx = sample_idx*10 + state_idx;
+    __global float *current_sample_ptr;
+    current_sample_ptr = tmp + sample_idx*10;
+    //current_sample_ptr = tmp;
+    k1[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
+    tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k1[flat_idx];
+}
+
+__kernel void mc_integrate_3( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp,
+    __global float *t)
+{
+    int sample_idx = get_global_id(0);  
+    int state_idx = get_global_id(1);
+    int flat_idx = sample_idx*10 + state_idx;
+    __global float *current_sample_ptr;
+    current_sample_ptr = tmp + sample_idx*10;
+    //current_sample_ptr = tmp;
+    k2[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
+    tmp[flat_idx] = final_state[flat_idx] + RK4_H * k2[flat_idx];
+}
+
+__kernel void mc_integrate_4( 
+    __global float *initial_state,
+    __global float *final_state, 
+    __global float *input,
+    __global float *k0,
+    __global float *k1,
+    __global float *k2,
+    __global float *k3,
+    __global float *tmp,
+    __global float *t)
+{
+    int sample_idx = get_global_id(0);  
+    int state_idx = get_global_id(1);
+    int flat_idx = sample_idx*10 + state_idx;
+    __global float *current_sample_ptr;
+    current_sample_ptr = tmp + sample_idx*10;
+    //current_sample_ptr = tmp;
+    k3[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t +  step_size, state_idx);
+    final_state[flat_idx] = final_state[flat_idx] + (RK4_H / 6.0)*(k0[flat_idx] + 2.0*k1[flat_idx] + 2.0*k2[flat_idx] + k3[flat_idx]);
+    *t += RK4_H;
+}
+#endif  /* end of monte carlo */

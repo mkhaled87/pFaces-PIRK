@@ -86,7 +86,6 @@ float ctmm_decomposition_dynamics(
         dh += beta[k] * (u1[k] - u2[k]);
     }
     if(i==0)
-        printf("%d %f\n",i, dh);
     return dh;
     
     
