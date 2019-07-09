@@ -10,25 +10,46 @@ namespace pirk{
   // -----------------------------------------------
   // A post-execcute to save the data
   // -----------------------------------------------
-size_t saveData(
+size_t gb_saveData(
     const pfaces2DKernel& thisKernel,
     const pfacesParallelProgram& thisParallelProgram,
     std::vector<std::shared_ptr<void>>& postExecuteParamsList)
 {
 
-  pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE");
+  pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nGB");
   pirk* knl = ((pirk*)(&thisKernel));
   /* index 1 is the final state for the center */
   // for growth bound, use idx 1
-  float* A = (float*)(thisParallelProgram.m_dataPool[0].first);
+  float* radius = (float*)(thisParallelProgram.m_dataPool[1].first);
+  float* center = (float*)(thisParallelProgram.m_dataPool[9].first);
+  pfacesTerminal::showMessage("Successor lower\n-------------------");
   for(int i=0; i<knl->states_dim; i++) {
-      pfacesTerminal::showMessage(std::to_string(A[i]));
+      pfacesTerminal::showMessage(std::to_string(radius[i]-center[i]));
     }
-    pfacesTerminal::showMessage("-------------------");
+    pfacesTerminal::showMessage("Successor upper\n-------------------");
   //for growth bound, use idx 9
-  A = (float*)(thisParallelProgram.m_dataPool[1].first);
   for(int i=0; i<knl->states_dim; i++) {
+      pfacesTerminal::showMessage(std::to_string(radius[i]+center[i]));
+    }
+
+  return 0;
+}
+
+size_t ctmm_saveData(
+    const pfaces2DKernel& thisKernel,
+    const pfacesParallelProgram& thisParallelProgram,
+    std::vector<std::shared_ptr<void>>& postExecuteParamsList)
+{
+
+  pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nCTMM");
+  pirk* knl = ((pirk*)(&thisKernel));
+  float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
+  pfacesTerminal::showMessage("Successor lower\n-------------------");
+  for(int i = 0; i < 2 * knl->states_dim; i++) {
       pfacesTerminal::showMessage(std::to_string(A[i]));
+      if(i == knl->states_dim -1){
+        pfacesTerminal::showMessage("Successor upper\n-------------------");
+      }
     }
 
   return 0;
@@ -88,7 +109,13 @@ void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram)
 
   // register a post-execute instruction to save the data
   std::vector<std::shared_ptr<void>> postExecuteParamsList;
-  registerPostExecuteFunction(saveData, "Saving results", postExecuteParamsList);
+  if(method_choice == 1) {
+      registerPostExecuteFunction(gb_saveData, "Saving results", postExecuteParamsList);
+  } else if (method_choice == 2) {
+      registerPostExecuteFunction(ctmm_saveData, "Saving results", postExecuteParamsList);
+  } else {
+      throw std::runtime_error(method_choice_err);
+  }
 
 }
 
