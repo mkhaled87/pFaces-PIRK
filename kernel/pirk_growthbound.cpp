@@ -194,6 +194,14 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
       pfacesBigInt::getPrimitiveValue(states_dim),
       pfacesBigInt::getPrimitiveValue(1)  /* dummy value, no need for second dimension */
   );
+
+
+  cl::NDRange ndUniversalStateDimSquared(
+      pfacesBigInt::getPrimitiveValue(states_dim),
+      pfacesBigInt::getPrimitiveValue(states_dim)
+  );
+
+
   /* note: if you want to use more or fewer dimensions than 2, you can still use this function.
    *       you just give it as many arguments as you want dimensions. */
 
@@ -201,7 +209,12 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   cl::NDRange ndProcessRangeStateDim = stateDimProcessRangeAndOffset.first;
   cl::NDRange ndProcessOffsetStateDim = stateDimProcessRangeAndOffset.second;
 
+  std::pair<cl::NDRange, cl::NDRange> stateDimSquaredProcessRangeAndOffset = parallelAdvisor.getProcessNDRangeAndOffset(ndUniversalStateDimSquared);
+  cl::NDRange ndProcessRangeStateDimSquared = stateDimSquaredProcessRangeAndOffset.first;
+  cl::NDRange ndProcessOffsetStateDimSquared = stateDimSquaredProcessRangeAndOffset.second;
+
   cl::NDRange ndUniversalOffsetStateDim = cl::NullRange;
+  cl::NDRange ndUniversalOffsetStateDimSquared = cl::NullRange;
 
   std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_initialize_center;
   jobsPerDev_gb_initialize_center = parallelAdvisor.distributeJob(
@@ -274,8 +287,8 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   jobsPerDev_gb_integrate_radius_1 = parallelAdvisor.distributeJob(
 	      *this,
 	      6, /* function index */
-	      ndProcessRangeStateDim, /* process range */
-	      ndProcessOffsetStateDim,  /* process offset */
+	      ndProcessRangeStateDimSquared, /* process range */
+	      ndProcessOffsetStateDimSquared,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
 	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
 	      true, false, false  /* some additional flags */
@@ -285,8 +298,8 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   jobsPerDev_gb_integrate_radius_2 = parallelAdvisor.distributeJob(
 	      *this,
 	      7, /* function index */
-	      ndProcessRangeStateDim, /* process range */
-	      ndProcessOffsetStateDim,  /* process offset */
+	      ndProcessRangeStateDimSquared, /* process range */
+	      ndProcessOffsetStateDimSquared,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
 	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
 	      true, false, false  /* some additional flags */
@@ -296,8 +309,8 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   jobsPerDev_gb_integrate_radius_3 = parallelAdvisor.distributeJob(
 	      *this,
 	      8, /* function index */
-	      ndProcessRangeStateDim, /* process range */
-	      ndProcessOffsetStateDim,  /* process offset */
+	      ndProcessRangeStateDimSquared, /* process range */
+	      ndProcessOffsetStateDimSquared,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
 	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
 	      true, false, false  /* some additional flags */
@@ -307,8 +320,8 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   jobsPerDev_gb_integrate_radius_4 = parallelAdvisor.distributeJob(
 	      *this,
 	      9, /* function index */
-	      ndProcessRangeStateDim, /* process range */
-	      ndProcessOffsetStateDim,  /* process offset */
+	      ndProcessRangeStateDimSquared, /* process range */
+	      ndProcessOffsetStateDimSquared,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
 	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
 	      true, false, false  /* some additional flags */

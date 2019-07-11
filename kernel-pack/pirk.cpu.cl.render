@@ -31,7 +31,7 @@
 float growth_bound_radius_dynamics(__global float* r, __global float* u, float t, int i)
 {
   float dr=0;
-  for (int j=0; j < 100000; j++) {
+  for (int j=0; j < 10; j++) {
     dr += growth_bound_matrix(i,j,u)*r[j];
   }
   dr += u[i]; //this is causing the bug
@@ -82,15 +82,7 @@ __kernel void gb_initialize_center(
 
 }
 
-
-#define gb_integrate_dynchoice_1 gb_integrate_center_1
-#define gb_integrate_dynchoice_2 gb_integrate_center_2
-#define gb_integrate_dynchoice_3 gb_integrate_center_3
-#define gb_integrate_dynchoice_4 gb_integrate_center_4
-
-#define dynfn dynamics_element_global
-
-__kernel void gb_integrate_dynchoice_1( 
+__kernel void gb_integrate_center_1( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -102,11 +94,11 @@ __kernel void gb_integrate_dynchoice_1(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k0[i] = dynfn(initial_state, input, *t, i);
+    k0[i] = dynamics_element_global(initial_state, input, *t, i);
     tmp[i] = final_state[i] + RK4_H / 2.0*k0[i];
 }
 
-__kernel void gb_integrate_dynchoice_2( 
+__kernel void gb_integrate_center_2( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -118,11 +110,11 @@ __kernel void gb_integrate_dynchoice_2(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k1[i] = dynfn(tmp, input, *t + 0.5*step_size,  i);
+    k1[i] = dynamics_element_global(tmp, input, *t + 0.5*step_size,  i);
     tmp[i] = final_state[i] + RK4_H / 2.0*k1[i];
 }
 
-__kernel void gb_integrate_dynchoice_3( 
+__kernel void gb_integrate_center_3( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -134,11 +126,11 @@ __kernel void gb_integrate_dynchoice_3(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k2[i] = dynfn(tmp, input, *t + 0.5*step_size, i);
+    k2[i] = dynamics_element_global(tmp, input, *t + 0.5*step_size, i);
     tmp[i] = final_state[i] + RK4_H * k2[i];
 }
 
-__kernel void gb_integrate_dynchoice_4( 
+__kernel void gb_integrate_center_4( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -150,11 +142,10 @@ __kernel void gb_integrate_dynchoice_4(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k3[i] = dynfn(tmp, input, *t +  step_size, i);
+    k3[i] = dynamics_element_global(tmp, input, *t +  step_size, i);
     final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
     *t += RK4_H;
 }
-
 
 
 __kernel void gb_initialize_radius( 
@@ -187,21 +178,7 @@ __kernel void gb_initialize_radius(
   *t = 0.000000;
 
 }
-
-#undef gb_integrate_dynchoice_1
-#undef gb_integrate_dynchoice_2
-#undef gb_integrate_dynchoice_3
-#undef gb_integrate_dynchoice_4
-
-#undef dynfn
-
-#define gb_integrate_dynchoice_1 gb_integrate_radius_1
-#define gb_integrate_dynchoice_2 gb_integrate_radius_2
-#define gb_integrate_dynchoice_3 gb_integrate_radius_3
-#define gb_integrate_dynchoice_4 gb_integrate_radius_4
-#define dynfn growth_bound_radius_dynamics
-
-__kernel void gb_integrate_dynchoice_1( 
+__kernel void gb_integrate_radius_1( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -213,11 +190,17 @@ __kernel void gb_integrate_dynchoice_1(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k0[i] = dynfn(initial_state, input, *t, i);
-    tmp[i] = final_state[i] + RK4_H / 2.0*k0[i];
+    int j = get_global_id(1);  
+    float dr = growth_bound_matrix(i,j,input)*final_state[j] + input[i] / 10;
+    k0[i] += dr;
+    final_state[i] += (RK4_H/6.0)*dr;
+    tmp[i] += RK4_H / 2.0*dr;
+    if(j==0) {
+        tmp[i] += final_state[i];
+    }
 }
 
-__kernel void gb_integrate_dynchoice_2( 
+__kernel void gb_integrate_radius_2( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -229,11 +212,18 @@ __kernel void gb_integrate_dynchoice_2(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k1[i] = dynfn(tmp, input, *t + 0.5*step_size,  i);
-    tmp[i] = final_state[i] + RK4_H / 2.0*k1[i];
+    int j = get_global_id(1);  
+    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 10;
+    k1[i] += dr;
+    tmp[i] += RK4_H / 2.0*dr;
+    final_state[i] += (RK4_H/6.0)*2.0*dr;
+    if(j==0) {
+        tmp[i] -= RK4_H/2.0 * k0[i];  
+    }
+    /* after this is done, we should have tmp[i] = final_state[i] + RK4_H/2.0*k1[i] */
 }
 
-__kernel void gb_integrate_dynchoice_3( 
+__kernel void gb_integrate_radius_3( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -245,11 +235,18 @@ __kernel void gb_integrate_dynchoice_3(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k2[i] = dynfn(tmp, input, *t + 0.5*step_size, i);
-    tmp[i] = final_state[i] + RK4_H * k2[i];
+    int j = get_global_id(1);  
+    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 10;
+    k2[i] += dr;
+    tmp[i] += RK4_H / 2.0*dr;
+    final_state[i] += (RK4_H/6.0)*2.0*dr;
+    if(j==0) {
+        tmp[i] -= RK4_H/2.0 * k1[i];  
+    }
+    /* after this is done, we should have tmp[i] = final_state[i] + RK4_H/2.0*k2[i] */
 }
 
-__kernel void gb_integrate_dynchoice_4( 
+__kernel void gb_integrate_radius_4( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -261,9 +258,19 @@ __kernel void gb_integrate_dynchoice_4(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k3[i] = dynfn(tmp, input, *t +  step_size, i);
-    final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
+    int j = get_global_id(1);  
+    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 10;
+    k3[i] += dr;
+    final_state[i] += (RK4_H/6.0)*dr;
+    
     *t += RK4_H;
+    /* reset the temp vars for the next round */
+    k0[i] = 0;
+    k1[i] = 0;
+    k2[i] = 0;
+    k3[i] = 0;
+    tmp[i] = 0;
+
 }
 
 
@@ -289,38 +296,38 @@ float ctmm_decomposition_dynamics(
     __global float* x2;
     __global float* u1;
     __global float* u2;
-    if(i - 100000 < 0) {
+    if(i - 10 < 0) {
         /* The index is in the 'upper half', so we're computing g(x,u,xhat,uhat). */
         idx = i;
         offset = 0;
-        idx_hat = i + 100000;
-        hat_offset = 100000;
+        idx_hat = i + 10;
+        hat_offset = 10;
         idx_nom = i;
         x1 = x;
-        x2 = x + 100000;
+        x2 = x + 10;
         u1 = u;
-        u2 = u + 100000;
+        u2 = u + 10;
 
     }
     else {
         /* the index is in the 'lower half', so we're computing g(xhat,uhat,x,u). */
         idx = i;
-        offset = 100000;
-        idx_hat = i - 100000;
+        offset = 10;
+        idx_hat = i - 10;
         hat_offset = 0;
-        idx_nom = i - 100000;
-        x1 = x + 100000;
+        idx_nom = i - 10;
+        x1 = x + 10;
         x2 = x;
         u1 = u;
-        u2 = u + 100000;
+        u2 = u + 10;
     }
-    float xi[100000];
-    float pi[100000];
-    float alpha[100000];
-    float beta[100000];
+    float xi[10];
+    float pi[10];
+    float alpha[10];
+    float beta[10];
     float dh;
     
-    for(int k=0; k < 100000; k++) {
+    for(int k=0; k < 10; k++) {
         float ju = state_jacobian_upper_bound(i,k);
         float jl = state_jacobian_lower_bound(i,k);
         float jm = 0.5 * (ju + jl);
@@ -336,7 +343,7 @@ float ctmm_decomposition_dynamics(
     alpha[idx_nom] = 0.0;
     xi[idx_nom] = x1[idx_nom];
 
-    for(int k=0; k < 100000; k++) {
+    for(int k=0; k < 10; k++) {
         float ju = input_jacobian_upper_bound(i,k);
         float jl = input_jacobian_lower_bound(i,k);
         float jm = 0.5 * (ju + jl);
@@ -351,10 +358,10 @@ float ctmm_decomposition_dynamics(
     }
     
     dh = dynamics_element_private(xi, pi, t, idx_nom);
-    for(int k=0; k < 100000; k++) {
+    for(int k=0; k < 10; k++) {
         dh += alpha[k] * (x1[k] - x2[k]);
     }
-    for(int k=0; k < 100000; k++) {
+    for(int k=0; k < 10; k++) {
         dh += beta[k] * (u1[k] - u2[k]);
     }
     if(i==0)
@@ -376,7 +383,7 @@ __kernel void ctmm_initialize(
 {
   float x_low, x_up, u_low, u_up;
   int i = get_global_id(0);
-    if(i - 100000 < 0) {
+    if(i - 10 < 0) {
         /* The index is in the 'upper half', so we're computing g(x,u,xhat,uhat). */
         initial_state[i] = initial_state_lower_bound(i);
         final_state[i] = initial_state[i];
@@ -385,9 +392,9 @@ __kernel void ctmm_initialize(
     }
     else {
         /* the index is in the 'lower half', so we're computing g(xhat,uhat,x,u). */
-        initial_state[i] = initial_state_upper_bound(i-100000);
+        initial_state[i] = initial_state_upper_bound(i-10);
         final_state[i] = initial_state[i];
-        input[i] = input_upper_bound(i-100000);
+        input[i] = input_upper_bound(i-10);
     }
   k0[i] = 0;
   k1[i] = 0;
@@ -480,7 +487,7 @@ __kernel void mc_initialize(
 {
   int sample_idx = get_global_id(0);
   int state_idx = get_global_id(1);
-  int flat_idx = sample_idx*100000 + state_idx;
+  int flat_idx = sample_idx*10 + state_idx;
   int randseed = flat_idx;
 
   float x_low, x_up, u_low, u_up;
@@ -515,9 +522,9 @@ __kernel void mc_integrate_1(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*100000 + state_idx;
+    int flat_idx = sample_idx*10 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = final_state + sample_idx*100000;
+    current_sample_ptr = final_state + sample_idx*10;
     //current_sample_ptr = final_state; 
     k0[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k0[flat_idx];
@@ -536,9 +543,9 @@ __kernel void mc_integrate_2(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*100000 + state_idx;
+    int flat_idx = sample_idx*10 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*100000;
+    current_sample_ptr = tmp + sample_idx*10;
     //current_sample_ptr = tmp;
     k1[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k1[flat_idx];
@@ -557,9 +564,9 @@ __kernel void mc_integrate_3(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*100000 + state_idx;
+    int flat_idx = sample_idx*10 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*100000;
+    current_sample_ptr = tmp + sample_idx*10;
     //current_sample_ptr = tmp;
     k2[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H * k2[flat_idx];
@@ -578,9 +585,9 @@ __kernel void mc_integrate_4(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*100000 + state_idx;
+    int flat_idx = sample_idx*10 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*100000;
+    current_sample_ptr = tmp + sample_idx*10;
     //current_sample_ptr = tmp;
     k3[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t +  step_size, state_idx);
     final_state[flat_idx] = final_state[flat_idx] + (RK4_H / 6.0)*(k0[flat_idx] + 2.0*k1[flat_idx] + 2.0*k2[flat_idx] + k3[flat_idx]);
