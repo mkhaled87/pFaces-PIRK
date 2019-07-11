@@ -1792,3 +1792,71 @@ Done.
 Build ended
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
+Build log started on Thursday 11/07/2019 16:27:00-978
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Thursday 11/07/2019 16:27:12-049
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
