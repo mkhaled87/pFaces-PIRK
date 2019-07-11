@@ -202,6 +202,8 @@ void pirk::configureParallelProgramMonteCarlo(pfacesParallelProgram& parallelPro
   memReport.PrintReport();
 
   /* Now that the data pool has been made, we need to initialize the "rands" arguments of mc_initialize with random values between 0 and 1. */
+  pfacesTimer timer;
+  timer.tic();
   float* rands1 = (float*)(dataPool[9].first);
   for(size_t i=0; i<nsamples; i++) {
       for(size_t j=0; j<states_dim; j++) {
@@ -214,6 +216,7 @@ void pirk::configureParallelProgramMonteCarlo(pfacesParallelProgram& parallelPro
 	  rands2[states_dim * i + j] = ((float)std::rand() / RAND_MAX);
       }
   }
+  std::cout << "time: " << timer.toc().count() << std::endl;
 
 
   // ---------------------------------------------------------

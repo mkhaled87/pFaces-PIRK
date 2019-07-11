@@ -25,7 +25,6 @@ __kernel void mc_initialize(
   initial_state[flat_idx] = x_low + rands1[flat_idx]*(x_up-x_low);
   final_state[flat_idx] = initial_state[flat_idx];
   input[flat_idx] = u_low + rands2[flat_idx]*(u_up-u_low);
-  printf("%d, %f\n", state_idx, rands1[flat_idx]);
 
   k0[flat_idx] = 0;
   k1[flat_idx] = 0;

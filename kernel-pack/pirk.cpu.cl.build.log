@@ -1360,3 +1360,435 @@ Done.
 Build ended
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 11:20:40-739
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 11:21:19-272
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D DEBUG -g -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 11:22:33-017
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 11:22:52-994
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 11:30:45-291
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-w -cl-std=CL1.2 -Ikernels/ -I../examples/pirk/kernel-pack// -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:36:51-055
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:39:34-464
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:47:52-307
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:48:23-088
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:51:45-607
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=24 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=24 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:52:34-549
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=24 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=24 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:54:24-283
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:54:41-366
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:55:51-112
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:56:55-655
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 13:58:19-038
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Wednesday 10/07/2019 14:05:01-592
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was successfully vectorized (8)
+Kernel <gb_integrate_radius_2> was successfully vectorized (8)
+Kernel <gb_integrate_radius_3> was successfully vectorized (8)
+Kernel <gb_integrate_radius_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+

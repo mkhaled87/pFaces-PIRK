@@ -32,7 +32,7 @@ public:
   int nsteps;
   int nsamples;
   float true_step_size;
-  string dynamics_element_code;
+  std::string dynamics_element_code;
   std::string method_choice_err;
 
   /* All pFaces kernel classes need to provide the following three methods: */
