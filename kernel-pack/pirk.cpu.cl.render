@@ -12,26 +12,30 @@
 #define MC_1
 
 /* includes for the growth bound method */
-// /home/hcs/Documents/pFaces/examples/pirk/ex_n_link/hi.cl
+// /home/hcs/Documents/pFaces/examples/pirk/ex_identity/hi.cl
 
 /* common utility file */
 
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl"
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/bounds.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_identity/dynamics.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_identity/bounds.cl"
 
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/growth_bound_matrix.cl"
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/jacobian_bounds.cl"
+#ifdef MC_1
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_identity/growth_bound_matrix.cl"
+#endif
+#ifdef MC_2
+#include "/home/hcs/Documents/pFaces/examples/pirk/ex_identity/jacobian_bounds.cl"
+#endif
 
 /* useful defines for RK4 integration */
-#define step_size 0.750000
+#define step_size 0.100000
 #define RK4_NINT 5
-#define RK4_H ((0.750000/RK4_NINT))
+#define RK4_H ((0.100000/RK4_NINT))
 
 
 float growth_bound_radius_dynamics(__global float* r, __global float* u, float t, int i)
 {
   float dr=0;
-  for (int j=0; j < 10; j++) {
+  for (int j=0; j < 3; j++) {
     dr += growth_bound_matrix(i,j,u)*r[j];
   }
   dr += u[i]; //this is causing the bug
@@ -157,6 +161,7 @@ __kernel void gb_initialize_radius(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
+    __global float *tmp2,
     __global float *t)
 {
   float x_low, x_up, u_low, u_up;
@@ -173,7 +178,8 @@ __kernel void gb_initialize_radius(
   k1[i] = 0;
   k2[i] = 0;
   k3[i] = 0;
-  tmp[i] = 0;
+  tmp[i] = final_state[i];
+  tmp2[i] = final_state[i];
   input[i]=0.5 * (u_up - u_low);
   *t = 0.000000;
 
@@ -187,17 +193,21 @@ __kernel void gb_integrate_radius_1(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
+    __global float *tmp2,
     __global float *t)
 {
     int i = get_global_id(0);  
     int j = get_global_id(1);  
-    float dr = growth_bound_matrix(i,j,input)*final_state[j] + input[i] / 10;
+    
+    printf("i,j=%d,%d\n",i,j);
+    
+    float dr = growth_bound_matrix(i,j,input)*tmp2[j] + input[i] / 3;
     k0[i] += dr;
-    final_state[i] += (RK4_H/6.0)*dr;
+    //final_state[i] += (RK4_H/6.0)*dr;
     tmp[i] += RK4_H / 2.0*dr;
-    if(j==0) {
-        tmp[i] += final_state[i];
-    }
+    /* after this kfun: */
+    /* tmp[i] = final_state[i] + RK4_H/2*k0[i] */
+    /* tmp2[i] = final_state */
 }
 
 __kernel void gb_integrate_radius_2( 
@@ -209,18 +219,18 @@ __kernel void gb_integrate_radius_2(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
+    __global float *tmp2,
     __global float *t)
 {
     int i = get_global_id(0);  
     int j = get_global_id(1);  
-    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 10;
+    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 3;
     k1[i] += dr;
-    tmp[i] += RK4_H / 2.0*dr;
-    final_state[i] += (RK4_H/6.0)*2.0*dr;
-    if(j==0) {
-        tmp[i] -= RK4_H/2.0 * k0[i];  
-    }
-    /* after this is done, we should have tmp[i] = final_state[i] + RK4_H/2.0*k1[i] */
+    tmp2[i] += RK4_H / 2.0*dr;
+    //final_state[i] += (RK4_H/6.0)*2.0*dr;
+    /* after this kfun: */
+    /* tmp[i] = final_state[i] + RK4_H/2*k0[i] */
+    /* tmp2[i] = final_state[i]+ RK4_H/2*k1[i] */
 }
 
 __kernel void gb_integrate_radius_3( 
@@ -232,18 +242,21 @@ __kernel void gb_integrate_radius_3(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
+    __global float *tmp2,
     __global float *t)
 {
     int i = get_global_id(0);  
     int j = get_global_id(1);  
-    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 10;
+    float dr = growth_bound_matrix(i,j,input)*tmp2[j] + input[i] / 3;
     k2[i] += dr;
     tmp[i] += RK4_H / 2.0*dr;
-    final_state[i] += (RK4_H/6.0)*2.0*dr;
-    if(j==0) {
-        tmp[i] -= RK4_H/2.0 * k1[i];  
+    //final_state[i] += (RK4_H/6.0)*2.0*dr;
+    if(j==1) {
+        tmp[i] -= RK4_H/2.0 * k0[i];  
     }
-    /* after this is done, we should have tmp[i] = final_state[i] + RK4_H/2.0*k2[i] */
+    /* after this kfun: */
+    /* tmp[i] = final_state[i] + RK4_H/2*k2[i] */
+    /* tmp2[i] = final_state[i]+ RK4_H/2*k1[i] */
 }
 
 __kernel void gb_integrate_radius_4( 
@@ -255,13 +268,14 @@ __kernel void gb_integrate_radius_4(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
+    __global float *tmp2,
     __global float *t)
 {
     int i = get_global_id(0);  
     int j = get_global_id(1);  
-    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 10;
+    float dr = growth_bound_matrix(i,j,input)*tmp[j] + input[i] / 3;
     k3[i] += dr;
-    final_state[i] += (RK4_H/6.0)*dr;
+    //final_state[i] += (RK4_H/6.0)*dr;
     
     *t += RK4_H;
     /* reset the temp vars for the next round */
@@ -269,7 +283,9 @@ __kernel void gb_integrate_radius_4(
     k1[i] = 0;
     k2[i] = 0;
     k3[i] = 0;
-    tmp[i] = 0;
+    tmp[i] = final_state[i];
+    tmp2[i] = final_state[i];
+    //if(i==0 && j==0) printf("%f\n",final_state[i]);
 
 }
 
@@ -296,38 +312,38 @@ float ctmm_decomposition_dynamics(
     __global float* x2;
     __global float* u1;
     __global float* u2;
-    if(i - 10 < 0) {
+    if(i - 3 < 0) {
         /* The index is in the 'upper half', so we're computing g(x,u,xhat,uhat). */
         idx = i;
         offset = 0;
-        idx_hat = i + 10;
-        hat_offset = 10;
+        idx_hat = i + 3;
+        hat_offset = 3;
         idx_nom = i;
         x1 = x;
-        x2 = x + 10;
+        x2 = x + 3;
         u1 = u;
-        u2 = u + 10;
+        u2 = u + 3;
 
     }
     else {
         /* the index is in the 'lower half', so we're computing g(xhat,uhat,x,u). */
         idx = i;
-        offset = 10;
-        idx_hat = i - 10;
+        offset = 3;
+        idx_hat = i - 3;
         hat_offset = 0;
-        idx_nom = i - 10;
-        x1 = x + 10;
+        idx_nom = i - 3;
+        x1 = x + 3;
         x2 = x;
         u1 = u;
-        u2 = u + 10;
+        u2 = u + 3;
     }
-    float xi[10];
-    float pi[10];
-    float alpha[10];
-    float beta[10];
+    float xi[3];
+    float pi[3];
+    float alpha[3];
+    float beta[3];
     float dh;
     
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 3; k++) {
         float ju = state_jacobian_upper_bound(i,k);
         float jl = state_jacobian_lower_bound(i,k);
         float jm = 0.5 * (ju + jl);
@@ -343,7 +359,7 @@ float ctmm_decomposition_dynamics(
     alpha[idx_nom] = 0.0;
     xi[idx_nom] = x1[idx_nom];
 
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 3; k++) {
         float ju = input_jacobian_upper_bound(i,k);
         float jl = input_jacobian_lower_bound(i,k);
         float jm = 0.5 * (ju + jl);
@@ -358,10 +374,10 @@ float ctmm_decomposition_dynamics(
     }
     
     dh = dynamics_element_private(xi, pi, t, idx_nom);
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 3; k++) {
         dh += alpha[k] * (x1[k] - x2[k]);
     }
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 3; k++) {
         dh += beta[k] * (u1[k] - u2[k]);
     }
     if(i==0)
@@ -383,7 +399,7 @@ __kernel void ctmm_initialize(
 {
   float x_low, x_up, u_low, u_up;
   int i = get_global_id(0);
-    if(i - 10 < 0) {
+    if(i - 3 < 0) {
         /* The index is in the 'upper half', so we're computing g(x,u,xhat,uhat). */
         initial_state[i] = initial_state_lower_bound(i);
         final_state[i] = initial_state[i];
@@ -392,9 +408,9 @@ __kernel void ctmm_initialize(
     }
     else {
         /* the index is in the 'lower half', so we're computing g(xhat,uhat,x,u). */
-        initial_state[i] = initial_state_upper_bound(i-10);
+        initial_state[i] = initial_state_upper_bound(i-3);
         final_state[i] = initial_state[i];
-        input[i] = input_upper_bound(i-10);
+        input[i] = input_upper_bound(i-3);
     }
   k0[i] = 0;
   k1[i] = 0;
@@ -487,7 +503,7 @@ __kernel void mc_initialize(
 {
   int sample_idx = get_global_id(0);
   int state_idx = get_global_id(1);
-  int flat_idx = sample_idx*10 + state_idx;
+  int flat_idx = sample_idx*3 + state_idx;
   int randseed = flat_idx;
 
   float x_low, x_up, u_low, u_up;
@@ -522,9 +538,9 @@ __kernel void mc_integrate_1(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*3 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = final_state + sample_idx*10;
+    current_sample_ptr = final_state + sample_idx*3;
     //current_sample_ptr = final_state; 
     k0[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k0[flat_idx];
@@ -543,9 +559,9 @@ __kernel void mc_integrate_2(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*3 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*10;
+    current_sample_ptr = tmp + sample_idx*3;
     //current_sample_ptr = tmp;
     k1[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k1[flat_idx];
@@ -564,9 +580,9 @@ __kernel void mc_integrate_3(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*3 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*10;
+    current_sample_ptr = tmp + sample_idx*3;
     //current_sample_ptr = tmp;
     k2[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H * k2[flat_idx];
@@ -585,9 +601,9 @@ __kernel void mc_integrate_4(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*3 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*10;
+    current_sample_ptr = tmp + sample_idx*3;
     //current_sample_ptr = tmp;
     k3[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t +  step_size, state_idx);
     final_state[flat_idx] = final_state[flat_idx] + (RK4_H / 6.0)*(k0[flat_idx] + 2.0*k1[flat_idx] + 2.0*k2[flat_idx] + k3[flat_idx]);

@@ -2,8 +2,12 @@
 #include "@@config_file_directory@@/dynamics.cl"
 #include "@@config_file_directory@@/bounds.cl"
 
+#ifdef MC_1
 #include "@@config_file_directory@@/growth_bound_matrix.cl"
+#endif
+#ifdef MC_2
 #include "@@config_file_directory@@/jacobian_bounds.cl"
+#endif
 
 /* useful defines for RK4 integration */
 #define step_size @@true_step_size@@

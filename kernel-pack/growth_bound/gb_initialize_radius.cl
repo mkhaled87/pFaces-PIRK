@@ -7,6 +7,7 @@ __kernel void gb_initialize_radius(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
+    __global float *tmp2,
     __global float *t)
 {
   float x_low, x_up, u_low, u_up;
@@ -23,7 +24,8 @@ __kernel void gb_initialize_radius(
   k1[i] = 0;
   k2[i] = 0;
   k3[i] = 0;
-  tmp[i] = 0;
+  tmp[i] = final_state[i];
+  tmp2[i] = final_state[i];
   input[i]=0.5 * (u_up - u_low);
   *t = @@initial_time@@;
 

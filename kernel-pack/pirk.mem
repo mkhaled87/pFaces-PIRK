@@ -1263,7 +1263,30 @@ gb_initialize_radius{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 5.8: t (gets attached to 0.8's buffer)
+	# argument 5.8: tmp2 (gets attached to a new buffer)
+	# ----------------------------------------------------
+	tmp2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 5.9: t (gets attached to 0.8's buffer)
 	# ----------------------------------------------------
 	t{
 		directionWriteOrRead	= "false";
@@ -1476,7 +1499,30 @@ gb_integrate_radius_1{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 6.8: t (gets attached to 0.8's buffer)
+	# argument 6.8: tmp2 (gets attached to 5.8's buffer)
+	# ----------------------------------------------------
+	tmp2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "5";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 6.9: t (gets attached to 0.8's buffer)
 	# ----------------------------------------------------
 	t{
 		directionWriteOrRead	= "false";
@@ -1689,7 +1735,31 @@ gb_integrate_radius_2{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 7.8: t (gets attached to 0.8's buffer)
+	# argument 7.8: tmp2 (gets attached to 5.8's buffer)
+	# ----------------------------------------------------
+	tmp2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "5";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+
+	# argument 7.9: t (gets attached to 0.8's buffer)
 	# ----------------------------------------------------
 	t{
 		directionWriteOrRead	= "false";
@@ -1903,7 +1973,31 @@ gb_integrate_radius_3{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 8.8: t (gets attached to 0.8's buffer)
+	# argument 8.8: tmp2 (gets attached to 5.8's buffer)
+	# ----------------------------------------------------
+	tmp2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "5";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+
+	# argument 8.9: t (gets attached to 0.8's buffer)
 	# ----------------------------------------------------
 	t{
 		directionWriteOrRead	= "false";
@@ -2118,7 +2212,31 @@ gb_integrate_radius_4{
 		equalSubBufferSizes		= "false";
 	}
 
-	# argument 9.8: t (gets attached to 0.8's buffer)
+	# argument 9.8: tmp2 (gets attached to 5.8's buffer)
+	# ----------------------------------------------------
+	tmp2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "5";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+
+	# argument 9.9: t (gets attached to 0.8's buffer)
 	# ----------------------------------------------------
 	t{
 		directionWriteOrRead	= "false";

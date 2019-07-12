@@ -99,12 +99,12 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
   /* begin code for creating the "gb_gb_initialize_radius" kernel function (function 5) */
   pfacesKernelFunction function_gb_initialize_radius(
       "gb_initialize_radius",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_initialize_radius = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_initialize_radius",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   function_gb_initialize_radius.setArguments(args_gb_initialize_radius);
   addKernelFunction(function_gb_initialize_radius);
@@ -116,12 +116,12 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
   /* begin code for creating the "gb_integrate_radius_1" kernel function (function 6) */
   pfacesKernelFunction function_gb_integrate_radius_1(
       "gb_integrate_radius_1",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_1 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_1",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_1.setArguments(args_gb_integrate_radius_1);
   addKernelFunction(function_gb_integrate_radius_1);
@@ -133,12 +133,12 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
   /* begin code for creating the "gb_integrate_radius_2" kernel function (function 7) */
   pfacesKernelFunction function_gb_integrate_radius_2(
       "gb_integrate_radius_2",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_2 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_2",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_2.setArguments(args_gb_integrate_radius_2);
   addKernelFunction(function_gb_integrate_radius_2);
@@ -150,12 +150,12 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
   /* begin code for creating the "gb_integrate_radius_3" kernel function (function 8) */
   pfacesKernelFunction function_gb_integrate_radius_3(
       "gb_integrate_radius_3",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_3 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_3",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_3.setArguments(args_gb_integrate_radius_3);
   addKernelFunction(function_gb_integrate_radius_3);
@@ -167,12 +167,12 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
   /* begin code for creating the "gb_integrate_radius_4" kernel function (function 9) */
   pfacesKernelFunction function_gb_integrate_radius_4(
       "gb_integrate_radius_4",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_4 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_4",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "tmp2", "t"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_4.setArguments(args_gb_integrate_radius_4);
   addKernelFunction(function_gb_integrate_radius_4);

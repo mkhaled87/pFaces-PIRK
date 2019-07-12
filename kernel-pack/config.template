@@ -30,3 +30,5 @@ input_upper_bound_code = string
 
 growth_bound = scope
 growth_bound.growth_bound_matrix_code = string
+
+nsamples = int
