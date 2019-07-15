@@ -60,6 +60,8 @@ __kernel void gb_integrate_dynchoice_4(
     int i = get_global_id(0);  
     k3[i] = dynfn(tmp, input, *t +  step_size, i);
     final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
-    *t += RK4_H;
+    if(i==0) {
+        *t += RK4_H;
+    }
 }
 
