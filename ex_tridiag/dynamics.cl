@@ -1,4 +1,4 @@
-float dynamics_element(__global float* x, __global float* u, float t, int i) {
+float dynamics_element_global(__global float* x, __global float* u, float t, int i) {
     int nx = 20;
     float dx = 0;
     if(i==0) {

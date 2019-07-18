@@ -12,15 +12,15 @@
 #define MC_1
 
 /* includes for the growth bound method */
-// /home/hcs/Documents/pFaces/examples/pirk/ex_n_link/hi.cl
+// /home/hcs/Documents/pFaces/examples/pirk/speed_test_gb/ex_n_link_1000000/hi.cl
 
 /* common utility file */
 
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/dynamics.cl"
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/bounds.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/speed_test_gb/ex_n_link_1000000/dynamics.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/speed_test_gb/ex_n_link_1000000/bounds.cl"
 
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/growth_bound_matrix.cl"
-#include "/home/hcs/Documents/pFaces/examples/pirk/ex_n_link/jacobian_bounds.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/speed_test_gb/ex_n_link_1000000/growth_bound_matrix.cl"
+#include "/home/hcs/Documents/pFaces/examples/pirk/speed_test_gb/ex_n_link_1000000/jacobian_bounds.cl"
 
 /* useful defines for RK4 integration */
 #define step_size 0.750000
@@ -28,15 +28,17 @@
 #define RK4_H ((0.750000/RK4_NINT))
 
 
-float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global float *ncel, float t, int i)
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
 {
   float dr=0;
   int idx;
   for (int j=0; j < ncel[i]; j++) {
     idx = cidxs[i*1 + j];
-    dr += cvals[idx]*r[j];
+    dr += cvals[i*1 + j]*r[idx];
   }
   dr += u[i];
+  if(i==0)
+      //printf("%f\n",dr);
   return dr;
 }
 
@@ -152,21 +154,31 @@ __kernel void gb_integrate_center_4(
 }
 
 
-__kernel void gb_compute_contraction_matrix(__global int *cidxs, __global float *cvals, __global float *ncel)
+__kernel void gb_compute_contraction_matrix(__global int *cidxs, __global float *cvals, __global int *ncel)
 {
     int row_idx = get_global_id(0);
     int nonzero_count = 0;
     float c;
-    for (int col_idx = 0; col_idx < 10; col_idx++) {
+    for (int col_idx = 0; col_idx < 1000000; col_idx++) {
        c = growth_bound_matrix(row_idx, col_idx);
+       //if(row_idx==0) {printf("%d %f\n",col_idx, c);}
        if(c != 0.) {
-        cidxs[row_idx * 1 + nonzero_count] = col_idx;
-        cvals[row_idx * 1 + nonzero_count] = c;
-        nonzero_count++;
+           if(row_idx==0) printf("gonna save the index %d to position %d, with the value %f\n",col_idx, nonzero_count, c);
+           cidxs[row_idx * 1 + nonzero_count] = col_idx;
+           cvals[row_idx * 1 + nonzero_count] = c;
+           nonzero_count++;
        }
     }
     ncel[row_idx] = nonzero_count;
-    printf("nonzero elements in row %d of contraction matrix: %d\n", row_idx, nonzero_count);
+    //if(row_idx == 0){
+    //    printf("nonzero elements in row %d of contraction matrix: %d\n", row_idx, ncel[row_idx]);
+    //    printf("elements in row %d:\n",row_idx);
+    //    int idx;
+    //    for(int q = 0; q < ncel[row_idx];q++){
+    //        idx = cidxs[row_idx*1 + q];
+    //        printf("[%d], col %d: %f\n",q, idx, cvals[row_idx*1 + q]);
+     //   }
+    //}
 }
 __kernel void gb_initialize_radius( 
     __global float *initial_state,
@@ -300,38 +312,38 @@ float ctmm_decomposition_dynamics(
     __global float* x2;
     __global float* u1;
     __global float* u2;
-    if(i - 10 < 0) {
+    if(i - 1000000 < 0) {
         /* The index is in the 'upper half', so we're computing g(x,u,xhat,uhat). */
         idx = i;
         offset = 0;
-        idx_hat = i + 10;
-        hat_offset = 10;
+        idx_hat = i + 1000000;
+        hat_offset = 1000000;
         idx_nom = i;
         x1 = x;
-        x2 = x + 10;
+        x2 = x + 1000000;
         u1 = u;
-        u2 = u + 10;
+        u2 = u + 1000000;
 
     }
     else {
         /* the index is in the 'lower half', so we're computing g(xhat,uhat,x,u). */
         idx = i;
-        offset = 10;
-        idx_hat = i - 10;
+        offset = 1000000;
+        idx_hat = i - 1000000;
         hat_offset = 0;
-        idx_nom = i - 10;
-        x1 = x + 10;
+        idx_nom = i - 1000000;
+        x1 = x + 1000000;
         x2 = x;
         u1 = u;
-        u2 = u + 10;
+        u2 = u + 1000000;
     }
-    float xi[10];
-    float pi[10];
-    float alpha[10];
-    float beta[10];
+    float xi[1000000];
+    float pi[1000000];
+    float alpha[1000000];
+    float beta[1000000];
     float dh;
     
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 1000000; k++) {
         float ju = state_jacobian_upper_bound(i,k);
         float jl = state_jacobian_lower_bound(i,k);
         float jm = 0.5 * (ju + jl);
@@ -347,7 +359,7 @@ float ctmm_decomposition_dynamics(
     alpha[idx_nom] = 0.0;
     xi[idx_nom] = x1[idx_nom];
 
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 1000000; k++) {
         float ju = input_jacobian_upper_bound(i,k);
         float jl = input_jacobian_lower_bound(i,k);
         float jm = 0.5 * (ju + jl);
@@ -362,10 +374,10 @@ float ctmm_decomposition_dynamics(
     }
     
     dh = dynamics_element_private(xi, pi, t, idx_nom);
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 1000000; k++) {
         dh += alpha[k] * (x1[k] - x2[k]);
     }
-    for(int k=0; k < 10; k++) {
+    for(int k=0; k < 1000000; k++) {
         dh += beta[k] * (u1[k] - u2[k]);
     }
     if(i==0)
@@ -387,7 +399,7 @@ __kernel void ctmm_initialize(
 {
   float x_low, x_up, u_low, u_up;
   int i = get_global_id(0);
-    if(i - 10 < 0) {
+    if(i - 1000000 < 0) {
         /* The index is in the 'upper half', so we're computing g(x,u,xhat,uhat). */
         initial_state[i] = initial_state_lower_bound(i);
         final_state[i] = initial_state[i];
@@ -396,9 +408,9 @@ __kernel void ctmm_initialize(
     }
     else {
         /* the index is in the 'lower half', so we're computing g(xhat,uhat,x,u). */
-        initial_state[i] = initial_state_upper_bound(i-10);
+        initial_state[i] = initial_state_upper_bound(i-1000000);
         final_state[i] = initial_state[i];
-        input[i] = input_upper_bound(i-10);
+        input[i] = input_upper_bound(i-1000000);
     }
   k0[i] = 0;
   k1[i] = 0;
@@ -491,7 +503,7 @@ __kernel void mc_initialize(
 {
   int sample_idx = get_global_id(0);
   int state_idx = get_global_id(1);
-  int flat_idx = sample_idx*10 + state_idx;
+  int flat_idx = sample_idx*1000000 + state_idx;
   int randseed = flat_idx;
 
   float x_low, x_up, u_low, u_up;
@@ -526,9 +538,9 @@ __kernel void mc_integrate_1(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*1000000 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = final_state + sample_idx*10;
+    current_sample_ptr = final_state + sample_idx*1000000;
     //current_sample_ptr = final_state; 
     k0[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k0[flat_idx];
@@ -547,9 +559,9 @@ __kernel void mc_integrate_2(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*1000000 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*10;
+    current_sample_ptr = tmp + sample_idx*1000000;
     //current_sample_ptr = tmp;
     k1[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H / 2.0*k1[flat_idx];
@@ -568,9 +580,9 @@ __kernel void mc_integrate_3(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*1000000 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*10;
+    current_sample_ptr = tmp + sample_idx*1000000;
     //current_sample_ptr = tmp;
     k2[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t + 0.5*step_size, state_idx);
     tmp[flat_idx] = final_state[flat_idx] + RK4_H * k2[flat_idx];
@@ -589,9 +601,9 @@ __kernel void mc_integrate_4(
 {
     int sample_idx = get_global_id(0);  
     int state_idx = get_global_id(1);
-    int flat_idx = sample_idx*10 + state_idx;
+    int flat_idx = sample_idx*1000000 + state_idx;
     __global float *current_sample_ptr;
-    current_sample_ptr = tmp + sample_idx*10;
+    current_sample_ptr = tmp + sample_idx*1000000;
     //current_sample_ptr = tmp;
     k3[flat_idx] = dynamics_element_global(current_sample_ptr, input, *t +  step_size, state_idx);
     final_state[flat_idx] = final_state[flat_idx] + (RK4_H / 6.0)*(k0[flat_idx] + 2.0*k1[flat_idx] + 2.0*k2[flat_idx] + k3[flat_idx]);

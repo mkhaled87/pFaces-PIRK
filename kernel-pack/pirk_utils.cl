@@ -11,15 +11,17 @@
 #define RK4_H ((@@true_step_size@@/RK4_NINT))
 
 
-float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global float *ncel, float t, int i)
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
 {
   float dr=0;
   int idx;
   for (int j=0; j < ncel[i]; j++) {
     idx = cidxs[i*@@row_max@@ + j];
-    dr += cvals[idx]*r[j];
+    dr += cvals[i*@@row_max@@ + j]*r[idx];
   }
   dr += u[i];
+  if(i==0)
+      //printf("%f\n",dr);
   return dr;
 }
 
