@@ -1,0 +1,590 @@
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_10/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 10
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 10
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     2397,       10) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     2397,       10) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     2397,       10) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     2397,       10) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     2397,       10) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.915649
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 95880,95880,95880,95880,95880,95880,95880,95880,4,95880,95880
+ Buf. Paddings  ( B): 120,120,120,120,120,120,120,120,124,120,120
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 96000,96000,96000,96000,96000,96000,96000,96000,128,96000,96000
+*********************************************************************************************************************
+time: 0.000712322
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:04:49-012] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: The kernel is built successfully for 1 device(s) in 0.240741 seconds.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-253] pFaces: Started running the parallel instructions.
+[Tuesday 16/07/2019 15:04:49-253] pirk.cpu: The program has started.
+[Tuesday 16/07/2019 15:04:49-255] pirk.cpu: Initializing integration...
+[Tuesday 16/07/2019 15:04:49-255] pirk.cpu: Performing integration...
+[Tuesday 16/07/2019 15:04:49-361] pirk.cpu: Initializing radius integration...
+[Tuesday 16/07/2019 15:04:49-362] pirk.cpu: program complete.
+[Tuesday 16/07/2019 15:04:49-362] pFaces: Finished running the parallel instructions.
+[1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
+MC
+[0mLog of Interval Volume
+-------------------
+[0m45.819660
+[0m*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0641856 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:  6.7749e-05, DW:  9.5909e-05, DR: 0.000133742, NC:     1
+Dev. [1] | mc_integrate.: EX:  0.00614887, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:  0.00622862, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:  0.00622295, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:   0.0107075, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.0293757 seconds.
+Post-execute task time  : 0.000105221 seconds.	(Saving results)
+Total data-write time   : 9.5909e-05 seconds.
+Total data-read time    : 0.000133742 seconds.
+Program compile time    : 0.240741 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 0.493446 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_20/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 20
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 20
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     5348,       20) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     5348,       20) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     5348,       20) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     5348,       20) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     5348,       20) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 4.08093
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 427840,427840,427840,427840,427840,427840,427840,427840,4,427840,427840
+ Buf. Paddings  ( B): 64,64,64,64,64,64,64,64,124,64,64
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 427904,427904,427904,427904,427904,427904,427904,427904,128,427904,427904
+*********************************************************************************************************************
+time: 0.00317258
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:04:49-500] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:04:49-737] pFaces: The kernel is built successfully for 1 device(s) in 0.237461 seconds.
+[Tuesday 16/07/2019 15:04:49-737] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:49-738] pFaces: Started running the parallel instructions.
+[Tuesday 16/07/2019 15:04:49-738] pirk.cpu: The program has started.
+[Tuesday 16/07/2019 15:04:49-740] pirk.cpu: Initializing integration...
+[Tuesday 16/07/2019 15:04:49-742] pirk.cpu: Performing integration...
+[Tuesday 16/07/2019 15:04:50-361] pirk.cpu: Initializing radius integration...
+[Tuesday 16/07/2019 15:04:50-362] pirk.cpu: program complete.
+[Tuesday 16/07/2019 15:04:50-362] pFaces: Finished running the parallel instructions.
+[1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
+MC
+[0mLog of Interval Volume
+-------------------
+[0m91.706718
+[0m*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0707963 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:  0.00199158, DW: 0.000419743, DR:  0.00035816, NC:     1
+Dev. [1] | mc_integrate.: EX:    0.111584, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     0.11604, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.116415, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.185312, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.531342 seconds.
+Post-execute task time  : 0.000197691 seconds.	(Saving results)
+Total data-write time   : 0.000419743 seconds.
+Total data-read time    : 0.00035816 seconds.
+Program compile time    : 0.237461 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 0.992901 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_50/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 50
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 50
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (    15202,       50) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (    15202,       50) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (    15202,       50) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (    15202,       50) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (    15202,       50) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 28.9967
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 3040400,3040400,3040400,3040400,3040400,3040400,3040400,3040400,4,3040400,3040400
+ Buf. Paddings  ( B): 112,112,112,112,112,112,112,112,124,112,112
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 3040512,3040512,3040512,3040512,3040512,3040512,3040512,3040512,128,3040512,3040512
+*********************************************************************************************************************
+time: 0.0245554
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:04:50-518] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: The kernel is built successfully for 1 device(s) in 0.240997 seconds.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:50-759] pFaces: Started running the parallel instructions.
+[Tuesday 16/07/2019 15:04:50-759] pirk.cpu: The program has started.
+[Tuesday 16/07/2019 15:04:50-768] pirk.cpu: Initializing integration...
+[Tuesday 16/07/2019 15:04:50-774] pirk.cpu: Performing integration...
+[Tuesday 16/07/2019 15:04:52-438] pirk.cpu: Initializing radius integration...
+[Tuesday 16/07/2019 15:04:52-442] pirk.cpu: program complete.
+[Tuesday 16/07/2019 15:04:52-442] pFaces: Finished running the parallel instructions.
+[1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
+MC
+[0mLog of Interval Volume
+-------------------
+[0m229.454773
+[0m*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0889137 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:  0.00586556, DW:  0.00254457, DR:  0.00326298, NC:     1
+Dev. [1] | mc_integrate.: EX:    0.314015, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.316452, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.317296, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.562801, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 1.51643 seconds.
+Post-execute task time  : 0.00132549 seconds.	(Saving results)
+Total data-write time   : 0.00254457 seconds.
+Total data-read time    : 0.00326298 seconds.
+Program compile time    : 0.240997 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 2.07352 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_100/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 100
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 100
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (    33177,      100) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (    33177,      100) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (    33177,      100) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (    33177,      100) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (    33177,      100) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 126.561
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 13270800,13270800,13270800,13270800,13270800,13270800,13270800,13270800,4,13270800,13270800
+ Buf. Paddings  ( B): 112,112,112,112,112,112,112,112,124,112,112
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 13270912,13270912,13270912,13270912,13270912,13270912,13270912,13270912,128,13270912,13270912
+*********************************************************************************************************************
+time: 0.104749
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:04:52-679] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:04:52-919] pFaces: The kernel is built successfully for 1 device(s) in 0.240572 seconds.
+[Tuesday 16/07/2019 15:04:52-919] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:04:52-920] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:04:52-920] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-922] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-924] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-926] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-928] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-931] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-933] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-934] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-934] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-937] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-940] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:52-940] pFaces: Started running the parallel instructions.
+[Tuesday 16/07/2019 15:04:52-940] pirk.cpu: The program has started.
+[Tuesday 16/07/2019 15:04:52-970] pirk.cpu: Initializing integration...
+[Tuesday 16/07/2019 15:04:53-008] pirk.cpu: Performing integration...
+[Tuesday 16/07/2019 15:04:58-862] pirk.cpu: Initializing radius integration...
+[Tuesday 16/07/2019 15:04:58-874] pirk.cpu: program complete.
+[Tuesday 16/07/2019 15:04:58-875] pFaces: Finished running the parallel instructions.
+[1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
+MC
+[0mLog of Interval Volume
+-------------------
+[0m459.208038
+[0m*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.169103 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:   0.0339476, DW:   0.0145749, DR:   0.0115756, NC:     1
+Dev. [1] | mc_integrate.: EX:     1.24172, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     1.25701, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     1.25871, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     1.84559, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 5.63698 seconds.
+Post-execute task time  : 0.00742693 seconds.	(Saving results)
+Total data-write time   : 0.0145749 seconds.
+Total data-read time    : 0.0115756 seconds.
+Program compile time    : 0.240572 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 6.43283 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_200/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 200
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 200
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (    71898,      200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (    71898,      200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (    71898,      200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (    71898,      200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (    71898,      200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 548.539
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 57518400,57518400,57518400,57518400,57518400,57518400,57518400,57518400,4,57518400,57518400
+ Buf. Paddings  ( B): 64,64,64,64,64,64,64,64,124,64,64
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 57518464,57518464,57518464,57518464,57518464,57518464,57518464,57518464,128,57518464,57518464
+*********************************************************************************************************************
+time: 0.448049
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:04:59-469] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:04:59-709] pFaces: The kernel is built successfully for 1 device(s) in 0.240924 seconds.
+[Tuesday 16/07/2019 15:04:59-709] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:04:59-710] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:04:59-716] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-723] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-731] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-737] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-747] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-754] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-761] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-768] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-768] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-777] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-784] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:04:59-784] pFaces: Started running the parallel instructions.
+[Tuesday 16/07/2019 15:04:59-784] pirk.cpu: The program has started.
+[Tuesday 16/07/2019 15:04:59-875] pirk.cpu: Initializing integration...
+[Tuesday 16/07/2019 15:05:00-251] pirk.cpu: Performing integration...
+[Tuesday 16/07/2019 15:06:34-925] pirk.cpu: Initializing radius integration...
+[Tuesday 16/07/2019 15:06:34-976] pirk.cpu: program complete.
+[Tuesday 16/07/2019 15:06:34-976] pFaces: Finished running the parallel instructions.
+[1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
+MC
+[0mLog of Interval Volume
+-------------------
+[0m918.649719
+[0m*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.512621 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:    0.356038, DW:   0.0531091, DR:    0.047974, NC:     1
+Dev. [1] | mc_integrate.: EX:     20.3459, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     20.4881, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     20.4445, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     32.2131, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 93.8476 seconds.
+Post-execute task time  : 0.0501247 seconds.	(Saving results)
+Total data-write time   : 0.0531091 seconds.
+Total data-read time    : 0.047974 seconds.
+Program compile time    : 0.240924 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 96.1573 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_500/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 500
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 500
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (   198070,      500) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (   198070,      500) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (   198070,      500) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (   198070,      500) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (   198070,      500) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 3777.89
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 396140000,396140000,396140000,396140000,396140000,396140000,396140000,396140000,4,396140000,396140000
+ Buf. Paddings  ( B): 32,32,32,32,32,32,32,32,124,32,32
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 396140032,396140032,396140032,396140032,396140032,396140032,396140032,396140032,128,396140032,396140032
+*********************************************************************************************************************
+time: 3.08151
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:06:38-274] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:06:38-510] pFaces: The kernel is built successfully for 1 device(s) in 0.236006 seconds.
+[Tuesday 16/07/2019 15:06:38-510] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:06:38-510] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:06:38-554] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-599] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-642] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-686] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-729] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-772] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-815] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-858] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-858] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-901] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-944] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:06:38-944] pFaces: Started running the parallel instructions.
+[Tuesday 16/07/2019 15:06:38-944] pirk.cpu: The program has started.
+[Tuesday 16/07/2019 15:06:39-519] pirk.cpu: Initializing integration...
+[Tuesday 16/07/2019 15:06:40-097] pirk.cpu: Performing integration...
+[Tuesday 16/07/2019 15:10:02-575] pirk.cpu: Initializing radius integration...
+[Tuesday 16/07/2019 15:10:02-918] pirk.cpu: program complete.
+[Tuesday 16/07/2019 15:10:02-918] pFaces: Finished running the parallel instructions.
+[1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
+MC
+[0mLog of Interval Volume
+-------------------
+[0m2297.495605
+[0m*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 3.14286 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:      0.5077, DW:    0.343032, DR:    0.325113, NC:     1
+Dev. [1] | mc_integrate.: EX:     44.1986, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     44.9314, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     44.8895, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     67.3618, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 201.889 seconds.
+Post-execute task time  : 0.741477 seconds.	(Saving results)
+Total data-write time   : 0.343032 seconds.
+Total data-read time    : 0.325113 seconds.
+Program compile time    : 0.236006 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 208.728 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_1000/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 1000
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 1000
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (   423866,     1000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (   423866,     1000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (   423866,     1000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (   423866,     1000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (   423866,     1000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 16169.2
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 1695464000,1695464000,1695464000,1695464000,1695464000,1695464000,1695464000,1695464000,4,1695464000,1695464000
+ Buf. Paddings  ( B): 64,64,64,64,64,64,64,64,124,64,64
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 1695464064,1695464064,1695464064,1695464064,1695464064,1695464064,1695464064,1695464064,128,1695464064,1695464064
+*********************************************************************************************************************
+time: 13.2098
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 16/07/2019 15:10:17-242] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 16/07/2019 15:10:17-510] pFaces: The kernel is built successfully for 1 device(s) in 0.268537 seconds.
+[Tuesday 16/07/2019 15:10:17-510] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Tuesday 16/07/2019 15:10:17-510] pFaces: Creating buffers on devices ... 
+[Tuesday 16/07/2019 15:10:17-705] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:10:17-895] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:10:18-089] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 16/07/2019 15:10:18-797] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[1;31mpFaces::Error: Failed to create buffers for parallel execution.[OpenCL Error#: -6]
+[0mpFaces 1.0 [beta]
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] Intel(R) OpenCL HD Graphics, Intel(R) Corporation: Intel(R) Gen9 HD Graphics NEO, 12.41/4.00 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz, 15.51/3.88 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (../examples/pirk/speed_test_mc/ex_n_link_2000/ex_n_link.cfg) ... done.
+[1;32mpFaces::Info: 2000
+[0m[1;32mpFaces::Info: Setting up the Monte Carlo method...
+[0mGrouping devices into one execution context ... done.
+[1;32mpFaces::Info: Configuring the Monte Carlo parallel program...
+[0m[1;32mpFaces::Info: 2000
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (   903183,     2000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (   903183,     2000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (   903183,     2000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (   903183,     2000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (   903183,     2000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 68907.4
+ Num. Buffers       : 11
+ Alignment Base ( B): 128
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 7225464000,7225464000,7225464000,7225464000,7225464000,7225464000,7225464000,7225464000,4,7225464000,7225464000
+ Buf. Paddings  ( B): 64,64,64,64,64,64,64,64,124,64,64
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 7225464064,7225464064,7225464064,7225464064,7225464064,7225464064,7225464064,7225464064,128,7225464064,7225464064
+*********************************************************************************************************************
