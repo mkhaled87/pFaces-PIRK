@@ -28,13 +28,15 @@
 #define RK4_H ((0.750000/RK4_NINT))
 
 
-float growth_bound_radius_dynamics(__global float* r, __global float* u, float t, int i)
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global float *ncel, float t, int i)
 {
   float dr=0;
-  for (int j=0; j < 10; j++) {
-    dr += growth_bound_matrix(i,j,u)*r[j];
+  int idx;
+  for (int j=0; j < ncel[i]; j++) {
+    idx = cidxs[i*1 + j];
+    dr += cvals[idx]*r[j];
   }
-  dr += u[i]; //this is causing the bug
+  dr += u[i];
   return dr;
 }
 
@@ -82,15 +84,7 @@ __kernel void gb_initialize_center(
 
 }
 
-
-#define gb_integrate_dynchoice_1 gb_integrate_center_1
-#define gb_integrate_dynchoice_2 gb_integrate_center_2
-#define gb_integrate_dynchoice_3 gb_integrate_center_3
-#define gb_integrate_dynchoice_4 gb_integrate_center_4
-
-#define dynfn dynamics_element_global
-
-__kernel void gb_integrate_dynchoice_1( 
+__kernel void gb_integrate_center_1( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -102,11 +96,11 @@ __kernel void gb_integrate_dynchoice_1(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k0[i] = dynfn(initial_state, input, *t, i);
+    k0[i] = dynamics_element_global(initial_state, input, *t, i);
     tmp[i] = final_state[i] + RK4_H / 2.0*k0[i];
 }
 
-__kernel void gb_integrate_dynchoice_2( 
+__kernel void gb_integrate_center_2( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -118,11 +112,11 @@ __kernel void gb_integrate_dynchoice_2(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k1[i] = dynfn(tmp, input, *t + 0.5*step_size,  i);
+    k1[i] = dynamics_element_global(tmp, input, *t + 0.5*step_size,  i);
     tmp[i] = final_state[i] + RK4_H / 2.0*k1[i];
 }
 
-__kernel void gb_integrate_dynchoice_3( 
+__kernel void gb_integrate_center_3( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -134,11 +128,11 @@ __kernel void gb_integrate_dynchoice_3(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k2[i] = dynfn(tmp, input, *t + 0.5*step_size, i);
+    k2[i] = dynamics_element_global(tmp, input, *t + 0.5*step_size, i);
     tmp[i] = final_state[i] + RK4_H * k2[i];
 }
 
-__kernel void gb_integrate_dynchoice_4( 
+__kernel void gb_integrate_center_4( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -150,13 +144,30 @@ __kernel void gb_integrate_dynchoice_4(
     __global float *t)
 {
     int i = get_global_id(0);  
-    k3[i] = dynfn(tmp, input, *t +  step_size, i);
+    k3[i] = dynamics_element_global(tmp, input, *t +  step_size, i);
     final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
-    *t += RK4_H;
+    if(i==0) {
+        *t += RK4_H;
+    }
 }
 
 
-
+__kernel void gb_compute_contraction_matrix(__global int *cidxs, __global float *cvals, __global float *ncel)
+{
+    int row_idx = get_global_id(0);
+    int nonzero_count = 0;
+    float c;
+    for (int col_idx = 0; col_idx < 10; col_idx++) {
+       c = growth_bound_matrix(row_idx, col_idx);
+       if(c != 0.) {
+        cidxs[row_idx * 1 + nonzero_count] = col_idx;
+        cvals[row_idx * 1 + nonzero_count] = c;
+        nonzero_count++;
+       }
+    }
+    ncel[row_idx] = nonzero_count;
+    printf("nonzero elements in row %d of contraction matrix: %d\n", row_idx, nonzero_count);
+}
 __kernel void gb_initialize_radius( 
     __global float *initial_state,
     __global float *final_state, 
@@ -187,21 +198,7 @@ __kernel void gb_initialize_radius(
   *t = 0.000000;
 
 }
-
-#undef gb_integrate_dynchoice_1
-#undef gb_integrate_dynchoice_2
-#undef gb_integrate_dynchoice_3
-#undef gb_integrate_dynchoice_4
-
-#undef dynfn
-
-#define gb_integrate_dynchoice_1 gb_integrate_radius_1
-#define gb_integrate_dynchoice_2 gb_integrate_radius_2
-#define gb_integrate_dynchoice_3 gb_integrate_radius_3
-#define gb_integrate_dynchoice_4 gb_integrate_radius_4
-#define dynfn growth_bound_radius_dynamics
-
-__kernel void gb_integrate_dynchoice_1( 
+__kernel void gb_integrate_radius_1( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -210,14 +207,17 @@ __kernel void gb_integrate_dynchoice_1(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t)
+    __global float *t,
+    __global int *cidxs,
+    __global float *cvals,
+    __global float *ncel)
 {
     int i = get_global_id(0);  
-    k0[i] = dynfn(initial_state, input, *t, i);
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
     tmp[i] = final_state[i] + RK4_H / 2.0*k0[i];
 }
 
-__kernel void gb_integrate_dynchoice_2( 
+__kernel void gb_integrate_radius_2( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -226,14 +226,17 @@ __kernel void gb_integrate_dynchoice_2(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t)
+    __global float *t,
+    __global int *cidxs,
+    __global float *cvals,
+    __global float *ncel)
 {
     int i = get_global_id(0);  
-    k1[i] = dynfn(tmp, input, *t + 0.5*step_size,  i);
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
     tmp[i] = final_state[i] + RK4_H / 2.0*k1[i];
 }
 
-__kernel void gb_integrate_dynchoice_3( 
+__kernel void gb_integrate_radius_3( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -242,14 +245,17 @@ __kernel void gb_integrate_dynchoice_3(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t)
+    __global float *t,
+    __global int *cidxs,
+    __global float *cvals,
+    __global float *ncel)
 {
     int i = get_global_id(0);  
-    k2[i] = dynfn(tmp, input, *t + 0.5*step_size, i);
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
     tmp[i] = final_state[i] + RK4_H * k2[i];
 }
 
-__kernel void gb_integrate_dynchoice_4( 
+__kernel void gb_integrate_radius_4( 
     __global float *initial_state,
     __global float *final_state, 
     __global float *input,
@@ -258,12 +264,17 @@ __kernel void gb_integrate_dynchoice_4(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t)
+    __global float *t,
+    __global int *cidxs,
+    __global float *cvals,
+    __global float *ncel)
 {
     int i = get_global_id(0);  
-    k3[i] = dynfn(tmp, input, *t +  step_size, i);
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
     final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
-    *t += RK4_H;
+    if(i==0) {
+        *t += RK4_H;
+    }
 }
 
 

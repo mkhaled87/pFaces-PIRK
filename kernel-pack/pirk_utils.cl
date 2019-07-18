@@ -11,13 +11,15 @@
 #define RK4_H ((@@true_step_size@@/RK4_NINT))
 
 
-float growth_bound_radius_dynamics(__global float* r, __global float* u, float t, int i)
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global float *ncel, float t, int i)
 {
   float dr=0;
-  for (int j=0; j < @@states_dim@@; j++) {
-    dr += growth_bound_matrix(i,j,u)*r[j];
+  int idx;
+  for (int j=0; j < ncel[i]; j++) {
+    idx = cidxs[i*@@row_max@@ + j];
+    dr += cvals[idx]*r[j];
   }
-  dr += u[i]; //this is causing the bug
+  dr += u[i];
   return dr;
 }
 

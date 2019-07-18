@@ -111,17 +111,36 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
   /* end code for creating the "gb_gb_initialize_radius" kernel function */
   /* ----------------------------------------------------------------------------------------------------------------------------- */
 
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+  /* begin code for creating the "compute_contraction_matrix" kernel function (function 6) */
+  pfacesKernelFunction function_gb_compute_contraction_matrix(
+      "gb_compute_contraction_matrix",  /* name of the function to add */
+      {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
+  );
+  pfacesKernelFunctionArguments args_gb_compute_contraction_matrix = pfacesKernelFunctionArguments::loadFromFile(
+      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+      "gb_compute_contraction_matrix",  /* name of the function to add */
+      {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
+  );
+  size_t size_cidxs = row_max * sizeof(cl_int);
+  size_t size_cvals = row_max * sizeof(float);
+  size_t size_ncel =  sizeof(cl_int);
+  args_gb_compute_contraction_matrix.m_baseTypeSize = {size_cidxs,size_cvals,size_ncel};
+  function_gb_compute_contraction_matrix.setArguments(args_gb_compute_contraction_matrix);
+  addKernelFunction(function_gb_compute_contraction_matrix);
+  /* end code for creating the "gb_integrate_radius" kernel function */
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "gb_integrate_radius_1" kernel function (function 6) */
+  /* begin code for creating the "gb_integrate_radius_1" kernel function (function 7) */
   pfacesKernelFunction function_gb_integrate_radius_1(
       "gb_integrate_radius_1",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_1 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_1",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_1.setArguments(args_gb_integrate_radius_1);
   addKernelFunction(function_gb_integrate_radius_1);
@@ -130,15 +149,15 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
 
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "gb_integrate_radius_2" kernel function (function 7) */
+  /* begin code for creating the "gb_integrate_radius_2" kernel function (function 8) */
   pfacesKernelFunction function_gb_integrate_radius_2(
       "gb_integrate_radius_2",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_2 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_2",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_2.setArguments(args_gb_integrate_radius_2);
   addKernelFunction(function_gb_integrate_radius_2);
@@ -147,15 +166,15 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
 
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "gb_integrate_radius_3" kernel function (function 8) */
+  /* begin code for creating the "gb_integrate_radius_3" kernel function (function 9) */
   pfacesKernelFunction function_gb_integrate_radius_3(
       "gb_integrate_radius_3",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_3 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_3",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_3.setArguments(args_gb_integrate_radius_3);
   addKernelFunction(function_gb_integrate_radius_3);
@@ -164,15 +183,15 @@ void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>&
 
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "gb_integrate_radius_4" kernel function (function 9) */
+  /* begin code for creating the "gb_integrate_radius_4" kernel function (function 10) */
   pfacesKernelFunction function_gb_integrate_radius_4(
       "gb_integrate_radius_4",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   pfacesKernelFunctionArguments args_gb_integrate_radius_4 = pfacesKernelFunctionArguments::loadFromFile(
       mem_fingerprint_file,  /* name of the file to load the fingerprint from */
       "gb_integrate_radius_4",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
   );
   function_gb_integrate_radius_4.setArguments(args_gb_integrate_radius_4);
   addKernelFunction(function_gb_integrate_radius_4);
@@ -270,10 +289,21 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
 	      true, false, false  /* some additional flags */
   );
 
+  std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_compute_contraction_matrix;
+  jobsPerDev_gb_compute_contraction_matrix = parallelAdvisor.distributeJob(
+	      *this,
+	      6, /* function index */
+	      ndProcessRangeStateDim, /* process range */
+	      ndProcessOffsetStateDim,  /* process offset */
+	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
+	      parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
+	      true, false, false  /* some additional flags */
+  );
+
   std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_1;
   jobsPerDev_gb_integrate_radius_1 = parallelAdvisor.distributeJob(
 	      *this,
-	      6, /* function index */
+	      7, /* function index */
 	      ndProcessRangeStateDim, /* process range */
 	      ndProcessOffsetStateDim,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -284,7 +314,7 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_2;
   jobsPerDev_gb_integrate_radius_2 = parallelAdvisor.distributeJob(
 	      *this,
-	      7, /* function index */
+	      8, /* function index */
 	      ndProcessRangeStateDim, /* process range */
 	      ndProcessOffsetStateDim,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -295,7 +325,7 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_3;
   jobsPerDev_gb_integrate_radius_3 = parallelAdvisor.distributeJob(
 	      *this,
-	      8, /* function index */
+	      9, /* function index */
 	      ndProcessRangeStateDim, /* process range */
 	      ndProcessOffsetStateDim,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -306,7 +336,7 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_4;
   jobsPerDev_gb_integrate_radius_4 = parallelAdvisor.distributeJob(
 	      *this,
-	      9, /* function index */
+	      10, /* function index */
 	      ndProcessRangeStateDim, /* process range */
 	      ndProcessOffsetStateDim,  /* process offset */
 	      parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -327,6 +357,7 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
           "gb_integrate_center_3",
           "gb_integrate_center_4",
           "gb_initialize_radius",
+          "gb_compute_contraction_matrix",
           "gb_integrate_radius_1",
           "gb_integrate_radius_2",
           "gb_integrate_radius_3",
@@ -339,6 +370,7 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
           jobsPerDev_gb_integrate_center_3,
           jobsPerDev_gb_integrate_center_4,
           jobsPerDev_gb_initialize_radius,
+          jobsPerDev_gb_compute_contraction_matrix,
           jobsPerDev_gb_integrate_radius_1,
           jobsPerDev_gb_integrate_radius_2,
           jobsPerDev_gb_integrate_radius_3,
@@ -496,6 +528,17 @@ void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelPr
   // INSTRUCTION: a sync point after initialization
   instrList.push_back(instrSyncPoint);
 
+  std::shared_ptr<pfacesInstruction> instrMsgSp = std::make_shared<pfacesInstruction>();
+  instrMsgSp->setAsMessage("Computing sparse representation of contraction matrix...");
+  instrList.push_back(instrMsgSp);
+  // INSTRUCTIONS: computing the sparse contraction matrix
+  for (size_t i = 0; i < jobsPerDev_gb_compute_contraction_matrix.size(); i++) {
+      std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+      tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_compute_contraction_matrix[i]);
+      instrList.push_back(tmpExecuteInstr);
+  }
+
+  instrList.push_back(instrSyncPoint);
 
   std::shared_ptr<pfacesInstruction> instrMsg3 = std::make_shared<pfacesInstruction>();
   instrMsg3->setAsMessage("Performing radius integration...");

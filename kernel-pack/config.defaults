@@ -28,3 +28,5 @@ input_upper_bound_code = "u_up[i]=1;";
 growth_bound{
     growth_bound_matrix_code = "if(i==j) c = 1.0; else c = 0.0;";
 }
+
+row_max = "3";

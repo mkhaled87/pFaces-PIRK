@@ -93,6 +93,10 @@ void pirk::configureParameters(std::vector<std::string> params, std::vector<std:
   params.push_back("@@growth_bound_matrix_code@@");
   paramvals.push_back(growth_bound_matrix_code);
 
+  row_max = std::stoi(m_spCfg->readConfigValueString("row_max"));
+  params.push_back("@@row_max@@");
+  paramvals.push_back(std::to_string(method_choice));
+
   // updating the list of params
   updatePrameters(params, paramvals);  /* TODO: the word "parameters" is misspelled in this function name */
 }

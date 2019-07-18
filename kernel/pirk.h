@@ -31,6 +31,7 @@ public:
   float integration_time;
   int nsteps;
   int nsamples;
+  int row_max;
   float true_step_size;
   std::string dynamics_element_code;
   std::string method_choice_err;
