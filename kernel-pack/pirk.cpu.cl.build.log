@@ -13481,3 +13481,883 @@ Done.
 Build ended
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:49:23-064
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:51:27-599
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:51:44-749
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:51:55-051
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:51:56-376
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:51:57-441
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:51:58-771
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:52:00-819
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:52:02-496
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:52:04-454
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:52:35-780
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:52:51-423
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:212:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:231:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:250:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:269:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:54:13-173
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:54:44-902
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:54:47-683
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:54:49-676
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:54:52-991
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:55:27-442
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:55:33-846
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 10:58:01-204
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+1:31:132: note: passing argument to parameter 'ncel' here
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <gb_initialize_center> was successfully vectorized (8)
+Kernel <gb_integrate_center_1> was successfully vectorized (8)
+Kernel <gb_integrate_center_2> was successfully vectorized (8)
+Kernel <gb_integrate_center_3> was successfully vectorized (8)
+Kernel <gb_integrate_center_4> was successfully vectorized (8)
+Kernel <gb_compute_contraction_matrix> was successfully vectorized (8)
+Kernel <gb_initialize_radius> was successfully vectorized (8)
+Kernel <gb_integrate_radius_1> was not vectorized
+Kernel <gb_integrate_radius_2> was not vectorized
+Kernel <gb_integrate_radius_3> was not vectorized
+Kernel <gb_integrate_radius_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
