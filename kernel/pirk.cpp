@@ -24,12 +24,14 @@ size_t gb_saveData(
   float* radius = (float*)(thisParallelProgram.m_dataPool[1].first);
   float* center = (float*)(thisParallelProgram.m_dataPool[9].first);
   pfacesTerminal::showMessage("Successor lower\n-------------------");
-  for(int i=0; i<knl->states_dim; i++) {
+//  for(int i=0; i<knl->states_dim; i++) {
+  for(int i=0; i<10; i++) {
       pfacesTerminal::showMessage(std::to_string(radius[i]-center[i]));
     }
     pfacesTerminal::showMessage("Successor upper\n-------------------");
   //for growth bound, use idx 9
-  for(int i=0; i<knl->states_dim; i++) {
+//  for(int i=0; i<knl->states_dim; i++) {
+  for(int i=0; i<10; i++) {
       pfacesTerminal::showMessage(std::to_string(radius[i]+center[i]));
     }
 
