@@ -98,7 +98,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
     }
 
     // Now for the affine input term
-    //dx = dx + u[i];
+    dx = dx + u[i];
     return dx;
 }
 float dynamics_element_private(float* x, float* u, float t, int i) {
@@ -200,6 +200,6 @@ float dynamics_element_private(float* x, float* u, float t, int i) {
     }
 
     // Now for the affine input term
-    //dx = dx + u[i];
+    dx = dx + u[i];
     return dx;
 }
