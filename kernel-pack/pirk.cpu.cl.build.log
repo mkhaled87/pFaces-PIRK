@@ -17477,3 +17477,1668 @@ float growth_bound_radius_dynamics(__global float* r, __global float* u, __globa
 Build ended
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:10-202
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:10-850
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:11-516
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:12-198
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:12-879
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:13-561
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:14-247
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:14-926
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:15-600
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:16-308
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:17-008
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:17-735
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:18-717
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:20-241
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:11:23-690
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:218:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:237:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:256:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:275:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:39-387
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:40-021
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:40-706
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:41-370
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:42-027
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:42-691
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:43-350
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:44-015
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:44-672
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:45-350
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:46-036
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:46-746
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:47-614
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:48-882
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:12:51-643
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:37:05-814
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:39:26-263
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=50000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:39:36-867
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:39:42-832
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:39:51-163
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:44:08-575
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Oclgrind Simulator; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Oclgrind Simulator] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+input.cl:43:1: warning: control may reach end of non-void function
+}
+^
+input.cl:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+input.cl:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+input.cl:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+input.cl:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+input.cl:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+input.cl:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+input.cl:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+input.cl:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Friday 19/07/2019 15:44:23-743
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Gen9 HD Graphics NEO; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Gen9 HD Graphics NEO] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=500000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+1:43:1: warning: control may reach end of non-void function
+}
+^
+1:219:78: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+                                                                             ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:238:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:257:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+1:276:68: warning: incompatible pointer types passing '__global float *' to parameter of type '__global int *'
+    k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+                                                                   ^~~~
+1:31:132: note: passing argument to parameter 'ncel' here
+float growth_bound_radius_dynamics(__global float* r, __global float* u, __global int *cidxs, __global float *cvals, __global int *ncel, float t, int i)
+                                                                                                                                   ^
+
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+

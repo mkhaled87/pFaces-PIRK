@@ -38,32 +38,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:54-431] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:54-701] pFaces: The kernel is built successfully for 1 device(s) in 0.270256 seconds.
-[Friday 19/07/2019 14:29:54-701] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:54-701] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:54-701] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:54-701] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:54-703] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:54-703] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:54-779] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:54-779] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:54-779] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:54-854] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:54-854] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:39-387] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:39-651] pFaces: The kernel is built successfully for 1 device(s) in 0.264525 seconds.
+[Friday 19/07/2019 15:12:39-651] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:39-652] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:39-652] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:39-652] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:39-654] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:39-654] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:39-727] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:39-727] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:39-727] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:39-805] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:39-805] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -93,29 +93,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.144265 seconds.
+Kernel load/config. time: 0.146905 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   4.833e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00170937, DW:  3.5324e-05, DR:  3.8324e-05, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00158235, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00157643, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00195621, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:   4.999e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  1.4999e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00116737, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0011226, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00112277, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00142611, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   4.749e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00172718, DW:   3.449e-05, DR:  3.9325e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0015701, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00156743, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00196496, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   4.749e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:  1.5166e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00116153, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00112293, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00111926, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00142301, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0116881 seconds.
-Post-execute task time  : 7.8076e-05 seconds.	(Saving results)
-Total data-write time   : 3.5324e-05 seconds.
-Total data-read time    : 3.8324e-05 seconds.
-Program compile time    : 0.270256 seconds.
+Program execution time  : 0.0116811 seconds.
+Post-execute task time  : 8.9958e-05 seconds.	(Saving results)
+Total data-write time   : 3.449e-05 seconds.
+Total data-read time    : 3.9325e-05 seconds.
+Program compile time    : 0.264525 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.643794 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.627058 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -157,32 +157,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:55-068] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:55-344] pFaces: The kernel is built successfully for 1 device(s) in 0.275797 seconds.
-[Friday 19/07/2019 14:29:55-344] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:55-344] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-344] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:55-344] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:55-346] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:55-347] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:55-419] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:55-420] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:55-420] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:55-499] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:55-499] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:40-021] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:40-305] pFaces: The kernel is built successfully for 1 device(s) in 0.284375 seconds.
+[Friday 19/07/2019 15:12:40-305] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:40-305] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-305] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:40-305] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:40-307] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:40-308] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:40-383] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:40-383] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:40-383] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:40-462] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:40-462] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -212,29 +212,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.146153 seconds.
+Kernel load/config. time: 0.146978 seconds.
 ---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:   4.999e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00173094, DW:  3.5491e-05, DR:  3.9244e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00157561, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00158404, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00196628, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:   4.916e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:   0.0017652, DW:  3.5409e-05, DR:  3.8742e-05, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0015971, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00159135, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00197029, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:   5.166e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  2.6166e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00116279, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00111004, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00110861, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00140263, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_compute_c.: EX:  2.3749e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00117578, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00111394, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00112536, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00140529, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0117443 seconds.
-Post-execute task time  : 7.1485e-05 seconds.	(Saving results)
-Total data-write time   : 3.5409e-05 seconds.
-Total data-read time    : 3.8742e-05 seconds.
-Program compile time    : 0.275797 seconds.
+Program execution time  : 0.0117109 seconds.
+Post-execute task time  : 5.8734e-05 seconds.	(Saving results)
+Total data-write time   : 3.5491e-05 seconds.
+Total data-read time    : 3.9244e-05 seconds.
+Program compile time    : 0.284375 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.636382 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.648565 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -276,32 +276,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:55-713] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:55-998] pFaces: The kernel is built successfully for 1 device(s) in 0.285243 seconds.
-[Friday 19/07/2019 14:29:55-998] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:55-999] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:55-999] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:55-999] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:55-001] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:55-001] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:56-073] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:56-073] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:56-073] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:56-145] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:56-145] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:40-706] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:40-999] pFaces: The kernel is built successfully for 1 device(s) in 0.29281 seconds.
+[Friday 19/07/2019 15:12:40-999] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:40-999] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-999] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:40-000] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:40-000] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:40-002] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:40-002] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:41-076] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:41-076] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:41-076] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:41-156] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:41-156] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -331,29 +331,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.146302 seconds.
+Kernel load/config. time: 0.14776 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   4.999e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00130729, DW:  3.7408e-05, DR:  4.4659e-05, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00120537, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00120421, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00156088, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   4.916e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00130839, DW:   3.724e-05, DR:  4.1575e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00119345, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00119813, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00154695, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:   4.833e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  2.5749e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00112528, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00107752, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00107128, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00135528, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_compute_c.: EX:  2.5416e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00112202, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00107278, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00107045, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00136286, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0099427 seconds.
-Post-execute task time  : 7.849e-05 seconds.	(Saving results)
-Total data-write time   : 3.7408e-05 seconds.
-Total data-read time    : 4.4659e-05 seconds.
-Program compile time    : 0.285243 seconds.
+Program execution time  : 0.0099102 seconds.
+Post-execute task time  : 5.5655e-05 seconds.	(Saving results)
+Total data-write time   : 3.724e-05 seconds.
+Total data-read time    : 4.1575e-05 seconds.
+Program compile time    : 0.29281 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.636187 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.684381 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -395,32 +395,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:56-359] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:56-649] pFaces: The kernel is built successfully for 1 device(s) in 0.290204 seconds.
-[Friday 19/07/2019 14:29:56-649] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:56-649] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:56-649] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:56-649] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:56-651] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:56-651] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:56-725] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:56-725] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:56-725] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:56-801] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:56-801] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:41-370] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:41-661] pFaces: The kernel is built successfully for 1 device(s) in 0.291324 seconds.
+[Friday 19/07/2019 15:12:41-661] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:41-661] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:41-661] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:41-661] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:41-663] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:41-663] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:41-735] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:41-735] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:41-735] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:41-812] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:41-812] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -450,29 +450,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.145492 seconds.
+Kernel load/config. time: 0.146018 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   5.083e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00123485, DW:  4.0075e-05, DR:  4.1824e-05, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00114969, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00112436, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00150461, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:   4.916e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  3.5166e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00116719, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00112244, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00113495, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00140995, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00123404, DW:   4.024e-05, DR:  4.3074e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00112428, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00114095, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00149377, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   5.249e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:  3.5999e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00117419, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00112419, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00112161, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00141262, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.00989323 seconds.
-Post-execute task time  : 5.1501e-05 seconds.	(Saving results)
-Total data-write time   : 4.0075e-05 seconds.
-Total data-read time    : 4.1824e-05 seconds.
-Program compile time    : 0.290204 seconds.
+Program execution time  : 0.00987182 seconds.
+Post-execute task time  : 8.0486e-05 seconds.	(Saving results)
+Total data-write time   : 4.024e-05 seconds.
+Total data-read time    : 4.3074e-05 seconds.
+Program compile time    : 0.291324 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.64894 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.64902 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -514,32 +514,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:57-017] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:57-311] pFaces: The kernel is built successfully for 1 device(s) in 0.293901 seconds.
-[Friday 19/07/2019 14:29:57-311] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:57-311] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-311] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:57-311] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:57-313] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:57-313] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:57-384] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:57-384] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:57-384] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:57-458] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:57-458] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:42-027] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:42-324] pFaces: The kernel is built successfully for 1 device(s) in 0.296884 seconds.
+[Friday 19/07/2019 15:12:42-324] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:42-324] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-324] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:42-324] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:42-326] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:42-327] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:42-397] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:42-397] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:42-397] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:42-473] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:42-473] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -569,29 +569,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.148687 seconds.
+Kernel load/config. time: 0.147184 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   5.083e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00128413, DW:  4.5743e-05, DR:  5.1991e-05, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00113487, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00113179, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00151788, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:   5.249e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  4.9499e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00118862, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00112852, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00115487, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00141304, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   4.916e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0012963, DW:  4.6909e-05, DR:  5.2574e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00113213, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00113463, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00150738, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   4.916e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:  4.9166e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00120087, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00115189, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00115271, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00142903, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0100136 seconds.
-Post-execute task time  : 5.2096e-05 seconds.	(Saving results)
-Total data-write time   : 4.5743e-05 seconds.
-Total data-read time    : 5.1991e-05 seconds.
-Program compile time    : 0.293901 seconds.
+Program execution time  : 0.0100639 seconds.
+Post-execute task time  : 7.5727e-05 seconds.	(Saving results)
+Total data-write time   : 4.6909e-05 seconds.
+Total data-read time    : 5.2574e-05 seconds.
+Program compile time    : 0.296884 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.648247 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.653765 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -633,32 +633,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:57-676] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:57-969] pFaces: The kernel is built successfully for 1 device(s) in 0.292679 seconds.
-[Friday 19/07/2019 14:29:57-969] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:57-969] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:57-969] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:57-969] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:57-971] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:57-971] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:58-043] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:58-043] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:58-043] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:58-115] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:58-115] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:42-690] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:42-982] pFaces: The kernel is built successfully for 1 device(s) in 0.291499 seconds.
+[Friday 19/07/2019 15:12:42-982] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:42-982] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:42-982] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:42-982] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:42-984] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:42-984] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:43-058] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:43-059] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:43-059] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:43-135] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:43-135] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -688,29 +688,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.148489 seconds.
+Kernel load/config. time: 0.145905 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   5.083e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00131994, DW:  6.6408e-05, DR:  7.5825e-05, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00112978, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00113593, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0015022, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:   5.416e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  9.2999e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:   0.0011992, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00115037, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00114028, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00145995, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   5.333e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00129412, DW:  8.2743e-05, DR:  7.0408e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00114738, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00114954, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00148503, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   5.333e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:  9.2416e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00117894, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00113629, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00113677, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0014088, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0101412 seconds.
-Post-execute task time  : 7.3769e-05 seconds.	(Saving results)
-Total data-write time   : 6.6408e-05 seconds.
-Total data-read time    : 7.5825e-05 seconds.
-Program compile time    : 0.292679 seconds.
+Program execution time  : 0.0100399 seconds.
+Post-execute task time  : 5.3319e-05 seconds.	(Saving results)
+Total data-write time   : 8.2743e-05 seconds.
+Total data-read time    : 7.0408e-05 seconds.
+Program compile time    : 0.291499 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.650032 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.65278 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -752,32 +752,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:58-329] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:58-637] pFaces: The kernel is built successfully for 1 device(s) in 0.308817 seconds.
-[Friday 19/07/2019 14:29:58-638] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:58-638] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:58-638] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:58-638] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:58-640] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:58-640] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:58-710] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:58-710] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:58-712] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:58-787] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:58-787] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:43-350] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:43-645] pFaces: The kernel is built successfully for 1 device(s) in 0.295309 seconds.
+[Friday 19/07/2019 15:12:43-645] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:43-645] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:43-645] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:43-645] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:43-647] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:43-648] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:43-720] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:43-720] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:43-720] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:43-794] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:43-794] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -807,29 +807,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.146505 seconds.
+Kernel load/config. time: 0.147129 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   5.499e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00136413, DW: 0.000114493, DR: 0.000106825, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00113879, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00115104, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00151012, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:   5.166e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX: 0.000165749, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00121736, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00116679, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00115904, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00141762, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00134971, DW: 0.000105659, DR: 0.000121991, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00116503, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00116586, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00153061, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   5.249e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX: 0.000165582, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0012057, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00116453, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00116536, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00143295, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0103013 seconds.
-Post-execute task time  : 5.3087e-05 seconds.	(Saving results)
-Total data-write time   : 0.000114493 seconds.
-Total data-read time    : 0.000106825 seconds.
-Program compile time    : 0.308817 seconds.
+Program execution time  : 0.0103558 seconds.
+Post-execute task time  : 7.8408e-05 seconds.	(Saving results)
+Total data-write time   : 0.000105659 seconds.
+Total data-read time    : 0.000121991 seconds.
+Program compile time    : 0.295309 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.663028 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.652109 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -871,32 +871,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:58-000] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:59-287] pFaces: The kernel is built successfully for 1 device(s) in 0.286659 seconds.
-[Friday 19/07/2019 14:29:59-287] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:59-287] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-287] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:59-287] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:59-289] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:59-289] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:29:59-361] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:29:59-361] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:29:59-362] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:29:59-440] pirk.cpu: program complete.
-[Friday 19/07/2019 14:29:59-440] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:44-015] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:44-308] pFaces: The kernel is built successfully for 1 device(s) in 0.292232 seconds.
+[Friday 19/07/2019 15:12:44-308] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:44-308] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-308] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:44-308] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:44-310] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:44-310] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:44-385] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:44-385] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:44-385] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:44-458] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:44-458] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -926,29 +926,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.14542 seconds.
+Kernel load/config. time: 0.149922 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   6.166e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00131596, DW: 0.000210492, DR: 0.000211657, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00121803, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00121511, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00156687, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:   5.916e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX: 0.000356665, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00128396, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00122986, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0012406, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00151428, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00132445, DW: 0.000221742, DR: 0.000223405, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00122911, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00123119, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00158304, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   6.249e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX: 0.000337831, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00127687, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00120804, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00121704, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00147363, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0109534 seconds.
-Post-execute task time  : 5.8209e-05 seconds.	(Saving results)
-Total data-write time   : 0.000210492 seconds.
-Total data-read time    : 0.000211657 seconds.
-Program compile time    : 0.286659 seconds.
+Program execution time  : 0.0108934 seconds.
+Post-execute task time  : 5.7757e-05 seconds.	(Saving results)
+Total data-write time   : 0.000221742 seconds.
+Total data-read time    : 0.000223405 seconds.
+Program compile time    : 0.292232 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.644947 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.656348 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -990,32 +990,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:29:59-654] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:29:59-945] pFaces: The kernel is built successfully for 1 device(s) in 0.291478 seconds.
-[Friday 19/07/2019 14:29:59-945] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:29:59-946] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:29:59-946] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:29:59-946] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:29:59-948] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:29:59-948] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:00-027] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:00-027] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:30:00-029] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:30:00-108] pirk.cpu: program complete.
-[Friday 19/07/2019 14:30:00-108] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:44-672] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:44-964] pFaces: The kernel is built successfully for 1 device(s) in 0.291864 seconds.
+[Friday 19/07/2019 15:12:44-964] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:44-964] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:44-964] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:44-964] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:44-966] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:44-967] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:45-040] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:45-040] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:45-042] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:45-130] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:45-130] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -1045,29 +1045,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.148354 seconds.
+Kernel load/config. time: 0.145601 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:   9.666e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00181261, DW: 0.000545156, DR: 0.000348157, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00169903, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00169603, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00209445, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   9.416e-06, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00178954, DW: 0.000450491, DR:  0.00052224, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00168645, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00169662, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00208112, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:   8.833e-06, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  0.00171941, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00186504, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00187062, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00186863, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0022477, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_compute_c.: EX:  0.00169908, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00189212, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00186279, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00186378, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00222304, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.016892 seconds.
-Post-execute task time  : 8.2935e-05 seconds.	(Saving results)
-Total data-write time   : 0.000545156 seconds.
-Total data-read time    : 0.000348157 seconds.
-Program compile time    : 0.291478 seconds.
+Program execution time  : 0.0168128 seconds.
+Post-execute task time  : 8.8774e-05 seconds.	(Saving results)
+Total data-write time   : 0.000450491 seconds.
+Total data-read time    : 0.00052224 seconds.
+Program compile time    : 0.291864 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.661506 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.663248 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -1109,32 +1109,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:30:00-320] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:30:00-610] pFaces: The kernel is built successfully for 1 device(s) in 0.29034 seconds.
-[Friday 19/07/2019 14:30:00-610] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:30:00-611] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:00-611] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:30:00-611] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:30:00-614] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:30:00-614] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:00-690] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:00-690] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:30:00-696] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:30:00-777] pirk.cpu: program complete.
-[Friday 19/07/2019 14:30:00-777] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:45-350] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:45-645] pFaces: The kernel is built successfully for 1 device(s) in 0.294652 seconds.
+[Friday 19/07/2019 15:12:45-645] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:45-645] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:45-645] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:45-645] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:45-648] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:45-649] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:45-727] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:45-727] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:45-733] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:45-818] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:45-818] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -1164,29 +1164,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.144833 seconds.
+Kernel load/config. time: 0.14596 seconds.
 ---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:  1.2083e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00228945, DW: 0.000861989, DR:  0.00104832, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00223886, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0022132, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00269003, DW:           0, DR:           0, NC:   200
 Dev. [1] | gb_initializ.: EX:  1.2166e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00230186, DW: 0.000881489, DR:  0.00108207, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00221378, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0022097, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0027102, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:  1.7916e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:  0.00587389, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00244112, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0023552, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00236912, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00277371, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_compute_c.: EX:  0.00589764, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00245536, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00238638, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00237021, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00279229, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0252787 seconds.
-Post-execute task time  : 6.5591e-05 seconds.	(Saving results)
-Total data-write time   : 0.000881489 seconds.
-Total data-read time    : 0.00108207 seconds.
-Program compile time    : 0.29034 seconds.
+Program execution time  : 0.0253577 seconds.
+Post-execute task time  : 5.2053e-05 seconds.	(Saving results)
+Total data-write time   : 0.000861989 seconds.
+Total data-read time    : 0.00104832 seconds.
+Program compile time    : 0.294652 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.660986 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.678831 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -1228,32 +1228,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:30:00-995] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:30:01-282] pFaces: The kernel is built successfully for 1 device(s) in 0.286429 seconds.
-[Friday 19/07/2019 14:30:01-282] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:30:01-282] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-282] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:30:01-282] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:30:01-287] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:30:01-288] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:01-371] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:01-372] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:30:01-390] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:30:01-480] pirk.cpu: program complete.
-[Friday 19/07/2019 14:30:01-480] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:46-036] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:46-331] pFaces: The kernel is built successfully for 1 device(s) in 0.294223 seconds.
+[Friday 19/07/2019 15:12:46-331] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:46-331] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:46-331] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:46-331] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:46-336] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:46-337] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:46-422] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:46-423] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:46-441] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:46-529] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:46-529] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -1283,29 +1283,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.144242 seconds.
+Kernel load/config. time: 0.147718 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:  1.8749e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00319545, DW:  0.00175873, DR:  0.00165382, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00312287, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00313312, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00398287, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:  1.8416e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:   0.0180753, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00374937, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00365278, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00366853, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00431227, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  1.9249e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00316379, DW:  0.00173882, DR:   0.0018034, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00308812, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00308053, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00393362, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  1.8166e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:   0.0181827, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00369886, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00364886, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00362094, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00429587, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.0469297 seconds.
-Post-execute task time  : 7.3248e-05 seconds.	(Saving results)
-Total data-write time   : 0.00175873 seconds.
-Total data-read time    : 0.00165382 seconds.
-Program compile time    : 0.286429 seconds.
+Program execution time  : 0.0467507 seconds.
+Post-execute task time  : 7.0711e-05 seconds.	(Saving results)
+Total data-write time   : 0.00173882 seconds.
+Total data-read time    : 0.0018034 seconds.
+Program compile time    : 0.294223 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.694832 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.703804 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -1347,32 +1347,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:30:01-694] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:30:01-983] pFaces: The kernel is built successfully for 1 device(s) in 0.289309 seconds.
-[Friday 19/07/2019 14:30:01-983] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:30:01-983] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-983] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-984] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-987] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-987] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:01-987] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:30:01-987] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:30:01-995] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:30:01-997] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:02-092] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:02-092] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:30:02-216] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:30:02-334] pirk.cpu: program complete.
-[Friday 19/07/2019 14:30:02-334] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:46-746] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:47-038] pFaces: The kernel is built successfully for 1 device(s) in 0.292007 seconds.
+[Friday 19/07/2019 15:12:47-038] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:47-038] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-038] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-039] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-043] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-047] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-048] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-048] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:47-048] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:47-057] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:47-059] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:47-159] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:47-159] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:47-282] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:47-391] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:47-391] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -1402,29 +1402,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.145797 seconds.
+Kernel load/config. time: 0.147993 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:  4.6333e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00661803, DW:  0.00404022, DR:  0.00405156, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00647945, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00649087, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00816129, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:  4.6416e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:    0.119193, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:  0.00759146, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00753078, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00752462, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:  0.00883071, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  4.6833e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0065882, DW:  0.00383748, DR:  0.00381839, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00640778, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00643261, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00813212, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  4.6166e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:    0.117902, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00752861, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00742245, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00745612, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00874753, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.178513 seconds.
-Post-execute task time  : 7.6673e-05 seconds.	(Saving results)
-Total data-write time   : 0.00404022 seconds.
-Total data-read time    : 0.00405156 seconds.
-Program compile time    : 0.289309 seconds.
+Program execution time  : 0.17671 seconds.
+Post-execute task time  : 0.000124687 seconds.	(Saving results)
+Total data-write time   : 0.00383748 seconds.
+Total data-read time    : 0.00381839 seconds.
+Program compile time    : 0.292007 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 0.846414 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 0.858372 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -1466,32 +1466,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:30:02-548] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:30:02-845] pFaces: The kernel is built successfully for 1 device(s) in 0.29672 seconds.
-[Friday 19/07/2019 14:30:02-845] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:30:02-845] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-845] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-851] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-855] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-855] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:02-856] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:30:02-856] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:30:02-871] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:30:02-875] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:02-999] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:02-000] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:30:03-434] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:30:03-579] pirk.cpu: program complete.
-[Friday 19/07/2019 14:30:03-579] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:47-614] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:47-909] pFaces: The kernel is built successfully for 1 device(s) in 0.294343 seconds.
+[Friday 19/07/2019 15:12:47-909] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:47-909] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-909] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-914] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-919] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-919] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:47-919] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:47-919] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:47-946] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:47-949] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:48-072] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:48-072] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:48-514] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:48-661] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:48-661] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -1521,29 +1521,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.144458 seconds.
+Kernel load/config. time: 0.149735 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX:  9.4582e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:    0.011639, DW:  0.00811779, DR:  0.00712472, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0114857, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0114984, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0146221, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX:  8.9499e-05, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:    0.429428, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:   0.0139663, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0137407, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0138305, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:    0.016306, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  8.9082e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0116191, DW:  0.00812805, DR:  0.00734555, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0113945, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0114854, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0145716, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  8.8166e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:    0.430973, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0138668, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0136218, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0136554, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.016491, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 0.536701 seconds.
-Post-execute task time  : 7.805e-05 seconds.	(Saving results)
-Total data-write time   : 0.00811779 seconds.
-Total data-read time    : 0.00712472 seconds.
-Program compile time    : 0.29672 seconds.
+Program execution time  : 0.537856 seconds.
+Post-execute task time  : 9.7242e-05 seconds.	(Saving results)
+Total data-write time   : 0.00812805 seconds.
+Total data-read time    : 0.00734555 seconds.
+Program compile time    : 0.294343 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 1.23898 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 1.25644 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -1585,32 +1585,32 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:30:03-799] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:30:04-090] pFaces: The kernel is built successfully for 1 device(s) in 0.291205 seconds.
-[Friday 19/07/2019 14:30:04-090] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:30:04-090] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-090] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-091] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-091] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-091] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-100] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-110] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-110] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:04-110] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:30:04-110] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:30:04-141] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:30:04-148] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:04-328] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:04-328] pirk.cpu: Computing sparse representation of contraction matrix...
-[Friday 19/07/2019 14:30:06-044] pirk.cpu: Performing radius integration...
-[Friday 19/07/2019 14:30:06-293] pirk.cpu: program complete.
-[Friday 19/07/2019 14:30:06-293] pFaces: Finished running the parallel instructions.
+[Friday 19/07/2019 15:12:48-882] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:49-176] pFaces: The kernel is built successfully for 1 device(s) in 0.29414 seconds.
+[Friday 19/07/2019 15:12:49-176] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:49-176] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-176] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-195] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-214] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-214] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:49-214] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:49-214] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:49-247] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:49-255] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:49-434] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:49-434] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:51-165] pirk.cpu: Performing radius integration...
+[Friday 19/07/2019 15:12:51-426] pirk.cpu: program complete.
+[Friday 19/07/2019 15:12:51-426] pFaces: Finished running the parallel instructions.
 [1;32mpFaces::Info: This is where I'd write to a save file... IF I HAD ONE
 GB
 [0mSuccessor lower
@@ -1640,29 +1640,29 @@ GB
 [0m*********************************************************************************************************************
 Profiling report (in seconds) for the program (pirk.cpu):
 *********************************************************************************************************************
-Kernel load/config. time: 0.146816 seconds.
+Kernel load/config. time: 0.147789 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Dev. [1] | gb_initializ.: EX: 0.000211249, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:   0.0240181, DW:   0.0157865, DR:   0.0147288, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0219221, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0221991, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0282718, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_initializ.: EX: 0.000189665, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_compute_c.: EX:     1.70839, DW:           0, DR:           0, NC:     1
-Dev. [1] | gb_integrate.: EX:   0.0317605, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0281818, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0279485, DW:           0, DR:           0, NC:   200
-Dev. [1] | gb_integrate.: EX:   0.0372613, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX: 0.000190249, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0241473, DW:   0.0153308, DR:   0.0151653, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0220421, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0216002, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.028135, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX: 0.000177582, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_compute_c.: EX:     1.71526, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0331762, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0290145, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0283864, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0398091, DW:           0, DR:           0, NC:   200
 ---------------------------------------------------------------------------------------------------------------------
 Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
 ---------------------------------------------------------------------------------------------------------------------
-Program execution time  : 1.93036 seconds.
-Post-execute task time  : 8.0873e-05 seconds.	(Saving results)
-Total data-write time   : 0.0157865 seconds.
-Total data-read time    : 0.0147288 seconds.
-Program compile time    : 0.291205 seconds.
+Program execution time  : 1.94194 seconds.
+Post-execute task time  : 9.3115e-05 seconds.	(Saving results)
+Total data-write time   : 0.0153308 seconds.
+Total data-read time    : 0.0151653 seconds.
+Program compile time    : 0.29414 seconds.
 ---------------------------------------------------------------------------------------------------------------------
-Wall-Clock Time         : 2.70691 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+Wall-Clock Time         : 2.75844 seconds [Verbosity, Scheduling and Compilation Times Incl.]
 *********************************************************************************************************************
 pFaces 1.0 [beta]
 [0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
@@ -1704,26 +1704,26 @@ Memory Allocation Report:
 *********************************************************************************************************************
 Checking the parallel jobs suggested by the scheduler/kernel ... [1;34mpFaces::Warning: A Blocking-SyncPoint job at index 1614 is not necessary
 [0mRunning the parallel program [Wall-Clock Started]: 
-[Friday 19/07/2019 14:30:06-515] pFaces: Started building the kernel (pirk.cpu) for the context.
-[Friday 19/07/2019 14:30:06-805] pFaces: The kernel is built successfully for 1 device(s) in 0.290159 seconds.
-[Friday 19/07/2019 14:30:06-805] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
-[Friday 19/07/2019 14:30:06-805] pFaces: Creating buffers on devices ... 
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-805] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-806] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-806] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-806] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-831] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-856] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-856] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
-[Friday 19/07/2019 14:30:06-857] pFaces: Started running the parallel instructions.
-[Friday 19/07/2019 14:30:06-857] pirk.cpu: The program has started.
-[Friday 19/07/2019 14:30:06-925] pirk.cpu: Initializing center integration...
-[Friday 19/07/2019 14:30:06-943] pirk.cpu: Performing center integration...
-[Friday 19/07/2019 14:30:07-421] pirk.cpu: Initializing radius integration...
-[Friday 19/07/2019 14:30:07-422] pirk.cpu: Computing sparse representation of contraction matrix...
+[Friday 19/07/2019 15:12:51-642] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Friday 19/07/2019 15:12:51-939] pFaces: The kernel is built successfully for 1 device(s) in 0.29699 seconds.
+[Friday 19/07/2019 15:12:51-939] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 24 PEs.
+[Friday 19/07/2019 15:12:51-940] pFaces: Creating buffers on devices ... 
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-940] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-966] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [1/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-993] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [2/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-993] pFaces: A dummy device buffer is created: Fnc [7, gb_compute_contraction_matrix], Arg [3/3], t.b.assigned later.
+[Friday 19/07/2019 15:12:51-993] pFaces: Started running the parallel instructions.
+[Friday 19/07/2019 15:12:51-993] pirk.cpu: The program has started.
+[Friday 19/07/2019 15:12:52-064] pirk.cpu: Initializing center integration...
+[Friday 19/07/2019 15:12:52-082] pirk.cpu: Performing center integration...
+[Friday 19/07/2019 15:12:52-580] pirk.cpu: Initializing radius integration...
+[Friday 19/07/2019 15:12:52-581] pirk.cpu: Computing sparse representation of contraction matrix...
