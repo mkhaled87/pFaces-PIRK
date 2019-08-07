@@ -19142,3 +19142,1644 @@ float growth_bound_radius_dynamics(__global float* r, __global float* u, __globa
 Build ended
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:10-052
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was not vectorized
+Kernel <ctmm_integrate_2> was not vectorized
+Kernel <ctmm_integrate_3> was not vectorized
+Kernel <ctmm_integrate_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:10-517
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=40 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=40 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:12-942
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was not vectorized
+Kernel <ctmm_integrate_2> was not vectorized
+Kernel <ctmm_integrate_3> was not vectorized
+Kernel <ctmm_integrate_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:13-275
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:14-812
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=400 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=400 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:16-448
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:18-524
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:43:21-676
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=4000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=4000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:42-683
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was not vectorized
+Kernel <ctmm_integrate_2> was not vectorized
+Kernel <ctmm_integrate_3> was not vectorized
+Kernel <ctmm_integrate_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:42-956
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=40 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=40 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:45-349
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was not vectorized
+Kernel <ctmm_integrate_2> was not vectorized
+Kernel <ctmm_integrate_3> was not vectorized
+Kernel <ctmm_integrate_4> was not vectorized
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:45-679
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=200 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:47-187
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=400 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=400 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:48-787
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=1000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:50-774
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:45:53-963
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=4000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=4000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:46:01-659
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:46:03-079
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=20000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:46:04-517
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=40000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=40000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 11:46:05-957
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=100000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:52:29-880
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:52:30-434
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:52:31-699
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:53:16-432
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:53:16-974
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:53:18-216
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:53:21-304
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:53:50-147
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 15:57:50-438
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 16:25:41-041
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 16:59:51-551
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 16:59:52-063
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 16:59:53-262
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 16:59:56-160
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 17:00:21-801
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 29/07/2019 17:04:07-010
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:08:52-359
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=10000 -D UNIVERSAL_WIDTH_Y=1 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+1:379:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <ctmm_initialize> was successfully vectorized (8)
+Kernel <ctmm_integrate_1> was successfully vectorized (8)
+Kernel <ctmm_integrate_2> was successfully vectorized (8)
+Kernel <ctmm_integrate_3> was successfully vectorized (8)
+Kernel <ctmm_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:15:11-675
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:15:12-199
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:15:13-435
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:15:16-518
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:15:43-595
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:19:38-757
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 10:54:17-106
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=423866 -D UNIVERSAL_WIDTH_Y=1000 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=423866 -D UNIVERSAL_WIDTH_Y=1000 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:03:44-739
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:03:45-437
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:03:46-671
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:04:37-731
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=2679 -D UNIVERSAL_WIDTH_Y=10 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:04:38-269
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=5657 -D UNIVERSAL_WIDTH_Y=20 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:04:39-502
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=15547 -D UNIVERSAL_WIDTH_Y=50 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:04:42-518
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=33549 -D UNIVERSAL_WIDTH_Y=100 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:05:10-799
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=72298 -D UNIVERSAL_WIDTH_Y=200 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:08:58-274
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=198506 -D UNIVERSAL_WIDTH_Y=500 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Build log started on Monday 05/08/2019 11:43:35-316
+-----------------------------------------------------------------
+Number of devices: 1
+Devices: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz; 
+Purpose: Building context for a run on a single devices.
+OpenCL compiler params: -cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=423866 -D UNIVERSAL_WIDTH_Y=1000 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0
+Kernel file: ../examples/pirk/kernel-pack//pirk.cpu.cl.render
+-----------------------------------------------------------------
+Build was succesufull with the following log:
+
+
+Build log for  Dev. [Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz] with options (-cl-std=CL1.2 -I/home/hcs/Documents/pFaces/bin/kernels/ -I../examples/pirk/kernel-pack// -D UNIVERSAL_WIDTH_X=423866 -D UNIVERSAL_WIDTH_Y=1000 -D UNIVERSAL_OFFSET_X=0 -D UNIVERSAL_OFFSET_Y=0 -D PROCESS_WIDTH_X=0 -D PROCESS_WIDTH_Y=0 -D PROCESS_OFFSET_X=0 -D PROCESS_OFFSET_Y=0):
+Compilation started
+1:43:1: warning: control may reach end of non-void function
+Compilation done
+Linking started
+Linking done
+Device build started
+Device build done
+Kernel <mc_initialize> was successfully vectorized (8)
+Kernel <mc_integrate_1> was successfully vectorized (8)
+Kernel <mc_integrate_2> was successfully vectorized (8)
+Kernel <mc_integrate_3> was successfully vectorized (8)
+Kernel <mc_integrate_4> was successfully vectorized (8)
+Done.
+-----------------------------------------------------------------
+Build ended
+-----------------------------------------------------------------
+

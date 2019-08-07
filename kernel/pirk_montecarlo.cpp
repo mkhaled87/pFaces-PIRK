@@ -217,7 +217,8 @@ void pirk::configureParallelProgramMonteCarlo(pfacesParallelProgram& parallelPro
       }
   }
   std::cout << "time: " << timer.toc().count() << std::endl;
-
+  timer.toc();
+  pfacesTerminal::showInfoMessage("INITIAL STATE GENERATION TIME TO FOLLOW");
 
   // ---------------------------------------------------------
   // Creating the parallel program

@@ -1,5 +1,6 @@
 #include "pirk.h"
 #include <math.h>       /* ceil */
+#include <chrono>  // for high_resolution_clock
 #include "pirk_utils.cpp"
 #include "pirk_growthbound.cpp"
 #include "pirk_ctmm.cpp"
@@ -47,13 +48,13 @@ size_t ctmm_saveData(
   pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nCTMM");
   pirk* knl = ((pirk*)(&thisKernel));
   float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
-  pfacesTerminal::showMessage("Successor lower\n-------------------");
-  for(int i = 0; i < 2 * knl->states_dim; i++) {
-      pfacesTerminal::showMessage(std::to_string(A[i]));
-      if(i == knl->states_dim -1){
-        pfacesTerminal::showMessage("Successor upper\n-------------------");
-      }
-    }
+//  pfacesTerminal::showMessage("Successor lower\n-------------------");
+//  for(int i = 0; i < 2 * knl->states_dim; i++) {
+//      pfacesTerminal::showMessage(std::to_string(A[i]));
+//      if(i == knl->states_dim -1){
+//        pfacesTerminal::showMessage("Successor upper\n-------------------");
+//      }
+//    }
 
   return 0;
 }
@@ -85,14 +86,14 @@ size_t mc_saveData(
 	  }
       }
   }
-  pfacesTerminal::showMessage("Lower sucessor\n-------------------");
-  for(int i=0; i<knl->states_dim; i++) {
-      pfacesTerminal::showMessage(std::to_string(succ_low[i]));
-    }
-  pfacesTerminal::showMessage("Upper sucessor\n-------------------");
-  for(int i=0; i<knl->states_dim; i++) {
-      pfacesTerminal::showMessage(std::to_string(succ_up[i]));
-    }
+//  pfacesTerminal::showMessage("Lower sucessor\n-------------------");
+//  for(int i=0; i<knl->states_dim; i++) {
+//      pfacesTerminal::showMessage(std::to_string(succ_low[i]));
+//    }
+//  pfacesTerminal::showMessage("Upper sucessor\n-------------------");
+//  for(int i=0; i<knl->states_dim; i++) {
+//      pfacesTerminal::showMessage(std::to_string(succ_up[i]));
+//    }
 
   return 0;
 }
