@@ -70,8 +70,8 @@ size_t mc_saveData(
   float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
   /* index 1 is the final state for the center */
   // for growth bound, use idx 1
-  float succ_up[knl->states_dim];
-  float succ_low[knl->states_dim];
+  std::vector<float> succ_up(knl->states_dim);
+  std::vector<float> succ_low(knl->states_dim);
   float cmp;
   for(int i = 0; i < knl->states_dim; i++) {
       succ_up[i] = -INFINITY;

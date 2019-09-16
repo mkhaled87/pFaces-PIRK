@@ -9,7 +9,7 @@ void pirk::configureParameters(std::vector<std::string> params, std::vector<std:
 
   // config file directory
   std::string config_file_directory = pfacesFileIO::getFileDirectoryPath(m_spCfg->getConfigFilePath());
-  config_file_directory = std::experimental::filesystem::canonical(config_file_directory);
+  config_file_directory = std::experimental::filesystem::canonical(config_file_directory).string();
   params.push_back("@@config_file_directory@@");
   paramvals.push_back(config_file_directory);
 

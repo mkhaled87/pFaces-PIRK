@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="kernel-pack">
+      <UniqueIdentifier>{589129e1-d7ca-4a2f-9d2a-02de0fd5247c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kernel-pack\growth_bound">
+      <UniqueIdentifier>{5e86fcd1-0603-4720-8324-c3c4803f0fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kernel-pack\ctmm">
+      <UniqueIdentifier>{0a17d477-9d65-47f6-a9ae-b1a13da3adeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kernel-pack\monte_carlo">
+      <UniqueIdentifier>{05b15265-e9ab-423f-9c97-21a1e12f38e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kernel\pirk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel\pirk_ctmm.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel\pirk_growthbound.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel\pirk_montecarlo.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel\pirk_utils.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kernel\pirk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kernel-pack\config.defaults">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\config.template">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\pirk.cpu.cl">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\pirk.cpu.cl.render">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\pirk.hwa.cl">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\pirk.mem">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\pirk_utils.cl">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\pirk.gpu.cl">
+      <Filter>kernel-pack</Filter>
+    </None>
+    <None Include="kernel-pack\growth_bound\gb_compute_contraction_matrix.cl">
+      <Filter>kernel-pack\growth_bound</Filter>
+    </None>
+    <None Include="kernel-pack\growth_bound\gb_initialize_center.cl">
+      <Filter>kernel-pack\growth_bound</Filter>
+    </None>
+    <None Include="kernel-pack\growth_bound\gb_initialize_radius.cl">
+      <Filter>kernel-pack\growth_bound</Filter>
+    </None>
+    <None Include="kernel-pack\growth_bound\gb_integrate_center.cl">
+      <Filter>kernel-pack\growth_bound</Filter>
+    </None>
+    <None Include="kernel-pack\growth_bound\gb_integrate_radius.cl">
+      <Filter>kernel-pack\growth_bound</Filter>
+    </None>
+    <None Include="kernel-pack\ctmm\ctmm_decomposition_dynamics.cl">
+      <Filter>kernel-pack\ctmm</Filter>
+    </None>
+    <None Include="kernel-pack\ctmm\ctmm_initialize.cl">
+      <Filter>kernel-pack\ctmm</Filter>
+    </None>
+    <None Include="kernel-pack\ctmm\ctmm_integrate_kfns.cl">
+      <Filter>kernel-pack\ctmm</Filter>
+    </None>
+    <None Include="kernel-pack\ctmm\decomposition_body.cl">
+      <Filter>kernel-pack\ctmm</Filter>
+    </None>
+    <None Include="kernel-pack\monte_carlo\mc_initialize.cl">
+      <Filter>kernel-pack\monte_carlo</Filter>
+    </None>
+    <None Include="kernel-pack\monte_carlo\mc_integrate_kfns.cl">
+      <Filter>kernel-pack\monte_carlo</Filter>
+    </None>
+  </ItemGroup>
+</Project>

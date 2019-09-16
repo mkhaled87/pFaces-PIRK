@@ -1291,7 +1291,7 @@ gb_initialize_radius{
 
 # function: 6- gb_compute_contraction_matrix
 # -----------------------
-gb_integrate_radius_1{ 
+gb_compute_contraction_matrix{ 
 
 	# argument 6.0: cidxs (gets attached to a new buffer)
 	# ----------------------------------------------------

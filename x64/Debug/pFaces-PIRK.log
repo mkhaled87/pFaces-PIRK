@@ -1,0 +1,7 @@
+﻿  pirk_ctmm.cpp
+  pirk_growthbound.cpp
+  pirk_montecarlo.cpp
+  pirk_utils.cpp
+  Generating Code...
+C:\Users\engmk\Workspace\Gitlab\pFaces-PIRK\kernel\pirk_utils.cpp(46,16): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+LINK : fatal error LNK1104: cannot open file 'pfaces-sdk-dbg.lib'

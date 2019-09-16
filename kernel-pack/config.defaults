@@ -1,32 +1,38 @@
 #-----------------------------------------------------------------------
 # Project Data
 #-----------------------------------------------------------------------
-project_name = "minimal_kernel";
+project_name = "pirk_kernel";
 
+# Method:
+# 1=GrowthBound 
+# 2=CTMM
+# 3= MonteCarlo
+# -----------------
 method_choice = "1";
 
+
+# Time settings
+# -----------------
 initial_time = "0.0";
 final_time = "1.0";
 step_size = "1.0";
 
+# System Info
+# -----------------
 states{
 	dim = "3";
 }
-
 inputs{
 	dim = "3";
 }
-
 dynamics_element_code = "dx[i] = x[i];";
-
 initial_state_lower_bound_code = "x_low[i]=0;";
 initial_state_upper_bound_code = "x_up[i]=1;";
-
 input_lower_bound_code = "u_low[i]=0;";
 input_upper_bound_code = "u_up[i]=1;";
-
 growth_bound{
     growth_bound_matrix_code = "if(i==j) c = 1.0; else c = 0.0;";
 }
+
 
 row_max = "3";

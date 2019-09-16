@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pFaces-PIRK", "pFaces-PIRK.vcxproj", "{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Debug|x64.ActiveCfg = Debug|x64
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Debug|x64.Build.0 = Debug|x64
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Debug|x86.ActiveCfg = Debug|Win32
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Debug|x86.Build.0 = Debug|Win32
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Release|x64.ActiveCfg = Release|x64
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Release|x64.Build.0 = Release|x64
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Release|x86.ActiveCfg = Release|Win32
+		{0F16CA27-6B76-46E5-B3E0-8D37683A95EA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4943952-EEE3-42D6-8B4B-6870751DE4A0}
+	EndGlobalSection
+EndGlobal
