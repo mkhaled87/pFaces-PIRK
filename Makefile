@@ -17,6 +17,9 @@ clean:
 	rm -f ./kernel-pack/*.pdb
 	rm -f ./kernel-pack/*.ipdb
 	rm -f ./kernel-pack/*.iobj
+	rm -rf x64
+	rm -rf Release
+	rm -rf Debug
 	find . -name "*.raw" -type f -delete
 	find . -name "*.prism" -type f -delete
 	for dir in $(SUBDIRS); do $(MAKE) clean -C $$dir $@; done
