@@ -11,9 +11,6 @@
 #define CPU_VERSION
 #define MC_@@method_choice@@
 
-/* includes for the growth bound method */
-// @@config_file_directory@@/hi.cl
-
 /* common utility file */
 @pfaces-include:"pirk_utils.cl"
 
