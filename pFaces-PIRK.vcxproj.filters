@@ -26,22 +26,22 @@
     <ClCompile Include="kernel\pirk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kernel\pirk_ctmm.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kernel\pirk_growthbound.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kernel\pirk_montecarlo.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kernel\pirk_utils.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kernel\pirk.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel\pirk_ctmm.cpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel\pirk_growthbound.cpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel\pirk_montecarlo.cpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel\pirk_utils.cpp">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -102,5 +102,6 @@
     <None Include="kernel-pack\monte_carlo\mc_integrate_kfns.cl">
       <Filter>kernel-pack\monte_carlo</Filter>
     </None>
+    <None Include="Makefile" />
   </ItemGroup>
 </Project>

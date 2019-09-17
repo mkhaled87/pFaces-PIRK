@@ -60,6 +60,7 @@
     <None Include="kernel-pack\pirk.hwa.cl" />
     <None Include="kernel-pack\pirk.mem" />
     <None Include="kernel-pack\pirk_utils.cl" />
+    <None Include="Makefile" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
