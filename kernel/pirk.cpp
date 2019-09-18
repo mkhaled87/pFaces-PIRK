@@ -137,34 +137,35 @@ namespace pirk{
 	/* constructor code ends */
 
 	void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram){
+		
+		std::vector<std::shared_ptr<void>> postExecuteParamsList;
+		
+		// configure the program and register a post-execute instruction to save the data
 		if(method_choice == 1) {
 			configureParallelProgramGrowthBound(parallelProgram);
-		} else if (method_choice == 2) {
-			configureParallelProgramCTMM(parallelProgram);
-		} else if (method_choice == 3) {
-			configureParallelProgramMonteCarlo(parallelProgram);
-		} else {
-			throw std::runtime_error(method_choice_err);
-		}
-
-		// register a post-execute instruction to save the data
-		std::vector<std::shared_ptr<void>> postExecuteParamsList;
-		if(method_choice == 1) {
 			registerPostExecuteFunction(gb_saveData, "Saving results", postExecuteParamsList);
 		} else if (method_choice == 2) {
+			configureParallelProgramCTMM(parallelProgram);
 			registerPostExecuteFunction(ctmm_saveData, "Saving results", postExecuteParamsList);
 		} else if (method_choice == 3) {
+			configureParallelProgramMonteCarlo(parallelProgram);
 			registerPostExecuteFunction(mc_saveData, "Saving results", postExecuteParamsList);
 		} else {
 			throw std::runtime_error(method_choice_err);
 		}
 
-
 		// add extra include path: the config file path
 		std::string CFG_DIR = pfacesFileIO::getFileDirectoryPath(m_spCfg->getConfigFilePath());
 		std::string INC_CFG_DIR = std::string(" -I") + CFG_DIR;
 		parallelProgram.m_oclOptions += INC_CFG_DIR;
+	}
 
+	/* providing implementation of the virtual method: configureTuneParallelProgram*/
+	void pirk::configureTuneParallelProgram(pfacesParallelProgram& tuneParallelProgram, size_t targetFunctionIdx) {
+		(void)tuneParallelProgram;
+		(void)targetFunctionIdx;
+
+		pfacesTerminal::showInfoMessage("Tuning function to be added later.");
 	}
 }  /* end of pirk namespace */
 
