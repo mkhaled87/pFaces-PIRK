@@ -34,8 +34,14 @@ TARGET = kernel
 all: $(TARGET)
 
 kernel: 
-	$(CC) -c -o kernel.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) $(KERNEL_SRC)
-	$(CC) -shared -o kernel.so $(PFACES_SDK_LNK) $(EXTRA_LNK) kernel.o
+	$(CC) -c -o pirk_io.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_io.cpp
+	$(CC) -c -o pirk_utils.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_utils.cpp
+	$(CC) -c -o pirk_ctmm.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_ctmm.cpp
+	$(CC) -c -o pirk_growthbound.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_growthbound.cpp
+	$(CC) -c -o pirk_montecarlo.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_montecarlo.cpp
+	
+	$(CC) -c -o $(KERNEL_NAME).o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) $(KERNEL_SRC)
+	$(CC) -shared -o kernel.so $(PFACES_SDK_LNK) $(EXTRA_LNK) *.o
 	cp kernel.so ../kernel-pack/$(KERNEL_NAME).driver
 
 clean:

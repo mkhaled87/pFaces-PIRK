@@ -26,6 +26,9 @@
     <ClCompile Include="kernel\pirk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kernel\pirk_io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kernel\pirk.h">
@@ -102,6 +105,5 @@
     <None Include="kernel-pack\monte_carlo\mc_integrate_kfns.cl">
       <Filter>kernel-pack\monte_carlo</Filter>
     </None>
-    <None Include="Makefile" />
   </ItemGroup>
 </Project>

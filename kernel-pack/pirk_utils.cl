@@ -20,8 +20,7 @@ float growth_bound_radius_dynamics(__global float* r, __global float* u, __globa
     dr += cvals[i*@@row_max@@ + j]*r[idx];
   }
   dr += u[i];
-  if(i==0)
-      //printf("%f\n",dr);
+  // if(i==0) printf("%f\n",dr);
   return dr;
 }
 

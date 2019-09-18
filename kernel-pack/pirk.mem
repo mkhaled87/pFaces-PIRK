@@ -217,7 +217,7 @@ gb_initialize_center{
 		isNewOrResident			= "true";
 		residentFuncIdx			= "-1";
 		residentFuncArgIdx		= "-1";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 }
@@ -429,7 +429,7 @@ gb_integrate_center_1{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -642,7 +642,7 @@ gb_integrate_center_2{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -855,7 +855,7 @@ gb_integrate_center_3{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -1069,7 +1069,7 @@ gb_integrate_center_4{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -1282,7 +1282,7 @@ gb_initialize_radius{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -1571,7 +1571,7 @@ gb_integrate_radius_1{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -1853,7 +1853,7 @@ gb_integrate_radius_2{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -2135,7 +2135,7 @@ gb_integrate_radius_3{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -2419,7 +2419,7 @@ gb_integrate_radius_4{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -2701,7 +2701,7 @@ ctmm_initialize{
 		isNewOrResident			= "true";
 		residentFuncIdx			= "-1";
 		residentFuncArgIdx		= "-1";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 }
@@ -2914,7 +2914,7 @@ ctmm_integrate_1{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -3128,7 +3128,7 @@ ctmm_integrate_2{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -3342,7 +3342,7 @@ ctmm_integrate_3{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -3556,7 +3556,7 @@ ctmm_integrate_4{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -3769,7 +3769,7 @@ mc_initialize{
 		isNewOrResident			= "true";
 		residentFuncIdx			= "-1";
 		residentFuncArgIdx		= "-1";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -4028,7 +4028,7 @@ mc_integrate_1{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -4242,7 +4242,7 @@ mc_integrate_2{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -4456,7 +4456,7 @@ mc_integrate_3{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
@@ -4670,7 +4670,7 @@ mc_integrate_4{
 		isNewOrResident			= "false";
 		residentFuncIdx			= "0";
 		residentFuncArgIdx		= "8";
-		requiresSubBuffering	= "true";
+		requiresSubBuffering	= "false";
 		equalSubBufferSizes		= "false";
 	}
 
