@@ -31,10 +31,9 @@ namespace pirk{
 
 	  // true step size
 	  float integration_time;
-	  //int nsteps;
 	  float true_step_size;
 	  integration_time = final_time - initial_time;
-	  nsteps = (int)ceil(integration_time / step_size);
+	  nsteps = (size_t)ceil(integration_time / step_size);
 	  true_step_size = integration_time / (float)(nsteps);
 
 	  params.push_back("@@true_step_size@@");

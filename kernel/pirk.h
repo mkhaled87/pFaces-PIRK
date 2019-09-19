@@ -38,13 +38,13 @@ namespace pirk{
 
 	public:
 		/* some vars for local storage */
-		int states_dim;
-		int inputs_dim;
-		int method_choice;
+		size_t states_dim;
+		size_t inputs_dim;
+		size_t method_choice;
 		float integration_time;
-		int nsteps;
-		int nsamples;
-		int row_max;
+		size_t nsteps;
+		size_t nsamples;
+		size_t row_max;
 		float true_step_size;
 		std::string dynamics_element_code;
 		std::string method_choice_err;
@@ -56,16 +56,13 @@ namespace pirk{
 		void configureParallelProgram(pfacesParallelProgram& parallelProgram);
 		void configureTuneParallelProgram(pfacesParallelProgram& tuneParallelProgram, size_t targetFunctionIdx);
 
-		void initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState,
-							const std::shared_ptr<pfacesConfigurationReader>& spCfg);
+		void initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState);
 		void configureParallelProgramGrowthBound(pfacesParallelProgram& parallelProgram);
 
-		void initializeCTMM(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState,
-  							const std::shared_ptr<pfacesConfigurationReader>& spCfg);
+		void initializeCTMM(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState);
 		void configureParallelProgramCTMM(pfacesParallelProgram& parallelProgram);
 
-		void initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState,
-    							const std::shared_ptr<pfacesConfigurationReader>& spCfg);
+		void initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState);
 		void configureParallelProgramMonteCarlo(pfacesParallelProgram& parallelProgram);
 
 	};

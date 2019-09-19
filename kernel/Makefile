@@ -9,7 +9,7 @@ CXXFLAGS 		= -Wall -Wextra -std=c++11 -O3 -DNDEBUG -Wno-deprecated -Wno-ignored-
 # pfaces-sdk
 # 
 PFACES_SDK_INC = -I$(PFACES_SDK_ROOT)/include
-EXTRA_LNK=-L/usr/local/opt/openssl/lib -lcpprest -lssl -lcrypto -lboost_system -ldl -lpthread -lstdc++fs
+EXTRA_LNK=-L/usr/local/opt/openssl/lib -lcpprest -lssl -lcrypto -lboost_system -ldl -lpthread
 
 OS := $(shell uname)
 ifeq ($(OS),Darwin)
@@ -18,6 +18,7 @@ EXTRA_LNK += -lboost_thread-mt -lboost_chrono-mt
 CXXFLAGS += -Wno-ignored-attributes
 else
 PFACES_SDK_LNK = -L$(PFACES_SDK_ROOT)/lib -Wl,--whole-archive -lpfaces-sdk -Wl,--no-whole-archive
+EXTRA_LNK += -lstdc++fs
 endif
 
 #

@@ -3,8 +3,7 @@
 
 namespace pirk{
 
-	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState,
-						  const std::shared_ptr<pfacesConfigurationReader>& spCfg){
+	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
 	  std::string mem_fingerprint_file = spLaunchState->kernelPackPath + std::string("pirk.mem");
 

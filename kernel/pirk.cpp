@@ -11,6 +11,9 @@ namespace pirk{
 		const pfacesParallelProgram& thisParallelProgram,
 		std::vector<std::shared_ptr<void>>& postExecuteParamsList){
 
+		(void)thisKernel;
+		(void)postExecuteParamsList;
+
 		pfacesTerminal::showInfoMessage("This is the reach set as from the GB method:");
 		float* radius = (float*)(thisParallelProgram.m_dataPool[1].first);	/* index 1 is the final state for the center */
 		float* center = (float*)(thisParallelProgram.m_dataPool[9].first);	/* index 1 is the final state for the radius */
@@ -31,6 +34,9 @@ namespace pirk{
 		const pfaces2DKernel& thisKernel,
 		const pfacesParallelProgram& thisParallelProgram,
 		std::vector<std::shared_ptr<void>>& postExecuteParamsList){
+
+		(void)thisKernel;
+		(void)postExecuteParamsList;			
 
 		//pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nCTMM");
 		//pirk* knl = ((pirk*)(&thisKernel));
@@ -53,6 +59,9 @@ namespace pirk{
 		const pfaces2DKernel& thisKernel,
 		const pfacesParallelProgram& thisParallelProgram,
 		std::vector<std::shared_ptr<void>>& postExecuteParamsList){
+
+		(void)thisKernel;
+		(void)postExecuteParamsList;			
 
 		//pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nMC");
 		//pirk* knl = ((pirk*)(&thisKernel));
@@ -109,11 +118,11 @@ namespace pirk{
 	  //------------------------------------------------------------------------
 	  method_choice_err = "Invalid method selection! Please set method_choice to 1 (growth bound), 2 (CTMM), or 3 (Monte Carlo).";
 	  if(method_choice == 1) {
-		  initializeGrowthBound(spLaunchState, spCfg);
+		  initializeGrowthBound(spLaunchState);
 	  } else if (method_choice == 2) {
-		  initializeCTMM(spLaunchState, spCfg);
+		  initializeCTMM(spLaunchState);
 	  } else if (method_choice == 3) {
-		  initializeMonteCarlo(spLaunchState, spCfg);
+		  initializeMonteCarlo(spLaunchState);
 	  } else {
 		  throw std::runtime_error(method_choice_err);
 	  }
