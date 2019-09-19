@@ -26,6 +26,6 @@ __kernel void gb_initialize_radius(
   tmp[i] = 0;
   input[i]=0.5 * (u_up - u_low);
 
-  if(i == 0)
+  //if(i == 0)
 	*t = @@initial_time@@;
 }
