@@ -1,7 +1,7 @@
 float growth_bound_matrix(int i, int j)
 {
     // Parameters
-    int nlinks = 1000000000;
+    int nlinks = 2000000000;
     float v = 0.5;            // free-flow speed, in links/period
     float w =  1.0/6.0;            // congestion-wave speed, in links/period
     float xbar = 320.0;         // max occupancy when jammed, in vehicles
@@ -44,7 +44,7 @@ float growth_bound_matrix(int i, int j)
 // in the row.
 float getNextNonZeroGrouthBoundValue(int i, int last_j, int* done, int* new_j){
 
-    int nlinks = 1000000000;
+    int nlinks = 2000000000;
 
     // this example is simle: only two values in each row so we can implement it as 
     // an if statement
