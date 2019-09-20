@@ -64,7 +64,12 @@ __kernel void gb_integrate_center_4(
     k3[i] = dynamics_element_global(tmp, input, *t +  step_size, i);
     final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
 
+
+	// MK: This is not correct. It works now since the systems are not time dependent
+	// if i=0 gets executed before others, time will be changed and other threads will use
+	// different time
+	// TODO: Make a different function to increment the time
     if(i==0)
-        *t += RK4_H;
+		*t += RK4_H;
 }
 

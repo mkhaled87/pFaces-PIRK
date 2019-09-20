@@ -57,13 +57,7 @@
     <None Include="kernel-pack\pirk.cpu.cl">
       <Filter>kernel-pack</Filter>
     </None>
-    <None Include="kernel-pack\pirk.cpu.cl.render">
-      <Filter>kernel-pack</Filter>
-    </None>
     <None Include="kernel-pack\pirk.hwa.cl">
-      <Filter>kernel-pack</Filter>
-    </None>
-    <None Include="kernel-pack\pirk.mem">
       <Filter>kernel-pack</Filter>
     </None>
     <None Include="kernel-pack\pirk_utils.cl">
@@ -106,5 +100,15 @@
       <Filter>kernel-pack\monte_carlo</Filter>
     </None>
     <None Include="README.md" />
+    <None Include="LICENSE" />
+    <None Include="kernel-pack\ctmm\ctmm.mem">
+      <Filter>kernel-pack\ctmm</Filter>
+    </None>
+    <None Include="kernel-pack\growth_bound\gb.mem">
+      <Filter>kernel-pack\growth_bound</Filter>
+    </None>
+    <None Include="kernel-pack\monte_carlo\mc.mem">
+      <Filter>kernel-pack\monte_carlo</Filter>
+    </None>
   </ItemGroup>
 </Project>

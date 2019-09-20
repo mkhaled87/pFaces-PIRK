@@ -6,7 +6,9 @@ namespace pirk{
     void pirk::initializeCTMM(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
     pfacesTerminal::showInfoMessage("Setting up the CTMM method...");
 
-    std::string mem_fingerprint_file = spLaunchState->kernelPackPath + std::string("pirk.mem");
+	std::string mem_fingerprint_file =
+		spLaunchState->kernelPackPath + std::string("ctmm") +
+		std::string(PFACES_PATH_SPLITTER) + std::string("ctmm.mem");
 
     /* ----------------------------------------------------------------------------------------------------------------------------- */
     /* begin code for creating the "initialize" kernel function (function 10) */
@@ -267,13 +269,13 @@ namespace pirk{
     instrMsg1->setAsMessage("Performing integration...");
     instrList.push_back(instrMsg1);
 
-    int rk4_nint = 5;
-    int total_steps = nsteps * rk4_nint;
+    size_t rk4_nint = 5;
+	size_t total_steps = nsteps * rk4_nint;
 
 
     int multiple_devices = parallelProgram.countTargetDevices() > 1;
 
-    for (int w = 0; w < total_steps; w++) {
+    for (size_t w = 0; w < total_steps; w++) {
 
         // INSTRUCTIONS: Perform center integration
         for (size_t i = 0; i < jobsPerDev_ctmm_integrate_1.size(); i++) {

@@ -5,7 +5,9 @@ namespace pirk{
 
 	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
-	  std::string mem_fingerprint_file = spLaunchState->kernelPackPath + std::string("pirk.mem");
+	  std::string mem_fingerprint_file = 
+		  spLaunchState->kernelPackPath + std::string("growth_bound") + 
+		  std::string(PFACES_PATH_SPLITTER) + std::string("gb.mem");
 
 
 	  /* ----------------------------------------------------------------------------------------------------------------------------- */
@@ -513,50 +515,50 @@ namespace pirk{
 		instrMsg1->setAsMessage("Performing center integration...");
 		instrList.push_back(instrMsg1);
 
-		int rk4_nint = 5;
-		int total_steps = nsteps * rk4_nint;
+		size_t rk4_nint = 5;
+		size_t total_steps = nsteps * rk4_nint;
 
 		// INSTRUCTIONS: Perform center integration
-		for (int w = 0; w < total_steps; w++) {
+		for (size_t w = 0; w < total_steps; w++) {
 
 			// INSTRUCTIONS: Perform center integration 1
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_center_1.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_1[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
-		// INSTRUCTIONS: Perform center integration 2
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_center_2.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_2[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_center_1.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_1[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
+			// INSTRUCTIONS: Perform center integration 2
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_center_2.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_2[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 
-		// INSTRUCTIONS: Perform center integration 3
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_center_3.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_3[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
+			// INSTRUCTIONS: Perform center integration 3
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_center_3.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_3[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 
-		// INSTRUCTIONS: Perform center integration 4
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_center_4.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_4[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
+			// INSTRUCTIONS: Perform center integration 4
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_center_4.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_center_4[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 
 		}
 
@@ -587,6 +589,7 @@ namespace pirk{
 			instrList.push_back(tmpExecuteInstr);
 		}
 
+		// INSTRUCTION: a sync point after computing the contraction matrix
 		instrList.push_back(instrSyncPoint);
 
 		std::shared_ptr<pfacesInstruction> instrMsg3 = std::make_shared<pfacesInstruction>();
@@ -594,58 +597,56 @@ namespace pirk{
 		instrList.push_back(instrMsg3);
 
 		// INSTRUCTIONS: Perform radius integration
-		for (int w = 0; w < total_steps; w++) {
+		for (size_t w = 0; w < total_steps; w++) {
 
-		// INSTRUCTIONS: Perform radius integration 1
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_1.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_1[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
+			// INSTRUCTIONS: Perform radius integration 1
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_1.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_1[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 
-		// INSTRUCTIONS: Perform radius integration 2
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_2.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_2[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
+			// INSTRUCTIONS: Perform radius integration 2
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_2.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_2[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 
-		// INSTRUCTIONS: Perform radius integration 3
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_3.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_3[i]);
-			instrList.push_back(tmpExecuteInstr);
-		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
+			// INSTRUCTIONS: Perform radius integration 3
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_3.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_3[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 
-		// INSTRUCTIONS: Perform radius integration 4
-		for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_4.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_4[i]);
-			instrList.push_back(tmpExecuteInstr);
+			// INSTRUCTIONS: Perform radius integration 4
+			for (size_t i = 0; i < jobsPerDev_gb_integrate_radius_4.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_integrate_radius_4[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
+			if (multiple_devices){
+				instrList.push_back(instrSyncPoint);
+			}
 		}
-		if (multiple_devices){
-			instrList.push_back(instrSyncPoint);
-		}
-
-		}
-
-		// INSTRUCTION: a sync point after integration
-		instrList.push_back(instrSyncPoint);
 
 		// INSTRUCTION: read memory bags from devices
 		// if not using direct access to host memory, we write the data to the device memory
 		// and followed by a barrier to sync among all device threads
 		if (!parallelProgram.m_useHostMemory) {
 			instrList.push_back(instr_readAllData);
+			if (multiple_devices)
+				instrList.push_back(instrSyncPoint);
 		}
 
 		// INSTRUCTION: a sync point after the matrix elements have all been added together

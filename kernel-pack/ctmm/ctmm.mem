@@ -1,0 +1,1074 @@
+#-----------------------------------------------------------------------
+# File: ctmm.mem
+# Date: 19.09.2019
+# Athr: M. Khaled
+# Desc: This file describes the memory buffers needed by the kernel CTMM.
+#-----------------------------------------------------------------------
+
+# function: 0- ctmm_initialize
+# -----------------------
+ctmm_initialize{ 
+
+	# argument 0.0: initial_state (gets attached to a new buffer)
+	# ----------------------------------------------------
+	initial_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";  
+		residentFuncArgIdx		= "-1";  
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 0.1: final_state (gets attached to a new buffer)
+	# ----------------------------------------------------
+	final_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 0.2: input (gets attached to a new buffer)
+	# ----------------------------------------------------
+	input{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 0.3: k0 (gets attached to a new buffer)
+	# ----------------------------------------------------
+	k0{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 0.4: k1 (gets attached to a new buffer)
+	# ----------------------------------------------------
+	k1{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 0.5: k2 (gets attached to a new buffer)
+	# ----------------------------------------------------
+	k2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 0.6: k3 (gets attached to a new buffer)
+	# ----------------------------------------------------
+	k3{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 0.7: tmp (gets attached to a new buffer)
+	# ----------------------------------------------------
+	tmp{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 0.8: t (gets attached to a new buffer)
+	# ----------------------------------------------------
+	t{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "false";
+		isNewOrResident			= "true";
+		residentFuncIdx			= "-1";
+		residentFuncArgIdx		= "-1";
+		requiresSubBuffering	= "false";
+		equalSubBufferSizes		= "false";
+	}
+}
+
+
+# function: 1- ctmm_integrate_1
+# -----------------------
+ctmm_integrate_1{ 
+
+	# argument 1.0: initial_state (gets attached to 10.0's buffer)
+	# ----------------------------------------------------
+	initial_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";  
+		residentFuncArgIdx		= "0";  
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 1.1: final_state (gets attached to 10.1's buffer)
+	# ----------------------------------------------------
+	final_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 1.2: input (gets attached to 10.2's buffer)
+	# ----------------------------------------------------
+	input{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "2";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 1.3: k0 (gets attached to 0.3's buffer)
+	# ----------------------------------------------------
+	k0{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "3";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 1.4: k1 (gets attached to 10.4's buffer)
+	# ----------------------------------------------------
+	k1{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "4";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 1.5: k2 (gets attached to 10.5's buffer)
+	# ----------------------------------------------------
+	k2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "5";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 1.6: k3 (gets attached to 10.6's buffer)
+	# ----------------------------------------------------
+	k3{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "6";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 1.7: tmp (gets attached to 10.7's buffer)
+	# ----------------------------------------------------
+	tmp{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "7";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 1.8: t (gets attached to 10.8's buffer)
+	# ----------------------------------------------------
+	t{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "false";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "false";
+		equalSubBufferSizes		= "false";
+	}
+
+}
+
+
+# function: 2- ctmm_integrate_2
+# -----------------------
+ctmm_integrate_2{ 
+
+	# argument 2.0: initial_state (gets attached to 10.0's buffer)
+	# ----------------------------------------------------
+	initial_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";  
+		residentFuncArgIdx		= "0";  
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 2.1: final_state (gets attached to 10.1's buffer)
+	# ----------------------------------------------------
+	final_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 2.2: input (gets attached to 10.2's buffer)
+	# ----------------------------------------------------
+	input{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "2";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 2.3: k0 (gets attached to 0.3's buffer)
+	# ----------------------------------------------------
+	k0{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "3";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 2.4: k1 (gets attached to 10.4's buffer)
+	# ----------------------------------------------------
+	k1{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "4";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 2.5: k2 (gets attached to 10.5's buffer)
+	# ----------------------------------------------------
+	k2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "5";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 2.6: k3 (gets attached to 10.6's buffer)
+	# ----------------------------------------------------
+	k3{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "6";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 2.7: tmp (gets attached to 10.7's buffer)
+	# ----------------------------------------------------
+	tmp{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "7";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 2.8: t (gets attached to 10.8's buffer)
+	# ----------------------------------------------------
+	t{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "false";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "false";
+		equalSubBufferSizes		= "false";
+	}
+
+}
+
+
+# function: 3- ctmm_integrate_3
+# -----------------------
+ctmm_integrate_3{ 
+
+	# argument 3.0: initial_state (gets attached to 10.0's buffer)
+	# ----------------------------------------------------
+	initial_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";  
+		residentFuncArgIdx		= "0";  
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 3.1: final_state (gets attached to 10.1's buffer)
+	# ----------------------------------------------------
+	final_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 3.2: input (gets attached to 10.2's buffer)
+	# ----------------------------------------------------
+	input{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "2";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 3.3: k0 (gets attached to 0.3's buffer)
+	# ----------------------------------------------------
+	k0{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "3";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 3.4: k1 (gets attached to 10.4's buffer)
+	# ----------------------------------------------------
+	k1{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "4";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 3.5: k2 (gets attached to 10.5's buffer)
+	# ----------------------------------------------------
+	k2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "5";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 3.6: k3 (gets attached to 10.6's buffer)
+	# ----------------------------------------------------
+	k3{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "6";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 3.7: tmp (gets attached to 10.7's buffer)
+	# ----------------------------------------------------
+	tmp{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "7";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 3.8: t (gets attached to 10.8's buffer)
+	# ----------------------------------------------------
+	t{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "false";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "false";
+		equalSubBufferSizes		= "false";
+	}
+
+}
+
+
+# function: 4- ctmm_integrate_4
+# -----------------------
+ctmm_integrate_4{ 
+
+	# argument 4.0: initial_state (gets attached to 10.0's buffer)
+	# ----------------------------------------------------
+	initial_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";  
+		residentFuncArgIdx		= "0";  
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 4.1: final_state (gets attached to 10.1's buffer)
+	# ----------------------------------------------------
+	final_state{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "1";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 4.2: input (gets attached to 10.2's buffer)
+	# ----------------------------------------------------
+	input{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "2";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 4.3: k0 (gets attached to 0.3's buffer)
+	# ----------------------------------------------------
+	k0{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "3";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 4.4: k1 (gets attached to 10.4's buffer)
+	# ----------------------------------------------------
+	k1{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "4";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 4.5: k2 (gets attached to 10.5's buffer)
+	# ----------------------------------------------------
+	k2{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "5";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 4.6: k3 (gets attached to 10.6's buffer)
+	# ----------------------------------------------------
+	k3{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "6";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+	
+	# argument 4.7: tmp (gets attached to 10.7's buffer)
+	# ----------------------------------------------------
+	tmp{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "true";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "7";
+		requiresSubBuffering	= "true";
+		equalSubBufferSizes		= "false";
+	}
+
+	# argument 4.8: t (gets attached to 10.8's buffer)
+	# ----------------------------------------------------
+	t{
+		directionWriteOrRead	= "false";
+		HostDoWrite				= "false";
+		HostDoRead				= "false";
+		memAccessFlag			= "CL_MEM_READ_WRITE";
+		baseTypeSize			= "4";
+		baseTypeMultiple		= "1";
+		baseTypeXDimMultiple	= "0";
+		baseTypeYDimMultiple	= "0";
+		deviceMultiple			= "false";
+		isGlobalMemory			= "true";
+		isConstantMemory		= "false";
+		isLocalMemory			= "false";
+		isRangeScalable			= "false";
+		isNewOrResident			= "false";
+		residentFuncIdx			= "0";
+		residentFuncArgIdx		= "8";
+		requiresSubBuffering	= "false";
+		equalSubBufferSizes		= "false";
+	}
+
+}

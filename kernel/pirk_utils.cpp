@@ -84,7 +84,7 @@ namespace pirk{
 
 	  row_max = std::stoi(m_spCfg->readConfigValueString("row_max"));
 	  params.push_back("@@row_max@@");
-	  paramvals.push_back(std::to_string(method_choice));
+	  paramvals.push_back(std::to_string(row_max));
 
 	  // updating the list of params
 	  updatePrameters(params, paramvals);  /* TODO: the word "parameters" is misspelled in this function name */

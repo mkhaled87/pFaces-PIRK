@@ -20,6 +20,7 @@ growth_bound_radius_dynamics(
 
 	float dr=0;
 	int idx;
+
 	for (int j=0; j < ncel[i]; j++) {
 		idx = cidxs[i*@@row_max@@ + j];
 		dr += cvals[i*@@row_max@@ + j]*r[idx];

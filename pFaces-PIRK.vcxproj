@@ -52,23 +52,25 @@
   <ItemGroup>
     <None Include="kernel-pack\config.defaults" />
     <None Include="kernel-pack\config.template" />
+    <None Include="kernel-pack\ctmm\ctmm.mem" />
     <None Include="kernel-pack\ctmm\ctmm_decomposition_dynamics.cl" />
     <None Include="kernel-pack\ctmm\ctmm_initialize.cl" />
     <None Include="kernel-pack\ctmm\ctmm_integrate_kfns.cl" />
     <None Include="kernel-pack\ctmm\decomposition_body.cl" />
+    <None Include="kernel-pack\growth_bound\gb.mem" />
     <None Include="kernel-pack\growth_bound\gb_compute_contraction_matrix.cl" />
     <None Include="kernel-pack\growth_bound\gb_initialize_center.cl" />
     <None Include="kernel-pack\growth_bound\gb_initialize_radius.cl" />
     <None Include="kernel-pack\growth_bound\gb_integrate_center.cl" />
     <None Include="kernel-pack\growth_bound\gb_integrate_radius.cl" />
+    <None Include="kernel-pack\monte_carlo\mc.mem" />
     <None Include="kernel-pack\monte_carlo\mc_initialize.cl" />
     <None Include="kernel-pack\monte_carlo\mc_integrate_kfns.cl" />
     <None Include="kernel-pack\pirk.cpu.cl" />
-    <None Include="kernel-pack\pirk.cpu.cl.render" />
     <None Include="kernel-pack\pirk.gpu.cl" />
     <None Include="kernel-pack\pirk.hwa.cl" />
-    <None Include="kernel-pack\pirk.mem" />
     <None Include="kernel-pack\pirk_utils.cl" />
+    <None Include="LICENSE" />
     <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
