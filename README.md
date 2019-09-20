@@ -26,11 +26,7 @@ Test the installation of pFaces and make sure it recognizes the parallel hardwar
 pfaces -CGH -l
 ```
 
-where **pfaces** calls pFaces launcher as installed in your machine. This should list all available HW configurations attached to your machine and means you are ready to work with AMYTISS.
-
-```
-pfaces -CGH -l
-```
+where **pfaces** calls pFaces launcher as installed in your machine. This should list all available HW configurations attached to your machine and means you are ready to work with PIRK.
 
 ### Build tools
 
