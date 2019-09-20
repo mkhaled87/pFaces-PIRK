@@ -14,7 +14,7 @@ namespace pirk{
 		(void)thisKernel;
 		(void)postExecuteParamsList;
 
-		pfacesTerminal::showInfoMessage("This is the reach set as from the GB method:");
+		pfacesTerminal::showInfoMessage("This is the reach set as from the GB method for the 10-link example:");
 		float* center = (float*)(thisParallelProgram.m_dataPool[1].first);	/* index 1 is the final state for the center */
 		float* radius = (float*)(thisParallelProgram.m_dataPool[9].first);	/* index 1 is the final state for the radius */
 
@@ -29,6 +29,7 @@ namespace pirk{
 		pfacesTerminal::showMessage("\nSuccessor lower\n-------------------");
 		for(int i=0; i<10; i++)
 			pfacesTerminal::showMessage(std::to_string(center[i] - radius[i]));
+
 		pfacesTerminal::showMessage("Successor upper\n-------------------");
 		for(int i=0; i<10; i++)
 			pfacesTerminal::showMessage(std::to_string(radius[i] + center[i]));
