@@ -23,7 +23,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
 
     // Parameters
     int nlinks = 200000;
-    float v = 0.5;            // free-flow speed, in links/period
+    float v = 0.5f;            // free-flow speed, in links/period
     float w = (float)(1./6.);            // congestion-wave speed, in links/period
     float c = 40.;             // capacity (max downstream flow), in vehicles/period
     float xbar = 320.;         // max occupancy when jammed, in vehicles
@@ -44,7 +44,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
 
     else if(i == 1) {
     //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(2) ; w/b*(xbar-x(4))]));
-        t1 = fmin((float) fmin(0.5*c, 0.5*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. */
+        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. */
                    fmin(w*(xbar-x[1]), w*(xbar-x[2]))
                  );
         t2 = fmin(fmin(c, v*x[1]), 
@@ -55,7 +55,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
     
     else if(i == 2) {
     //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(3) ; w/b*(xbar-x(5))]));
-        t1 = fmin((float) fmin(0.5*c, 0.5*v*x[0]),
+        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),
                    fmin(w*(xbar-x[1]), w*(xbar-x[2]))
                  );
         t2 = fmin(fmin(c, v*x[2]), 
@@ -125,7 +125,7 @@ float dynamics_element_private(float* x, float* u, float t, int i) {
 
     // Parameters
     int nlinks = 200000;
-    float v = 0.5;            // free-flow speed, in links/period
+    float v = 0.5f;            // free-flow speed, in links/period
     float w = (float)(1./6.);            // congestion-wave speed, in links/period
     float c = 40.;             // capacity (max downstream flow), in vehicles/period
     float xbar = 320.;         // max occupancy when jammed, in vehicles
@@ -146,7 +146,7 @@ float dynamics_element_private(float* x, float* u, float t, int i) {
 
     else if(i == 1) {
     //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(2) ; w/b*(xbar-x(4))]));
-        t1 = fmin((float) fmin(0.5*c, 0.5*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. Why? */
+        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. Why? */
                    fmin(w*(xbar-x[1]), w*(xbar-x[2]))
                  );
         t2 = fmin(fmin(c, v*x[1]), 
@@ -157,7 +157,7 @@ float dynamics_element_private(float* x, float* u, float t, int i) {
     
     else if(i == 2) {
     //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(3) ; w/b*(xbar-x(5))]));
-        t1 = fmin((float) fmin(0.5*c, 0.5*v*x[0]),
+        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),
                    fmin(w*(xbar-x[1]), w*(xbar-x[2]))
                  );
         t2 = fmin(fmin(c, v*x[2]), 
