@@ -144,17 +144,22 @@ namespace pirk{
 	void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram){
 		
 		std::vector<std::shared_ptr<void>> postExecuteParamsList;
+		bool save_result = m_spCfg->readConfigValueBool("save_result");
 		
 		// configure the program and register a post-execute instruction to save the data
 		if(method_choice == 1) {
 			configureParallelProgramGrowthBound(parallelProgram);
-			registerPostExecuteFunction(gb_saveData, "Saving results", postExecuteParamsList);
+			if(save_result)
+				registerPostExecuteFunction(gb_saveData, "Saving results", postExecuteParamsList);
 		} else if (method_choice == 2) {
 			configureParallelProgramCTMM(parallelProgram);
-			registerPostExecuteFunction(ctmm_saveData, "Saving results", postExecuteParamsList);
+			if (save_result)
+				registerPostExecuteFunction(ctmm_saveData, "Saving results", postExecuteParamsList);
 		} else if (method_choice == 3) {
 			configureParallelProgramMonteCarlo(parallelProgram);
-			registerPostExecuteFunction(mc_saveData, "Saving results", postExecuteParamsList);
+			
+			if (save_result)
+				registerPostExecuteFunction(mc_saveData, "Saving results", postExecuteParamsList);
 		} else {
 			throw std::runtime_error(method_choice_err);
 		}

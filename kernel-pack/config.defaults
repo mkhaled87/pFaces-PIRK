@@ -2,6 +2,7 @@
 # Project Data
 #-----------------------------------------------------------------------
 project_name = "pirk_kernel";
+save_result = "true";
 
 # Method:
 # 1=GrowthBound 
