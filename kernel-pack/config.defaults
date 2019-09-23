@@ -9,6 +9,7 @@ project_name = "pirk_kernel";
 # 3= MonteCarlo
 # -----------------
 method_choice = "1";
+mem_efficient = "false";
 
 
 # Time settings

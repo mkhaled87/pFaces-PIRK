@@ -8,13 +8,21 @@ void gb_integrate_radius_1(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t,
+    __global float *t
+#ifndef MEM_EFFICIENT
+	,
     __global int *cidxs,
     __global float *cvals,
-    __global float *ncel){
+    __global float *ncel
+#endif
+){
 
-    int i = get_global_id(0);  
+	unsigned int i = get_global_id(0);
+#ifndef MEM_EFFICIENT
 	k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+#else
+	k0[i] = growth_bound_radius_dynamics(initial_state, input, *t, i);	
+#endif
 	tmp[i] = final_state[i] + RK4_H / 2.0*k0[i];
 }
 
@@ -28,13 +36,21 @@ void gb_integrate_radius_2(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t,
-    __global int *cidxs,
-    __global float *cvals,
-    __global float *ncel){
+	__global float* t
+#ifndef MEM_EFFICIENT
+	,
+	__global int* cidxs,
+	__global float* cvals,
+	__global float* ncel
+#endif
+) {
 
-	int i = get_global_id(0);  
+	unsigned int i = get_global_id(0);
+#ifndef MEM_EFFICIENT
 	k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+#else
+	k1[i] = growth_bound_radius_dynamics(tmp, input, *t + 0.5 * step_size, i);	
+#endif
 	tmp[i] = final_state[i] + RK4_H / 2.0*k1[i];
 }
 
@@ -48,13 +64,21 @@ void gb_integrate_radius_3(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t,
-    __global int *cidxs,
-    __global float *cvals,
-    __global float *ncel){
+	__global float* t
+#ifndef MEM_EFFICIENT
+	,
+	__global int* cidxs,
+	__global float* cvals,
+	__global float* ncel
+#endif
+) {
 
-	int i = get_global_id(0);  
+	unsigned int i = get_global_id(0);
+#ifndef MEM_EFFICIENT
 	k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+#else
+	k2[i] = growth_bound_radius_dynamics(tmp, input, *t + 0.5 * step_size, i);
+#endif
 	tmp[i] = final_state[i] + RK4_H * k2[i];
 }
 
@@ -68,13 +92,21 @@ void gb_integrate_radius_4(
     __global float *k2,
     __global float *k3,
     __global float *tmp,
-    __global float *t,
-    __global int *cidxs,
-    __global float *cvals,
-    __global float *ncel){
+	__global float* t
+#ifndef MEM_EFFICIENT
+	,
+	__global int* cidxs,
+	__global float* cvals,
+	__global float* ncel
+#endif
+) {
 
-	int i = get_global_id(0);  
+	unsigned int i = get_global_id(0);  
+#ifndef MEM_EFFICIENT
 	k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
+#else
+	k3[i] = growth_bound_radius_dynamics(tmp, input, *t + step_size, i);
+#endif
 	final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
 
 

@@ -9,6 +9,7 @@ namespace pirk{
 		  spLaunchState->kernelPackPath + std::string("growth_bound") + 
 		  std::string(PFACES_PATH_SPLITTER) + std::string("gb.mem");
 
+	  mem_efficient = m_spCfg->readConfigValueBool("mem_efficient");
 
 	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 	  /* begin code for creating the "initialize_center" kernel function (function 0) */
@@ -111,36 +112,48 @@ namespace pirk{
 	  /* end code for creating the "gb_gb_initialize_radius" kernel function */
 	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
+	  
 	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 	  /* begin code for creating the "compute_contraction_matrix" kernel function (function 6) */
-	  pfacesKernelFunction function_gb_compute_contraction_matrix(
-		  "gb_compute_contraction_matrix",  /* name of the function to add */
-		  {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
-	  );
-	  pfacesKernelFunctionArguments args_gb_compute_contraction_matrix = pfacesKernelFunctionArguments::loadFromFile(
-		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-		  "gb_compute_contraction_matrix",  /* name of the function to add */
-		  {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
-	  );
-	  size_t size_cidxs = row_max * sizeof(cl_int);
-	  size_t size_cvals = row_max * sizeof(float);
-	  size_t size_ncel =  sizeof(cl_int);
-	  args_gb_compute_contraction_matrix.m_baseTypeSize = {size_cidxs,size_cvals,size_ncel};
-	  function_gb_compute_contraction_matrix.setArguments(args_gb_compute_contraction_matrix);
-	  addKernelFunction(function_gb_compute_contraction_matrix);
+	  if(!mem_efficient){
+		  pfacesKernelFunction function_gb_compute_contraction_matrix(
+			  "gb_compute_contraction_matrix",  /* name of the function to add */
+			  {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  );
+		  pfacesKernelFunctionArguments args_gb_compute_contraction_matrix = pfacesKernelFunctionArguments::loadFromFile(
+			  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+			  "gb_compute_contraction_matrix",  /* name of the function to add */
+			  {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  );
+		  size_t size_cidxs = row_max * sizeof(cl_int);
+		  size_t size_cvals = row_max * sizeof(float);
+		  size_t size_ncel =  sizeof(cl_int);
+		  args_gb_compute_contraction_matrix.m_baseTypeSize = {size_cidxs,size_cvals,size_ncel};
+		  function_gb_compute_contraction_matrix.setArguments(args_gb_compute_contraction_matrix);
+		  addKernelFunction(function_gb_compute_contraction_matrix);
+	  }
 	  /* end code for creating the "gb_integrate_radius" kernel function */
 	  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+	  std::vector<std::string> argNames;
+	  if (!mem_efficient) {
+		  argNames = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel" };
+	  }
+	  else {
+		  argNames = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"};
+	  }
 
 	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 	  /* begin code for creating the "gb_integrate_radius_1" kernel function (function 7) */
 	  pfacesKernelFunction function_gb_integrate_radius_1(
 		  "gb_integrate_radius_1",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_1 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_1",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  function_gb_integrate_radius_1.setArguments(args_gb_integrate_radius_1);
 	  addKernelFunction(function_gb_integrate_radius_1);
@@ -152,12 +165,12 @@ namespace pirk{
 	  /* begin code for creating the "gb_integrate_radius_2" kernel function (function 8) */
 	  pfacesKernelFunction function_gb_integrate_radius_2(
 		  "gb_integrate_radius_2",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_2 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_2",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  function_gb_integrate_radius_2.setArguments(args_gb_integrate_radius_2);
 	  addKernelFunction(function_gb_integrate_radius_2);
@@ -169,12 +182,12 @@ namespace pirk{
 	  /* begin code for creating the "gb_integrate_radius_3" kernel function (function 9) */
 	  pfacesKernelFunction function_gb_integrate_radius_3(
 		  "gb_integrate_radius_3",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_3 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_3",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  function_gb_integrate_radius_3.setArguments(args_gb_integrate_radius_3);
 	  addKernelFunction(function_gb_integrate_radius_3);
@@ -186,12 +199,12 @@ namespace pirk{
 	  /* begin code for creating the "gb_integrate_radius_4" kernel function (function 10) */
 	  pfacesKernelFunction function_gb_integrate_radius_4(
 		  "gb_integrate_radius_4",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_4 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_4",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel"}  /* list of the names of its args */
+		  argNames  /* list of the names of its args */
 	  );
 	  function_gb_integrate_radius_4.setArguments(args_gb_integrate_radius_4);
 	  addKernelFunction(function_gb_integrate_radius_4);
@@ -291,7 +304,9 @@ namespace pirk{
 		);
 
 		std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_compute_contraction_matrix;
-		jobsPerDev_gb_compute_contraction_matrix = parallelAdvisor.distributeJob(
+		int shift = 0;
+		if (!mem_efficient) {
+			jobsPerDev_gb_compute_contraction_matrix = parallelAdvisor.distributeJob(
 				*this,
 				6, /* function index */
 				ndProcessRangeStateDim, /* process range */
@@ -299,12 +314,16 @@ namespace pirk{
 				parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
 				parallelProgram.m_fixedJobDistribution, /* the fixed distribution, if one is being used */
 				true, false, false  /* some additional flags */
-		);
+			);
+		}
+		else {
+			shift = -1;
+		}
 
 		std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_1;
 		jobsPerDev_gb_integrate_radius_1 = parallelAdvisor.distributeJob(
 				*this,
-				7, /* function index */
+				7 + shift, /* function index */
 				ndProcessRangeStateDim, /* process range */
 				ndProcessOffsetStateDim,  /* process offset */
 				parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -315,7 +334,7 @@ namespace pirk{
 		std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_2;
 		jobsPerDev_gb_integrate_radius_2 = parallelAdvisor.distributeJob(
 				*this,
-				8, /* function index */
+				8 + shift, /* function index */
 				ndProcessRangeStateDim, /* process range */
 				ndProcessOffsetStateDim,  /* process offset */
 				parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -326,7 +345,7 @@ namespace pirk{
 		std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_3;
 		jobsPerDev_gb_integrate_radius_3 = parallelAdvisor.distributeJob(
 				*this,
-				9, /* function index */
+				9 + shift, /* function index */
 				ndProcessRangeStateDim, /* process range */
 				ndProcessOffsetStateDim,  /* process offset */
 				parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -337,7 +356,7 @@ namespace pirk{
 		std::vector<std::shared_ptr<pfacesDeviceExecuteJob>> jobsPerDev_gb_integrate_radius_4;
 		jobsPerDev_gb_integrate_radius_4 = parallelAdvisor.distributeJob(
 				*this,
-				10, /* function index */
+				10 + shift, /* function index */
 				ndProcessRangeStateDim, /* process range */
 				ndProcessOffsetStateDim,  /* process offset */
 				parallelProgram.m_isFixedJobDistribution, /* whether or not to use a fixed job distribution, or to tune automatically */
@@ -347,21 +366,22 @@ namespace pirk{
 
 
 		// print the task-scheduling report
-		parallelAdvisor.printTaskSchedulingReport(
-			parallelProgram.getMachine(),
-			{
-				"gb_initialize_center",
-				"gb_integrate_center_1",
-				"gb_integrate_center_2",
-				"gb_integrate_center_3",
-				"gb_integrate_center_4",
-				"gb_initialize_radius",
-				"gb_compute_contraction_matrix",
-				"gb_integrate_radius_1",
-				"gb_integrate_radius_2",
-				"gb_integrate_radius_3",
-				"gb_integrate_radius_4",
-			},
+		if (!mem_efficient) {
+			parallelAdvisor.printTaskSchedulingReport(
+				parallelProgram.getMachine(),
+				{
+					"gb_initialize_center",
+					"gb_integrate_center_1",
+					"gb_integrate_center_2",
+					"gb_integrate_center_3",
+					"gb_integrate_center_4",
+					"gb_initialize_radius",
+					"gb_compute_contraction_matrix",
+					"gb_integrate_radius_1",
+					"gb_integrate_radius_2",
+					"gb_integrate_radius_3",
+					"gb_integrate_radius_4",
+				},
 			{
 			jobsPerDev_gb_initialize_center,
 				jobsPerDev_gb_integrate_center_1,
@@ -376,7 +396,38 @@ namespace pirk{
 				jobsPerDev_gb_integrate_radius_4,
 			},
 			ndUniversalRangeStateDim[0]
-		);
+			);
+		}
+		else {
+			parallelAdvisor.printTaskSchedulingReport(
+				parallelProgram.getMachine(),
+				{
+					"gb_initialize_center",
+					"gb_integrate_center_1",
+					"gb_integrate_center_2",
+					"gb_integrate_center_3",
+					"gb_integrate_center_4",
+					"gb_initialize_radius",
+					"gb_integrate_radius_1",
+					"gb_integrate_radius_2",
+					"gb_integrate_radius_3",
+					"gb_integrate_radius_4",
+				},
+			{
+			jobsPerDev_gb_initialize_center,
+				jobsPerDev_gb_integrate_center_1,
+				jobsPerDev_gb_integrate_center_2,
+				jobsPerDev_gb_integrate_center_3,
+				jobsPerDev_gb_integrate_center_4,
+				jobsPerDev_gb_initialize_radius,
+				jobsPerDev_gb_integrate_radius_1,
+				jobsPerDev_gb_integrate_radius_2,
+				jobsPerDev_gb_integrate_radius_3,
+				jobsPerDev_gb_integrate_radius_4,
+			},
+			ndUniversalRangeStateDim[0]
+			);
+		}
 
 
 		// ---------------------------------------------------------
@@ -402,30 +453,33 @@ namespace pirk{
 			SubBufers_GB_0_initialize_center_6_k3				= getSubBuffers(jobsPerDev_gb_initialize_center, 0, 6, memReport.bufferFinalSize[6], 1);
 			SubBufers_GB_0_initialize_center_7_tmp				= getSubBuffers(jobsPerDev_gb_initialize_center, 0, 7, memReport.bufferFinalSize[7], 1);
 			SubBufers_GB_5_initialize_radius_1_final_state		= getSubBuffers(jobsPerDev_gb_initialize_radius, 5, 1, memReport.bufferFinalSize[9], 1);
-			SubBufers_GB_6_compute_contraction_matrix_0_cidxs	= getSubBuffers(jobsPerDev_gb_compute_contraction_matrix, 6, 0, memReport.bufferFinalSize[10], 1);
-			SubBufers_GB_6_compute_contraction_matrix_1_cvals	= getSubBuffers(jobsPerDev_gb_compute_contraction_matrix, 6, 1, memReport.bufferFinalSize[11], 1);
-			SubBufers_GB_6_compute_contraction_matrix_2_ncel	= getSubBuffers(jobsPerDev_gb_compute_contraction_matrix, 6, 2, memReport.bufferFinalSize[12], 1);
+			if (!mem_efficient) {
+				SubBufers_GB_6_compute_contraction_matrix_0_cidxs = getSubBuffers(jobsPerDev_gb_compute_contraction_matrix, 6, 0, memReport.bufferFinalSize[10], 1);
+				SubBufers_GB_6_compute_contraction_matrix_1_cvals = getSubBuffers(jobsPerDev_gb_compute_contraction_matrix, 6, 1, memReport.bufferFinalSize[11], 1);
+				SubBufers_GB_6_compute_contraction_matrix_2_ncel = getSubBuffers(jobsPerDev_gb_compute_contraction_matrix, 6, 2, memReport.bufferFinalSize[12], 1);
+			}
 
 			// printing the sub-buffering report
-			parallelAdvisor.printSubBufferingReport(
-				{ "gb_initialize_center",	"gb_integrate_center_1",	"gb_integrate_center_2",	"gb_integrate_center_3",	"gb_integrate_center_4",
-				  "gb_initialize_radius",	"gb_compute_contraction_matrix",	"gb_integrate_radius_1",	"gb_integrate_radius_2",	
-				  "gb_integrate_radius_3",	"gb_integrate_radius_4" },
+			if (!mem_efficient) {
+				parallelAdvisor.printSubBufferingReport(
+					{ "gb_initialize_center",	"gb_integrate_center_1",	"gb_integrate_center_2",	"gb_integrate_center_3",	"gb_integrate_center_4",
+					  "gb_initialize_radius",	"gb_compute_contraction_matrix",	"gb_integrate_radius_1",	"gb_integrate_radius_2",
+					  "gb_integrate_radius_3",	"gb_integrate_radius_4" },
 
-				{ 0,					0,						0,						0,						0,						
-					0,					0,						0,						5,						
-					6,					6,						6 },
+					{ 0,					0,						0,						0,						0,
+						0,					0,						0,						5,
+						6,					6,						6 },
 
-				{ 0,					1,						2,						3,						4,						
-					5,					6,						7,						1,						
-					0,					1,						2 },
+					{ 0,					1,						2,						3,						4,
+						5,					6,						7,						1,
+						0,					1,						2 },
 
-				{ 9,					9,						9,						9,						9,
-					9,					9,						9,						9,
-					3,					3,						3 },
+					{ 9,					9,						9,						9,						9,
+						9,					9,						9,						9,
+						3,					3,						3 },
 
-				{ 
-					SubBufers_GB_0_initialize_center_0_initial_state, 
+				{
+					SubBufers_GB_0_initialize_center_0_initial_state,
 					SubBufers_GB_0_initialize_center_1_final_state,
 					SubBufers_GB_0_initialize_center_2_input,
 					SubBufers_GB_0_initialize_center_3_k0,
@@ -438,7 +492,35 @@ namespace pirk{
 					SubBufers_GB_6_compute_contraction_matrix_1_cvals,
 					SubBufers_GB_6_compute_contraction_matrix_2_ncel
 				}
-			);
+				);
+			}
+			else {
+				parallelAdvisor.printSubBufferingReport(
+					{ "gb_initialize_center",	"gb_integrate_center_1",	"gb_integrate_center_2",	"gb_integrate_center_3",	"gb_integrate_center_4",
+					  "gb_initialize_radius",	"gb_integrate_radius_1",	"gb_integrate_radius_2",	"gb_integrate_radius_3",	"gb_integrate_radius_4" },
+
+					{ 0,					0,						0,						0,						0,
+						0,					0,						0,						5},
+
+					{ 0,					1,						2,						3,						4,
+						5,					6,						7,						1},
+
+					{ 9,					9,						9,						9,						9,
+						9,					9,						9,						9},
+
+				{
+					SubBufers_GB_0_initialize_center_0_initial_state,
+					SubBufers_GB_0_initialize_center_1_final_state,
+					SubBufers_GB_0_initialize_center_2_input,
+					SubBufers_GB_0_initialize_center_3_k0,
+					SubBufers_GB_0_initialize_center_4_k1,
+					SubBufers_GB_0_initialize_center_5_k2,
+					SubBufers_GB_0_initialize_center_6_k3,
+					SubBufers_GB_0_initialize_center_7_tmp,
+					SubBufers_GB_5_initialize_radius_1_final_state
+				}
+				);
+			}
 
 		}
 		
@@ -576,17 +658,20 @@ namespace pirk{
 			instrList.push_back(tmpExecuteInstr);
 		}
 
-		// INSTRUCTION: a sync point after initialization
-		instrList.push_back(instrSyncPoint);
 
-		std::shared_ptr<pfacesInstruction> instrMsgSp = std::make_shared<pfacesInstruction>();
-		instrMsgSp->setAsMessage("Computing sparse representation of contraction matrix...");
-		instrList.push_back(instrMsgSp);
-		// INSTRUCTIONS: computing the sparse contraction matrix
-		for (size_t i = 0; i < jobsPerDev_gb_compute_contraction_matrix.size(); i++) {
-			std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
-			tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_compute_contraction_matrix[i]);
-			instrList.push_back(tmpExecuteInstr);
+		if (!mem_efficient) {
+			// INSTRUCTION: a sync point after initialization
+			instrList.push_back(instrSyncPoint);
+
+			std::shared_ptr<pfacesInstruction> instrMsgSp = std::make_shared<pfacesInstruction>();
+			instrMsgSp->setAsMessage("Computing sparse representation of contraction matrix...");
+			instrList.push_back(instrMsgSp);
+			// INSTRUCTIONS: computing the sparse contraction matrix
+			for (size_t i = 0; i < jobsPerDev_gb_compute_contraction_matrix.size(); i++) {
+				std::shared_ptr<pfacesInstruction> tmpExecuteInstr = std::make_shared<pfacesInstruction>();
+				tmpExecuteInstr->setAsDeviceExecute(jobsPerDev_gb_compute_contraction_matrix[i]);
+				instrList.push_back(tmpExecuteInstr);
+			}
 		}
 
 		// INSTRUCTION: a sync point after computing the contraction matrix

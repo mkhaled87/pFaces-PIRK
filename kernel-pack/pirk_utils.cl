@@ -8,6 +8,8 @@
 #define RK4_NINT 5
 #define RK4_H ((@@true_step_size@@/RK4_NINT))
 
+
+#ifndef MEM_EFFICIENT
 float 
 growth_bound_radius_dynamics(
 	__global float* r, 
@@ -29,6 +31,33 @@ growth_bound_radius_dynamics(
 	
 	return dr;
 }
+#else
+#ifndef USE_SMART_SPARSE_GB
+#error "To use memory efficnet version, please provide the smart contraction matrix function (getNextNonZeroGrouthBoundValue)."
+#endif
+float
+growth_bound_radius_dynamics(
+	__global float* r,
+	__global float* u,
+	float t,
+	int i) {
+
+	int last_j = -1;
+	int new_j = -1;
+	int done = 0;
+	float dr = 0;
+	float c;
+
+	do {
+		c = getNextNonZeroGrouthBoundValue(i, last_j, &done, &new_j);
+		dr += c * r[new_j];
+		last_j = new_j;
+	} while (done == 0);
+	dr += u[i];
+
+	return dr;
+}
+#endif
 
 
 // 1 <= *seed < m

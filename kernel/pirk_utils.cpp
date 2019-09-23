@@ -86,6 +86,16 @@ namespace pirk{
 	  params.push_back("@@row_max@@");
 	  paramvals.push_back(std::to_string(row_max));
 
+
+	  if (m_spCfg->readConfigValueBool("mem_efficient")) {
+		  params.push_back("@@mem_efficient@@");
+		  paramvals.push_back("#define MEM_EFFICIENT");
+	  }
+	  else {
+		  params.push_back("@@mem_efficient@@");
+		  paramvals.push_back("");
+	  }
+
 	  // updating the list of params
 	  updatePrameters(params, paramvals);  /* TODO: the word "parameters" is misspelled in this function name */
 	}

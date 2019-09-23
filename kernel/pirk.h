@@ -20,6 +20,7 @@ namespace pirk{
 	class pirk : public pfaces2DKernel {
 	private:
 		const std::shared_ptr<pfacesConfigurationReader> m_spCfg;
+		
 
 		/* sub-buffers */
 		std::vector<std::pair<size_t, size_t>> SubBufers_GB_0_initialize_center_0_initial_state;
@@ -48,6 +49,7 @@ namespace pirk{
 		float true_step_size;
 		std::string dynamics_element_code;
 		std::string method_choice_err;
+		bool mem_efficient;
 
 		pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const std::shared_ptr<pfacesConfigurationReader>& spCfg);
 		~pirk() = default;

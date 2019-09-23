@@ -1,3 +1,4 @@
+#ifndef MEM_EFFICIENT
 __kernel 
 void gb_compute_contraction_matrix(
 	__global int *cidxs, 
@@ -5,7 +6,7 @@ void gb_compute_contraction_matrix(
 	__global int *ncel){
 
 	// i is row_idx
-	int i = get_global_id(0);
+	unsigned int i = get_global_id(0);
 	int nonzero_count = 0;
 	float c;
 
@@ -19,7 +20,7 @@ void gb_compute_contraction_matrix(
 		cidxs[i * @@row_max@@ + nonzero_count] = new_j;
 		cvals[i * @@row_max@@ + nonzero_count] = c;
 		nonzero_count++;		
-		last_j = 0;
+		last_j = new_j;
 	}while(done == 0);
 #else
 	for (int col_idx = 0; col_idx < @@states_dim@@; col_idx++) {
@@ -38,3 +39,4 @@ void gb_compute_contraction_matrix(
 
 	ncel[i] = nonzero_count;
 }
+#endif

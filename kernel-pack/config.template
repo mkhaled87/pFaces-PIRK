@@ -4,17 +4,19 @@
 project_name = string
 
 #-----------------------------------------------------------------------
+# Method
+#-----------------------------------------------------------------------
+method_choice = int
+mem_efficient = boolean
+
+#-----------------------------------------------------------------------
 # ODE integration parameters
 #-----------------------------------------------------------------------
-
-
 states = scope
 states.dim = int
 
 inputs = scope
 inputs.dim = int
-
-method_choice = int
 
 initial_time = float
 final_time = float

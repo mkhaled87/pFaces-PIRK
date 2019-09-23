@@ -11,7 +11,7 @@ void gb_initialize_radius(
     __global float *t){
 
 	float x_low, x_up, u_low, u_up;
-	int i = get_global_id(0);
+	unsigned int i = get_global_id(0);
 
 	x_low = initial_state_lower_bound(i);
 	x_up = initial_state_upper_bound(i);

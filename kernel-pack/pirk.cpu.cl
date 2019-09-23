@@ -10,6 +10,8 @@
 
 #define CPU_VERSION
 #define MC_@@method_choice@@
+@@mem_efficient@@
+
 
 /* common utility file */
 @pfaces-include:"pirk_utils.cl"

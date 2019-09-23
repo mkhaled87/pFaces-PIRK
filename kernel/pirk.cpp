@@ -18,21 +18,23 @@ namespace pirk{
 		float* center = (float*)(thisParallelProgram.m_dataPool[1].first);	/* index 1 is the final state for the center */
 		float* radius = (float*)(thisParallelProgram.m_dataPool[9].first);	/* index 1 is the final state for the radius */
 
-		pfacesTerminal::showMessage("Center\n-------------------");
+		pfacesTerminal::showMessage("Center:\t", false);
 		for (int i = 0; i < 10; i++)
 			pfacesTerminal::showMessage(std::to_string(center[i]) + std::string(", "), false);
 
-		pfacesTerminal::showMessage("\nRadius\n-------------------");
+		pfacesTerminal::showMessage("\nRadius:\t", false);
 		for (int i = 0; i < 10; i++)
 			pfacesTerminal::showMessage(std::to_string(radius[i]) + std::string(", "), false);
 
-		pfacesTerminal::showMessage("\nSuccessor lower\n-------------------");
+		pfacesTerminal::showMessage("\nS-Low :\t", false);
 		for(int i=0; i<10; i++)
-			pfacesTerminal::showMessage(std::to_string(center[i] - radius[i]));
+			pfacesTerminal::showMessage(std::to_string(center[i] - radius[i]) + std::string(", "), false);
 
-		pfacesTerminal::showMessage("Successor upper\n-------------------");
+		pfacesTerminal::showMessage("\nS-Up  :\t", false);
 		for(int i=0; i<10; i++)
-			pfacesTerminal::showMessage(std::to_string(radius[i] + center[i]));
+			pfacesTerminal::showMessage(std::to_string(radius[i] + center[i]) + std::string(", "), false);
+
+		pfacesTerminal::showMessage("");
 
 		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_gb_radius");
 		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_gb_center");
