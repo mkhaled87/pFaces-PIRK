@@ -14,16 +14,16 @@ float
 growth_bound_radius_dynamics(
 	__global float* r, 
 	__global float* u, 
-	__global int *cidxs, 
+	__global unsigned int *cidxs,
 	__global float *cvals, 
-	__global int *ncel, 
+	__global unsigned int *ncel,
 	float t, 
-	int i){
+	unsigned int i){
 
 	float dr=0;
-	int idx;
+	unsigned int idx;
 
-	for (int j=0; j < ncel[i]; j++) {
+	for (unsigned int j=0; j < ncel[i]; j++) {
 		idx = cidxs[i*@@row_max@@ + j];
 		dr += cvals[i*@@row_max@@ + j]*r[idx];
 	}
@@ -40,11 +40,11 @@ growth_bound_radius_dynamics(
 	__global float* r,
 	__global float* u,
 	float t,
-	int i) {
+	unsigned int i) {
 
-	int last_j = -1;
-	int new_j = -1;
-	int done = 0;
+	unsigned int last_j = -1;
+	unsigned int new_j = -1;
+	unsigned int done = 0;
 	float dr = 0;
 	float c;
 

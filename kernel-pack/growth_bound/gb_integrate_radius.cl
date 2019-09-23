@@ -11,7 +11,7 @@ void gb_integrate_radius_1(
     __global float *t
 #ifndef MEM_EFFICIENT
 	,
-    __global int *cidxs,
+    __global unsigned int *cidxs,
     __global float *cvals,
     __global float *ncel
 #endif
@@ -39,7 +39,7 @@ void gb_integrate_radius_2(
 	__global float* t
 #ifndef MEM_EFFICIENT
 	,
-	__global int* cidxs,
+	__global unsigned int* cidxs,
 	__global float* cvals,
 	__global float* ncel
 #endif
@@ -67,7 +67,7 @@ void gb_integrate_radius_3(
 	__global float* t
 #ifndef MEM_EFFICIENT
 	,
-	__global int* cidxs,
+	__global unsigned int* cidxs,
 	__global float* cvals,
 	__global float* ncel
 #endif
@@ -95,7 +95,7 @@ void gb_integrate_radius_4(
 	__global float* t
 #ifndef MEM_EFFICIENT
 	,
-	__global int* cidxs,
+	__global unsigned int* cidxs,
 	__global float* cvals,
 	__global float* ncel
 #endif
