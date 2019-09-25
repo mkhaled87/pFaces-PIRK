@@ -1,7 +1,13 @@
 #include "dynamics.cl"
 #include "bounds.cl"
+
+#ifdef MC_1 /* growth bound ? */
 #include "growth_bound_matrix.cl"
+#endif
+
+#ifdef MC_2  /* CTMM ? */
 #include "jacobian_bounds.cl"
+#endif
 
 /* useful defines for RK4 integration */
 #define step_size @@true_step_size@@
