@@ -121,13 +121,12 @@ namespace pirk{
 	  //---------------------------
 	  std::vector<std::string> params;
 	  std::vector<std::string> paramvals;
-	  method_choice = std::stoi(m_spCfg->readConfigValueString("method_choice"));
-	  params.push_back("@@method_choice@@");
-	  paramvals.push_back(std::to_string(method_choice));
 	  this->configureParameters(params, paramvals);
+
 
 	  // Creating the kernel function and load their memory fingerprints
 	  //------------------------------------------------------------------------
+	  method_choice = std::stoi(m_spCfg->readConfigValueString("method_choice"));
 	  method_choice_err = "Invalid method selection! Please set method_choice to 1 (growth bound), 2 (CTMM), or 3 (Monte Carlo).";
 	  if(method_choice == 1) {
 		  initializeGrowthBound(spLaunchState);

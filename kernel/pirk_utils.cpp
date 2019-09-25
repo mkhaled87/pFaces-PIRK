@@ -10,7 +10,8 @@ namespace pirk{
 	  params.push_back("@@method_choice@@");
 	  paramvals.push_back(std::to_string(method_choice));
 
-	  nsamples = std::stoi(m_spCfg->readConfigValueString("nsamples"));
+	  
+	  nsamples = static_cast<size_t>(std::stoul(m_spCfg->readConfigValueString("nsamples")));
 	  params.push_back("@@nsamples@@");
 	  paramvals.push_back(std::to_string(method_choice));
 
@@ -43,12 +44,12 @@ namespace pirk{
 	  paramvals.push_back(std::to_string(nsteps));
 
 	  //int states_dim;
-	  states_dim = std::stoi(m_spCfg->readConfigValueString("states.dim"));
+	  states_dim = static_cast<size_t>(std::stoul(m_spCfg->readConfigValueString("states.dim")));
 	  params.push_back("@@states_dim@@");
 	  paramvals.push_back(std::to_string(states_dim));
 
 	  //int inputs_dim;
-	  inputs_dim = std::stoi(m_spCfg->readConfigValueString("inputs.dim"));
+	  inputs_dim = static_cast<size_t>(std::stoul(m_spCfg->readConfigValueString("inputs.dim")));
 	  params.push_back("@@inputs_dim@@");
 	  paramvals.push_back(std::to_string(inputs_dim));
 
@@ -82,7 +83,7 @@ namespace pirk{
 	  params.push_back("@@growth_bound_matrix_code@@");
 	  paramvals.push_back(growth_bound_matrix_code);
 
-	  row_max = std::stoi(m_spCfg->readConfigValueString("row_max"));
+	  row_max = static_cast<size_t>(std::stoul(m_spCfg->readConfigValueString("row_max")));
 	  params.push_back("@@row_max@@");
 	  paramvals.push_back(std::to_string(row_max));
 
