@@ -1,7 +1,7 @@
-float growth_bound_matrix(int i, int j)
+float growth_bound_matrix(unsigned int i, unsigned int j)
 {
     // Parameters
-    int nlinks = 4000000000;
+    unsigned int nlinks = 4000000000;
     float v = 0.5;            // free-flow speed, in links/period
     float w =  1.0/6.0;            // congestion-wave speed, in links/period
     float xbar = 320.0;         // max occupancy when jammed, in vehicles
@@ -42,9 +42,9 @@ float growth_bound_matrix(int i, int j)
 // given: last_j (last column), which should be -1 in first trial.
 // It sets new_j to the new index and assigns done=1 if it is the last value
 // in the row.
-float getNextNonZeroGrouthBoundValue(int i, int last_j, int* done, int* new_j){
+float getNextNonZeroGrouthBoundValue(unsigned int i, unsigned int last_j, unsigned int* done, unsigned int* new_j){
 
-    int nlinks = 4000000000;
+    unsigned int nlinks = 4000000000;
 
     // this example is simle: only two values in each row so we can implement it as 
     // an if statement
