@@ -55,9 +55,7 @@ gb_initialize_center{
 	# ----------------------------------------------------
 	initial_state{
         MemConfig               = "buff_rw_global_scale_sb";
-		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";  
-		residentFuncArgIdx		= "-1";  
+		isNewOrResident			= "true"; 
 	}
 
 	# argument 0.1: final_state (gets attached to a new buffer)
@@ -65,8 +63,6 @@ gb_initialize_center{
 	final_state{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 0.2: input (gets attached to a new buffer)
@@ -74,8 +70,6 @@ gb_initialize_center{
 	input{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 0.3: k0 (gets attached to a new buffer)
@@ -83,8 +77,6 @@ gb_initialize_center{
 	k0{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 0.4: k1 (gets attached to a new buffer)
@@ -92,8 +84,6 @@ gb_initialize_center{
 	k1{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 0.5: k2 (gets attached to a new buffer)
@@ -101,8 +91,6 @@ gb_initialize_center{
 	k2{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 0.6: k3 (gets attached to a new buffer)
@@ -110,8 +98,6 @@ gb_initialize_center{
 	k3{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 0.7: tmp (gets attached to a new buffer)
@@ -119,8 +105,6 @@ gb_initialize_center{
 	tmp{
         MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 
 	# argument 0.8: t (gets attached to a new buffer)
@@ -128,8 +112,6 @@ gb_initialize_center{
 	t{
         MemConfig               = "buff_rw_global_noscale_nosb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 }
 
@@ -500,8 +482,6 @@ gb_initialize_radius{
 	final_state{
 		MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";
-		residentFuncArgIdx		= "-1";
 	}
 	
 	# argument 5.2: input (gets attached to 0.2's buffer)
@@ -579,8 +559,6 @@ gb_compute_contraction_matrix{
 	cidxs{
 		MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";  
-		residentFuncArgIdx		= "-1";  
 	}
 
 	# argument 6.1: cvals (gets attached to a new buffer)
@@ -588,8 +566,6 @@ gb_compute_contraction_matrix{
 	cvals{
 		MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";  
-		residentFuncArgIdx		= "-1";  
 	}
 
 	# argument 6.2: ncel (gets attached to a new buffer)
@@ -597,8 +573,6 @@ gb_compute_contraction_matrix{
 	ncel{
 		MemConfig               = "buff_rw_global_scale_sb";
 		isNewOrResident			= "true";
-		residentFuncIdx			= "-1";  
-		residentFuncArgIdx		= "-1";  
 	}
 
 }

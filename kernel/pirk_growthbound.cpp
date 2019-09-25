@@ -3,6 +3,7 @@
 
 namespace pirk{
 
+	/* the growth bound constructor */
 	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
 	  std::string mem_fingerprint_file = 
@@ -11,115 +12,75 @@ namespace pirk{
 
 	  mem_efficient = m_spCfg->readConfigValueBool("mem_efficient");
 
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "initialize_center" kernel function (function 0) */
-	  pfacesKernelFunction function_gb_initialize_center(
-		  "gb_initialize_center",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-	  );
+
+	  /* some constants */
+	  std::vector<std::string> argNames_center;
+	  std::vector<std::string> argNames_radius;
+	  argNames_center = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t" };
+	  if (!mem_efficient) {
+		  argNames_radius = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel" };
+	  }
+	  else {
+		  argNames_radius = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t" };
+	  }
+
+	  
+	  /* creating the "initialize_center" kernel function (function 0) */
 	  pfacesKernelFunctionArguments args_gb_initialize_center = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_initialize_center",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+		  argNames_center  /* list of the names of its args */
 	  );
-	  function_gb_initialize_center.setArguments(args_gb_initialize_center);
+	  pfacesKernelFunction function_gb_initialize_center("gb_initialize_center", args_gb_initialize_center);
 	  addKernelFunction(function_gb_initialize_center);
-	  /* end code for creating the "initialize_center" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_center_1" kernel function (function 1) */
-	  pfacesKernelFunction function_gb_integrate_center_1(
-		  "gb_integrate_center_1",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_center_1" kernel function (function 1) */
 	  pfacesKernelFunctionArguments args_gb_integrate_center_1 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_center_1",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+		  argNames_center  /* list of the names of its args */
 	  );
-	  function_gb_integrate_center_1.setArguments(args_gb_integrate_center_1);
+	  pfacesKernelFunction function_gb_integrate_center_1("gb_integrate_center_1", args_gb_integrate_center_1);
 	  addKernelFunction(function_gb_integrate_center_1);
-	  /* end code for creating the "gb_integrate_center" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_center_2" kernel function (function 2) */
-	  pfacesKernelFunction function_gb_integrate_center_2(
-		  "gb_integrate_center_2",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_center_2" kernel function (function 2) */
 	  pfacesKernelFunctionArguments args_gb_integrate_center_2 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_center_2",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+		  argNames_center  /* list of the names of its args */
 	  );
-	  function_gb_integrate_center_2.setArguments(args_gb_integrate_center_2);
+	  pfacesKernelFunction function_gb_integrate_center_2("gb_integrate_center_2", args_gb_integrate_center_2);
 	  addKernelFunction(function_gb_integrate_center_2);
-	  /* end code for creating the "gb_integrate_center" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_center_3" kernel function (function 3) */
-	  pfacesKernelFunction function_gb_integrate_center_3(
-		  "gb_integrate_center_3",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_center_3" kernel function (function 3) */
 	  pfacesKernelFunctionArguments args_gb_integrate_center_3 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_center_3",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+		  argNames_center  /* list of the names of its args */
 	  );
-	  function_gb_integrate_center_3.setArguments(args_gb_integrate_center_3);
+	  pfacesKernelFunction function_gb_integrate_center_3("gb_integrate_center_3", args_gb_integrate_center_3);
 	  addKernelFunction(function_gb_integrate_center_3);
-	  /* end code for creating the "gb_integrate_center" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_center_4" kernel function (function 4) */
-	  pfacesKernelFunction function_gb_integrate_center_4(
-		  "gb_integrate_center_4",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_center_4" kernel function (function 4) */	  
 	  pfacesKernelFunctionArguments args_gb_integrate_center_4 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_center_4",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+		  argNames_center  /* list of the names of its args */
 	  );
-	  function_gb_integrate_center_4.setArguments(args_gb_integrate_center_4);
+	  pfacesKernelFunction function_gb_integrate_center_4("gb_integrate_center_4", args_gb_integrate_center_4);
 	  addKernelFunction(function_gb_integrate_center_4);
-	  /* end code for creating the "gb_integrate_center" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_gb_initialize_radius" kernel function (function 5) */
-	  pfacesKernelFunction function_gb_initialize_radius(
-		  "gb_initialize_radius",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-	  );
+	  /* creating the "gb_gb_initialize_radius" kernel function (function 5) */	  
 	  pfacesKernelFunctionArguments args_gb_initialize_radius = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_initialize_radius",  /* name of the function to add */
-		  {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+		  argNames_center  /* list of the names of its args */
 	  );
-	  function_gb_initialize_radius.setArguments(args_gb_initialize_radius);
+	  pfacesKernelFunction function_gb_initialize_radius("gb_initialize_radius", args_gb_initialize_radius);
 	  addKernelFunction(function_gb_initialize_radius);
-	  /* end code for creating the "gb_gb_initialize_radius" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-
 	  
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "compute_contraction_matrix" kernel function (function 6) */
-	  if(!mem_efficient){
-		  pfacesKernelFunction function_gb_compute_contraction_matrix(
-			  "gb_compute_contraction_matrix",  /* name of the function to add */
-			  {"cidxs", "cvals", "ncel"}  /* list of the names of its args */
-		  );
+	  /* creating the "compute_contraction_matrix" kernel function (function 6) */
+	  if(!mem_efficient){		  
 		  pfacesKernelFunctionArguments args_gb_compute_contraction_matrix = pfacesKernelFunctionArguments::loadFromFile(
 			  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 			  "gb_compute_contraction_matrix",  /* name of the function to add */
@@ -129,93 +90,50 @@ namespace pirk{
 		  size_t size_cvals = row_max * sizeof(float);
 		  size_t size_ncel =  sizeof(cl_int);
 		  args_gb_compute_contraction_matrix.m_baseTypeSize = {size_cidxs,size_cvals,size_ncel};
-		  function_gb_compute_contraction_matrix.setArguments(args_gb_compute_contraction_matrix);
+		  pfacesKernelFunction function_gb_compute_contraction_matrix("gb_compute_contraction_matrix", args_gb_compute_contraction_matrix);
 		  addKernelFunction(function_gb_compute_contraction_matrix);
 	  }
-	  /* end code for creating the "gb_integrate_radius" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-
-
-	  std::vector<std::string> argNames;
-	  if (!mem_efficient) {
-		  argNames = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "cidxs", "cvals", "ncel" };
-	  }
-	  else {
-		  argNames = { "initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"};
-	  }
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_radius_1" kernel function (function 7) */
-	  pfacesKernelFunction function_gb_integrate_radius_1(
-		  "gb_integrate_radius_1",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
-	  );
+	  
+	  /* creating the "gb_integrate_radius_1" kernel function (function 7) */
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_1 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_1",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
+		  argNames_radius  /* list of the names of its args */
 	  );
-	  function_gb_integrate_radius_1.setArguments(args_gb_integrate_radius_1);
+	  pfacesKernelFunction function_gb_integrate_radius_1("gb_integrate_radius_1",args_gb_integrate_radius_1);
 	  addKernelFunction(function_gb_integrate_radius_1);
-	  /* end code for creating the "gb_integrate_radius" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_radius_2" kernel function (function 8) */
-	  pfacesKernelFunction function_gb_integrate_radius_2(
-		  "gb_integrate_radius_2",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_radius_2" kernel function (function 8) */
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_2 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_2",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
+		  argNames_radius  /* list of the names of its args */
 	  );
-	  function_gb_integrate_radius_2.setArguments(args_gb_integrate_radius_2);
+	  pfacesKernelFunction function_gb_integrate_radius_2("gb_integrate_radius_2",  /* name of the function to add */args_gb_integrate_radius_2);
 	  addKernelFunction(function_gb_integrate_radius_2);
-	  /* end code for creating the "gb_integrate_radius" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_radius_3" kernel function (function 9) */
-	  pfacesKernelFunction function_gb_integrate_radius_3(
-		  "gb_integrate_radius_3",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_radius_3" kernel function (function 9) */	  
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_3 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_3",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
+		  argNames_radius  /* list of the names of its args */
 	  );
-	  function_gb_integrate_radius_3.setArguments(args_gb_integrate_radius_3);
+	  pfacesKernelFunction function_gb_integrate_radius_3("gb_integrate_radius_3",  args_gb_integrate_radius_3);
 	  addKernelFunction(function_gb_integrate_radius_3);
-	  /* end code for creating the "gb_integrate_radius" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
-	  /* begin code for creating the "gb_integrate_radius_4" kernel function (function 10) */
-	  pfacesKernelFunction function_gb_integrate_radius_4(
-		  "gb_integrate_radius_4",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
-	  );
+	  /* creating the "gb_integrate_radius_4" kernel function (function 10) */
 	  pfacesKernelFunctionArguments args_gb_integrate_radius_4 = pfacesKernelFunctionArguments::loadFromFile(
 		  mem_fingerprint_file,  /* name of the file to load the fingerprint from */
 		  "gb_integrate_radius_4",  /* name of the function to add */
-		  argNames  /* list of the names of its args */
+		  argNames_radius  /* list of the names of its args */
 	  );
-	  function_gb_integrate_radius_4.setArguments(args_gb_integrate_radius_4);
+	  pfacesKernelFunction function_gb_integrate_radius_4("gb_integrate_radius_4", args_gb_integrate_radius_4);
 	  addKernelFunction(function_gb_integrate_radius_4);
-	  /* end code for creating the "gb_integrate_radius" kernel function */
-	  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
+	}
 
-	} /* End of the growth bound constructor */
-
-	void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelProgram)
-	{
+	/* the growth bound configutrator */
+	void pirk::configureParallelProgramGrowthBound(pfacesParallelProgram& parallelProgram){
 
 		bool multiple_devices = parallelProgram.countTargetDevices() > 1;
 
@@ -758,4 +676,4 @@ namespace pirk{
 
 	}
 
-}  /* End namespace pirk */
+}

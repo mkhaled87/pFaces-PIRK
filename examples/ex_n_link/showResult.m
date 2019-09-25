@@ -27,6 +27,8 @@ for k=1:n_links
 end
 
 % print the lower/upper bounds of the reach-set
+disp(['Center: ' num2str(center, '%3.3f\t')]);
+disp(['Radius: ' num2str(radius, '%3.3f\t')]);
 lb = center - radius;
 ub = center + radius;
 disp(['Lower-bound of reach-set: ' num2str(lb, '%3.3f\t')]);
