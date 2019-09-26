@@ -12,6 +12,7 @@
 #define MC_@@method_choice@@
 @@mem_efficient@@
 
+#define indextype unsigned int
 
 /* common utility file */
 @pfaces-include:"pirk_utils.cl"

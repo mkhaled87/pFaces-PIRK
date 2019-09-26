@@ -239,7 +239,7 @@ namespace pirk{
 
     // INSTRUCTION: a start message
     std::shared_ptr<pfacesInstruction> instrMsg_start = std::make_shared<pfacesInstruction>();
-    instrMsg_start->setAsMessage("The program has started.");
+    instrMsg_start->setAsMessage("The program has started (CTMM Method).");
     instrList.push_back(instrMsg_start);
 
     // INSTRUCTION: write memory bags to devices
