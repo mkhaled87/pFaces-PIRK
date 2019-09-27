@@ -4,92 +4,92 @@
 namespace pirk{
 
 void pirk::initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
-  pfacesTerminal::showInfoMessage("Setting up the Monte Carlo method...");
+  
+	pfacesTerminal::showInfoMessage("Setting up the Monte Carlo method...");
 
+	std::string mem_fingerprint_file =
+		spLaunchState->kernelPackPath + std::string("monte_carlo") +
+		std::string(PFACES_PATH_SPLITTER) + std::string("mc.mem");
 
-  std::string mem_fingerprint_file =
-	  spLaunchState->kernelPackPath + std::string("monte_carlo") +
-	  std::string(PFACES_PATH_SPLITTER) + std::string("mc.mem");
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* begin code for creating the "initialize" kernel function (function 10) */
+	pfacesKernelFunction function_mc_initialize(
+		"mc_initialize",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "rands1", "rands2"}  /* list of the names of its args */
+	);
+	pfacesKernelFunctionArguments args_mc_initialize = pfacesKernelFunctionArguments::loadFromFile(
+		mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+		"mc_initialize",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "rands1", "rands2"}  /* list of the names of its args */
+	);
+	function_mc_initialize.setArguments(args_mc_initialize);
+	addKernelFunction(function_mc_initialize);
+	/* end code for creating the "initialize_center" kernel function */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
 
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "initialize" kernel function (function 10) */
-  pfacesKernelFunction function_mc_initialize(
-      "mc_initialize",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "rands1", "rands2"}  /* list of the names of its args */
-  );
-  pfacesKernelFunctionArguments args_mc_initialize = pfacesKernelFunctionArguments::loadFromFile(
-      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "mc_initialize",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t", "rands1", "rands2"}  /* list of the names of its args */
-  );
-  function_mc_initialize.setArguments(args_mc_initialize);
-  addKernelFunction(function_mc_initialize);
-  /* end code for creating the "initialize_center" kernel function */
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* begin code for creating the "integrate_1" kernel function (function 11) */
+	pfacesKernelFunction function_mc_integrate_1(
+		"mc_integrate_1",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	pfacesKernelFunctionArguments args_mc_integrate_1 = pfacesKernelFunctionArguments::loadFromFile(
+		mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+		"mc_integrate_1",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	function_mc_integrate_1.setArguments(args_mc_integrate_1);
+	addKernelFunction(function_mc_integrate_1);
+	/* end code for creating the "integrate_1_center" kernel function */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
 
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "integrate_1" kernel function (function 11) */
-  pfacesKernelFunction function_mc_integrate_1(
-      "mc_integrate_1",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  pfacesKernelFunctionArguments args_mc_integrate_1 = pfacesKernelFunctionArguments::loadFromFile(
-      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "mc_integrate_1",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  function_mc_integrate_1.setArguments(args_mc_integrate_1);
-  addKernelFunction(function_mc_integrate_1);
-  /* end code for creating the "integrate_1_center" kernel function */
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* begin code for creating the "integrate_2" kernel function (function 12) */
+	pfacesKernelFunction function_mc_integrate_2(
+		"mc_integrate_2",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	pfacesKernelFunctionArguments args_mc_integrate_2 = pfacesKernelFunctionArguments::loadFromFile(
+		mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+		"mc_integrate_2",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	function_mc_integrate_2.setArguments(args_mc_integrate_2);
+	addKernelFunction(function_mc_integrate_2);
+	/* end code for creating the "integrate_2_center" kernel function */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
 
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "integrate_2" kernel function (function 12) */
-  pfacesKernelFunction function_mc_integrate_2(
-      "mc_integrate_2",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  pfacesKernelFunctionArguments args_mc_integrate_2 = pfacesKernelFunctionArguments::loadFromFile(
-      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "mc_integrate_2",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  function_mc_integrate_2.setArguments(args_mc_integrate_2);
-  addKernelFunction(function_mc_integrate_2);
-  /* end code for creating the "integrate_2_center" kernel function */
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* begin code for creating the "integrate_3" kernel function (function 13) */
+	pfacesKernelFunction function_mc_integrate_3(
+		"mc_integrate_3",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	pfacesKernelFunctionArguments args_mc_integrate_3 = pfacesKernelFunctionArguments::loadFromFile(
+		mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+		"mc_integrate_3",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	function_mc_integrate_3.setArguments(args_mc_integrate_3);
+	addKernelFunction(function_mc_integrate_3);
+	/* end code for creating the "integrate_3_center" kernel function */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
 
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "integrate_3" kernel function (function 13) */
-  pfacesKernelFunction function_mc_integrate_3(
-      "mc_integrate_3",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  pfacesKernelFunctionArguments args_mc_integrate_3 = pfacesKernelFunctionArguments::loadFromFile(
-      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "mc_integrate_3",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  function_mc_integrate_3.setArguments(args_mc_integrate_3);
-  addKernelFunction(function_mc_integrate_3);
-  /* end code for creating the "integrate_3_center" kernel function */
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* begin code for creating the "integrate_4" kernel function (function 14) */
-  pfacesKernelFunction function_mc_integrate_4(
-      "mc_integrate_4",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  pfacesKernelFunctionArguments args_mc_integrate_4 = pfacesKernelFunctionArguments::loadFromFile(
-      mem_fingerprint_file,  /* name of the file to load the fingerprint from */
-      "mc_integrate_4",  /* name of the function to add */
-      {"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
-  );
-  function_mc_integrate_4.setArguments(args_mc_integrate_4);
-  addKernelFunction(function_mc_integrate_4);
-  /* end code for creating the "integrate_4_center" kernel function */
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
+	/* begin code for creating the "integrate_4" kernel function (function 14) */
+	pfacesKernelFunction function_mc_integrate_4(
+		"mc_integrate_4",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	pfacesKernelFunctionArguments args_mc_integrate_4 = pfacesKernelFunctionArguments::loadFromFile(
+		mem_fingerprint_file,  /* name of the file to load the fingerprint from */
+		"mc_integrate_4",  /* name of the function to add */
+		{"initial_state", "final_state", "input", "k0","k1","k2","k3","tmp", "t"}  /* list of the names of its args */
+	);
+	function_mc_integrate_4.setArguments(args_mc_integrate_4);
+	addKernelFunction(function_mc_integrate_4);
+	/* end code for creating the "integrate_4_center" kernel function */
+	/* ----------------------------------------------------------------------------------------------------------------------------- */
 
 }
 

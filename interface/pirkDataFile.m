@@ -54,6 +54,11 @@ classdef pirkDataFile
             c = obj.num_elements;
         end
         
+        % read meta-data element value
+        function element_value = getMetadataElement(obj, element_name)
+            element_value = obj.pfacesDataOnject.getMetadataElement(element_name);
+        end         
+        
     end
 end
 

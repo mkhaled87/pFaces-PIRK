@@ -75,38 +75,7 @@ namespace pirk{
 		(void)thisKernel;
 		(void)postExecuteParamsList;			
 
-		//pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nMC");
-		//pirk* knl = ((pirk*)(&thisKernel));
-		//float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
-		///* index 1 is the final state for the center */
-		//// for growth bound, use idx 1
-		//std::vector<float> succ_up(knl->states_dim);
-		//std::vector<float> succ_low(knl->states_dim);
-		//float cmp;
-		//for(int i = 0; i < knl->states_dim; i++) {
-			// succ_up[i] = -INFINITY;
-			// succ_low[i] = INFINITY;
-			// for(int w = 0; w < knl->nsamples; w++) {
-			// cmp = A[w*knl->states_dim + i];
-			// if(cmp > succ_up[i]) {
-			//  succ_up[i] = cmp;
-			// }
-			// if(cmp < succ_low[i]) {
-			//  succ_low[i] = cmp;
-			// }
-			// }
-		//}
-		//  pfacesTerminal::showMessage("Lower sucessor\n-------------------");
-		//  for(int i=0; i<knl->states_dim; i++) {
-		//      pfacesTerminal::showMessage(std::to_string(succ_low[i]));
-		//    }
-		//  pfacesTerminal::showMessage("Upper sucessor\n-------------------");
-		//  for(int i=0; i<knl->states_dim; i++) {
-		//      pfacesTerminal::showMessage(std::to_string(succ_up[i]));
-		//    }
-
-		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_mc_radius");
-		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_mc_center");
+		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_mc_posts");
 
 		return 0;
 	}

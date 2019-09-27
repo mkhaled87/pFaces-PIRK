@@ -24,6 +24,7 @@ namespace pirk{
 		metadata.push_back(std::make_pair("step_size", thisParallelProgram.m_spCfgReader->readConfigValueString("step_size")));
 		metadata.push_back(std::make_pair("states.dim", thisParallelProgram.m_spCfgReader->readConfigValueString("states.dim")));
 		metadata.push_back(std::make_pair("inputs.dim", thisParallelProgram.m_spCfgReader->readConfigValueString("inputs.dim")));
+		metadata.push_back(std::make_pair("nsamples", thisParallelProgram.m_spCfgReader->readConfigValueString("nsamples")));		
 		metadata.push_back(std::make_pair("raw_data_size",std::to_string(pDataSize)));
 
 
