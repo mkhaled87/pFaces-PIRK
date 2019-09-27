@@ -1,1 +1,1 @@
-pfaces -CGH -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -d 1 -p
+pfaces -CGH -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p 

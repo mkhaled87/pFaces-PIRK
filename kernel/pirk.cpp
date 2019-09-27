@@ -134,6 +134,8 @@ namespace pirk{
 
 		// add extra include path: the config file path
 		std::string CFG_DIR = pfacesFileIO::getFileDirectoryPath(m_spCfg->getConfigFilePath());
+		if(CFG_DIR.empty())
+			CFG_DIR = std::string(".") + std::string(PFACES_PATH_SPLITTER);
 		std::string INC_CFG_DIR = std::string(" -I") + CFG_DIR;
 		parallelProgram.m_oclOptions += INC_CFG_DIR;
 	}
