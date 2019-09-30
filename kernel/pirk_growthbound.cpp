@@ -6,8 +6,6 @@ namespace pirk{
 	/* the growth bound constructor */
 	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
-		pfacesTerminal::showInfoMessage("Setting up the Growth-bound method...");
-
 		std::string mem_fingerprint_file = 
 			spLaunchState->kernelPackPath + std::string("growth_bound") + 
 			std::string(PFACES_PATH_SPLITTER) + std::string("gb.mem");

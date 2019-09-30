@@ -56,6 +56,12 @@ growth_bound_radius_dynamics(
 
 	do {
 		c = getNextNonZeroGrouthBoundValue(i, last_j, &done, &new_j);
+
+		// does this i have all zeros ?
+		if (new_j == -1 && done == 1) {
+			break;
+		}
+
 		dr += c * r[new_j];
 		last_j = new_j;
 	} while (done == 0);

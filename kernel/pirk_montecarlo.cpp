@@ -4,8 +4,6 @@
 namespace pirk{
 
 void pirk::initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
-  
-	pfacesTerminal::showInfoMessage("Setting up the Monte Carlo method...");
 
 	std::string mem_fingerprint_file =
 		spLaunchState->kernelPackPath + std::string("monte_carlo") +

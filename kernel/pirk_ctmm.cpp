@@ -4,7 +4,6 @@
 namespace pirk{
 
     void pirk::initializeCTMM(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
-    pfacesTerminal::showInfoMessage("Setting up the CTMM method...");
 
 	std::string mem_fingerprint_file =
 		spLaunchState->kernelPackPath + std::string("ctmm") +
