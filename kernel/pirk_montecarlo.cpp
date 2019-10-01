@@ -3,6 +3,27 @@
 
 namespace pirk{
 
+	size_t hostFunctionGenerateRandomNumbers(void* pPackedKernel, void* pPackedParallelProgram) {
+		
+		// the randoom values arrays from the data pool
+		float* rands1 = (float*)(((pfacesParallelProgram*)pPackedParallelProgram)->m_dataPool[9].first);
+		float* rands2 = (float*)(((pfacesParallelProgram*)pPackedParallelProgram)->m_dataPool[10].first);
+
+		size_t nsamples = ((pirk*)pPackedKernel)->nsamples;
+		size_t states_dim = ((pirk*)pPackedKernel)->states_dim;
+		
+		size_t gen_space = nsamples * states_dim;
+		pfacesUtils::threaded_for(gen_space, [&rands1, &rands2](int start, int end) {
+			std::srand(start*std::time(NULL));
+			for (size_t i = start; i < end; i++){
+				rands1[i] = ((float)std::rand() / RAND_MAX);
+				rands2[i] = ((float)std::rand() / RAND_MAX);
+			}
+		});
+
+		return 0;
+	}
+
 	void pirk::initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
 		std::string mem_fingerprint_file =
@@ -169,23 +190,6 @@ namespace pirk{
 
 		memReport.PrintReport();
 
-		/* Now that the data pool has been made, we need to initialize the "rands" arguments of mc_initialize with random values between 0 and 1. */
-		pfacesTimer timer;
-		timer.tic();
-		float* rands1 = (float*)(dataPool[9].first);
-		for(size_t i=0; i<nsamples; i++) {
-			for(size_t j=0; j<states_dim; j++) {
-			rands1[states_dim * i + j] = ((float)std::rand() / RAND_MAX);
-			}
-		}
-		float* rands2 = (float*)(dataPool[10].first);
-		for(size_t i=0; i<nsamples; i++) {
-			for(size_t j=0; j<states_dim; j++) {
-			rands2[states_dim * i + j] = ((float)std::rand() / RAND_MAX);
-			}
-		}
-		std::cout << "time: " << timer.toc().count() << std::endl;
-		timer.toc();
 
 		// ---------------------------------------------------------
 		// Creating the parallel program
@@ -222,10 +226,23 @@ namespace pirk{
 		std::shared_ptr<pfacesInstruction> instrLogOff = std::make_shared<pfacesInstruction>();
 		instrLogOff->setAsLogOff();
 
+		std::shared_ptr<pfacesInstruction> instrHostSideFuncGenerateRandomNumbers = std::make_shared<pfacesInstruction>();
+		instrHostSideFuncGenerateRandomNumbers->setAsHostFunction(hostFunctionGenerateRandomNumbers, "hostFunctionGenerateRandomNumbers");
+
 		// INSTRUCTION: a start message
 		std::shared_ptr<pfacesInstruction> instrMsg_start = std::make_shared<pfacesInstruction>();
 		instrMsg_start->setAsMessage("The program has started (Mont-Carlo Method).");
 		instrList.push_back(instrMsg_start);
+
+		// INSTRUCTION: a message for random number
+		std::shared_ptr<pfacesInstruction> instrMsg_rng = std::make_shared<pfacesInstruction>();
+		instrMsg_rng->setAsMessage("Generating random numbers at Host-side (in parallel) ...");
+		instrList.push_back(instrMsg_rng);
+
+		// INSTRUCTION: host-side generation of random numbers
+		instrList.push_back(instrSyncPoint);
+		instrList.push_back(instrHostSideFuncGenerateRandomNumbers);
+		
 
 		// INSTRUCTION: write memory bags to devices
 		// if not using th direct access to host memory, we write the data to the device memory
