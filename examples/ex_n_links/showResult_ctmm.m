@@ -6,8 +6,8 @@ addpath('../../interface/');
 
 % some cosntants
 n_links = 10;
-center_file_name = 'minimal_kernel.result_gb_center.raw';
-radius_file_name = 'minimal_kernel.result_gb_radius.raw';
+center_file_name = 'minimal_kernel.result_ctmm_center.raw';
+radius_file_name = 'minimal_kernel.result_ctmm_radius.raw';
 
 % load the result files
 if ~exist(center_file_name, 'file') || ...

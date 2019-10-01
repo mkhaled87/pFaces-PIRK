@@ -93,7 +93,6 @@ namespace pirk{
 
     void pirk::configureParallelProgramCTMM(pfacesParallelProgram& parallelProgram){
 
-    pfacesTerminal::showInfoMessage("Configuring the CTMM parallel program...");
     // A parallel advisor used for task scheduling
     pfacesParallelAdvisor parallelAdvisor(parallelProgram.getMachine(), parallelProgram.getTargetDevicesIndicies());
 

@@ -672,8 +672,6 @@ namespace pirk{
 		parallelProgram.m_Universal_offsetNDRange = ndUniversalOffsetStateDim;
 		parallelProgram.m_dataPool = dataPool;
 		parallelProgram.m_spInstructionList = instrList;
-
-
 	}
 
 }

@@ -1,5 +1,5 @@
 
-float dynamics_element_global(__global float* x, __global float* u, float t, int i) {
+float dynamics_element_global(__global float* x, __global float* u, float t, unsigned int i) {
     // Traffic diverge nx-link (needs n_x >= 5)
         
     // through a three-way intersection, using the cell transmission
@@ -22,7 +22,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
     //        but the first (i.e. the real one) to be zero.
 
     // Parameters
-    int nlinks = 10;
+    unsigned int nlinks = SS_DIM;
     float v = 0.5f;            // free-flow speed, in links/period
     float w = (float)(1./6.);            // congestion-wave speed, in links/period
     float c = 40.;             // capacity (max downstream flow), in vehicles/period
@@ -33,7 +33,6 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
     float t1 = 0.;
     float t2 = 0.;
   
-    barrier(CLK_GLOBAL_MEM_FENCE);
     if(i == 0) {
     //dx(1) = 1/T*(-fmin([c ; v*x(1) ; 2*w*(xbar-x(2)) ; 2*w*(xbar-x(3))]));
         dx = 1/T*(-fmin(fmin(c, v*x[0]), 
@@ -101,7 +100,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, int
     dx = dx + u[i];
     return dx;
 }
-float dynamics_element_private(float* x, float* u, float t, int i) {
+float dynamics_element_private(float* x, float* u, float t, unsigned int i) {
     // Traffic diverge nx-link (needs n_x >= 5)
         
     // through a three-way intersection, using the cell transmission
@@ -124,7 +123,7 @@ float dynamics_element_private(float* x, float* u, float t, int i) {
     //        but the first (i.e. the real one) to be zero.
 
     // Parameters
-    int nlinks = 10;
+    unsigned int nlinks = SS_DIM;
     float v = 0.5f;            // free-flow speed, in links/period
     float w = (float)(1./6.);            // congestion-wave speed, in links/period
     float c = 40.;             // capacity (max downstream flow), in vehicles/period
@@ -135,7 +134,6 @@ float dynamics_element_private(float* x, float* u, float t, int i) {
     float t1 = 0.;
     float t2 = 0.;
   
-    barrier(CLK_GLOBAL_MEM_FENCE);
     if(i == 0) {
     //dx(1) = 1/T*(-fmin([c ; v*x(1) ; 2*w*(xbar-x(2)) ; 2*w*(xbar-x(3))]));
         dx = 1/T*(-fmin(fmin(c, v*x[0]), 

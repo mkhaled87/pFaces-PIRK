@@ -1,3 +1,6 @@
+#define SS_DIM @@states_dim@@
+#define IS_DIM @@inputs_dim@@
+
 #include "dynamics.cl"
 #include "bounds.cl"
 
