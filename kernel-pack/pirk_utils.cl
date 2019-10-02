@@ -73,17 +73,3 @@ growth_bound_radius_dynamics(
 	return dr;
 }
 #endif
-
-
-// 1 <= *seed < m
-int 
-krand(int* seed){ 
-
-	int const a = 16807; //ie 7**5
-	int const m = 2147483647; //ie 2**31-1
-	int tmp = *seed;
-	//*seed = ((long( tmp * a)%m;
-	*seed = tmp * a;
-	*seed = *seed %m;
-	return(*seed);
-}

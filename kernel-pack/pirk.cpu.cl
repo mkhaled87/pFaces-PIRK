@@ -35,3 +35,8 @@
 @pfaces-include:"monte_carlo/mc_initialize.cl"
 @pfaces-include:"monte_carlo/mc_integrate_kfns.cl"
 #endif  /* end of monte carlo */
+
+#ifdef MC_4  /* start of monte carlo HD*/
+@pfaces-include:"monte_carlo_hd/mchd_initialize.cl"
+@pfaces-include:"monte_carlo_hd/mchd_integrate_kfns.cl"
+#endif  /* end of monte carlo */

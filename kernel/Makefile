@@ -40,6 +40,7 @@ kernel:
 	$(CC) -c -o pirk_ctmm.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_ctmm.cpp
 	$(CC) -c -o pirk_growthbound.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_growthbound.cpp
 	$(CC) -c -o pirk_montecarlo.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_montecarlo.cpp
+	$(CC) -c -o pirk_montecarlo_hd.o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) pirk_montecarlo_hd.cpp
 	
 	$(CC) -c -o $(KERNEL_NAME).o -fPIC $(CXXFLAGS) $(PFACES_SDK_INC) $(KERNEL_SRC)
 	$(CC) -shared -o kernel.so $(PFACES_SDK_LNK) $(EXTRA_LNK) *.o

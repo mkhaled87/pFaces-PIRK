@@ -16,6 +16,24 @@ namespace pirk{
 	// function: saveBufferToFile
 	void saveBufferToFile(const pfacesParallelProgram& thisParallelProgram, char* pData, size_t pDataSize, std::string fileTag);
 
+	// data saving functions
+	size_t gb_saveData(
+		const pfaces2DKernel& thisKernel,
+		const pfacesParallelProgram& thisParallelProgram,
+		std::vector<std::shared_ptr<void>>& postExecuteParamsList);
+	size_t ctmm_saveData(
+		const pfaces2DKernel& thisKernel,
+		const pfacesParallelProgram& thisParallelProgram,
+		std::vector<std::shared_ptr<void>>& postExecuteParamsList);
+	size_t mc_saveData(
+		const pfaces2DKernel& thisKernel,
+		const pfacesParallelProgram& thisParallelProgram,
+		std::vector<std::shared_ptr<void>>& postExecuteParamsList);
+	size_t mchd_saveData(
+		const pfaces2DKernel& thisKernel,
+		const pfacesParallelProgram& thisParallelProgram,
+		std::vector<std::shared_ptr<void>>& postExecuteParamsList);
+
 	// class: pirk
 	class pirk : public pfaces2DKernel {
 	private:
@@ -66,6 +84,9 @@ namespace pirk{
 
 		void initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState);
 		void configureParallelProgramMonteCarlo(pfacesParallelProgram& parallelProgram);
+
+		void initializeMonteCarloHD(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState);
+		void configureParallelProgramMonteCarloHD(pfacesParallelProgram& parallelProgram);
 
 	};
 

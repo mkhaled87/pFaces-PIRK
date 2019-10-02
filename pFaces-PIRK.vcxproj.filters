@@ -41,6 +41,9 @@
     <ClCompile Include="kernel\pirk_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kernel\pirk_montecarlo_hd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kernel\pirk.h">

@@ -20,12 +20,32 @@ if(nsamples <= 0)
 end
 
 % collect/show the results
-for k=0:nsamples-1
-    posts = zeros(1,n_links);
+posts = zeros(nsamples,n_links);
+for k=0:nsamples-1    
     for j=0:n_links-1
         flat_idx = k*n_links + j;
-        posts(j+1) = posts_file.getElement(flat_idx);
+        posts(k+1,j+1) = posts_file.getElement(flat_idx);
     end
-    disp(['MC Sample #' num2str(k+1) ': ' num2str(posts, '%3.3f\t')]);
+    disp(['MC Sample #' num2str(k+1) ': ' num2str(posts(k+1,:), '%3.3f\t')]);
 end
+reachlb = posts(1,:);
+reachub = posts(1,:);
+for k=1:nsamples
+    for j=1:n_links
+        if(posts(k,j) < reachlb(j))
+            reachlb(j) = posts(k,j);
+        end
+        if(posts(k,j) > reachub(j))
+            reachub(j) = posts(k,j);
+        end        
+    end
+end    
+disp(['reachlb: ' num2str(reachlb, '%3.3f\t')]);
+disp(['reachub: ' num2str(reachub, '%3.3f\t')]);
+
+
+
+
+
+
 

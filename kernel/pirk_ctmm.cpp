@@ -3,6 +3,31 @@
 
 namespace pirk{
 
+	size_t ctmm_saveData(
+		const pfaces2DKernel& thisKernel,
+		const pfacesParallelProgram& thisParallelProgram,
+		std::vector<std::shared_ptr<void>>& postExecuteParamsList) {
+
+		(void)thisKernel;
+		(void)postExecuteParamsList;
+
+		//pfacesTerminal::showInfoMessage("This is where I'd write to a save file... IF I HAD ONE\nCTMM");
+		//pirk* knl = ((pirk*)(&thisKernel));
+		//float* A = (float*)(thisParallelProgram.m_dataPool[1].first);
+		////  pfacesTerminal::showMessage("Successor lower\n-------------------");
+		////  for(int i = 0; i < 2 * knl->states_dim; i++) {
+		////      pfacesTerminal::showMessage(std::to_string(A[i]));
+		////      if(i == knl->states_dim -1){
+		////        pfacesTerminal::showMessage("Successor upper\n-------------------");
+		////      }
+		////    }
+
+		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_ctmm_radius");
+		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_ctmm_center");
+
+		return 0;
+	}
+
     void pirk::initializeCTMM(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
 	std::string mem_fingerprint_file =

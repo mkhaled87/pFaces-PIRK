@@ -3,6 +3,44 @@
 
 namespace pirk{
 
+	// A post-execcute functions to save the data
+	// -----------------------------------------------
+	size_t gb_saveData(
+		const pfaces2DKernel& thisKernel,
+		const pfacesParallelProgram& thisParallelProgram,
+		std::vector<std::shared_ptr<void>>& postExecuteParamsList) {
+
+		(void)thisKernel;
+		(void)postExecuteParamsList;
+
+		//pfacesTerminal::showInfoMessage("This is the reach set as from the GB method for the 10-link example:");
+		//float* center = (float*)(thisParallelProgram.m_dataPool[1].first);	/* index 1 is the final state for the center */
+		//float* radius = (float*)(thisParallelProgram.m_dataPool[9].first);	/* index 1 is the final state for the radius */
+
+		//pfacesTerminal::showMessage("Center:\t", false);
+		//for (int i = 0; i < 10; i++)
+		//	pfacesTerminal::showMessage(std::to_string(center[i]) + std::string(", "), false);
+
+		//pfacesTerminal::showMessage("\nRadius:\t", false);
+		//for (int i = 0; i < 10; i++)
+		//	pfacesTerminal::showMessage(std::to_string(radius[i]) + std::string(", "), false);
+
+		//pfacesTerminal::showMessage("\nS-Low :\t", false);
+		//for(int i=0; i<10; i++)
+		//	pfacesTerminal::showMessage(std::to_string(center[i] - radius[i]) + std::string(", "), false);
+
+		//pfacesTerminal::showMessage("\nS-Up  :\t", false);
+		//for(int i=0; i<10; i++)
+		//	pfacesTerminal::showMessage(std::to_string(radius[i] + center[i]) + std::string(", "), false);
+
+		//pfacesTerminal::showMessage("");
+
+		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_gb_center");
+		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_gb_radius");
+
+		return 0;
+	}
+
 	/* the growth bound constructor */
 	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
