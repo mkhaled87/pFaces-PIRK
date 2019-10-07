@@ -19,8 +19,6 @@ float dynamics_element_global(__global float* x, __global float* u, float t, uns
     float reaction_term = 0;
     float cross_term = 0;
 	
-	
-
     //The dynamics comes in two "flavors": the dynamics for elements of the u grid (i < N*N) and the dynamics for elements on the v grid (i >= N*N).
     if(i < N*N) {
 	
@@ -40,10 +38,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, uns
 		// The modulo N*N enforces the periodic boundary condition.
         reaction_term = lam*x[i] -x[i]*x[i]*x[i] - kappa;
 		unsigned int idx = i+N*N;
-		if(idx < 0 || idx >= 200)
-			printf("error: dynamics_element_global i < N*N and idx = %d !\n", idx);
-		else		
-			cross_term = x[i+N*N];  // this is the interaction from the v grid to the u grid
+		cross_term = x[i+N*N];  // this is the interaction from the v grid to the u grid
         dx = reaction_term + diffusion_term + cross_term;
     }
     else {
@@ -61,10 +56,7 @@ float dynamics_element_global(__global float* x, __global float* u, float t, uns
         // so we have to add it back.
         reaction_term = -x[i];
 		unsigned int idx = i-N*N;
-		if(idx < 0 || idx >= 200)
-			printf("error: dynamics_element_global i >= N*N and idx = %d !\n", idx);
-		else
-			cross_term = x[idx];  // this is the interaction from the u grid to the v grid
+		cross_term = x[idx];  // this is the interaction from the u grid to the v grid
         dx = (reaction_term + diffusion_term + cross_term)/tau;
     }
     //Now for the affine input term

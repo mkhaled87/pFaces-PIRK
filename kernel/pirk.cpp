@@ -65,7 +65,7 @@ namespace pirk{
 		if(CFG_DIR.empty())
 			CFG_DIR = std::string(".") + std::string(PFACES_PATH_SPLITTER);
 		std::string INC_CFG_DIR = std::string(" -I") + CFG_DIR;
-		parallelProgram.m_oclOptions += INC_CFG_DIR;
+		parallelProgram.m_oclOptions += INC_CFG_DIR + std::string(" -cl-opt-disable");
 	}
 
 	/* providing implementation of the virtual method: configureTuneParallelProgram*/

@@ -1,5 +1,5 @@
-
 float dynamics_element_global(__global float* x, __global float* u, float t, unsigned int i) {
+	
     // Traffic diverge nx-link (needs n_x >= 5)
         
     // through a three-way intersection, using the cell transmission
@@ -24,75 +24,38 @@ float dynamics_element_global(__global float* x, __global float* u, float t, uns
     // Parameters
     unsigned int nlinks = SS_DIM;
     float v = 0.5f;            // free-flow speed, in links/period
-    float w = (float)(1./6.);            // congestion-wave speed, in links/period
-    float c = 40.;             // capacity (max downstream flow), in vehicles/period
-    float xbar = 320.;         // max occupancy when jammed, in vehicles
-    float b = (float)(3./4.);            // fraction of vehicule staying on the network after each link
-    float T = 30.;             // time step for the continuous-time model
-    float dx = 0.;
-    float t1 = 0.;
-    float t2 = 0.;
+    float w = (float)(1.0f/6.0f);            // congestion-wave speed, in links/period
+    float c = 40.0f;             // capacity (max downstream flow), in vehicles/period
+    float xbar = 320.0f;         // max occupancy when jammed, in vehicles
+    float b = (float)(3.0f/4.0f);            // fraction of vehicule staying on the network after each link
+    float T = 30.0f;             // time step for the continuous-time model
+    float dx = 0.0f;
+    float t1 = 0.0f;
+    float t2 = 0.0f;
   
-    if(i == 0) {
-    //dx(1) = 1/T*(-fmin([c ; v*x(1) ; 2*w*(xbar-x(2)) ; 2*w*(xbar-x(3))]));
-        dx = 1/T*(-fmin(fmin(c, v*x[0]), 
-                        fmin(2*w*(xbar-x[1]), 2*w*(xbar-x[2]))
-                        )
-                 );
-    }
-
-    else if(i == 1) {
-    //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(2) ; w/b*(xbar-x(4))]));
-        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),  /* Won't compile without that (float), claims 'ambiguous call'. */
-                   fmin(w*(xbar-x[1]), w*(xbar-x[2]))
-                 );
-        t2 = fmin(fmin(c, v*x[1]), 
-                  w/b * (xbar - x[3])
-                 );
+    if (i == 0) {
+        dx = 1/T*(-fmin(fmin(c, v*x[0]), fmin(2*w*(xbar-x[1]), 2*w*(xbar-x[2]))));
+    } else if(i == 1) {
+        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),fmin(w*(xbar-x[1]), w*(xbar-x[2])));
+        t2 = fmin(fmin(c, v*x[1]), w/b * (xbar - x[3]));
         dx = 1/T * (t1 - t2);
-    } 
-    
-    else if(i == 2) {
-    //1/T*(min([c/2 ; v*x(1)/2 ; w*(xbar-x(2)) ; w*(xbar-x(3))]) - min([c ; v*x(3) ; w/b*(xbar-x(5))]));
-        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),
-                   fmin(w*(xbar-x[1]), w*(xbar-x[2]))
-                 );
-        t2 = fmin(fmin(c, v*x[2]), 
-                  w/b * (xbar - x[4])
-                 );
+    } else if(i == 2) {
+        t1 = fmin((float) fmin(0.5f*c, 0.5f*v*x[0]),fmin(w*(xbar-x[1]), w*(xbar-x[2])));
+        t2 = fmin(fmin(c, v*x[2]), w/b * (xbar - x[4]));
         dx = 1/T * (t1 - t2);
-    } 
-    
-    else if(i == nlinks - 2) {
-    //dx(end-1) = 1/T*(b*min([c ; v*x(end-3) ; w*(xbar-x(end-1))]) - fmin([c ; v*x(end-1)])); 
-        t1 = b * fmin(fmin(c, v*x[(nlinks-2) - 2]), 
-                  w* (xbar - x[(nlinks-2)])
-                 );
+    } else if(i == nlinks-2) {
+        t1 = b * fmin(fmin(c, v*x[(nlinks-2) - 2]), w* (xbar - x[(nlinks-2)]));
         t2 = fmin(c, v * x[(nlinks-1) - 1]);
         dx = 1/T * (t1 - t2);
-    }
-    
-    else if(i == nlinks - 1) {
-    //dx(end) = 1/T*(b*min([c ; v*x(end-2) ; w*(xbar-x(end))]) - fmin([c ; v*x(end)]));    
-        t1 = b * fmin(fmin(c, v*x[(nlinks-1) - 2]), 
-                  w* (xbar - x[(nlinks-1)])
-                 );
+    } else if(i == nlinks-1) {
+        t1 = b * fmin(fmin(c, v*x[(nlinks-1) - 2]), w* (xbar - x[(nlinks-1)]));
         t2 = fmin(c, v * x[(nlinks-1)]);
         dx = 1/T * (t1 - t2);
-    }
-
-    else if (i > 2 && i < nlinks-2) {
-    //dx(i) = 1/T*(b*min([c ; v*x(i-2) ; w*(xbar-x(i))])-fmin([c ; v*x(i) ; w/b*(xbar-x(i+2))])); 
-        t1 = b * fmin(fmin(c, v*x[(i) - 2]), 
-                  w * (xbar - x[(i)])
-                 );
-        t2 =     fmin(fmin(c, v*x[(i)]), 
-                  w/b * (xbar - x[(i)+2])
-                 );
+    } else if ((i > 2) && (i < (nlinks-2))) { 	
+        t1 = b * fmin(fmin(c, v*x[i-2]), w * (xbar - x[i]));
+        t2 =     fmin(fmin(c, v*x[i]), w/b * (xbar - x[i+2]));
         dx = 1/T * (t1 - t2);
-    } 
-    
-    else {
+    } else {
         printf("Huh! %d\n",i);
     }
 
