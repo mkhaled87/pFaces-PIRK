@@ -2,22 +2,22 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommand>$(PFACES_SDK_ROOT)\..\bin\pfaces.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg examples\ex_n_link\ex_n_link.cfg -d 1 -p</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg .\examples\ex_nonlinear_pde.cfg -v5 -d 1 -p -co "save_result=false,mem_efficient=true,method_choice=1,states.dim=200,inputs.dim=200"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommand>$(PFACES_SDK_ROOT)\..\bin\pfaces.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg examples\ex_n_link\ex_n_link.cfg -d 1 -p</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg .\examples\ex_nonlinear_pde.cfg -v5 -d 1 -p -co "save_result=false,mem_efficient=true,method_choice=1,states.dim=200,inputs.dim=200"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LocalDebuggerCommand>$(PFACES_SDK_ROOT)\..\bin\pfaces.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg examples\ex_n_link\ex_n_link.cfg -d 1 -p</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg .\examples\ex_nonlinear_pde.cfg -v5 -d 1 -p -co "save_result=false,mem_efficient=true,method_choice=1,states.dim=200,inputs.dim=200"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LocalDebuggerCommand>$(PFACES_SDK_ROOT)\..\bin\pfaces.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg examples\ex_n_link\ex_n_link.cfg -d 1 -p</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-CGH -k pirk -cfg .\examples\ex_nonlinear_pde.cfg -v5 -d 1 -p -co "save_result=false,mem_efficient=true,method_choice=1,states.dim=200,inputs.dim=200"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

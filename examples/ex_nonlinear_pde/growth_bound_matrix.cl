@@ -1,5 +1,6 @@
-float growth_bound_matrix(unsigned int i, unsigned int j)
-{
+float growth_bound_matrix(unsigned int i, unsigned int j){
+	
+	
     // Parameters
     unsigned int N = 10;  // grid side length. total state dimension will be 2*N*N.
     float du = 1.0;
@@ -65,13 +66,150 @@ float growth_bound_matrix(unsigned int i, unsigned int j)
     
     return c;
 }
+inline unsigned int next_largest(unsigned int i, unsigned int i0, unsigned int i1, unsigned int i2, unsigned int i3, unsigned int i4, unsigned int i5);
+inline unsigned int next_largest(unsigned int i, unsigned int i0, unsigned int i1, unsigned int i2, unsigned int i3, unsigned int i4, unsigned int i5) {
+    /**
+     * Returns the smallest unsigned integer in the list v0...v5 that us larger than a.
+     */
+	 unsigned int ret = i;
+	 unsigned int smallest;
+	 unsigned int smallest_set = 0;
+	 
+	 if(i0 > ret){
+		 if(smallest_set == 0){
+			 smallest_set = 1;
+			 ret = i0;
+			 smallest = i0;
+		 }else{
+			 if (i0 < smallest){
+				 ret = i0;
+				 smallest = i0;				 
+			 }
+		 }
+	 }
+	 
+	 if(i1 > ret){
+		 if(smallest_set == 0){
+			 smallest_set = 1;
+			 ret = i1;
+			 smallest = i1;
+		 }else{
+			 if (i1 < smallest){
+				 ret = i1;
+				 smallest = i1;				 
+			 }
+		 }
+	 }
 
+	 if(i2 > ret){
+		 if(smallest_set == 0){
+			 smallest_set = 1;
+			 ret = i2;
+			 smallest = i2;
+		 }else{
+			 if (i2 < smallest){
+				 ret = i2;
+				 smallest = i2;				 
+			 }
+		 }
+	 }
+
+	 if(i3 > ret){
+		 if(smallest_set == 0){
+			 smallest_set = 1;
+			 ret = i3;
+			 smallest = i3;
+		 }else{
+			 if (i3 < smallest){
+				 ret = i3;
+				 smallest = i3;				 
+			 }
+		 }
+	 }
+
+	 if(i4 > ret){
+		 if(smallest_set == 0){
+			 smallest_set = 1;
+			 ret = i4;
+			 smallest = i4;
+		 }else{
+			 if (i4 < smallest){
+				 ret = i4;
+				 smallest = i4;				 
+			 }
+		 }
+	 }	 
+	 
+	 
+	 if(i5 > ret){
+		 if(smallest_set == 0){
+			 smallest_set = 1;
+			 ret = i5;
+			 smallest = i5;
+		 }else{
+			 if (i5 < smallest){
+				 ret = i5;
+				 smallest = i5;				 
+			 }
+		 }
+	 }	 
+	  
+	 
+    return ret;
+}
+
+inline unsigned int largest(unsigned int i0, unsigned int i1, unsigned int i2, unsigned int i3, unsigned int i4, unsigned int i5);
+inline unsigned int largest(unsigned int i0, unsigned int i1, unsigned int i2, unsigned int i3, unsigned int i4, unsigned int i5) {
+    /**
+     * returns the largest element of the list i0...i5.	 
+     */
+	 unsigned int ret = i0;
+	 
+	 if(i1 > ret)
+		 ret = i1;
+	 
+	 if(i2 > ret)
+		 ret = i2;
+	 
+	 if(i3 > ret)
+		 ret = i3;
+
+	 if(i4 > ret)
+		 ret = i4;
+
+	 if(i5 > ret)
+		 ret = i5;
+	 
+    return ret;
+}
+
+inline unsigned int smallest(unsigned int i0, unsigned int i1, unsigned int i2, unsigned int i3, unsigned int i4, unsigned int i5);
+inline unsigned int smallest(unsigned int i0, unsigned int i1, unsigned int i2, unsigned int i3, unsigned int i4, unsigned int i5) {
+    /**
+     * returns the largest element of the list i0...i5.	 
+     */
+	 unsigned int ret = i0;
+	 
+	 if(i1 < ret)
+		 ret = i1;
+	 
+	 if(i2 < ret)
+		 ret = i2;
+	 
+	 if(i3 < ret)
+		 ret = i3;
+
+	 if(i4 < ret)
+		 ret = i4;
+
+	 if(i5 < ret)
+		 ret = i5;
+	 
+    return ret;
+}
 
 // this is needed to inform PIRK we will use the next smart function for sparsity
 #define USE_SMART_SPARSE_GB
-
-unsigned int next_largest(unsigned int a, unsigned int *lst, unsigned int n);
-unsigned int largest(unsigned int *lst, unsigned int n);
 
 // This function utilizes the sparsity in the grouth-bound matrix
 // by giving the next non-zero value in the i'th row
@@ -79,9 +217,12 @@ unsigned int largest(unsigned int *lst, unsigned int n);
 // It sets new_j to the new index and assigns done=1 if it is the last value
 // in the row.
 float getNextNonZeroGrouthBoundValue(unsigned int i, unsigned int last_j, unsigned int* done, unsigned int* new_j){
-    
+		
     // Parameters
     unsigned int N = 10;  // grid side length. total state dimension will be 2*N*N.
+	unsigned int i0, i1, i2, i3, i4, i5;
+	unsigned int nxt, lrg;
+	
     /*
      * The code here is a bit obscure, so I'll do my best to explain.
      * Each row of the Jacobian has six nonzero elements. The column position of
@@ -96,78 +237,40 @@ float getNextNonZeroGrouthBoundValue(unsigned int i, unsigned int last_j, unsign
      * This is why it was necessary to write the helper functions next_largest
      * and largest.
      */
-    if(i < N*N) {
-        unsigned int nonzero_values[6] = {
-            i, 
-            (i-1)%(N*N),
-            (i+1)%(N*N),
-            (i-N)%(N*N),
-            (i+N)%(N*N),
-            i + N*N
-        };
-        unsigned int nxt = next_largest(last_j, nonzero_values, 6);
-        unsigned int lrg = largest(nonzero_values, 6);
-        *new_j = nxt;
-        if (*new_j == lrg) {
-            *done = 1;
-        }
-        else {
-            *done = 0;
-        }
+    if(i < N*N) {		
+		i0 = i;
+		i1 = (i-1)%(N*N);		
+		i2 = (i+1)%(N*N);		
+		i3 = (i-N)%(N*N);		
+		i4 = (i+N)%(N*N);
+		i5 = i + N*N;			
     }
-    else{
-        unsigned int nonzero_values[6] = {
-            i, 
-            (i-1)%(N*N) + N*N,
-            (i+1)%(N*N) + N*N,
-            (i-N)%(N*N) + N*N,
-            (i+N)%(N*N) + N*N,
-            i + N*N
-        };
-        unsigned int nxt = next_largest(last_j, nonzero_values, 6);
-        unsigned int lrg = largest(nonzero_values, 6);
-        *new_j = nxt;
-        if (*new_j == lrg) {
-            *done = 1;
-        }
-        else {
-            *done = 0;
-        }
+    else{		
+		i0 = i;
+		i1 = (i-1)%(N*N) + N*N;
+		i2 = (i+1)%(N*N) + N*N;		
+		i3 = (i-N)%(N*N) + N*N;		
+		i4 = (i+N)%(N*N) + N*N;		
+		i5 = i + N*N;
     }
+	
+	if(last_j == -1){
+		lrg = smallest(i0, i1, i2, i3, i4, i5);
+		nxt = next_largest(lrg, i0, i1, i2, i3, i4, i5);
+	} else {
+		nxt = next_largest(last_j, i0, i1, i2, i3, i4, i5);
+		lrg = largest(i0, i1, i2, i3, i4, i5);		
+	}
+	
+	*new_j = nxt;
+	if (*new_j == lrg) {
+		*done = 1;
+	}
+	else {
+		*done = 0;
+	}
+		
 
     float val = growth_bound_matrix(i, *new_j);
-
-    //You better put me back later
-//     if(val == 0)
-//         prunsigned intf("Oh something is not OK. check i=%d, j=%d\n", i, *new_j);
-    //printf("Gonna try to get the GB value at %d, %d", i, *new_j);
-
     return val;
-}
-
-unsigned int next_largest(unsigned int a, unsigned int *lst, unsigned int n) {
-    /**
-     * Returns the smallest unsigned integer in lst larger than a. n is the length of lst.
-     */
-    unsigned int nl = 40000000;
-    for(unsigned int i = 0; i < n; i++) {
-        if(lst[i] >= a && lst[i] <= nl) {
-            nl = lst[i];
-        }        
-    }
-//     printf("%d -> %d\n", a, nl);
-    return nl;
-}
-
-unsigned int largest(unsigned int *lst, unsigned int n) {
-    /**
-     * returns the largest element of the array lst.
-     */
-    unsigned int r = -40000000;
-    for(unsigned int i = 0; i < n; i++) {
-        if(lst[i] > r) {
-            r = lst[i];
-        }        
-    }
-    return r;
 }

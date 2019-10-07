@@ -13,8 +13,8 @@ namespace pirk{
 		size_t states_dim = ((pirk*)pPackedKernel)->states_dim;
 		
 		size_t gen_space = nsamples * states_dim;
-		pfacesUtils::threaded_for(gen_space, [&rands1, &rands2](int start, int end) {
-			std::srand(start*std::time(NULL));
+		pfacesUtils::threaded_for(gen_space, [&rands1, &rands2](size_t start, size_t end) {
+			std::srand((unsigned int)((start*std::time(NULL))%UINT_MAX));
 			for (size_t i = start; i < end; i++){
 				rands1[i] = ((float)std::rand() / RAND_MAX);
 				rands2[i] = ((float)std::rand() / RAND_MAX);
