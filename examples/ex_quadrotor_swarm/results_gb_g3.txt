@@ -1,0 +1,745 @@
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (       12,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.00488281
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 48,48,48,48,48,48,48,48,4,48
+ Buf. Paddings  ( B): 464,464,464,464,464,464,464,464,508,464
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 512,512,512,512,512,512,512,512,512,512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:16-088] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: The kernel is built successfully for 1 device(s) in 0.29016 seconds.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:16-378] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:16-379] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:16-379] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:16-379] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:16-433] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:16-433] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:37:16-498] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:37:16-498] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.059797 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:  3.1136e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00763162, DW:  1.0848e-05, DR:  1.2992e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0144681, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0144075, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0148708, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  1.8656e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00992006, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00937699, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00938115, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00986902, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.0899749 seconds.
+Total data-write time   : 1.0848e-05 seconds.
+Total data-read time    : 1.2992e-05 seconds.
+Program compile time    : 0.29016 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 2.03858 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (      120,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.00488281
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 480,480,480,480,480,480,480,480,4,480
+ Buf. Paddings  ( B): 32,32,32,32,32,32,32,32,508,32
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 512,512,512,512,512,512,512,512,512,512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:18-393] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: The kernel is built successfully for 1 device(s) in 0.14775 seconds.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:18-541] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:18-541] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:18-541] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:18-542] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:18-596] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:18-596] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:37:18-654] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:37:18-654] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0578124 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:  3.1168e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00759466, DW:   1.088e-05, DR:   1.296e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0146882, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0146343, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0150133, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   2.288e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0101587, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00957555, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00954502, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0100506, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.0913144 seconds.
+Total data-write time   : 1.088e-05 seconds.
+Total data-read time    : 1.296e-05 seconds.
+Program compile time    : 0.14775 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 1.88878 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (     1200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.0444336
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 4800,4800,4800,4800,4800,4800,4800,4800,4,4800
+ Buf. Paddings  ( B): 320,320,320,320,320,320,320,320,508,320
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 5120,5120,5120,5120,5120,5120,5120,5120,512,5120
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:20-553] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: The kernel is built successfully for 1 device(s) in 0.154734 seconds.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:20-708] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:20-708] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:20-709] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:20-709] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:20-750] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:20-750] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:37:20-809] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:37:20-809] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0575333 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:     3.2e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0144747, DW:  1.4944e-05, DR:   1.552e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00779574, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00775875, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00817136, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:   1.968e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0107283, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0102076, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0101786, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0105654, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.0799322 seconds.
+Total data-write time   : 1.4944e-05 seconds.
+Total data-read time    : 1.552e-05 seconds.
+Program compile time    : 0.154734 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 1.88804 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (    12000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.413574
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 48000,48000,48000,48000,48000,48000,48000,48000,4,48000
+ Buf. Paddings  ( B): 128,128,128,128,128,128,128,128,508,128
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 48128,48128,48128,48128,48128,48128,48128,48128,512,48128
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:22-709] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:22-859] pFaces: The kernel is built successfully for 1 device(s) in 0.150703 seconds.
+[Tuesday 08/10/2019 09:37:22-859] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:22-859] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:22-860] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:22-860] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:22-860] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:22-860] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:22-896] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:22-896] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:37:22-977] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:37:22-977] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0573341 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:  3.7952e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:  0.00824096, DW:  5.9776e-05, DR:  4.4384e-05, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0081481, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00813274, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:  0.00854307, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  2.5408e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0160221, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0153621, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0153318, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0158007, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.095645 seconds.
+Total data-write time   : 5.9776e-05 seconds.
+Total data-read time    : 4.4384e-05 seconds.
+Program compile time    : 0.150703 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 1.89903 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (   120000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 4.12256
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 480000,480000,480000,480000,480000,480000,480000,480000,4,480000
+ Buf. Paddings  ( B): 256,256,256,256,256,256,256,256,508,256
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 480256,480256,480256,480256,480256,480256,480256,480256,512,480256
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:24-871] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: The kernel is built successfully for 1 device(s) in 0.146572 seconds.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:25-018] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:25-018] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:25-019] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:25-021] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:25-269] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:25-269] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:37:25-759] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:37:25-759] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0574636 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX: 0.000149664, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:   0.0607679, DW: 0.000391392, DR: 0.000343904, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0608426, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0608899, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:   0.0632895, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:    0.000148, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:    0.114322, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.114819, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.114935, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.119733, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.709896 seconds.
+Total data-write time   : 0.000391392 seconds.
+Total data-read time    : 0.000343904 seconds.
+Program compile time    : 0.146572 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 2.5133 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (  1200000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 41.2036
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 4800000,4800000,4800000,4800000,4800000,4800000,4800000,4800000,4,4800000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 4800512,4800512,4800512,4800512,4800512,4800512,4800512,4800512,512,4800512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:27-655] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:27-803] pFaces: The kernel is built successfully for 1 device(s) in 0.147883 seconds.
+[Tuesday 08/10/2019 09:37:27-803] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:27-804] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:27-804] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:27-805] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:27-820] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:30-067] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:30-068] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:37:34-493] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:37:34-493] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0572009 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:  0.00129578, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:    0.555071, DW:   0.0111906, DR:   0.0523451, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.554856, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.554669, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:    0.579451, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:  0.00129971, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:     1.06217, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     1.07057, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     1.07035, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     1.12392, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 6.57365 seconds.
+Total data-write time   : 0.0111906 seconds.
+Total data-read time    : 0.0523451 seconds.
+Program compile time    : 0.147883 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 8.47103 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. ( 12000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 411.992
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 48000000,48000000,48000000,48000000,48000000,48000000,48000000,48000000,4,48000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 48000512,48000512,48000512,48000512,48000512,48000512,48000512,48000512,512,48000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:37:36-397] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: The kernel is built successfully for 1 device(s) in 0.148382 seconds.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:37:36-546] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:37:36-546] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:37:36-649] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:37:36-698] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:37:58-426] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:37:58-438] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:38:41-217] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:38:41-217] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0574711 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:    0.012454, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:     5.37368, DW:    0.136245, DR:    0.758838, NC:   200
+Dev. [1] | gb_integrate.: EX:     5.37064, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     5.37003, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     5.61011, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:    0.012475, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:     10.2917, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     10.3809, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     10.3796, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     10.9175, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 63.7191 seconds.
+Total data-write time   : 0.136245 seconds.
+Total data-read time    : 0.758838 seconds.
+Program compile time    : 0.148382 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 66.4816 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (120000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 4119.88
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 480000000,480000000,480000000,480000000,480000000,480000000,480000000,480000000,4,480000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 480000512,480000512,480000512,480000512,480000512,480000512,480000512,480000512,512,480000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:38:43-178] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: The kernel is built successfully for 1 device(s) in 0.14814 seconds.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:38:43-327] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:38:43-327] pirk.cpu: The program has started (Grouth-bound Method).
+[Tuesday 08/10/2019 09:38:44-676] pirk.cpu: Initializing center integration...
+[Tuesday 08/10/2019 09:38:44-838] pirk.cpu: Performing center integration...
+[Tuesday 08/10/2019 09:42:22-390] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 09:42:22-515] pirk.cpu: Performing radius integration...
+[Tuesday 08/10/2019 09:49:30-616] pirk.cpu: program complete.
+[Tuesday 08/10/2019 09:49:30-616] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.057498 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | gb_initializ.: EX:    0.124494, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:     53.8057, DW:     1.38257, DR:     7.90554, NC:   200
+Dev. [1] | gb_integrate.: EX:     53.7786, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:      53.771, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     56.1931, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_initializ.: EX:    0.124872, DW:           0, DR:           0, NC:     1
+Dev. [1] | gb_integrate.: EX:     103.014, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     103.916, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     103.903, DW:           0, DR:           0, NC:   200
+Dev. [1] | gb_integrate.: EX:     109.307, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 637.937 seconds.
+Total data-write time   : 1.38257 seconds.
+Total data-read time    : 7.90554 seconds.
+Program compile time    : 0.14814 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 649.128 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+gb_initialize_center : Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_1: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_2: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_3: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_center_4: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_initialize_radius : Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_1: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_2: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_3: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+gb_integrate_radius_4: Dev.1 / Tsk.1: glb. (1200000000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 41198.7
+ Num. Buffers       : 10
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 4800000000,4800000000,4800000000,4800000000,4800000000,4800000000,4800000000,4800000000,4,4800000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 4800000512,4800000512,4800000512,4800000512,4800000512,4800000512,4800000512,4800000512,512,4800000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 09:49:33-049] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 09:49:33-202] pFaces: The kernel is built successfully for 1 device(s) in 0.15296 seconds.
+[Tuesday 08/10/2019 09:49:33-202] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 09:49:33-202] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [1, gb_initialize_center], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: A dummy device buffer is created: Fnc [6, gb_initialize_radius], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 09:49:33-203] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 09:49:33-203] pirk.cpu: The program has started (Grouth-bound Method).
+[1;31mpFaces::Error: Failed to write data to device memory.[OpenCL Error#: -4]
+[0m
