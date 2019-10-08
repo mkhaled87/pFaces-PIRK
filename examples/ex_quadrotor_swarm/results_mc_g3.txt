@@ -1,0 +1,490 @@
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000,       12) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000,       12) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000,       12) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000,       12) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000,       12) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.459473
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 48000,48000,48000,48000,48000,48000,48000,48000,4,48000,48000
+ Buf. Paddings  ( B): 128,128,128,128,128,128,128,128,508,128,128
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 48128,48128,48128,48128,48128,48128,48128,48128,512,48128,48128
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:04:53-359] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: The kernel is built successfully for 1 device(s) in 0.221809 seconds.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:53-581] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:04:53-581] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:04:53-581] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
+[Tuesday 08/10/2019 11:04:53-584] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 11:04:53-584] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 11:04:53-609] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 11:04:53-610] pirk.cpu: program complete.
+[Tuesday 08/10/2019 11:04:53-610] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0389333 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:  4.5024e-05, DW:  6.6016e-05, DR:  4.9152e-05, NC:     1
+Dev. [1] | mc_integrate.: EX:  0.00521862, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:   0.0054335, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:  0.00540646, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:  0.00589958, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:  0.00220266, DW:           0, DR:           0, NC:     1
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.0242059 seconds.
+Total data-write time   : 6.6016e-05 seconds.
+Total data-read time    : 4.9152e-05 seconds.
+Program compile time    : 0.221809 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 1.86424 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000,      120) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000,      120) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000,      120) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000,      120) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000,      120) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 4.58057
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 480000,480000,480000,480000,480000,480000,480000,480000,4,480000,480000
+ Buf. Paddings  ( B): 256,256,256,256,256,256,256,256,508,256,256
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 480256,480256,480256,480256,480256,480256,480256,480256,512,480256,480256
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:04:55-487] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: The kernel is built successfully for 1 device(s) in 0.227068 seconds.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:55-714] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:04:55-714] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:04:55-714] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
+[Tuesday 08/10/2019 11:04:55-771] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 11:04:55-772] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 11:04:55-867] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 11:04:55-875] pirk.cpu: program complete.
+[Tuesday 08/10/2019 11:04:55-875] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0367486 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX: 0.000356416, DW: 0.000429824, DR: 0.000380032, NC:     1
+Dev. [1] | mc_integrate.: EX:   0.0212248, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:   0.0219167, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     0.02189, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.026647, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:   0.0555077, DW:           0, DR:           0, NC:     1
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.147542 seconds.
+Total data-write time   : 0.000429824 seconds.
+Total data-read time    : 0.000380032 seconds.
+Program compile time    : 0.227068 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 1.99845 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000,     1200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000,     1200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000,     1200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000,     1200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000,     1200) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 45.7817
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 4800000,4800000,4800000,4800000,4800000,4800000,4800000,4800000,4,4800000,4800000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 4800512,4800512,4800512,4800512,4800512,4800512,4800512,4800512,512,4800512,4800512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:04:57-755] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: The kernel is built successfully for 1 device(s) in 0.221872 seconds.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:04:57-977] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:04:57-977] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:04:57-977] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
+[Tuesday 08/10/2019 11:04:58-541] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 11:04:58-559] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 11:04:59-363] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 11:04:59-446] pirk.cpu: program complete.
+[Tuesday 08/10/2019 11:04:59-446] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0366451 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:  0.00449885, DW:   0.0126562, DR:   0.0552668, NC:     1
+Dev. [1] | mc_integrate.: EX:    0.180642, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.184265, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.185067, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:    0.251265, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:    0.560556, DW:           0, DR:           0, NC:     1
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 1.36629 seconds.
+Total data-write time   : 0.0126562 seconds.
+Total data-read time    : 0.0552668 seconds.
+Program compile time    : 0.221872 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 3.30391 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000,    12000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000,    12000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000,    12000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000,    12000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000,    12000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 457.769
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 48000000,48000000,48000000,48000000,48000000,48000000,48000000,48000000,4,48000000,48000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 48000512,48000512,48000512,48000512,48000512,48000512,48000512,48000512,512,48000512,48000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:05:01-330] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: The kernel is built successfully for 1 device(s) in 0.230735 seconds.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:01-561] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:05:01-561] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:05:01-561] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
+[Tuesday 08/10/2019 11:05:07-162] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 11:05:07-249] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 11:05:18-798] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 11:05:19-493] pirk.cpu: program complete.
+[Tuesday 08/10/2019 11:05:19-493] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0368759 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:   0.0673284, DW:    0.133621, DR:    0.668717, NC:     1
+Dev. [1] | mc_integrate.: EX:       2.416, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     2.45113, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:      2.4263, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     4.25179, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:     5.48399, DW:           0, DR:           0, NC:     1
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 17.0965 seconds.
+Total data-write time   : 0.133621 seconds.
+Total data-read time    : 0.668717 seconds.
+Program compile time    : 0.230735 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 19.8073 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000,   120000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000,   120000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000,   120000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000,   120000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000,   120000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 4577.64
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 480000000,480000000,480000000,480000000,480000000,480000000,480000000,480000000,4,480000000,480000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 480000512,480000512,480000512,480000512,480000512,480000512,480000512,480000512,512,480000512,480000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:05:21-419] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:05:21-637] pFaces: The kernel is built successfully for 1 device(s) in 0.2183 seconds.
+[Tuesday 08/10/2019 11:05:21-637] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:05:21-637] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:05:21-637] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-637] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:05:21-638] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:05:21-638] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:05:21-638] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
+[Tuesday 08/10/2019 11:06:16-495] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 11:06:19-794] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 11:13:35-246] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 11:13:42-332] pirk.cpu: program complete.
+[Tuesday 08/10/2019 11:13:42-332] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0370415 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | mc_initialize: EX:     3.28409, DW:     1.34536, DR:     7.05981, NC:     1
+Dev. [1] | mc_integrate.: EX:     58.7619, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:      58.795, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     58.8051, DW:           0, DR:           0, NC:   200
+Dev. [1] | mc_integrate.: EX:     259.084, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:     53.5226, DW:           0, DR:           0, NC:     1
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 492.253 seconds.
+Total data-write time   : 1.34536 seconds.
+Total data-read time    : 7.05981 seconds.
+Program compile time    : 0.2183 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 502.587 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000,  1200000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000,  1200000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000,  1200000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000,  1200000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000,  1200000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 45776.4
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 4800000000,4800000000,4800000000,4800000000,4800000000,4800000000,4800000000,4800000000,4,4800000000,4800000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 4800000512,4800000512,4800000512,4800000512,4800000512,4800000512,4800000512,4800000512,512,4800000512,4800000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:13:44-792] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:13:45-009] pFaces: The kernel is built successfully for 1 device(s) in 0.216845 seconds.
+[Tuesday 08/10/2019 11:13:45-009] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:13:45-009] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:13:45-009] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:13:45-010] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:13:45-010] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:13:45-010] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
+[1;31mpFaces::Error: Failed to write data to device memory.[OpenCL Error#: -4]
+[0mpFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_quadrotor_swarm.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+mc_initialize : Dev.1 / Tsk.1: glb. (     1000, 12000000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_1: Dev.1 / Tsk.1: glb. (     1000, 12000000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_2: Dev.1 / Tsk.1: glb. (     1000, 12000000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_3: Dev.1 / Tsk.1: glb. (     1000, 12000000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+mc_integrate_4: Dev.1 / Tsk.1: glb. (     1000, 12000000) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 457764
+ Num. Buffers       : 11
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 48000000000,48000000000,48000000000,48000000000,48000000000,48000000000,48000000000,48000000000,4,48000000000,48000000000
+ Buf. Paddings  ( B): 512,512,512,512,512,512,512,512,508,512,512
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 48000000512,48000000512,48000000512,48000000512,48000000512,48000000512,48000000512,48000000512,512,48000000512,48000000512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 11:22:20-628] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: The kernel is built successfully for 1 device(s) in 0.222448 seconds.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [1/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [2/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [3/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [4/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [5/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [6/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [7/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [8/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [9/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [10/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: A dummy device buffer is created: Fnc [1, mc_initialize], Arg [11/11], t.b.assigned later.
+[Tuesday 08/10/2019 11:22:20-851] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 11:22:20-851] pirk.cpu: The program has started (Mont-Carlo Method).
+[Tuesday 08/10/2019 11:22:20-851] pirk.cpu: Generating random numbers at Host-side (in parallel) ...
