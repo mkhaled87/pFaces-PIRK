@@ -1,0 +1,300 @@
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_n_link.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+[1;32mpFaces::Info: 10
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+ctmm_initialize : Dev.1 / Tsk.1: glb. (       20,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_1: Dev.1 / Tsk.1: glb. (       20,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_2: Dev.1 / Tsk.1: glb. (       20,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_3: Dev.1 / Tsk.1: glb. (       20,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_4: Dev.1 / Tsk.1: glb. (       20,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.00439453
+ Num. Buffers       : 9
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 80,80,80,80,80,80,80,80,4
+ Buf. Paddings  ( B): 432,432,432,432,432,432,432,432,508
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 512,512,512,512,512,512,512,512,512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 08:01:31-209] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: The kernel is built successfully for 1 device(s) in 3.61844 seconds.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:34-827] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 08:01:34-827] pirk.cpu: The program has started (CTMM Method).
+[Tuesday 08/10/2019 08:01:34-828] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 08:01:34-828] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 08:01:35-111] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 08:01:35-112] pirk.cpu: program complete.
+[Tuesday 08/10/2019 08:01:35-112] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0427963 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | ctmm_initial.: EX:  4.5472e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | ctmm_integra.: EX:   0.0642901, DW:  1.2896e-05, DR:  1.6416e-05, NC:   200
+Dev. [1] | ctmm_integra.: EX:   0.0638431, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:   0.0638581, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:   0.0647764, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 0.256813 seconds.
+Total data-write time   : 1.2896e-05 seconds.
+Total data-read time    : 1.6416e-05 seconds.
+Program compile time    : 3.61844 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 7.70074 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_n_link.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+[1;32mpFaces::Info: 100
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+ctmm_initialize : Dev.1 / Tsk.1: glb. (      200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_1: Dev.1 / Tsk.1: glb. (      200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_2: Dev.1 / Tsk.1: glb. (      200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_3: Dev.1 / Tsk.1: glb. (      200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_4: Dev.1 / Tsk.1: glb. (      200,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.00830078
+ Num. Buffers       : 9
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 800,800,800,800,800,800,800,800,4
+ Buf. Paddings  ( B): 224,224,224,224,224,224,224,224,508
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 1024,1024,1024,1024,1024,1024,1024,1024,512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 08:01:36-988] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 08:01:37-278] pFaces: The kernel is built successfully for 1 device(s) in 0.290004 seconds.
+[Tuesday 08/10/2019 08:01:37-278] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 08:01:37-278] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 08:01:37-278] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-278] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-278] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:37-279] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 08:01:37-279] pirk.cpu: The program has started (CTMM Method).
+[Tuesday 08/10/2019 08:01:37-279] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 08:01:37-279] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 08:01:38-315] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 08:01:38-315] pirk.cpu: program complete.
+[Tuesday 08/10/2019 08:01:38-315] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0355455 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | ctmm_initial.: EX:     2.8e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | ctmm_integra.: EX:      0.2579, DW:   1.008e-05, DR:  1.3216e-05, NC:   200
+Dev. [1] | ctmm_integra.: EX:    0.253112, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:    0.253148, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:    0.253583, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 1.01777 seconds.
+Total data-write time   : 1.008e-05 seconds.
+Total data-read time    : 1.3216e-05 seconds.
+Program compile time    : 0.290004 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 2.92994 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_n_link.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+[1;32mpFaces::Info: 1000
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+ctmm_initialize : Dev.1 / Tsk.1: glb. (     2000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_1: Dev.1 / Tsk.1: glb. (     2000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_2: Dev.1 / Tsk.1: glb. (     2000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_3: Dev.1 / Tsk.1: glb. (     2000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_4: Dev.1 / Tsk.1: glb. (     2000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.0629883
+ Num. Buffers       : 9
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 8000,8000,8000,8000,8000,8000,8000,8000,4
+ Buf. Paddings  ( B): 192,192,192,192,192,192,192,192,508
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 8192,8192,8192,8192,8192,8192,8192,8192,512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 08:01:40-198] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 08:01:40-432] pFaces: The kernel is built successfully for 1 device(s) in 0.234418 seconds.
+[Tuesday 08/10/2019 08:01:40-432] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:40-433] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 08:01:40-433] pirk.cpu: The program has started (CTMM Method).
+[Tuesday 08/10/2019 08:01:40-433] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 08:01:40-433] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 08:01:50-426] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 08:01:50-427] pirk.cpu: program complete.
+[Tuesday 08/10/2019 08:01:50-427] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0360633 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | ctmm_initial.: EX:  2.7264e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | ctmm_integra.: EX:     2.49216, DW:   1.616e-05, DR:  1.6256e-05, NC:   200
+Dev. [1] | ctmm_integra.: EX:     2.49175, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:     2.49147, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:     2.49866, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 9.97407 seconds.
+Total data-write time   : 1.616e-05 seconds.
+Total data-read time    : 1.6256e-05 seconds.
+Program compile time    : 0.234418 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 11.8452 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
+pFaces 1.0.1
+[0mTargeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):
+	[1: GPU] NVIDIA CUDA, NVIDIA Corporation: Tesla M60, 7.44/1.86 G.B.
+	[2: CPU] Intel(R) OpenCL, Intel(R) Corporation: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz, 120.00/30.00 G.B.
+We use the following devices [#] for parallel computations: [1]
+Reading pFaces configuration (./ex_n_link.cfg) ... done.
+Loading the kernel (kernel's constructor) ... 
+Grouping devices into one execution context ... done.
+Configuring the kernel's parallel program ... 
+[1;32mpFaces::Info: 10000
+[0m*********************************************************************************************************************
+Task Scheduling Report:
+*********************************************************************************************************************
+ctmm_initialize : Dev.1 / Tsk.1: glb. (    20000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_1: Dev.1 / Tsk.1: glb. (    20000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_2: Dev.1 / Tsk.1: glb. (    20000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_3: Dev.1 / Tsk.1: glb. (    20000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+ctmm_integrate_4: Dev.1 / Tsk.1: glb. (    20000,        1) loc. (        0,        0) offs. (        0,         0) [~ 100%]
+*********************************************************************************************************************
+*********************************************************************************************************************
+Memory Allocation Report: 
+*********************************************************************************************************************
+ Total Alloc.   (MB): 0.61377
+ Num. Buffers       : 9
+ Alignment Base ( B): 512
+ Buf. Unit Size ( B): 4,4,4,4,4,4,4,4,4
+ Buf. Org. Size ( B): 80000,80000,80000,80000,80000,80000,80000,80000,4
+ Buf. Paddings  ( B): 384,384,384,384,384,384,384,384,508
+ Per-Dev. Allocation: no,no,no,no,no,no,no,no,no
+ Buf. Tot. Size ( B): 80384,80384,80384,80384,80384,80384,80384,80384,512
+*********************************************************************************************************************
+Checking the parallel jobs suggested by the scheduler/kernel ... done.
+Running the parallel program [Wall-Clock Started]: 
+[Tuesday 08/10/2019 08:01:52-334] pFaces: Started building the kernel (pirk.cpu) for the context.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: The kernel is built successfully for 1 device(s) in 0.235639 seconds.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: The parallel program (pirk.cpu) will be executed in 1 device(s) with total of 16 PEs.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: Creating buffers on devices ... 
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [1/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [2/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [3/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [4/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [5/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [6/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [7/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [8/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: A dummy device buffer is created: Fnc [1, ctmm_initialize], Arg [9/9], t.b.assigned later.
+[Tuesday 08/10/2019 08:01:52-570] pFaces: Started running the parallel instructions.
+[Tuesday 08/10/2019 08:01:52-570] pirk.cpu: The program has started (CTMM Method).
+[Tuesday 08/10/2019 08:01:52-571] pirk.cpu: Initializing integration...
+[Tuesday 08/10/2019 08:01:52-571] pirk.cpu: Performing integration...
+[Tuesday 08/10/2019 08:05:10-991] pirk.cpu: Initializing radius integration...
+[Tuesday 08/10/2019 08:05:10-993] pirk.cpu: program complete.
+[Tuesday 08/10/2019 08:05:10-993] pFaces: Finished running the parallel instructions.
+*********************************************************************************************************************
+Profiling report (in seconds) for the program (pirk.cpu):
+*********************************************************************************************************************
+Kernel load/config. time: 0.0358329 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Dev. [1] | ctmm_initial.: EX:  1.9136e-05, DW:           0, DR:           0, NC:     1
+Dev. [1] | ctmm_integra.: EX:     50.6086, DW:  7.2288e-05, DR:  6.0736e-05, NC:   200
+Dev. [1] | ctmm_integra.: EX:      50.573, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:     50.5773, DW:           0, DR:           0, NC:   200
+Dev. [1] | ctmm_integra.: EX:     46.6372, DW:           0, DR:           0, NC:   200
+---------------------------------------------------------------------------------------------------------------------
+Host-side functions     : EX:           0, DW:           0, DR:           0, NC:     0
+---------------------------------------------------------------------------------------------------------------------
+Program execution time  : 198.396 seconds.
+Total data-write time   : 7.2288e-05 seconds.
+Total data-read time    : 6.0736e-05 seconds.
+Program compile time    : 0.235639 seconds.
+---------------------------------------------------------------------------------------------------------------------
+Wall-Clock Time         : 200.268 seconds [Verbosity, Scheduling and Compilation Times Incl.]
+*********************************************************************************************************************
