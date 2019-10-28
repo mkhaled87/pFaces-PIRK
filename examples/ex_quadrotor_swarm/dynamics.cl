@@ -10,32 +10,33 @@ float dynamics_element_global(__global float* x, __global float* u, float t, uns
 	float dx = 0.0f;
     
     unsigned int k = i % 12;
+    unsigned int w = i - k;
     if(k==0) {
-        dx = x[i+6];
+        dx = x[w+6];
     }
     else if(k==1) {
-        dx = x[i+7];
+        dx = x[w+7];
     }
     else if(k==2) {
-        dx = x[i+8];
+        dx = x[w+8];
     }
     else if(k==3) {
-        dx = x[i+9];
+        dx = x[w+9];
     }
     else if(k==4) {
-        dx = x[i+10];
+        dx = x[w+10];
     }
     else if(k==5) {
-        dx = x[i+11];
+        dx = x[w+11];
     }
     else if(k==6) {
-        dx = (f/m) * (-cos(x[i+3])*sin(x[i+4])*cos(x[i+5]) - sin(x[i+3])*sin(x[i+5]));
+        dx = (f/m) * (-cos(x[w+3])*sin(x[w+4])*cos(x[w+5]) - sin(x[w+3])*sin(x[w+5]));
     }
     else if(k==7) {
-        dx = (f/m) * (-cos(x[i+3])*sin(x[i+4])*cos(x[i+5]) + sin(x[i+3])*sin(x[i+5]));
+        dx = (f/m) * (-cos(x[w+3])*sin(x[w+4])*sin(x[w+5]) + sin(x[w+3])*cos(x[w+5]));
     }
     else if(k==8) {
-        dx = g - (f/m)*cos(x[i+3])*cos(x[i+4]);
+        dx = g - (f/m)*cos(x[w+3])*cos(x[w+4]);
     }
     else if(k==9) {
         dx = 0.0f;
