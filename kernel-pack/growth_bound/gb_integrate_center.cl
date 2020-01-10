@@ -68,7 +68,7 @@ __kernel void gb_integrate_center_4(
 	// MK: This is not correct. It works now since the systems are not time dependent
 	// if i=0 gets executed before others, time will be changed and other threads will use
 	// different time
-	// TODO: Make a different function to increment the time
+	// TODO: Make a different kernel-function to increment the time afterwards
     if(i==0)
 		*t += RK4_H;
 }

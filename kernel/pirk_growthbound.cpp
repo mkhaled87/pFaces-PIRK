@@ -3,6 +3,50 @@
 
 namespace pirk{
 
+	std::vector<concrete_t> gb_pipe_center;
+	std::vector<concrete_t> gb_pipe_radius;
+
+	// host-side functions to updae the pipe storage
+	size_t hfUpdatePipe_center(void* pPackedKernel, void* pPackedParallelProgram){
+
+		static pfacesParallelProgram*  pParallelProgram = (pfacesParallelProgram*)pPackedParallelProgram;
+		static pirk* pKernel = (pirk*)pPackedKernel;	
+		static concrete_t* pCenter	= (concrete_t*)pParallelProgram->m_dataPool[1].first;	
+		static size_t current_step = 0;
+
+		/* first time initialize */
+		if(current_step == 0)
+			gb_pipe_center.resize(pKernel->nsteps*pKernel->states_dim);		
+
+		/* record in the pipe */
+		for(size_t i=0; i<pKernel->states_dim; i++)
+			gb_pipe_center.data()[current_step*pKernel->states_dim + i] = pCenter[i];
+
+		current_step++;
+
+		return 0;
+	}
+	size_t hfUpdatePipe_radius(void* pPackedKernel, void* pPackedParallelProgram){
+
+		static pfacesParallelProgram*  pParallelProgram = (pfacesParallelProgram*)pPackedParallelProgram;
+		static pirk* pKernel = (pirk*)pPackedKernel;	
+		static concrete_t* pRadius	= (concrete_t*)pParallelProgram->m_dataPool[9].first;	
+		static size_t current_step = 0;
+
+		/* first time initialize */
+		if(current_step == 0)
+			gb_pipe_radius.resize(pKernel->nsteps*pKernel->states_dim);		
+
+		/* record in the pipe */
+		for (size_t i = 0; i < pKernel->states_dim; i++)
+			gb_pipe_radius.data()[current_step * pKernel->states_dim + i] = pRadius[i];
+
+		current_step++;
+
+		return 0;
+	}	
+
+
 	// A post-execcute functions to save the data
 	// -----------------------------------------------
 	size_t gb_saveData(
@@ -13,30 +57,13 @@ namespace pirk{
 		(void)thisKernel;
 		(void)postExecuteParamsList;
 
-		//pfacesTerminal::showInfoMessage("This is the reach set as from the GB method for the 10-link example:");
-		//float* center = (float*)(thisParallelProgram.m_dataPool[1].first);	/* index 1 is the final state for the center */
-		//float* radius = (float*)(thisParallelProgram.m_dataPool[9].first);	/* index 1 is the final state for the radius */
-
-		//pfacesTerminal::showMessage("Center:\t", false);
-		//for (int i = 0; i < 10; i++)
-		//	pfacesTerminal::showMessage(std::to_string(center[i]) + std::string(", "), false);
-
-		//pfacesTerminal::showMessage("\nRadius:\t", false);
-		//for (int i = 0; i < 10; i++)
-		//	pfacesTerminal::showMessage(std::to_string(radius[i]) + std::string(", "), false);
-
-		//pfacesTerminal::showMessage("\nS-Low :\t", false);
-		//for(int i=0; i<10; i++)
-		//	pfacesTerminal::showMessage(std::to_string(center[i] - radius[i]) + std::string(", "), false);
-
-		//pfacesTerminal::showMessage("\nS-Up  :\t", false);
-		//for(int i=0; i<10; i++)
-		//	pfacesTerminal::showMessage(std::to_string(radius[i] + center[i]) + std::string(", "), false);
-
-		//pfacesTerminal::showMessage("");
-
 		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_gb_center");
 		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_gb_radius");
+
+		if(((pirk*)(&thisKernel))->record_pipe){
+			saveBufferToFile(thisParallelProgram, (char*)gb_pipe_center.data(), gb_pipe_center.size()*sizeof(concrete_t), "result_gb_center_pipe");
+			saveBufferToFile(thisParallelProgram, (char*)gb_pipe_radius.data(), gb_pipe_radius.size()*sizeof(concrete_t), "result_gb_radius_pipe");
+		}
 
 		return 0;
 	}
@@ -521,6 +548,12 @@ namespace pirk{
 		std::shared_ptr<pfacesInstruction> instrLogOff = std::make_shared<pfacesInstruction>();
 		instrLogOff->setAsLogOff();
 
+		std::shared_ptr<pfacesInstruction> instrHostUpdatePipe_center = std::make_shared<pfacesInstruction>();
+		std::shared_ptr<pfacesInstruction> instrHostUpdatePipe_radius = std::make_shared<pfacesInstruction>();
+		instrHostUpdatePipe_center->setAsHostFunction(hfUpdatePipe_center, "hfUpdatePipe_center");
+		instrHostUpdatePipe_radius->setAsHostFunction(hfUpdatePipe_radius, "hfUpdatePipe_radius");
+
+
 		// INSTRUCTION: a start message
 		std::shared_ptr<pfacesInstruction> instrMsg_start = std::make_shared<pfacesInstruction>();
 		instrMsg_start->setAsMessage("The program has started (Grouth-bound Method).");
@@ -598,6 +631,12 @@ namespace pirk{
 				instrList.push_back(instrSyncPoint);
 			}
 
+			// should i record the latest center in the pipe data ?
+			if(save_result && record_pipe && (w%rk4_nint == 0)){	
+				instrList.push_back(instr_readAllData);
+				instrList.push_back(instrSyncPoint);
+				instrList.push_back(instrHostUpdatePipe_center);
+			}
 		}
 
 		// INSTRUCTION: a sync point after center integration
@@ -679,6 +718,13 @@ namespace pirk{
 			if (multiple_devices){
 				instrList.push_back(instrSyncPoint);
 			}
+
+			// should i record the latest radius in the pipe data ?
+			if(save_result && record_pipe && (w%rk4_nint == 0)){
+				instrList.push_back(instr_readAllData);
+				instrList.push_back(instrSyncPoint);
+				instrList.push_back(instrHostUpdatePipe_radius);
+			}			
 		}
 
 		// INSTRUCTION: read memory bags from devices

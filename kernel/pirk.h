@@ -60,6 +60,8 @@ namespace pirk{
 		size_t states_dim;
 		size_t inputs_dim;
 		size_t method_choice;
+		bool save_result;
+		bool record_pipe;
 		float integration_time;
 		size_t nsteps;
 		size_t nsamples;

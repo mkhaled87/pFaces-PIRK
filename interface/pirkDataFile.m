@@ -26,7 +26,7 @@ classdef pirkDataFile
     methods
         function obj = pirkDataFile(filename)
 
-            obj.pfacesDataOnject = DataFile(filename, true, true);
+            obj.pfacesDataOnject = DataFile(filename, false, true);
             obj.concrete_data_type = 'single';
             obj.concrete_data_size = 4;   
 

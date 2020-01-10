@@ -1,0 +1,4 @@
+pFaces 1.0.2
+Targeted API: OpenCL-1.2 (64-bit)/OCL-Release [OCL Device Memory Model Requested]
+Identifing available parallel devices ... done.
+This machine has the following device(s):

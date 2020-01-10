@@ -36,28 +36,41 @@ namespace pirk{
 	void pirk::configureParallelProgram(pfacesParallelProgram& parallelProgram){
 		
 		std::vector<std::shared_ptr<void>> postExecuteParamsList;
-		bool save_result = m_spCfg->readConfigValueBool("save_result");
+		save_result = m_spCfg->readConfigValueBool("save_result");
+		record_pipe = m_spCfg->readConfigValueBool("record_pipe");
+		if(!save_result)
+			record_pipe = false;
 		
 		// configure the program and register a post-execute instruction to save the data
 		if(method_choice == 1) {
 			configureParallelProgramGrowthBound(parallelProgram);
 			if(save_result)
 				registerPostExecuteFunction(gb_saveData, "Saving results", postExecuteParamsList);
+
 		} else if (method_choice == 2) {
 			configureParallelProgramCTMM(parallelProgram);
 			if (save_result)
 				registerPostExecuteFunction(ctmm_saveData, "Saving results", postExecuteParamsList);
+
+			if(save_result && record_pipe)
+				pfacesTerminal::showWarnMessage("TODO: add support for pipe-recording in CTMM.");				
 		} else if (method_choice == 3) {
 			configureParallelProgramMonteCarlo(parallelProgram);
 			
 			if (save_result)
 				registerPostExecuteFunction(mc_saveData, "Saving results", postExecuteParamsList);
+
+			if(save_result && record_pipe)
+				pfacesTerminal::showWarnMessage("TODO: add support for pipe-recording in Mont-Carlo.");				
 		}
 		else if (method_choice == 4) {
 			configureParallelProgramMonteCarloHD(parallelProgram);
 
 			if (save_result)
 				registerPostExecuteFunction(mchd_saveData, "Saving results", postExecuteParamsList);
+
+			if(save_result && record_pipe)
+				pfacesTerminal::showWarnMessage("TODO: add support for pipe-recording in Mont-Carlo.");
 		}
 
 		// add extra include path: the config file path
