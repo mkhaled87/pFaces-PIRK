@@ -17,13 +17,15 @@ void gb_integrate_radius_1(
 #endif
 ){
 
-	unsigned int i = get_global_id(0);
+	unsigned int i;
+
+	i = get_global_id(0);
 #ifndef MEM_EFFICIENT
 	k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
 #else
 	k0[i] = growth_bound_radius_dynamics(initial_state, input, *t, i);	
 #endif
-	tmp[i] = final_state[i] + RK4_H / 2.0*k0[i];
+	tmp[i] = final_state[i] + RK4_H/2.0f*k0[i];
 }
 
 __kernel 
@@ -45,13 +47,15 @@ void gb_integrate_radius_2(
 #endif
 ) {
 
-	unsigned int i = get_global_id(0);
+	unsigned int i;
+
+	i = get_global_id(0);
 #ifndef MEM_EFFICIENT
-	k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size,  i);
+	k1[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5f*step_size,  i);
 #else
-	k1[i] = growth_bound_radius_dynamics(tmp, input, *t + 0.5 * step_size, i);	
+	k1[i] = growth_bound_radius_dynamics(tmp, input, *t + 0.5f*step_size, i);	
 #endif
-	tmp[i] = final_state[i] + RK4_H / 2.0*k1[i];
+	tmp[i] = final_state[i] + RK4_H/2.0f*k1[i];
 }
 
 __kernel 
@@ -73,13 +77,15 @@ void gb_integrate_radius_3(
 #endif
 ) {
 
-	unsigned int i = get_global_id(0);
+	unsigned int i;
+
+	i = get_global_id(0);
 #ifndef MEM_EFFICIENT
-	k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5*step_size, i);
+	k2[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t + 0.5f*step_size, i);
 #else
-	k2[i] = growth_bound_radius_dynamics(tmp, input, *t + 0.5 * step_size, i);
+	k2[i] = growth_bound_radius_dynamics(tmp, input, *t + 0.5f*step_size, i);
 #endif
-	tmp[i] = final_state[i] + RK4_H * k2[i];
+	tmp[i] = final_state[i] + RK4_H*k2[i];
 }
 
 __kernel 
@@ -101,13 +107,15 @@ void gb_integrate_radius_4(
 #endif
 ) {
 
-	unsigned int i = get_global_id(0);  
+	unsigned int i;
+
+	i = get_global_id(0);
 #ifndef MEM_EFFICIENT
 	k3[i] = growth_bound_radius_dynamics(tmp, input, cidxs, cvals, ncel, *t +  step_size, i);
 #else
 	k3[i] = growth_bound_radius_dynamics(tmp, input, *t + step_size, i);
 #endif
-	final_state[i] = final_state[i] + (RK4_H / 6.0)*(k0[i] + 2.0*k1[i] + 2.0*k2[i] + k3[i]);
+	final_state[i] = final_state[i] + (RK4_H/6.0f)*(k0[i] + 2.0f*k1[i] + 2.0f*k2[i] + k3[i]);
 
 
 	// MK: This is not correct. It works now since the systems are not time dependent

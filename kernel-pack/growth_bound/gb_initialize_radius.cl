@@ -11,8 +11,9 @@ void gb_initialize_radius(
     __global float *t){
 
 	float x_low, x_up, u_low, u_up;
-	unsigned int i = get_global_id(0);
+	unsigned int i;
 
+	i = get_global_id(0);
 	x_low = initial_state_lower_bound(i);
 	x_up = initial_state_upper_bound(i);
 	u_low = input_lower_bound(i);
@@ -20,15 +21,15 @@ void gb_initialize_radius(
 
 	/* for the radius dynamics, we want the initial state to be the radius of the interval 
 	* (hence the name), that is one-half the distance between the upper and lower bound. */
-	initial_state[i] = 0.5 * (x_up - x_low);
+	initial_state[i] = 0.5f * (x_up - x_low);
 	final_state[i] = initial_state[i];
-	k0[i] = 0;
-	k1[i] = 0;
-	k2[i] = 0;
-	k3[i] = 0;
-	tmp[i] = 0;
-	input[i]=0.5 * (u_up - u_low);
+	k0[i] = 0.0f;
+	k1[i] = 0.0f;
+	k2[i] = 0.0f;
+	k3[i] = 0.0f;
+	tmp[i] = 0.0f;
+	input[i] = 0.5f * (u_up - u_low);
 
 	if(i == 0)
-		*t = @@initial_time@@;
+		*t = @@initial_time@@f;
 }
