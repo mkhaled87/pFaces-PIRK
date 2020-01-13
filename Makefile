@@ -21,6 +21,8 @@ clean:
 	rm -rf Release
 	rm -rf Debug
 	find . -name "*.raw" -type f -delete
+	find . -name "*.asv" -type f -delete
+	find . -name "*.exe" -type f -delete
 	find . -name "*.prism" -type f -delete
 	for dir in $(SUBDIRS); do $(MAKE) clean -C $$dir $@; done
 
