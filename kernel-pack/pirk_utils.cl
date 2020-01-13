@@ -13,9 +13,9 @@
 #endif
 
 /* useful defines for RK4 integration */
-#define step_size @@true_step_size@@
-#define RK4_NINT 5
-#define RK4_H ((@@true_step_size@@/RK4_NINT))
+#define step_size (@@true_step_size@@f)
+#define RK4_NINT (5)
+#define RK4_H ((@@true_step_size@@f/(float)RK4_NINT))
 
 
 #ifndef MEM_EFFICIENT

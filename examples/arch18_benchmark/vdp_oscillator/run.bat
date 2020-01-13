@@ -1,6 +1,6 @@
 del *.raw
-del out.txt
+del *.txt
 
-pfaces -C -k pirk.cpu@..\..\..\kernel-pack -cfg .\vdp_oscillator.cfg -d 1 -p > gb.txt
+pfaces -CG -k pirk.cpu@..\..\..\kernel-pack -cfg .\vdp_oscillator.cfg -d 2 -p > gb.txt
 
 pause
