@@ -71,6 +71,8 @@ Now, you have PIRK installed and ready to be used. You might now run a given exa
 
 ## **Running an example**
 
+<img align="right" src="/doc/media/pirk_lane_cnage.bmp" alt="car_manuever" width="170px" height="400px">
+
 Navigate to any of the examples in the directory [/examples](/examples). Within each example, one or more *.cfg* files are provided. 
 Such config files tell PIRK about the system being considered and the requirements PIRK should consider when computing the reach sets.
 
@@ -89,9 +91,7 @@ Make sure to replace each / with \ in case you are using Windows command line.
 
 pFaces will take some time (depending on your HW) to solve the reachability problem. The output will be stored in a file *vehicle.raw* which contains the reach pipe of this system. 
 
-We developed a Matlab-interface so that Matlab users can load and use the files generated from PIRK. If you have Matlab installed, open it and navigate to this example's folder. Running the Matlab script file *simulate.m* will use the Matlab-interface to load and plot the reach sets stored in the output file. The reach pipe should loop like the following image:
-
-<img align="right" src="/doc/media/pirk_lane_cnage.bmp" alt="car_manuever" width="170px" height="400px">
+We developed a Matlab-interface so that Matlab users can load and use the files generated from PIRK. If you have Matlab installed, open it and navigate to this example's folder. Running the Matlab script file *simulate.m* will use the Matlab-interface to load and plot the reach sets stored in the output file. The reach pipe should loop like the image on the right side.
 
 
 ## **Building your own example**
