@@ -166,6 +166,33 @@ There is no need to rebuild PIRK anytime you modify those files or create new ex
 
 ### **Method-specific Requirements**
 
+### *For the method (1: GB)*
+
+Apart from setting *method_choice* to *"1"*, users need to specify the growth/contraction matrix. A separate file (growth_bound_matrix.cl) must be provided and it should contain a callback function with the following signature:
+
+    float growth_bound_matrix(int i, int j);
+
+which provides the value in the growth/contraction matrix for the *i*th row and *j*th column.
+
+### *For the method (2: CTMM)*
+
+Apart from setting *method_choice* to *"2"*, users need to specify the bounds of the Jacobian. A separate file (jacobian_bounds.cl) must be provided and it should contain a callback functions with the following signatures:
+
+    float state_jacobian_lower_bound(unsigned int i, unsigned int j);
+    float state_jacobian_upper_bound(unsigned int i, unsigned int j);
+
+
+Both functions provide the lower (resp. upper) value in the Jacobian matrix for the *i*th row and *j*th column.
+
+### *For the methods (3: MC, 4:MC_hd)*
+
+Apart from setting *method_choice* to *"3"* (resp. *"4"*), users need to specify the number of simulations to be done. Each simulation will pick, randomly, an initial state vector and input vector, and simulate the dynamics based on them. The reach set will be the final set enclosing the reach states from all simulations.
+
+To specify the number of simulation (e.g., 1000 simulations), the following configuration must be set in the config file:
+
+    nsamples = "1000";
+
+
 ## **Authors**
 
 - [**Alex Devonport**](https://people.eecs.berkeley.edu/~arcak/people.html).
