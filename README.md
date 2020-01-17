@@ -27,7 +27,7 @@ where the command *pfaces* here calls pFaces launcher as installed in your machi
 
 PIRK is given as source code that need to be built one time. This requires a modern C/C++ compiler such as:
 
-- For windows: Microsoft Visual C++ (MS VisualStudio 2019 is recommended and there is a free version called [MS VisualStudio Community Edition]() you can use);
+- For windows: Microsoft Visual C++ (MS VisualStudio 2019 is recommended and there is a free version called [MS VisualStudio Community Edition](https://visualstudio.microsoft.com/downloads/) you can use);
 - For Linux/MacOS: any GCC/G++ with C++ 11 support will do the job.
 
 ### **Building on Windows**
@@ -78,7 +78,7 @@ Say you navigated to the example in [/examples/ex_vehicle7d](/examples/ex_vehicl
 To run this example, we launch PIRK with the config file [vehicle.cfg](/examples/ex_vehicle7d/vehicle.cfg). Run the following command from any terminal running on the example's folder:
 
 ```
-pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg .\vehicle.cfg -p
+pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./vehicle.cfg -p
 ```
 
 where **pfaces** calls pFaces launcher, "-CGH -d 1" asks pFaces to run on the first device of all available devices, 
@@ -96,24 +96,77 @@ We developed a Matlab-interface so that Matlab users can load and use the files 
 </p>
 
 
-
 ## **Building your own example**
 
-We recommend copying and modifying one of the provided examples to avoid syntactical mistakes. An example in PIRK is mainly some text files. 
+We recommend copying and modifying one of the provided examples to avoid syntactical mistakes. An example in PIRK is mainly some text files:
 
-## **The configuration files system parameters**
+- A configuration file (.cfg) describing the example.
+- A file (dynamics.cl) describing the dynamical system being considered.
+- A file (bounds.cl) setting the initial hyper-interval for states and inputs.
+- Based on the method chosen, one or more additional files may be required.
+
 
 ### **The configuration files**
-Each configuration file corresponds to a case describing a stochastic system and the requirements to be used to synthesize a controller for it. Config files are text files with scopes 'scope_name { contents }', where the contents is a list of ;-demilited key="value" pairs. Take a look to this [config](/examples/ex_toy_safety/toy2d.cfg) file for an example. The following are the keys that can be used in PIRK. Note that values need to be enclosed woith double quotes.
+A configuration file (.cfg) corresponds to a case describing a reachability analysis problem. Config files are text files with scopes and contents on the form: 'scope_name { contents }', where the contents is a list of semicolon-delimited key="value" pairs. The following is an example of a scope with contents:
 
-- **project_name**: a to describe the name of the project (the case) and will be used as name for output files.
-- **data**: describes the used data model and should be currently set to "raw".
-- bla bla aout other config files parts
+    country = "Egypt";
+    city {
+	    name = "Cairo";
+        population = "9.5 million";
+    }
+
+Some keys does not require parent scopes. All values need to be enclosed with double quotes. Now, take a quick look to this [config](/examples/ex_toy_safety/toy2d.cfg) file to get to know about the scopes/contents used in PIRK's config files. The following are the all the keys that can be used in PIRK. 
+
+- **project_name**: a key to describe the name of the project and will be used as a name for the output file.
+
+- **data**: describes the used data model and should be currently set to "raw". Later, we plan to support more data types with compressions to save memory.
+
+- **method_choice**: an integer [1-4] that describes the method used to compute the reach sets. The value can be any of:
+
+    1: (GB) Growth/Contraction Matrix,
+
+    2: (CTMM) Continious-time mixed monotonicity,
+
+    3: (MC) Monte-carlo based simulation, or
+
+    4: (MC_hd) Monte-carlo based simulation (High Definition).
 
 
-## **System parametrs**
-Tell the users about those openCl files for with they need to put functions for the bounds and .....
+- **mem_efficient**: a true/false value to enable/disable the memory efficient versions of the implemented algorithms. It is currently supported for the GB method. It should be set to *"false"* for other methods.
 
+- **record_pipe**: a true/false value to enable/disable the recording of the reach pipe. When set, an additional output file will be saved for the reach pipe.
+
+- **initial_time**: initial value for the time.
+
+- **final_time**: final value for the time.
+
+- **step_size**: time quantization step.
+
+- **states.dim**: The dimension of the state set (number of state variables).
+
+- **inputs.dim**: The dimension of the input set (number of input variables).
+
+
+### **System Dynamics and State/Input Bounds**
+
+The dynamics of the system is described in the (dynamics.cl) file. The file should contain C-language code and a callback function with the following signature:
+
+    float dynamics_element_global(__global float* x, __global float* u, float t, unsigned int i);
+
+where *x* and *u* are the supplied state and input vectors at time *t*. The function should return the RHS value of the system's differential equation with respect to the state variable number *i*. *i* will take values from *0* to *N-1* where *N* is the number of state variables.
+
+The computation of the reach set starts with a pre-defined hyper-rectangle (a.k.a. hyper-interval) over the states and inputs sets. This should be supplied by the user in the file (bounds.cl) which should contain four callback functions with the following signatures:
+
+    float initial_state_lower_bound(unsigned int i);
+    float initial_state_upper_bound(unsigned int i);
+    float input_lower_bound(unsigned int i);
+    float input_upper_bound(unsigned int i);
+
+where each function receives *i*, asking for the *i*th component of the lower (resp. upper) bound value of the initial state (resp. input) set. 
+
+There is no need to rebuild PIRK anytime you modify those files or create new examples. PIRK simply loads and injects the files into the OpenCL kernel that is sent to pFaces. pFaces then takes care of the online compilation of all OpenCL codes. 
+
+### **Method-specific Requirements**
 
 ## **Authors**
 
