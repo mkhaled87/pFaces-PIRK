@@ -91,9 +91,7 @@ pFaces will take some time (depending on your HW) to solve the reachability prob
 
 We developed a Matlab-interface so that Matlab users can load and use the files generated from PIRK. If you have Matlab installed, open it and navigate to this example's folder. Running the Matlab script file *simulate.m* will use the Matlab-interface to load and plot the reach sets stored in the output file. The reach pipe should loop like the following image:
 
-<p align="center">
-<img src="/doc/media/pirk_lane_cnage.bmp" alt="car_manuever" width="170px" height="400px">
-</p>
+<img align="right" src="/doc/media/pirk_lane_cnage.bmp" alt="car_manuever" width="170px" height="400px">
 
 
 ## **Building your own example**
