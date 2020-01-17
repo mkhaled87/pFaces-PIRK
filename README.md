@@ -1,17 +1,16 @@
 # **PIRK**: Parallel Computation of Reachable Sets for General Nonlinear Systems  
 
-Bla bla about reachability analysis ....
-**PIRK** is introduced as a software tool, implemented as a kernel on top of the acceleration ecosystem [pFaces](http://www.parallall.com/pfaces), 
-for computing the reachable sets of dynamical systems provided as nonlinear diffeential equations.
+PIRK is a tool to efficiently compute reachable sets for general nonlinear systems of *extremely high dimensions*.
+It introduces three parallel algorithms for computing interval approximations of forward reachable sets, based on component-wise contraction properties, mixed monotonicity, and Monte Carlo-based approaches.
+It utilize the acceleration ecosystem [pFaces](http://www.parallall.com/pfaces) to target HPC platforms for computing the reachable sets. PIRK has been tested on several systems, with state dimensions ranging from ten up to 4 billion.
+The scalability of PIRK's parallel implementations is found to be highly favorable.
 
-PIRK is used to:
+PIRK can be used to:
+- Compute the reachable sets (or pipes) for high-dimensional nonlinear systems. For instance, in the provided examples [n-links traffic network](/examples/ex_n_links/) and [Quadrotor swarm](/examples/ex_quadrotor_swarm/), PIRK can compute the reachable sets for systems with up to 4 billion state variables.
 
-- bla bla bla
+- Efficientlt verify the behaviour of systems. Given a fixed time-window and input sequence, PIRK calcualtes, efficienty, the reach pipe of the of the system in hand. This can be verify that the behaviour of the system will not violate the design specification. For instance, in the provided [BMW 320i exampe](/examples/ex_vehicle7d/), pirk computes in milliseconds the reach pipe of the vehicle in planned lane-change maneuver, which helps veriify that that the autonomously-driven car will not crash into the car in front of it. The reacch pipe is shown in the following imaghe:
 
-- bla bla bla
 
-In PIRK, scalable parallel algorithms are designed to ....
-They are implemented on top of pFaces as a kernel that supports parallel execution within CPUs, GPUs and hardware accelerators (HWAs). 
 
 # **Installation**
 
