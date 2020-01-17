@@ -71,7 +71,7 @@ Now, you have PIRK installed and ready to be used. You might now run a given exa
 
 ## **Running an example**
 
-<img align="right" src="/doc/media/pirk_lane_cnage.bmp" alt="car_manuever" width="220px" height="500px">
+<img align="right" src="/doc/media/pirk_lane_cnage.bmp" alt="car_manuever" width="50%" height="50%">
 
 Navigate to any of the examples in the directory [/examples](/examples). Within each example, one or more *.cfg* files are provided. 
 Such config files tell PIRK about the system being considered and the requirements PIRK should consider when computing the reach sets.
