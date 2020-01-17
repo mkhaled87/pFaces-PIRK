@@ -1,99 +1,102 @@
 # **PIRK**: Parallel Computation of Reachable Sets for General Nonlinear Systems  
 
 PIRK is a tool to efficiently compute reachable sets for general nonlinear systems of *extremely high dimensions*.
-It introduces three parallel algorithms for computing interval approximations of forward reachable sets, based on component-wise contraction properties, mixed monotonicity, and Monte Carlo-based approaches.
-It utilize the acceleration ecosystem [pFaces](http://www.parallall.com/pfaces) to target HPC platforms for computing the reachable sets. PIRK has been tested on several systems, with state dimensions ranging from ten up to 4 billion.
+It introduces three parallel algorithms for computing interval approximations of forward reachable sets, based on: component-wise contraction properties, mixed monotonicity, and Monte Carlo-based approaches.
+
+Implemented to utilize the acceleration ecosystem [pFaces](http://www.parallall.com/pfaces), PIRK targets HPC platforms for computing the reachable sets. It has been tested on several systems, with state dimensions ranging from ten up to 4 billion.
 The scalability of PIRK's parallel implementations is found to be highly favorable.
 
 PIRK can be used to:
 - Compute the reachable sets (or pipes) for high-dimensional nonlinear systems. For instance, in the provided examples [n-links traffic network](/examples/ex_n_links/) and [Quadrotor swarm](/examples/ex_quadrotor_swarm/), PIRK can compute the reachable sets for systems with up to 4 billion state variables.
 
-- Efficientlt verify the behaviour of systems. Given a fixed time-window and input sequence, PIRK calcualtes, efficienty, the reach pipe of the of the system in hand. This can be verify that the behaviour of the system will not violate the design specification. For instance, in the provided [BMW 320i exampe](/examples/ex_vehicle7d/), pirk computes in milliseconds the reach pipe of the vehicle in planned lane-change maneuver, which helps veriify that that the autonomously-driven car will not crash into the car in front of it. The reacch pipe is shown in the following imaghe:
-
-
+- Efficiently verify the behavior of systems. Given a fixed time-window and input sequence, PIRK calculates, efficiently, the reach pipe of the of the system in hand. This can be verify that the behavior of the system will not violate the design specification. For now, this requires extra code from the user side to verify the computed reach pipe. In the provided [BMW 320i example](/examples/ex_vehicle7d/), PIRK computes in milliseconds the reach pipe of the vehicle in planned lane-change maneuver, which helps verify that that the autonomously-driven car will not crash into the car in front of it. The result of running this example is provided in the *Getting Started* section below in this guide.
 
 # **Installation**
 
 ## **Prerequisites**
 
-### pFaces
-
-You first need to have have [pFaces](http://www.parallall.com/pfaces) installed and working. 
-Test the installation of pFaces and make sure it recognizes the parallel hardware in your machine by running the following command:
+You first need to have have [pFaces](http://www.parallall.com/pfaces) installed on the target machine. Once installed, test its installation and make sure it recognizes the parallel hardware in your machine by running the following command:
 
 ```
 pfaces -CGH -l
 ```
 
-where **pfaces** calls pFaces launcher as installed in your machine. This should list all available HW configurations attached to your machine and means you are ready to work with PIRK.
+where the command *pfaces* here calls pFaces launcher as installed in your machine. This should list all available HW configurations (HWCs) attached to your machine. If you see one or more devices, this means you are ready to work with PIRK. In case a device you know is not listed, you may need to install its device-driver or any OpenCL runtime environment that is provided by the vendor.
 
-### Build tools
+## Building PIRK
 
-PIRK is given as source code that need to be built one time. 
-This requires a modern C/C++ compiler such as:
+PIRK is given as source code that need to be built one time. This requires a modern C/C++ compiler such as:
 
-- For windows: Microsoft Visual Studio (2019 is recommended);
-- For Linu/MacOS: GCC/G++.
+- For windows: Microsoft Visual C++ (MS VisualStudio 2019 is recommended and there is a free version called [MS VisualStudio Community Edition]() you can use);
+- For Linux/MacOS: any GCC/G++ with C++ 11 support will do the job.
 
-## **Building PIRK**
+### **Building on Windows**
 
-If you will be using Windows, open the provided VisualStudio-solution file [pFaces-PIRK.sln](pFaces-PIRK.sln) and build it using the **Release (x64)** configuration. Building with Debug configuration will result in a slower operation and requires having the debug binaries of pFaces.
+If you will be using Windows, download the repository and extract it. Then, open the provided VisualStudio-solution file [pFaces-PIRK.sln](pFaces-PIRK.sln) and build it using the **Release (x64)** configuration. Building with Debug configuration will result in a slower operation and requires having the debug binaries of pFaces.
 
-If you will be using Linux or MacOS, assuming you have a GIT client, simply run the following command to clone this repo:
+### **Building on Linux/MacOS**
+
+If you will be using Linux or MacOS and assuming you have a GIT client, simply run the following command to clone this repository locally:
 
 ```
-$ git clone --depth=1 https://github.com/mkhaled87/pFaces-PIRK
+$ git clone --depth=1 https://github.com/mkhaled87/pFaces-PIRK.git
 ```
 
 PIRK requires to link with pFaces SDK, which should be already installed with pFaces. 
 The environment variable **PFACES_SDK_ROOT** should point to pFaces SDK root directory. 
-Make sure you have the environment variable **PFACES_SDK_ROOT** pointing to the full absolute pFaces SDK forlder. 
-If not, do it as follows:
+Make sure you have the environment variable **PFACES_SDK_ROOT** pointing to the full absolute pFaces SDK folder. If not, do it as follows:
 
 ```
 $ export PFACES_SDK_ROOT=/full/path/to/pfaces-sdk
 ```
 
-Now navigate to the created repo folder and build PIRK:
+Where */full/path/to/pfaces-sdk* is the complete path to the pFaces-SDK installed in the machine. Now navigate to the created repo folder and build PIRK:
 
 ```
 $ cd pFaces-PIRK
 $ make
 ```
 
-## **Getting Started**
+# **Getting Started**
 
 Now, you have PIRK installed and ready to be used. You might now run a given example or build your own.
 
-### **File structure of PIRK**
+## **File structure of PIRK**
 
 - [examples](/examples): the folder contains pre-designed examples.
-- [interface](/interface): the folder contains the Matlab interface to access the files genrated by PIRK.
+- [interface](/interface): the folder contains the Matlab interface to access the files generated by PIRK.
 - [kernel](/kernel): the folder C++ source codes of PIRK.
 - [kernel-pack](/kernel-pack): the folder contains the OpenCL codes of the PIRK and will hold the binaries of the loadable kernel of PIRK.
+- [tools](/tools): some independent PIRK-related tools the that can be used to test the dynamics of the systems.
 
-### **Running an example**
+## **Running an example**
 
-Navigate to any of the examples in the directoy [/examples](/examples). Within each example, one or more .cfg files are provided. 
-Config files tells PIRK about the system underconsideration and the requirements it should consider when desiging a controller for the system.
+Navigate to any of the examples in the directory [/examples](/examples). Within each example, one or more *.cfg* files are provided. 
+Such config files tell PIRK about the system being considered and the requirements PIRK should consider when computing the reach sets.
 
-Say you navigated to the example in [/examples/ex_n_link](/examples/ex_n_link) 
-and you want to launch PIRK with the config file [ex_n_link.cfg](/examples/ex_n_link/ex_n_link.cfg), 
-then run the following command from any terminal located in the example foder:
+Say you navigated to the example in [/examples/ex_vehicle7d](/examples/ex_vehicle7d). This examples is provided to compute the reach pipe of an autonomous vehicle making a lane-change manuever in the highway.
+To run this example, we launch PIRK with the config file [vehicle.cfg](/examples/ex_vehicle7d/vehicle.cfg). Run the following command from any terminal running on the example's folder:
 
 ```
-pfaces -CGH -d 1 -k pirk@../../kernel-pack -cfg ex_n_link.cfg -p
+pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg .\vehicle.cfg -p
 ```
 
-where **pfaces** calls pFaces launcher, "-CGH -d 1" asks pFaces to run PIRK in the first device of all avaialble deveices, 
+where **pfaces** calls pFaces launcher, "-CGH -d 1" asks pFaces to run on the first device of all available devices, 
 "-k pirk@../../kernel-pack" tells pFaces about PIRK and where it is located, 
-"-cfg toy2d.cfg" asks pFaces to hand the configuration file to PIRK, and 
+"-cfg vehicle.cfg" asks pFaces to hand the configuration file *vehicle.cfg* to PIRK, and 
 "-p" asks pFaces to collect profiling information. 
 Make sure to replace each / with \ in case you are using Windows command line.
 
-### **Building your own example**
+pFaces will take some time (depending on your HW) to solve the reachability problem. The output will be stored in a file *vehicle.raw* which contains the reach pipe of this system. 
 
-We recommend copying and modifing one of the provided examples to avoid syntactical mistakes.
+We developed a Matlab-interface so that Matlab users can load and use the files generated from PIRK. If you have Matlab installed, open it and navigate to this example's folder. Running the Matlab script file *simulate.m* will use the Matlab-interface to load and plot the reach sets stored in the output file. The reach pipe should loop like the following image:
+
+![car_manuever](/doc/media/pirk_lane_cnage.bmp)
+
+
+## **Building your own example**
+
+We recommend copying and modifying one of the provided examples to avoid syntactical mistakes. An example in PIRK is mainly some text files. 
 
 ## **The configuration files system parameters**
 
@@ -105,14 +108,16 @@ Each configuration file corresponds to a case describing a stochastic system and
 - bla bla aout other config files parts
 
 
-### **System parametrs**
+## **System parametrs**
 Tell the users about those openCl files for with they need to put functions for the bounds and .....
 
 
 ## **Authors**
 
-- [**Alex Devonport**](http://www.hyconsys.com/members/mzamani).
+- [**Alex Devonport**](https://people.eecs.berkeley.edu/~arcak/people.html).
 - [**Mahmoud Khaled**](http://www.mahmoud-khaled.com).
+- [**Mjid Zamani**](https://www.colorado.edu/cs/majid-zamani).
+- [**Murat Arcak**](https://www2.eecs.berkeley.edu/Faculty/Homepages/arcak.html).
 
 
 ## **License**

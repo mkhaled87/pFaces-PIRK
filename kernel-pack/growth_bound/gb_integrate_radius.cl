@@ -21,9 +21,9 @@ void gb_integrate_radius_1(
 
 	i = get_global_id(0);
 #ifndef MEM_EFFICIENT
-	k0[i] = growth_bound_radius_dynamics(initial_state, input, cidxs, cvals, ncel, *t, i);
+	k0[i] = growth_bound_radius_dynamics(final_state, input, cidxs, cvals, ncel, *t, i);
 #else
-	k0[i] = growth_bound_radius_dynamics(initial_state, input, *t, i);	
+	k0[i] = growth_bound_radius_dynamics(final_state, input, *t, i);	
 #endif
 	tmp[i] = final_state[i] + RK4_H/2.0f*k0[i];
 }

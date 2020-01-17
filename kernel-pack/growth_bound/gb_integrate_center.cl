@@ -13,7 +13,7 @@ void gb_integrate_center_1(
     unsigned int i;	
 
     i = get_global_id(0);
-    k0[i] = dynamics_element_global(initial_state, input, *t, i);
+    k0[i] = dynamics_element_global(final_state, input, *t, i);
     tmp[i] = final_state[i] + RK4_H/2.0f*k0[i];
 }
 

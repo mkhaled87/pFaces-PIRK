@@ -36,7 +36,7 @@ int main(){
 	
 	// compute the initial state/input
 	std::cout << "initial state = ";
-	float center_x[SS_DIM] = {0.330970, 0.244649, -0.133796, 5.046261, -0.002903, 0.044322, 0.046198};
+	float center_x[SS_DIM] = {INITIAL_STATE};
 	for(int i=0; i<SS_DIM; i++){
 		//center_x[i] = initial_state_lower_bound(i) + (initial_state_upper_bound(i)-initial_state_lower_bound(i))/2.0f;
 		std::cout << std::setprecision(PRINT_PRECISION) << center_x[i] << "\t";
