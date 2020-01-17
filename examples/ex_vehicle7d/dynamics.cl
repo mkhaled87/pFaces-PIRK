@@ -23,16 +23,16 @@
 
 float dynamics_element_global(__global float* x, __global float* u, float t, unsigned int i) {
 
-    if(t > 5.0){
-        u1 = 0.05;
+    if(t > 5.0f){
+        u1 = 0.03f;
         u2 = 2.0f;
     }
-    else if(t > 2.5){
-        u1 = -0.08;
+    else if(t > 2.5f){
+        u1 = -0.055;
         u2 = 2.0f;
     }
     else{
-        u1 = 0.04;
+        u1 = 0.025;
         u2 = 2.0f;
     }
         

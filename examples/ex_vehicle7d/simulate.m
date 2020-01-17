@@ -57,7 +57,7 @@ line([0.05 0.05],[0 end_road], 'LineWidth',3, 'Color','black', 'LineStyle','-')
 line([4.0 4.0],[0 end_road], 'LineWidth',2, 'Color','black', 'LineStyle','--')
 line([8.0 8.0],[0 end_road], 'LineWidth',2, 'Color','black', 'LineStyle','--')
 line([11.95 11.95],[0 end_road], 'LineWidth',3, 'Color','black', 'LineStyle','-')
-plot_rect([5 7 25 30], 'red', 1);
+plot_rect([5 7 27 33], 'red', 1);
 
 
 function [] = plot_rect(hr, rect_color, line_size)
