@@ -23,7 +23,7 @@
 %   5: using an extented definition of the mixed-monotonicity property to any system with bounded Jacobian matrices (for discrete-time systems)
 %   6: Using only the given system dynamics to perform Monte Carlo sampling of the transition function
 %   NaN: let the function TIRA.m select the best available method based on system properties and provided files in './Input_files' folder
-parameters.OA_method = 6;
+parameters.OA_method = 2;
 
     %% (2): Contraction/Growth bound method choice
 
