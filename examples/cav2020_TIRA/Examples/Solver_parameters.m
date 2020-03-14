@@ -23,7 +23,7 @@
 %   5: using an extented definition of the mixed-monotonicity property to any system with bounded Jacobian matrices (for discrete-time systems)
 %   6: Using only the given system dynamics to perform Monte Carlo sampling of the transition function
 %   NaN: let the function TIRA.m select the best available method based on system properties and provided files in './Input_files' folder
-parameters.OA_method = NaN;
+parameters.OA_method = 6;
 
     %% (2): Contraction/Growth bound method choice
 
@@ -77,7 +77,7 @@ parameters.OA_method = NaN;
         
         %% (6): Direct Monte Carlo method
         parameters.montecarlo_epsilon = 0.05;  % Probabilistic guarantee accuracy parameter: Reachable set will contain 1-epsilon of the probability measure
-        parameters.montecarlo_delta = 0.05;    % probabilistic guarantee confidence parameter: Reachable set will satisfy the epsilon guarantee with probability 1-delta
+        parameters.montecarlo_delta = 0.05;    % Probabilistic guarantee confidence parameter: Reachable set will satisfy the epsilon guarantee with probability 1-delta
 
 %% Default values
 % parameters.OA_method = NaN;
