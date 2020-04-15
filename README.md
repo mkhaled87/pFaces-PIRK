@@ -200,6 +200,22 @@ To specify the number of simulation (e.g., 1000 simulations), the following conf
 - [**Mjid Zamani**](https://www.colorado.edu/cs/majid-zamani).
 - [**Murat Arcak**](https://www2.eecs.berkeley.edu/Faculty/Homepages/arcak.html).
 
+## **Publications**
+
+- A. Devonport$, M. Khaled, M. Arcak, M. Zamani. PIRK: Scalable Interval Reachability Analysis for High-Dimensional Nonlinear Systems. 32nd Conference on Computer Aided Verification (CAV), July 2020.
+
+Please cite the tool paper as follows:
+
+    @inproceedings{PIRK,
+        title = {PIRK: Scalable Interval Reachability Analysis for High-Dimensional Nonlinear Systems},
+        author = {Devonport, Alex and Khaled, Mahmoud and Arcak, Murat and Zamani, Majid},
+        booktitle = {Proc. 32nd International Conference on Computer Aided Verification (CAV)},
+        publisher = {Springer},
+        series = {LNCS},
+        year = {2020}
+    }
+
+
 
 ## **License**
 
