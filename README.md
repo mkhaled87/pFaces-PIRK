@@ -192,6 +192,12 @@ To specify the number of simulation (e.g., 1000 simulations), the following conf
 
     nsamples = "1000";
 
+The required number of samples can be computed using the formula: 
+
+    nsamples = ceil((2*n/epsilon)*log(2*n/delta)), 
+
+where n is the state dimension and epsilon=delta=0.05 are parameters to control the probabilistic guarantee. 
+
 
 ## **Authors**
 
