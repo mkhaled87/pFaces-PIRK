@@ -14,7 +14,7 @@ PIRK can be used to:
 # **Installation using Docker**
 Here, we assume you will be using Linux or MacOS machine. Commands will be slightly different on Windows if you use Windows PowerShell.
 
-First, make sure to configure Docker to use all of the resources available (e.g., all CPU cores). Otherwise, AMYTISS will run slower than expected. Also, in case you are using a GPU, make sure to pass-through the GPU in Docker. See this [guide](https://docs.docker.com/config/containers/resource_constraints/).
+First, make sure to configure Docker to use all of the resources available (e.g., all CPU cores). Otherwise, PIRK will run slower than expected. Also, in case you are using a GPU, make sure to pass-through the GPU in Docker. See this [guide](https://docs.docker.com/config/containers/resource_constraints/).
 
 Download the Dockerfile:
 ``` bash
