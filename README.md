@@ -234,10 +234,12 @@ where n is the state dimension and epsilon=delta=0.05 are parameters to control 
 
 ## **Authors**
 
-- [**Alex Devonport**](https://people.eecs.berkeley.edu/~arcak/people.html).
-- [**Mahmoud Khaled**](http://www.mahmoud-khaled.com).
+- [**Mahmoud Khaled**](http://www.mahmoud-khaled.com)*.
+- [**Alex Devonport**](https://people.eecs.berkeley.edu/~arcak/people.html)*.
 - [**Mjid Zamani**](https://www.colorado.edu/cs/majid-zamani).
 - [**Murat Arcak**](https://www2.eecs.berkeley.edu/Faculty/Homepages/arcak.html).
+
+*: Both authors have the same contribution.
 
 ## **Publications**
 
