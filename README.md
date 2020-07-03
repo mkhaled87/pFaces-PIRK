@@ -11,7 +11,40 @@ PIRK can be used to:
 
 - Efficiently verify the behavior of systems. Given a fixed time-window and input sequence, PIRK calculates, efficiently, the reach pipe of the of the system in hand. This can be verify that the behavior of the system will not violate the design specification. For now, this requires extra code from the user side to verify the computed reach pipe. In the provided [BMW 320i example](/examples/ex_vehicle7d/), PIRK computes in milliseconds the reach pipe of the vehicle in planned lane-change maneuver, which helps verify that that the autonomously-driven car will not crash into the car in front of it. The result of running this example is provided in the *Getting Started* section below in this guide.
 
-# **Installation**
+# **Installation using Docker**
+Here, we assume you will be using Linux or MacOS machine. Commands will be slightly different on Windows if you use Windows PowerShell.
+
+First, make sure to configure Docker to use all of the resources available (e.g., all CPU cores). Otherwise, AMYTISS will run slower than expected. Also, in case you are using a GPU, make sure to pass-through the GPU in Docker. See this [guide](https://docs.docker.com/config/containers/resource_constraints/).
+
+Download the Dockerfile:
+``` bash
+$ mkdir pirk
+$ cd pirk
+$ wget https://raw.githubusercontent.com/mkhaled87/pFaces-PIRK/master/Dockerfile
+```    
+
+Build the Docker image:
+``` bash
+$ docker build -t pirk/latest.
+```    
+
+Run/enter the image's interactive shell
+``` bash
+$ docker run -it pirk/latest
+```    
+
+Now you can use PIRK. It is located in the director **pFaces-PIRK** and you can navigate to it as follows:
+``` bash
+$ cd pFaces-PIRK
+```
+
+In the Docker image, we installed Oclgrind to simulate an OpenCL platform/device that utilizes all the CPU cores usign threads. Unless you will be passing-through your device (e.g., a GPU), you MUST preced any pFaces command with oclgrind. For example, to check available devices in the prespective of Oclgrind, run:
+``` bash
+$ oclgrind pfaces -CGH -l
+```
+
+
+# **Installation using Source code**
 
 ## **Prerequisites**
 
