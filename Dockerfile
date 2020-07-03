@@ -13,4 +13,4 @@ RUN apt-get install -y clinfo oclgrind
 # install pfaces and AMYTISS
 RUN mkdir pfaces; cd pfaces; wget https://github.com/parallall/pFaces/releases/download/Release_1.0.5d/pFaces-1.0.5d-Ubuntu18.04_x64.zip; unzip pFaces-1.0.5d-Ubuntu18.04_x64.zip; sh ./install.sh
 RUN git clone --depth=1 https://github.com/mkhaled87/pFaces-PIRK
-RUN cd pFaces-AMYTISS; export PFACES_SDK_ROOT=$PWD/../pfaces/pfaces-sdk/; make
+RUN cd pFaces-PIRK; export PFACES_SDK_ROOT=$PWD/../pfaces/pfaces-sdk/; make
