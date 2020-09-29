@@ -25,7 +25,7 @@ $ wget https://raw.githubusercontent.com/mkhaled87/pFaces-PIRK/master/Dockerfile
 
 Build the Docker image:
 ``` bash
-$ docker build -t pirk/latest.
+$ docker build -t pirk/latest .
 ```    
 
 Run/enter the image's interactive shell
