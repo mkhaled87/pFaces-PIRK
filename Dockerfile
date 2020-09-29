@@ -11,6 +11,6 @@ RUN apt-get install -y wget git unzip build-essential libcpprest-dev opencl-c-he
 RUN apt-get install -y clinfo oclgrind
 
 # install pfaces and PIRK
-RUN mkdir pfaces; cd pfaces; wget https://github.com/parallall/pFaces/releases/download/Release_1.0.5d/pFaces-1.0.5d-Ubuntu18.04_x64.zip; unzip pFaces-1.0.5d-Ubuntu18.04_x64.zip; sh ./install.sh
+RUN mkdir pfaces; cd pfaces; wget https://github.com/parallall/pFaces/releases/download/Release_1.1.0d/pFaces-1.1.0-Ubuntu18.04.zip; unzip pFaces-1.1.0-Ubuntu18.04.zip; sh ./install.sh
 RUN git clone --depth=1 https://github.com/mkhaled87/pFaces-PIRK
 RUN cd pFaces-PIRK; export PFACES_SDK_ROOT=$PWD/../pfaces/pfaces-sdk/; make
