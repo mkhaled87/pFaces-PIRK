@@ -48,9 +48,7 @@ find_package(OpenCL REQUIRED)
 find_package(cpprestsdk REQUIRED NAMES cpprestsdk cpprest)
 
 # Generic CMake instructions to make the kernel
-link_directories(${PFACES_KERNEL} PUBLIC
-    $ENV{PFACES_SDK_ROOT}/lib
-)
+link_directories($ENV{PFACES_SDK_ROOT}/lib)
 ADD_LIBRARY(${PFACES_KERNEL} SHARED
     ${PFACES_KERNEL_SOURCES}
 )
@@ -76,7 +74,7 @@ if (MSVC)
     set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "/WHOLEARCHIVE:pfaces-sdk.lib")
     target_link_libraries(${PFACES_KERNEL} ${OpenCL_LIBRARY} cpprestsdk::cpprest ws2_32)
 elseif (APPLE)
-    set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "-Wl,-all_load -lpfaces-sdk -Wl,-noall_load")
+    set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "-Wl,-all_load -lpfaces-sdk")
     target_link_libraries(${PFACES_KERNEL} ${OpenCL_LIBRARY} cpprestsdk::cpprest dl pthread)
 else()
     set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "-Wl,--whole-archive -lpfaces-sdk -Wl,--no-whole-archive")
