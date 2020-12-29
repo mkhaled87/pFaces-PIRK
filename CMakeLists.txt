@@ -10,7 +10,9 @@ find_program(PFACES_BINARY "pfaces")
 if( (NOT PFACES_BINARY) OR ("$ENV{PFACES_SDK_ROOT}" STREQUAL "") OR (NOT EXISTS "$ENV{PFACES_SDK_ROOT}/include") OR (NOT EXISTS "$ENV{PFACES_SDK_ROOT}/lib"))
     message(FATAL_ERROR "Couln't find pFaces binary. Please make sure to insttall it correctly.")
 else()
-    message("-- pFaces binary and SDK enviroment found.")
+    file(READ "$ENV{PFACES_SDK_ROOT}/VERSION" PFACES_VERSION)
+    string(SUBSTRING "${PFACES_VERSION}" 24 5 PFACES_VERSION)
+    message("-- pFaces binary and SDK enviroment found (pFaces v${PFACES_VERSION}).")
 endif()
 
 # [Update Here] give a name to the project
