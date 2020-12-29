@@ -33,12 +33,12 @@ Run/enter the image's interactive shell
 $ docker run -it pirk/latest
 ```    
 
-Now you can use PIRK. It is located in the director **pFaces-PIRK** and you can navigate to it as follows:
+Now you can use PIRK. It is located in the director **pFaces-PIRK** in the Docker container and you can navigate to it as follows:
 ``` bash
 $ cd pFaces-PIRK
 ```
 
-In the Docker image, we installed Oclgrind to simulate an OpenCL platform/device that utilizes all the CPU cores usign threads. Unless you will be passing-through your device (e.g., a GPU), you MUST preced any pFaces command with oclgrind. For example, to check available devices in the prespective of Oclgrind, run:
+In the Docker image, we installed Oclgrind to simulate an OpenCL platform/device that utilizes all the CPU cores using threads. Unless you will be passing-through your device (e.g., a GPU), you MUST precede any pFaces command with oclgrind. For example, to check available devices in the prespective of Oclgrind, run:
 ``` bash
 $ oclgrind pfaces -CGH -l
 ```
@@ -56,39 +56,35 @@ pfaces -CGH -l
 
 where the command *pfaces* here calls pFaces launcher as installed in your machine. This should list all available HW configurations (HWCs) attached to your machine. If you see one or more devices, this means you are ready to work with PIRK. In case a device you know is not listed, you may need to install its device-driver or any OpenCL runtime environment that is provided by the vendor.
 
-## Building PIRK
+### **Building PIRK**
 
-PIRK is given as source code that need to be built one time. This requires a modern C/C++ compiler such as:
+PIRK uses CMake for cross-platform building.
+We support Windows, Linux and MacOS.
+PIRK was tested on Windows 10x64, Linux Ubuntu 18.04 and MacOS 10.
+In Windows, you must use the developer command prompt of Visual Studio so that CMake is integrated.
+Start by cloning this repo to some place in your machine (commands prompt is a little different in Windows):
 
-- For windows: Microsoft Visual C++ (MS VisualStudio 2019 is recommended and there is a free version called [MS VisualStudio Community Edition](https://visualstudio.microsoft.com/downloads/) you can use);
-- For Linux/MacOS: any GCC/G++ with C++ 11 support will do the job.
-
-### **Building on Windows**
-
-If you will be using Windows, download the repository and extract it. Then, open the provided VisualStudio-solution file [pFaces-PIRK.sln](pFaces-PIRK.sln) and build it using the **Release (x64)** configuration. Building with Debug configuration will result in a slower operation and requires having the debug binaries of pFaces.
-
-### **Building on Linux/MacOS**
-
-If you will be using Linux or MacOS and assuming you have a GIT client, simply run the following command to clone this repository locally:
-
-```
-$ git clone --depth=1 https://github.com/mkhaled87/pFaces-PIRK.git
+``` bash
+$ git clone --depth=1 https://github.com/mkhaled87/pFaces-PIRK
 ```
 
-PIRK requires to link with pFaces SDK, which should be already installed with pFaces. 
-The environment variable **PFACES_SDK_ROOT** should point to pFaces SDK root directory. 
-Make sure you have the environment variable **PFACES_SDK_ROOT** pointing to the full absolute pFaces SDK folder. If not, do it as follows:
+Now, run the build script that automates the CMake-based build.
+For MacOS/Linux:
 
-```
-$ export PFACES_SDK_ROOT=/full/path/to/pfaces-sdk
-```
-
-Where */full/path/to/pfaces-sdk* is the complete path to the pFaces-SDK installed in the machine. Now navigate to the created repo folder and build PIRK:
-
-```
+``` bash
 $ cd pFaces-PIRK
-$ make
+$ ./build.sh
 ```
+
+For MacOS/Linux:
+
+``` bash
+> cd pFaces-PIRK
+> .\build.bat
+```
+
+A successful build will generate the kernel driver `pirk.driver` in the `kernel-pack` folder.
+
 
 # **Getting Started**
 

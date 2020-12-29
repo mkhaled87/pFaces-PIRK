@@ -4,6 +4,9 @@ kernel-pack/*.driver
 **/*.render*
 **/*.log
 
+# any generated RAW files from the examples
+**/*.raw
+
 # VS and VSCode
 .vs/
 .vscode/
