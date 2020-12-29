@@ -40,9 +40,7 @@ find_package(OpenCL REQUIRED)
 find_package(cpprestsdk REQUIRED NAMES cpprestsdk cpprest)
 
 # Generic CMake instructions to make the kernel
-link_directories(${PFACES_KERNEL} PUBLIC
-    $ENV{PFACES_SDK_ROOT}/lib
-)
+link_directories($ENV{PFACES_SDK_ROOT}/lib)
 ADD_LIBRARY(${PFACES_KERNEL} SHARED
     ${PFACES_KERNEL_SOURCES}
 )
