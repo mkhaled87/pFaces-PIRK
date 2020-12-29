@@ -5,6 +5,14 @@ if(NOT APPLE AND NOT UNIX AND NOT WIN32)
     message(FATAL_ERROR "You are using not-supported OS.")
 endif()
 
+# check installation of pFaces/pFaces-SDK
+find_program(PFACES_BINARY "pfaces")
+if( (NOT PFACES_BINARY) OR ("$ENV{PFACES_SDK_ROOT}" STREQUAL "") OR (NOT EXISTS "$ENV{PFACES_SDK_ROOT}/include") OR (NOT EXISTS "$ENV{PFACES_SDK_ROOT}/lib"))
+    message(FATAL_ERROR "Couln't find pFaces binary. Please make sure to insttall it correctly.")
+else()
+    message("-- pFaces binary and SDK enviroment found.")
+endif()
+
 # [Update Here] give a name to the project
 project(pFaces-PIRK)
 
