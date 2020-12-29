@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ap
 RUN apt-get -y upgrade
 
 # install required libs/tools
-RUN apt-get install -y wget git unzip build-essential libcpprest-dev opencl-c-headers  opencl-clhpp-headers ocl-icd-opencl-dev
+RUN apt-get install -y cmake wget git unzip build-essential libcpprest-dev opencl-c-headers  opencl-clhpp-headers ocl-icd-opencl-dev
 RUN apt-get install -y clinfo oclgrind
 
 # install pfaces and PIRK
