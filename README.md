@@ -40,7 +40,7 @@ $ cd pFaces-PIRK
 
 In the Docker image, we installed Oclgrind to simulate an OpenCL platform/device that utilizes all the CPU cores using threads. Unless you will be passing-through your device (e.g., a GPU), you MUST precede any pFaces command with oclgrind. For example, to check available devices in the prespective of Oclgrind, run:
 ``` bash
-$ oclgrind pfaces -CGH -l
+$ oclgrind pfaces -CG -l
 ```
 
 
@@ -51,7 +51,7 @@ $ oclgrind pfaces -CGH -l
 You first need to have have [pFaces](http://www.parallall.com/pfaces) installed on the target machine. Once installed, test its installation and make sure it recognizes the parallel hardware in your machine by running the following command:
 
 ```
-pfaces -CGH -l
+pfaces -CG -l
 ```
 
 where the command *pfaces* here calls pFaces launcher as installed in your machine. This should list all available HW configurations (HWCs) attached to your machine. If you see one or more devices, this means you are ready to work with PIRK. In case a device you know is not listed, you may need to install its device-driver or any OpenCL runtime environment that is provided by the vendor.
@@ -112,7 +112,7 @@ To run this example, we launch PIRK with the config file [vehicle.cfg](/examples
 pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./vehicle.cfg -p
 ```
 
-where **pfaces** calls pFaces launcher, "-CGH -d 1" asks pFaces to run on the first device of all available devices, 
+where **pfaces** calls pFaces launcher, "-CG -d 1" asks pFaces to run on the first device of all available devices, 
 "-k pirk@../../kernel-pack" tells pFaces about PIRK and where it is located, 
 "-cfg vehicle.cfg" asks pFaces to hand the configuration file *vehicle.cfg* to PIRK, and 
 "-p" asks pFaces to collect profiling information. 
