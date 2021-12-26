@@ -1,5 +1,7 @@
 # **PIRK**: Parallel Computation of Reachable Sets for General Nonlinear Systems  
 
+> **Note:** This tool works on top of the demo version of pFaces. If you face any LICENSE issues (e.g., expired license), install the latest version of pFaces or use the latest license file from the latest demo version of pFaces. Latest demo version of pFaces can always be found [here](https://github.com/parallall/pFaces/releases).
+
 PIRK is a tool to efficiently compute reachable sets for general nonlinear systems of *extremely high dimensions*.
 It introduces three parallel algorithms for computing interval approximations of forward reachable sets, based on: component-wise contraction properties, mixed monotonicity, and Monte Carlo-based approaches.
 
