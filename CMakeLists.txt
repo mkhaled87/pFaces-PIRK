@@ -16,7 +16,7 @@ if( (NOT PFACES_BINARY) OR ("$ENV{PFACES_SDK_ROOT}" STREQUAL "") OR (NOT EXISTS 
 else()
     file(READ "$ENV{PFACES_SDK_ROOT}/VERSION" PFACES_VERSION)
     string(SUBSTRING "${PFACES_VERSION}" 24 3 PFACES_VERSION)
-    message("-- pFaces binary and SDK environment found (pFaces v${PFACES_VERSION}).")
+    message(STATUS "pFaces binary and SDK environment found (pFaces v${PFACES_VERSION}).")
 endif()
 
 # [Update Here] give a name to the project
