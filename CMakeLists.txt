@@ -12,11 +12,11 @@ else()
 find_program(PFACES_BINARY "pfaces")
 endif()
 if( (NOT PFACES_BINARY) OR ("$ENV{PFACES_SDK_ROOT}" STREQUAL "") OR (NOT EXISTS "$ENV{PFACES_SDK_ROOT}/include") OR (NOT EXISTS "$ENV{PFACES_SDK_ROOT}/lib"))
-    message(FATAL_ERROR "Couln't find pFaces binary. Please make sure to insttall it correctly.")
+    message(FATAL_ERROR "couldn't find pFaces binary. Please make sure to install it correctly.")
 else()
     file(READ "$ENV{PFACES_SDK_ROOT}/VERSION" PFACES_VERSION)
-    string(SUBSTRING "${PFACES_VERSION}" 24 5 PFACES_VERSION)
-    message("-- pFaces binary and SDK enviroment found (pFaces v${PFACES_VERSION}).")
+    string(SUBSTRING "${PFACES_VERSION}" 24 3 PFACES_VERSION)
+    message("-- pFaces binary and SDK environment found (pFaces v${PFACES_VERSION}).")
 endif()
 
 # [Update Here] give a name to the project
@@ -35,8 +35,12 @@ set(PFACES_KERNEL_SOURCES
 )
 set(PFACES_KERNEL_OUT_PATH "${PROJECT_SOURCE_DIR}/kernel-pack")
 
-# [Update Here] Must use C++11 or later
+# Set C++ Standard
+if (${PFACES_VERSION} GREATER_EQUAL 1.3)
+set(CMAKE_CXX_STANDARD 14)
+else()
 set(CMAKE_CXX_STANDARD 11)
+endif()
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Check: Win -> MSVC
