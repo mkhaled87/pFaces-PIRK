@@ -32,36 +32,6 @@ target_include_directories(${PFACES_KERNEL} PUBLIC
     ${OpenCL_INCLUDE_DIR}
     $ENV{PFACES_SDK_ROOT}/include
 )
-set_target_properties(${PFACES_KERNEL}
-    PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${PFACES_KERNEL_OUT_PATH}"
-    LIBRARY_OUTPUT_DIRECTORY_RELEASE "${PFACES_KERNEL_OUT_PATH}"
-    LIBRARY_OUTPUT_DIRECTORY_DEBUG "${PFACES_KERNEL_OUT_PATH}"
-    ARCHIVE_OUTPUT_DIRECTORY "${PFACES_KERNEL_OUT_PATH}"
-    ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${PFACES_KERNEL_OUT_PATH}"
-    ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${PFACES_KERNEL_OUT_PATH}"
-    RUNTIME_OUTPUT_DIRECTORY "${PFACES_KERNEL_OUT_PATH}"
-    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${PFACES_KERNEL_OUT_PATH}"
-    RUNTIME_OUTPUT_DIRECTORY_DEBUG "${PFACES_KERNEL_OUT_PATH}"
-    SUFFIX ".driver"
-    PREFIX ""
-)
-if (MSVC)
-    set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "/WHOLEARCHIVE:pfaces-sdk.lib")
-    target_link_libraries(${PFACES_KERNEL} ${OpenCL_LIBRARY})
-elseif (APPLE)
-    set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "-Wl,-all_load -lpfaces-sdk")
-    target_link_libraries(${PFACES_KERNEL} ${OpenCL_LIBRARY} dl pthread) 
-else()
-    set_target_properties(${PFACES_KERNEL} PROPERTIES LINK_FLAGS "-Wl,--whole-archive -lpfaces-sdk -Wl,--no-whole-archive")
-    target_link_libraries(${PFACES_KERNEL} ${OpenCL_LIBRARY} pthread)
-endif()
 
-# suppress some warnings
-if(UNIX OR APPLE)
-    target_compile_options(${PFACES_KERNEL} PRIVATE -Wno-deprecated -Wno-ignored-attributes -Wno-nullability-completeness-on-arrays)
-elseif(MSVC)
-    target_compile_options(${PFACES_KERNEL} PRIVATE /wd4267 /wd4996 /wd4101 /wd4390)
-endif()
-
-
+# Include link configs for the kernel.
+include($ENV{PFACES_SDK_ROOT}/pfaces_link.cmake)
