@@ -24,13 +24,11 @@ set(PFACES_KERNEL_SOURCES
 set(PFACES_KERNEL_OUT_PATH "${PROJECT_SOURCE_DIR}/kernel-pack")
 
 # Generic CMake instructions to make the kernel
-link_directories($ENV{PFACES_SDK_ROOT}/lib)
-ADD_LIBRARY(${PFACES_KERNEL} SHARED
+add_library(${PFACES_KERNEL} SHARED
     ${PFACES_KERNEL_SOURCES}
 )
 target_include_directories(${PFACES_KERNEL} PUBLIC
-    ${OpenCL_INCLUDE_DIR}
-    $ENV{PFACES_SDK_ROOT}/include
+    ${PROJECT_SOURCE_DIR}/kernel
 )
 
 # Include link configs for the kernel.
