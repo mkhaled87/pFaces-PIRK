@@ -4,9 +4,9 @@ rem CMake settings for using Visual Studio (you may only chnage the
 rem VS version with one from the list in 'cmake --help')
 set BUILDTYPE=Release
 set KERNEL_NAME=pirk
-set VSVERSION="Visual Studio 16 2019"
+set VSVERSION="Visual Studio 17 2022"
 set BUILD_DEF=-DCMAKE_BUILD_TYPE=%BUILDTYPE%
-set VCPKG_PATH=C:/Users/engmk/Workspace/Gitlab/vcpkg
+set VCPKG_PATH=C:/src/vcpkg
 set VCPKG_TRIPLET=-DVCPKG_TARGET_TRIPLET=x64-windows
 
 rem Remove any old build
