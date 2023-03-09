@@ -98,6 +98,6 @@ namespace pirk{
 	  }
 
 	  // updating the list of params
-	  updatePrameters(params, paramvals);  /* TODO: the word "parameters" is misspelled in this function name */
+	  updateParameters(params, paramvals);
 	}
 }
