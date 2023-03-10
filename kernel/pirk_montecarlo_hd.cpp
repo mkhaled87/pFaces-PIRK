@@ -44,7 +44,7 @@ namespace pirk{
 	void pirk::initializeMonteCarloHD(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
 		std::string mem_fingerprint_file =
-			spLaunchState->kernelPackPath + std::string("monte_carlo_hd") +
+			spLaunchState->getKernelPackPath() + std::string("monte_carlo_hd") +
 			std::string(PFACES_PATH_SPLITTER) + std::string("mchd.mem");
 
 		/* some constants */

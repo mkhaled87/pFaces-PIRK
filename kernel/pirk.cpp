@@ -6,7 +6,7 @@ namespace pirk{
 
 	/* pirk kernel constructor */
 	pirk::pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const std::shared_ptr<pfacesConfigurationReader>& spCfg) :
-		  pfaces2DKernel(spLaunchState->getDefaultSourceFilePath(std::string("pirk"), spLaunchState->kernelScope, spLaunchState->kernelPackPath), 1,1, spCfg),
+		  pfaces2DKernel(spLaunchState->getDefaultSourceFilePath("pirk"), 1,1, spCfg),
 		  m_spCfg(spCfg){
 
 	  // Updating the params

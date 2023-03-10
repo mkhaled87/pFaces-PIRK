@@ -72,7 +72,7 @@ namespace pirk{
 	void pirk::initializeGrowthBound(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState){
 
 		std::string mem_fingerprint_file = 
-			spLaunchState->kernelPackPath + std::string("growth_bound") + 
+			spLaunchState->getKernelPackPath() + std::string("growth_bound") + 
 			std::string(PFACES_PATH_SPLITTER) + std::string("gb.mem");
 
 		mem_efficient = m_spCfg->readConfigValueBool("mem_efficient");

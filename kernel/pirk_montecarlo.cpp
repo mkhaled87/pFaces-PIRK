@@ -46,7 +46,7 @@ size_t mc_saveData(
 
 void pirk::initializeMonteCarlo(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState) {
 
-  std::string mem_fingerprint_file = spLaunchState->kernelPackPath + std::string("monte_carlo") +
+  std::string mem_fingerprint_file = spLaunchState->getKernelPackPath() + std::string("monte_carlo") +
                                      std::string(PFACES_PATH_SPLITTER) + std::string("mc.mem");
 
   /* some constants */
