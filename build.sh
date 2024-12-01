@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# CMake cofiguration
-BUILDTYPE=Release
+# CMake configs
+BUILD_TYPE=Release
 KERNEL_NAME=pirk
-CLEAN_BUILD=false
+CLEAN_BUILD=true
 
 # remove old build binaries
 if [ $CLEAN_BUILD = true ]
@@ -15,6 +15,6 @@ fi
 # building ...
 mkdir -p build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=$BUILDTYPE
-cmake --build . --config $BUILDTYPE
+cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+cmake --build . --config $BUILD_TYPE
 cd ..
