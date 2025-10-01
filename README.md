@@ -5,7 +5,7 @@
 PIRK is a tool to efficiently compute reachable sets for general nonlinear systems of *extremely high dimensions*.
 It introduces three parallel algorithms for computing interval approximations of forward reachable sets, based on: component-wise contraction properties, mixed monotonicity, and Monte Carlo-based approaches.
 
-Implemented to utilize the acceleration ecosystem [pFaces](http://www.parallall.com/pfaces), PIRK targets HPC platforms for computing the reachable sets. It has been tested on several systems, with state dimensions ranging from ten up to 4 billion.
+Implemented to utilize the acceleration ecosystem [pFaces](https://github.com/parallall/pFaces), PIRK targets HPC platforms for computing the reachable sets. It has been tested on several systems, with state dimensions ranging from ten up to 4 billion.
 The scalability of PIRK's parallel implementations is found to be highly favorable.
 
 PIRK can be used to:
@@ -50,7 +50,7 @@ $ oclgrind pfaces -CG -l
 
 ## **Prerequisites**
 
-You first need to have have [pFaces](http://www.parallall.com/pfaces) installed on the target machine. Once installed, test its installation and make sure it recognizes the parallel hardware in your machine by running the following command:
+You first need to have have [pFaces](https://github.com/parallall/pFaces) installed on the target machine. Once installed, test its installation and make sure it recognizes the parallel hardware in your machine by running the following command:
 
 ```
 pfaces -CG -l
