@@ -3,6 +3,7 @@
 rem CMake settings for using Visual Studio (you may only change the 
 rem VS version with one from the list in 'cmake --help')
 set BUILD_TYPE=Release
+set CLEAN_BUILD="False"
 set KERNEL_NAME=pirk
 set VS_VERSION="Visual Studio 17 2022"
 set BUILD_DEF=-DCMAKE_BUILD_TYPE=%BUILD_TYPE%
@@ -10,11 +11,14 @@ set VCPKG_PATH=C:/src/vcpkg
 set VCPKG_TRIPLET=-DVCPKG_TARGET_TRIPLET=x64-windows
 
 rem Remove any old build
-IF NOT EXIST .\build GOTO BUILDING
-  rmdir /S/Q .\build
+IF %CLEAN_BUILD% == "True" (
+  IF EXIST .\build (
+    echo Deleting old BUILD folder because a clean build is requsted.
+    rmdir /S/Q .\build
+  )
+)
 
 rem Building ....
-:BUILDING
 set vcpkg=-DCMAKE_TOOLCHAIN_FILE=%VCPKG_PATH%/scripts/buildsystems/vcpkg.cmake
 mkdir build
 cd build
