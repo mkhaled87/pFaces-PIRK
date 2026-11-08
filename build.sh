@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # CMake configs
 BUILD_TYPE=Release
