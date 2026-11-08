@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# build kernel driver if not present
+[ ! -f ./kernel-pack/pirk.driver ] && sh ./build.sh
+
 # Testing example: ex_n_links
 cd examples/ex_n_links
 pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p -co "record_pipe=true"
