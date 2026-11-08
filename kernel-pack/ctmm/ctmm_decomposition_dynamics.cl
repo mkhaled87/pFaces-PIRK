@@ -39,8 +39,8 @@ float ctmm_decomposition_dynamics(
         idx_nom = i - @@states_dim@@;
         x1 = x + @@states_dim@@;
         x2 = x;
-        u1 = u;
-        u2 = u + @@states_dim@@;
+        u1 = u + @@states_dim@@;
+        u2 = u;
     }
     float xi[@@states_dim@@];
     float pi[@@states_dim@@];
@@ -49,15 +49,15 @@ float ctmm_decomposition_dynamics(
     float dh;
     
     for(int k=0; k < @@states_dim@@; k++) {
-        float ju = state_jacobian_upper_bound(i,k);
-        float jl = state_jacobian_lower_bound(i,k);
+        float ju = state_jacobian_upper_bound(idx_nom,k);
+        float jl = state_jacobian_lower_bound(idx_nom,k);
         float jm = 0.5 * (ju + jl);
         if(jm >= 0) {
-            xi[k] = x1[idx_nom];
+            xi[k] = x1[k];
             alpha[k] = fmax((float) 0.0, -jl);
         }
         else {
-            xi[k] = x2[idx_nom];
+            xi[k] = x2[k];
             alpha[k] = fmax((float) 0.0, ju);
         }
     }
@@ -65,15 +65,15 @@ float ctmm_decomposition_dynamics(
     xi[idx_nom] = x1[idx_nom];
 
     for(int k=0; k < @@inputs_dim@@; k++) {
-        float ju = input_jacobian_upper_bound(i,k);
-        float jl = input_jacobian_lower_bound(i,k);
+        float ju = input_jacobian_upper_bound(idx_nom,k);
+        float jl = input_jacobian_lower_bound(idx_nom,k);
         float jm = 0.5 * (ju + jl);
         if(jm >= 0) {
-            pi[k] = u1[idx_nom];
+            pi[k] = u1[k];
             beta[k] = fmax((float) 0.0, -jl);
         }
         else {
-            pi[k] = u2[idx_nom];
+            pi[k] = u2[k];
             beta[k] = fmax((float) 0.0, ju);
         }
     }
@@ -85,9 +85,5 @@ float ctmm_decomposition_dynamics(
     for(int k=0; k < @@inputs_dim@@; k++) {
         dh += beta[k] * (u1[k] - u2[k]);
     }
-    if(i==0)
     return dh;
-    
-    
-
 }

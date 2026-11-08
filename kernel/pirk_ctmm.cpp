@@ -23,7 +23,9 @@ namespace pirk{
 		////    }
 
 		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[1].first, thisParallelProgram.m_dataPool[1].second, "result_ctmm_radius");
-		saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_ctmm_center");
+		if (thisParallelProgram.m_dataPool.size() > 9) {
+			saveBufferToFile(thisParallelProgram, thisParallelProgram.m_dataPool[9].first, thisParallelProgram.m_dataPool[9].second, "result_ctmm_center");
+		}
 
 		return 0;
 	}
