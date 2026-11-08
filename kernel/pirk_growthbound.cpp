@@ -6,42 +6,44 @@ namespace pirk{
 	std::vector<concrete_t> gb_pipe_center;
 	std::vector<concrete_t> gb_pipe_radius;
 
-	// host-side functions to updae the pipe storage
+	// host-side functions to update the pipe storage
 	size_t hfUpdatePipe_center(void* pPackedKernel, void* pPackedParallelProgram){
 
-		static pfacesParallelProgram*  pParallelProgram = (pfacesParallelProgram*)pPackedParallelProgram;
-		static pirk* pKernel = (pirk*)pPackedKernel;	
-		static concrete_t* pCenter	= (concrete_t*)pParallelProgram->m_dataPool[1].first;	
-		static size_t current_step = 0;
+		pfacesParallelProgram* pParallelProgram = (pfacesParallelProgram*)pPackedParallelProgram;
+		pirk* pKernel = (pirk*)pPackedKernel;	
+		concrete_t* pCenter = (concrete_t*)pParallelProgram->m_dataPool[1].first;	
 
 		/* first time initialize */
-		if(current_step == 0)
-			gb_pipe_center.resize(pKernel->nsteps*pKernel->states_dim);		
+		if(pKernel->pipe_step_center == 0)
+			gb_pipe_center.resize(pKernel->nsteps * pKernel->states_dim);		
 
 		/* record in the pipe */
 		for(size_t i=0; i<pKernel->states_dim; i++)
-			gb_pipe_center.data()[current_step*pKernel->states_dim + i] = pCenter[i];
+			gb_pipe_center.data()[pKernel->pipe_step_center * pKernel->states_dim + i] = pCenter[i];
 
-		current_step++;
+		pKernel->pipe_step_center++;
+		if(pKernel->pipe_step_center >= pKernel->nsteps)
+			pKernel->pipe_step_center = 0;
 
 		return 0;
 	}
 	size_t hfUpdatePipe_radius(void* pPackedKernel, void* pPackedParallelProgram){
 
-		static pfacesParallelProgram*  pParallelProgram = (pfacesParallelProgram*)pPackedParallelProgram;
-		static pirk* pKernel = (pirk*)pPackedKernel;	
-		static concrete_t* pRadius	= (concrete_t*)pParallelProgram->m_dataPool[9].first;	
-		static size_t current_step = 0;
+		pfacesParallelProgram* pParallelProgram = (pfacesParallelProgram*)pPackedParallelProgram;
+		pirk* pKernel = (pirk*)pPackedKernel;	
+		concrete_t* pRadius = (concrete_t*)pParallelProgram->m_dataPool[9].first;	
 
 		/* first time initialize */
-		if(current_step == 0)
-			gb_pipe_radius.resize(pKernel->nsteps*pKernel->states_dim);		
+		if(pKernel->pipe_step_radius == 0)
+			gb_pipe_radius.resize(pKernel->nsteps * pKernel->states_dim);		
 
 		/* record in the pipe */
 		for (size_t i = 0; i < pKernel->states_dim; i++)
-			gb_pipe_radius.data()[current_step * pKernel->states_dim + i] = pRadius[i];
+			gb_pipe_radius.data()[pKernel->pipe_step_radius * pKernel->states_dim + i] = pRadius[i];
 
-		current_step++;
+		pKernel->pipe_step_radius++;
+		if(pKernel->pipe_step_radius >= pKernel->nsteps)
+			pKernel->pipe_step_radius = 0;
 
 		return 0;
 	}	

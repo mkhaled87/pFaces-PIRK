@@ -70,6 +70,8 @@ namespace pirk{
 		std::string dynamics_element_code;
 		std::string method_choice_err;
 		bool mem_efficient;
+		size_t pipe_step_center{0};
+		size_t pipe_step_radius{0};
 
 		pirk(const std::shared_ptr<pfacesKernelLaunchState>& spLaunchState, const std::shared_ptr<pfacesConfigurationReader>& spCfg);
 		~pirk() = default;

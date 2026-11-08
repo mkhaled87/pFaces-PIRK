@@ -13,7 +13,7 @@ namespace pirk{
 	  
 	  nsamples = static_cast<size_t>(std::stoul(m_spCfg->readConfigValueString("nsamples")));
 	  params.push_back("@@nsamples@@");
-	  paramvals.push_back(std::to_string(method_choice));
+	  paramvals.push_back(std::to_string(nsamples));
 
 	  //float initial_time;
 	  float initial_time = std::stof(m_spCfg->readConfigValueString("initial_time"));
