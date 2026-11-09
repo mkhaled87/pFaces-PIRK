@@ -634,7 +634,7 @@ namespace pirk{
 			}
 
 			// should i record the latest center in the pipe data ?
-			if(save_result && record_pipe && (w%rk4_nint == 0)){	
+			if(save_result && record_pipe && ((w + 1) % rk4_nint == 0)){	
 				instrList.push_back(instr_readAllData);
 				instrList.push_back(instrSyncPoint);
 				instrList.push_back(instrHostUpdatePipe_center);
@@ -722,7 +722,7 @@ namespace pirk{
 			}
 
 			// should i record the latest radius in the pipe data ?
-			if(save_result && record_pipe && (w%rk4_nint == 0)){
+			if(save_result && record_pipe && ((w + 1) % rk4_nint == 0)){
 				instrList.push_back(instr_readAllData);
 				instrList.push_back(instrSyncPoint);
 				instrList.push_back(instrHostUpdatePipe_radius);
