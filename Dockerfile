@@ -1,17 +1,44 @@
-# iamge
-FROM ubuntu:20.04
+FROM ubuntu:24.04
+LABEL maintainer="Mahmoud Khaled <eng.mk@msn.com>"
 
-# update image
-RUN apt-get update
-RUN apt-get install -y tzdata
-RUN apt-get -y upgrade
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=UTC
+ENV LANG=C.UTF-8
 
-# install required libs/tools
-RUN apt-get install -y cmake wget git unzip build-essential cmake libcpprest-dev opencl-c-headers opencl-clhpp-headers ocl-icd-opencl-dev clinfo oclgrind
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    build-essential \
+    cmake \
+    curl \
+    unzip \
+    git \
+    opencl-headers \
+    ocl-icd-opencl-dev \
+    pocl-opencl-icd \
+    clinfo \
+    python3 \
+    python3-numpy \
+    python3-scipy \
+    python3-matplotlib \
+    && rm -rf /var/lib/apt/lists/*
 
-# install pFaces 1.2.1d
-RUN mkdir pfaces; cd pfaces; wget https://github.com/parallall/pFaces/releases/download/Release_1.2.1d/pFaces-1.2.1-Ubuntu20.04.zip; unzip pFaces-1.2.1-Ubuntu20.04.zip; sh ./install.sh
+# Install pFaces v1.5 release
+WORKDIR /opt/pfaces
+RUN curl -sL https://github.com/parallall/pFaces/releases/download/v1.5.0/pFaces-1.5-Ubuntu22.04.5LTS-x86_64.zip -o pfaces.zip \
+    && unzip -q pfaces.zip \
+    && rm pfaces.zip \
+    && sh ./install.sh
 
-# install PIRK (version that supports pFaces v1.2)
-RUN git clone https://github.com/mkhaled87/pFaces-PIRK
-RUN cd pFaces-PIRK; git checkout tags/PFACES_UP_TO_1.2; export PFACES_SDK_ROOT=$PWD/../pfaces/pfaces-sdk/; sh build.sh
+ENV PFACES_ROOT=/opt/pfaces
+ENV PFACES_SDK_ROOT=/opt/pfaces/pfaces-sdk
+ENV PATH="/opt/pfaces/bin:${PATH}"
+
+# Setup workspace
+WORKDIR /opt/pFaces-PIRK
+COPY . /opt/pFaces-PIRK
+
+# Build driver and run tests
+RUN sh ./build.sh && sh ./test.sh
+
+CMD ["sh", "./test.sh"]
