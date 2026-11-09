@@ -234,6 +234,115 @@ The required number of samples can be computed using the formula:
 where n is the state dimension and epsilon=delta=0.05 are parameters to control the probabilistic guarantee. 
 
 
+# **Verified Continuous Reachability Benchmarks**
+
+PIRK includes an end-to-end continuous reachability verification test suite. For each benchmark, PIRK computes interval reach sets or continuous reach tubes (via Growth-Bound, Continuous-Time Mixed Monotonicity, or Monte-Carlo techniques), while standalone Python verification scripts solve continuous nonlinear ODE initial value problems (using `scipy.integrate.solve_ivp` with high-accuracy RK45) across boundary and interior sampled initial states. Each script mathematically verifies and asserts **100% enclosure** within the computed reach pipe/tube over the entire time horizon and generates publication-quality visualization figures.
+
+To run the complete automated verification test suite locally:
+```bash
+sh test.sh
+```
+
+---
+
+### **1. 7D Vehicle Lane-Change Maneuver (`ex_vehicle7d`)**
+- **Location**: [`examples/ex_vehicle7d`](examples/ex_vehicle7d)
+- **Dynamical Model & Problem**:
+  A 7-state nonlinear single-track vehicle model based on BMW 320i parameters executing a high-speed evasive lane-change maneuver on a highway over time horizon $t \in [0, 4.0]\text{ s}$ with step size $dt = 0.04\text{ s}$ (100 macro steps, 5 sub-steps/step, RK4).
+  The state vector $\mathbf{x} = [s_x, s_y, \delta, v, \psi, \dot{\psi}, \beta]^T$ captures:
+  - $s_x, s_y$: Longitudinal and lateral position in global Cartesian coordinates.
+  - $\delta$: Front-wheel steering angle.
+  - $v$: Longitudinal vehicle velocity.
+  - $\psi, \dot{\psi}$: Inertial heading angle and yaw rate.
+  - $\beta$: Vehicle side-slip angle.
+
+  The system dynamics incorporate nonlinear tire slip kinematics:
+  $$\dot{s}_x = v \cos(\psi) - v \tan(\beta) \sin(\psi), \quad \dot{s}_y = v \sin(\psi) + v \tan(\beta) \cos(\psi)$$
+  $$\dot{\delta} = u_1, \quad \dot{v} = u_2, \quad \dot{\psi} = \dot{\psi}, \quad \ddot{\psi} = \frac{a F_{y,f} - b F_{y,r}}{I_z}, \quad \dot{\beta} = \frac{F_{y,f} + F_{y,r}}{m v} - \dot{\psi}$$
+  PIRK computes the growth-bound bounding tube around nominal trajectory $c(t)$ with interval radius $r(t)$. Initial states start from nominal conditions with interval radii bounding the physical vehicle footprint ($r_0 = 1.0\text{ m}$ half-width, $r_1 = 2.35\text{ m}$ half-length). Continuous trajectory rollouts under time-varying steering inputs verify 100% enclosure within the computed reach tube.
+
+- **Commands to Compute and Verify**:
+  ```bash
+  cd examples/ex_vehicle7d
+  pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./vehicle.cfg -p -co "record_pipe=true"
+  python3 verify_vehicle7d.py
+  ```
+
+- **Visual Verification Plot**:
+  ![Vehicle 7D Reach Tube Verification](examples/ex_vehicle7d/vehicle7d_reach_tube_verification.png)
+
+---
+
+### **2. 2D Van der Pol Nonlinear Limit Cycle (`arch18_benchmark/vdp_oscillator`)**
+- **Location**: [`examples/arch18_benchmark/vdp_oscillator`](examples/arch18_benchmark/vdp_oscillator)
+- **Dynamical Model & Problem**:
+  The classic nonlinear Van der Pol oscillator from the ARCH-COMP 2018 benchmark suite, exhibiting non-conservative limit cycle dynamics over $t \in [0, 7.0]\text{ s}$ ($dt = 0.01\text{ s}$, 700 steps):
+  $$\dot{x}_1 = x_2, \quad \dot{x}_2 = \mu (1 - x_1^2) x_2 - x_1, \quad \mu = 1.0$$
+  The initial set is an uncertain box $X_0 = [1.25, 1.55] \times [2.25, 2.45]$. PIRK evaluates the logarithmic matrix norm of the state Jacobian $\mu_\infty(J)$ to compute conservative bounding intervals that tightly envelope nonlinear trajectory expansion and convergence toward the periodic orbit. Continuous trajectories simulated with `scipy.integrate.solve_ivp` achieve 100% mathematical enclosure with $< 10^{-4}$ tolerance.
+
+- **Commands to Compute and Verify**:
+  ```bash
+  cd examples/arch18_benchmark/vdp_oscillator
+  pfaces -CG -d 1 -k pirk.cpu@../../../kernel-pack -cfg ./vdp_oscillator.cfg -p -co "record_pipe=true"
+  python3 verify_vdp.py
+  ```
+
+- **Visual Verification Plot**:
+  ![Van der Pol Reach Tube Verification](examples/arch18_benchmark/vdp_oscillator/vdp_reach_tube_verification.png)
+
+---
+
+### **3. 7D Laub-Loomis Enzymatic Reaction Network (`arch18_benchmark/laub_loomis`)**
+- **Location**: [`examples/arch18_benchmark/laub_loomis`](examples/arch18_benchmark/laub_loomis)
+- **Dynamical Model & Problem**:
+  The 7-state ARCH-COMP enzymatic reaction network benchmark modeling spontaneous activation and oscillations of adenylyl cyclase in *Dictyostelium discoideum* over time horizon $t \in [0, 20.0]\text{ s}$ ($dt = 0.1\text{ s}$, 200 steps):
+  $$\dot{x}_1 = 1.4 x_3 - x_1$$
+  $$\dot{x}_2 = 2.5 x_2 - 1.5 x_2 x_3$$
+  $$\dot{x}_3 = 0.6 x_1 - 2.0 x_2 x_3 + 0.1$$
+  $$\dot{x}_4 = 2.0 - 1.5 x_4 x_5$$
+  $$\dot{x}_5 = 5.0 x_1 - 4.0 x_5$$
+  $$\dot{x}_6 = 1.5 x_2 - x_6$$
+  $$\dot{x}_7 = x_4 - x_7$$
+  Initial conditions start from an interval box $X_0 = \bar{x}_0 \pm 0.010$ around nominal operating concentrations. PIRK tightly bounds the sharp transient peak in species $x_4$ before settling toward steady state, maintaining 100% verified enclosure across all 7 chemical concentrations.
+
+- **Commands to Compute and Verify**:
+  ```bash
+  cd examples/arch18_benchmark/laub_loomis
+  pfaces -CG -d 1 -k pirk.cpu@../../../kernel-pack -cfg ./laub_loomis.cfg -p -co "record_pipe=true"
+  python3 verify_laub_loomis.py
+  ```
+
+- **Visual Verification Plot**:
+  ![Laub-Loomis Reach Tube Verification](examples/arch18_benchmark/laub_loomis/laub_loomis_reach_tube_verification.png)
+
+---
+
+### **4. 10-Link Traffic Flow Network (`ex_n_links`)**
+- **Location**: [`examples/ex_n_links`](examples/ex_n_links)
+- **Dynamical Model & Problem**:
+  A 10-link nonlinear traffic network modeling queue length dynamics and congestion spillback governed by downstream link capacities, bottlenecks, and switching demand inputs. PIRK computes interval reach sets using multiple methods:
+  - Growth-Bound (standard and memory-efficient)
+  - Continuous-Time Mixed Monotonicity (CTMM)
+  - Monte Carlo simulation (standard and high-definition)
+
+  The verification script evaluates bounding box containment across all 10 links over time, comparing the over-approximative Growth-Bound interval tube with empirical Monte-Carlo trajectories.
+
+- **Commands to Compute and Verify**:
+  ```bash
+  cd examples/ex_n_links
+  pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p -co "record_pipe=true"
+  pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p -co "mem_efficient=true"
+  pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p -co "method_choice=2"
+  pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p -co "method_choice=3"
+  pfaces -CG -d 1 -k pirk.cpu@../../kernel-pack -cfg ./ex_n_link.cfg -p -co "method_choice=4"
+  python3 verify_reachability.py
+  ```
+
+- **Visual Verification Plot**:
+  ![10-Link Traffic Reach Tube Verification](examples/ex_n_links/reachable_tube_verification.png)
+
+---
+
 ## **Authors**
 
 - [**Mahmoud Khaled**](http://www.mahmoud-khaled.com)*.
