@@ -6,9 +6,6 @@
 #define x6 x[5]
 #define x7 x[6]
 
-#define u1 u[0]
-#define u2 u[1]
-
 /* BMW 320i params */
 #define param_mu 1.0489f
 #define param_C_Sf 20.898084f
@@ -23,16 +20,19 @@
 
 float dynamics_element_global(__global float* x, __global float* u, float t, unsigned int i) {
 
+    float u1 = 0.0f;
+    float u2 = 0.0f;
+
     if(t > 5.0f){
         u1 = 0.03f;
         u2 = 2.0f;
     }
     else if(t > 2.5f){
-        u1 = -0.055;
+        u1 = -0.055f;
         u2 = 2.0f;
     }
     else{
-        u1 = 0.025;
+        u1 = 0.025f;
         u2 = 2.0f;
     }
         
